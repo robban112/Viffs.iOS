@@ -11,9 +11,11 @@ import Foundation
 class Receipt {
     var receiptName: String!
     var receiptTotal: String!
+    var receiptUrl: String!
     
-    init(name: String, total: String) {
+    init(name: String, total: String, url: String) {
         self.receiptName = name
         self.receiptTotal = total
+        self.receiptUrl = url
     }
 }

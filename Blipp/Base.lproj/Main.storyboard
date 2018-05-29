@@ -312,11 +312,51 @@
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="receiptTableView" destination="AuB-7A-GK5" id="n60-0m-MFk"/>
+                        <segue destination="fYg-mi-I3W" kind="show" identifier="receiptDetail" id="EUR-OI-2Og"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+        </scene>
+        <!--Receipt Detail View Controller-->
+        <scene sceneID="D6r-5w-eJl">
+            <objects>
+                <viewController id="fYg-mi-I3W" customClass="ReceiptDetailViewController" customModule="Blipp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eox-PC-jnw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qGg-GY-Bo7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-uZ-XDc">
+                                <rect key="frame" x="15" y="35" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="fYg-mi-I3W" eventType="touchUpInside" id="lNT-2d-Oc8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RTr-uZ-XDc" firstAttribute="leading" secondItem="zBE-U7-YAy" secondAttribute="leading" constant="15" id="3lA-4i-hdE"/>
+                            <constraint firstItem="qGg-GY-Bo7" firstAttribute="bottom" secondItem="zBE-U7-YAy" secondAttribute="bottom" id="3zV-kP-dkj"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RTr-uZ-XDc" secondAttribute="trailing" constant="20" symbolic="YES" id="Fkq-uy-QeX"/>
+                            <constraint firstItem="qGg-GY-Bo7" firstAttribute="trailing" secondItem="zBE-U7-YAy" secondAttribute="trailing" id="U5a-k9-qvs"/>
+                            <constraint firstItem="qGg-GY-Bo7" firstAttribute="leading" secondItem="zBE-U7-YAy" secondAttribute="leading" id="ZTt-B3-jwB"/>
+                            <constraint firstItem="RTr-uZ-XDc" firstAttribute="top" secondItem="zBE-U7-YAy" secondAttribute="top" constant="15" id="bG7-9e-5XH"/>
+                            <constraint firstItem="qGg-GY-Bo7" firstAttribute="top" secondItem="zBE-U7-YAy" secondAttribute="top" id="hFa-lC-FqM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zBE-U7-YAy"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qGg-GY-Bo7" id="btV-08-00w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SRA-4b-rpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="-321"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

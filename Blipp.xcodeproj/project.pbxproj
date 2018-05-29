@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
+		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
 		EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */; };
 		EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9220AADA4A006A0390 /* AppDelegate.swift */; };
 		EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */; };
@@ -19,6 +20,7 @@
 		EE826EA720AADE52006A0390 /* ReceiptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA620AADE52006A0390 /* ReceiptTableViewCell.swift */; };
 		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
+		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
 		EEA99FB220AB7D3A006A1924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FB120AB7D3A006A1924 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,7 @@
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
 		EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE826E8F20AADA4A006A0390 /* Blipp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blipp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE826E9220AADA4A006A0390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		EE826EA620AADE52006A0390 /* ReceiptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptTableViewCell.swift; sourceTree = "<group>"; };
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
+		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EEA99FB120AB7D3A006A1924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,17 +100,35 @@
 				EE826E9820AADA4A006A0390 /* Main.storyboard */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
-				EE826E9620AADA4A006A0390 /* SecondViewController.swift */,
-				EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */,
 				EE826EA620AADE52006A0390 /* ReceiptTableViewCell.swift */,
-				EE826EA820AB64CA006A0390 /* Receipt.swift */,
-				EEA99FB120AB7D3A006A1924 /* ViewController.swift */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
 				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
-				EE4CB0D320B574A600733817 /* LoginViewController.swift */,
-				EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */,
+				EE962D4E20BDA804006CEC0F /* Model */,
+				EE962D4D20BDA7EB006CEC0F /* Controller */,
 			);
 			path = Blipp;
+			sourceTree = "<group>";
+		};
+		EE962D4D20BDA7EB006CEC0F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE826E9620AADA4A006A0390 /* SecondViewController.swift */,
+				EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */,
+				EEA99FB120AB7D3A006A1924 /* ViewController.swift */,
+				EE4CB0D320B574A600733817 /* LoginViewController.swift */,
+				EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */,
+				EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE962D4E20BDA804006CEC0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE826EA820AB64CA006A0390 /* Receipt.swift */,
+				EE962D4F20BDC5B7006CEC0F /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +270,9 @@
 				EEA99FB220AB7D3A006A1924 /* ViewController.swift in Sources */,
 				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
 				EE826EA720AADE52006A0390 /* ReceiptTableViewCell.swift in Sources */,
+				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
 				EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */,
+				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
 				EE826E9720AADA4A006A0390 /* SecondViewController.swift in Sources */,
 				EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */,
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
@@ -399,7 +423,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AQ8FWFADX;
 				INFOPLIST_FILE = Blipp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.Blipp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -415,7 +442,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AQ8FWFADX;
 				INFOPLIST_FILE = Blipp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.Blipp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

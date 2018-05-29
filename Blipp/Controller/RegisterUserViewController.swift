@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class RegisterUserViewController: UIViewController {
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    var ref: DatabaseReference!
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -33,12 +35,15 @@ class RegisterUserViewController: UIViewController {
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
-                    print("Successfully created user!")
+                    if let user = user {
+                        print("Successfully created user!")
+                        self.ref.child("users").child(user.uid).setValue(["username": user.email])
+                    }
                 }
             }
         }
-        let loginViewController = LoginViewController()
-        present(loginViewController, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     func storageTest() {
@@ -47,24 +52,10 @@ class RegisterUserViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
