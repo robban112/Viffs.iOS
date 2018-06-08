@@ -9,5 +9,14 @@ target 'Blipp' do
   use_frameworks!
 
   # Pods for Blipp
+  pod 'RxSwift',  '~> 4.0'
+  pod 'RxCocoa',  '~> 4.0'
+  pod 'Overture', '~> 0.2'
+  pod 'Result', '~> 4.0.0'
+end
 
+# For unit testing
+target 'BlippTests' do
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
 end

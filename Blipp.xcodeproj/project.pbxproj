@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
@@ -21,11 +22,31 @@
 		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
-		EEA99FB220AB7D3A006A1924 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA99FB120AB7D3A006A1924 /* ViewController.swift */; };
+		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
+		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
+		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
+		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
+		FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
+		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
+		FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */; };
+		FFA681B220C49BD400FE29DA /* RxAuthExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FFA681A220BF063700FE29DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE826E8E20AADA4A006A0390;
+			remoteInfo = Blipp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blipp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
+		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +64,16 @@
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		EEA99FB120AB7D3A006A1924 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
+		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		FFA6819D20BF063700FE29DA /* BlippTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlippTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
+		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA681A920C0236000FE29DA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FFA681AC20C03BB200FE29DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
+		FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIViewExtensions.swift; sourceTree = "<group>"; };
+		FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAuthExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +85,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFA6819A20BF063700FE29DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */,
+				63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,6 +110,8 @@
 			children = (
 				C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */,
 				CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */,
+				0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */,
+				2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -79,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				EE826E9120AADA4A006A0390 /* Blipp */,
+				FFA6819E20BF063700FE29DA /* BlippTests */,
 				EE826E9020AADA4A006A0390 /* Products */,
 				51B78C2B7EDD5AA579DA57C6 /* Pods */,
 				35CB1C987188EE324ADB6859 /* Frameworks */,
@@ -89,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				EE826E8F20AADA4A006A0390 /* Blipp.app */,
+				FFA6819D20BF063700FE29DA /* BlippTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +139,8 @@
 		EE826E9120AADA4A006A0390 /* Blipp */ = {
 			isa = PBXGroup;
 			children = (
+				FFA681AB20C03B9A00FE29DA /* Utils */,
+				FFA681A720C01EB100FE29DA /* ViewModels */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
 				EE826E9820AADA4A006A0390 /* Main.storyboard */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
@@ -104,22 +149,18 @@
 				EE826EA020AADA4D006A0390 /* Info.plist */,
 				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
 				EE962D4E20BDA804006CEC0F /* Model */,
-				EE962D4D20BDA7EB006CEC0F /* Controller */,
+				EE962D4D20BDA7EB006CEC0F /* Views */,
+				FF38274E20C837670046F220 /* Environment.swift */,
 			);
 			path = Blipp;
 			sourceTree = "<group>";
 		};
-		EE962D4D20BDA7EB006CEC0F /* Controller */ = {
+		EE962D4D20BDA7EB006CEC0F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE826E9620AADA4A006A0390 /* SecondViewController.swift */,
-				EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */,
-				EEA99FB120AB7D3A006A1924 /* ViewController.swift */,
-				EE4CB0D320B574A600733817 /* LoginViewController.swift */,
-				EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */,
-				EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */,
+				FFA681A820C01ECA00FE29DA /* Controllers */,
 			);
-			path = Controller;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EE962D4E20BDA804006CEC0F /* Model */ = {
@@ -129,6 +170,55 @@
 				EE962D4F20BDC5B7006CEC0F /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FFA6819E20BF063700FE29DA /* BlippTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFA6819F20BF063700FE29DA /* BlippTests.swift */,
+				FFA681A120BF063700FE29DA /* Info.plist */,
+				FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */,
+			);
+			path = BlippTests;
+			sourceTree = "<group>";
+		};
+		FFA681A720C01EB100FE29DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FFA681A920C0236000FE29DA /* LoginViewModel.swift */,
+				FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FFA681A820C01ECA00FE29DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE826E9620AADA4A006A0390 /* SecondViewController.swift */,
+				EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */,
+				EE4CB0D320B574A600733817 /* LoginViewController.swift */,
+				EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */,
+				EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFA681AB20C03B9A00FE29DA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FFA681AE20C4991900FE29DA /* RxExtensions */,
+				FFA681AC20C03BB200FE29DA /* LoginValidation.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FFA681AE20C4991900FE29DA /* RxExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */,
+				FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */,
+			);
+			path = RxExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +233,6 @@
 				EE826E8C20AADA4A006A0390 /* Frameworks */,
 				EE826E8D20AADA4A006A0390 /* Resources */,
 				24DDAAA45E00A185C7E857F5 /* [CP] Embed Pods Frameworks */,
-				B7CAC3B8AF11ADF10E8A77A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +242,25 @@
 			productName = Blipp;
 			productReference = EE826E8F20AADA4A006A0390 /* Blipp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FFA6819C20BF063700FE29DA /* BlippTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "BlippTests" */;
+			buildPhases = (
+				30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */,
+				FFA6819920BF063700FE29DA /* Sources */,
+				FFA6819A20BF063700FE29DA /* Frameworks */,
+				FFA6819B20BF063700FE29DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFA681A320BF063700FE29DA /* PBXTargetDependency */,
+			);
+			name = BlippTests;
+			productName = BlippTests;
+			productReference = FFA6819D20BF063700FE29DA /* BlippTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -166,6 +274,10 @@
 				TargetAttributes = {
 					EE826E8E20AADA4A006A0390 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					FFA6819C20BF063700FE29DA = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = EE826E8E20AADA4A006A0390;
 					};
 				};
 			};
@@ -183,6 +295,7 @@
 			projectRoot = "";
 			targets = (
 				EE826E8E20AADA4A006A0390 /* Blipp */,
+				FFA6819C20BF063700FE29DA /* BlippTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +312,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFA6819B20BF063700FE29DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -211,6 +331,10 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -218,6 +342,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -226,19 +354,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7CAC3B8AF11ADF10E8A77A1 /* [CP] Copy Pods Resources */ = {
+		30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlippTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAE72E171D82634ABA1C39B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -267,9 +398,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */,
-				EEA99FB220AB7D3A006A1924 /* ViewController.swift in Sources */,
+				FF38274F20C837670046F220 /* Environment.swift in Sources */,
+				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
+				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
+				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
+				FFA681B220C49BD400FE29DA /* RxAuthExtensions.swift in Sources */,
 				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
 				EE826EA720AADE52006A0390 /* ReceiptTableViewCell.swift in Sources */,
+				FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */,
 				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
 				EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */,
 				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
@@ -279,7 +415,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FFA6819920BF063700FE29DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */,
+				FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFA681A320BF063700FE29DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE826E8E20AADA4A006A0390 /* Blipp */;
+			targetProxy = FFA681A220BF063700FE29DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EE826E9820AADA4A006A0390 /* Main.storyboard */ = {
@@ -453,6 +606,48 @@
 			};
 			name = Release;
 		};
+		FFA681A420BF063700FE29DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XNB472P6E;
+				INFOPLIST_FILE = BlippTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OskarApps.BlippTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+			};
+			name = Debug;
+		};
+		FFA681A520BF063700FE29DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6XNB472P6E;
+				INFOPLIST_FILE = BlippTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.OskarApps.BlippTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +665,15 @@
 			buildConfigurations = (
 				EE826EA420AADA4D006A0390 /* Debug */,
 				EE826EA520AADA4D006A0390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "BlippTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFA681A420BF063700FE29DA /* Debug */,
+				FFA681A520BF063700FE29DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

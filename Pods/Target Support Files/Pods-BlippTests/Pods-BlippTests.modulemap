@@ -1,0 +1,6 @@
+module Pods_BlippTests {
+  umbrella header "Pods-BlippTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

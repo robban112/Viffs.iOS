@@ -9,19 +9,13 @@
 import UIKit
 
 class ReceiptTableViewCell: UITableViewCell {
-    
-    @IBOutlet var receiptName: UILabel!
-    @IBOutlet var receiptTotal: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+  var receipt: Receipt? = nil {
+    didSet {
+      self.receiptName?.text = receipt?.receiptName
+      self.receiptTotal?.text = receipt?.receiptTotal
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  }
+  
+  @IBOutlet var receiptName: UILabel!
+  @IBOutlet var receiptTotal: UILabel!
 }
