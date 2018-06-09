@@ -9,12 +9,14 @@
 import XCTest
 import RxTest
 import RxBlocking
+@testable import Blipp
 
 class LoginViewModelTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    Current = .mock
   }
   
   override func tearDown() {
@@ -22,16 +24,11 @@ class LoginViewModelTests: XCTestCase {
     super.tearDown()
   }
   
-  func testExample() {
-    
-    
+  func testCorrectEmail() {
+    let loginViewModel = LoginViewModel()
+    let blockedCorrEmail = loginViewModel.correctEmail.toBlocking()
+    XCTAssertEqual(try blockedCorrEmail.first(), .some(false))
+    loginViewModel.inputs.emailString.onNext("test_email@blipp.se")
+    XCTAssertEqual(try blockedCorrEmail.first(), .some(true))
   }
-  
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
-  
 }

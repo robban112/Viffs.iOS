@@ -18,6 +18,9 @@ end
 
 # For unit testing
 target 'BlippTests' do
+    pod 'RxSwift',  '~> 4.0'
+    pod 'RxCocoa',  '~> 4.0'
     pod 'RxBlocking', '~> 4.0'
     pod 'RxTest',     '~> 4.0'
+    pod 'Firebase/Core'
 end

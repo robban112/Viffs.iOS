@@ -147,9 +147,6 @@
 		EE826E9120AADA4A006A0390 /* Blipp */ = {
 			isa = PBXGroup;
 			children = (
-				FFD95AFE20CBD59E0010FBC4 /* API */,
-				FFA681AB20C03B9A00FE29DA /* Utils */,
-				FFA681A720C01EB100FE29DA /* ViewModels */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
 				EE826E9820AADA4A006A0390 /* Main.storyboard */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
@@ -158,6 +155,9 @@
 				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
 				EE962D4E20BDA804006CEC0F /* Model */,
 				EE962D4D20BDA7EB006CEC0F /* Views */,
+				FFA681A720C01EB100FE29DA /* ViewModels */,
+				FFD95AFE20CBD59E0010FBC4 /* API */,
+				FFA681AB20C03B9A00FE29DA /* Utils */,
 				FF38274E20C837670046F220 /* Environment.swift */,
 				FF3828FA20CAAFFA0046F220 /* Coordinator.swift */,
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
@@ -351,14 +351,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-f0850809/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb-framework/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
