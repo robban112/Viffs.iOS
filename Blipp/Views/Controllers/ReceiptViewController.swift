@@ -9,10 +9,19 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 class ReceiptViewController: UIViewController {
-  let viewModel: ReceiptViewModelType = ReceiptViewModel()
+  var viewModel: ReceiptViewModelType!
   let disposeBag = DisposeBag()
+  
+  let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<Int, Receipt>>(
+    configureCell: { (_, tv, ip, receipt: Receipt) in
+      let cell = tv.dequeueReusableCell(withIdentifier: "ReceiptTableViewCell") as! ReceiptTableViewCell
+      cell.receipt = receipt
+      return cell
+    }
+  )
   
   @IBOutlet var receiptTableView: UITableView!
   
@@ -23,18 +32,14 @@ class ReceiptViewController: UIViewController {
   }
   
   func bindUIToViewModel() {
-    // Nothing to bind here yet
+    receiptTableView.rx.modelSelected(Receipt.self)
+      .bind(to: viewModel.inputs.receiptSelected)
+      .disposed(by: disposeBag)
   }
   
   func bindViewModelToUI() {
-    viewModel.outputs.receipts
-      .drive(receiptTableView.rx.items(
-        cellIdentifier: "ReceiptTableViewCell",
-        cellType: ReceiptTableViewCell.self
-      )) { _, receipt, cell in
-        cell.receipt = receipt
-      }
+    viewModel.outputs.receiptsContents
+      .drive(receiptTableView.rx.items(dataSource: dataSource))
       .disposed(by: disposeBag)
   }
 }
-

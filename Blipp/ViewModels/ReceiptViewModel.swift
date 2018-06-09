@@ -9,13 +9,14 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxDataSources
 
 protocol ReceiptViewModelInputs {
-
+  var receiptSelected: PublishSubject<Receipt> { get }
 }
 
 protocol ReceiptViewModelOutputs {
-  var receipts: Driver<[Receipt]> { get }
+  var receiptsContents: Driver<[SectionModel<Int, Receipt>]> { get }
 }
 
 protocol ReceiptViewModelType {
@@ -24,11 +25,20 @@ protocol ReceiptViewModelType {
 }
 
 struct ReceiptViewModel: ReceiptViewModelType, ReceiptViewModelInputs, ReceiptViewModelOutputs {
-  let receipts: Driver<[Receipt]>
+  let receiptsContents: Driver<[SectionModel<Int, Receipt>]>
+  let receiptSelected = PublishSubject<Receipt>()
+  
+  let receiptDetailNavigation: Observable<Receipt>
   
   init() {
-    receipts = Driver.just([ Receipt(name: "Pressbyrån", total: "30", url: "")
-                           , Receipt(name: "ICA", total: "200", url: "") ])
+    receiptsContents = Driver
+      .just([ Receipt(name: "Pressbyrån", total: "30", url: "")
+            , Receipt(name: "ICA", total: "200", url: "http://static.feber.se/article_images/19/53/44/195344_980.jpg") ])
+      .map { receipts in
+        [SectionModel(model: 0, items: receipts)]
+      }
+    
+    receiptDetailNavigation = receiptSelected.asObservable()
   }
   
   var inputs: ReceiptViewModelInputs { return self }

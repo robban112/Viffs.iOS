@@ -13,11 +13,13 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var coordinator: Coordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        let rootTabBarController = self.window!.rootViewController! as! UITabBarController
+        coordinator = Coordinator(rootTabBarController: rootTabBarController)
         return true
     }
 

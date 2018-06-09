@@ -7,45 +7,35 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ReceiptDetailViewController: UIViewController {
-    
-    @IBOutlet var imageView: UIImageView!
-    
-    var receipt: Receipt?
-    
-    @IBAction func backButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if let receipt = receipt {
-            imageView.downloadedFrom(link: receipt.receiptUrl)
-        } else {
-            print("Received receipt is nil")
-        }
-    }
-}
-
-extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
-        contentMode = mode
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil,
-                let image = UIImage(data: data)
-                else { return }
-            DispatchQueue.main.async() {
-                self.image = image
-            }
-            }.resume()
-    }
-    func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
-        guard let url = URL(string: link) else { return }
-        downloadedFrom(url: url, contentMode: mode)
-    }
+  
+  let disposeBag = DisposeBag()
+  
+  // will be set by the Coordinator
+  var viewModel: ReceiptDetailViewModelType!
+  
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet weak var backButton: UIButton!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    bindUIToViewModel()
+    bindViewModelToUI()
+  }
+  
+  func bindUIToViewModel() {
+    backButton.rx.tap
+      .bind(to: viewModel.inputs.backButtonPressed)
+      .disposed(by: disposeBag)
+  }
+  
+  func bindViewModelToUI() {
+    viewModel.outputs.receiptImage
+      .asDriver(onErrorJustReturn: nil)
+      .drive(imageView.rx.image)
+      .disposed(by: disposeBag)
+  }
 }

@@ -16,9 +16,9 @@ enum FirebaseError: Error {
 }
 
 extension Reactive where Base: Auth {
+  // Sign in with a given username and password
   func signIn(withEmail email: String, password: String) -> Single<Result<User, FirebaseError>> {
     return Single.create(subscribe: { single -> Disposable in
-      print("emal: \(email), password: \(password)")
       Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
         if let user = user {
           single(.success(.success(user)))

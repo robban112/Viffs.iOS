@@ -11,8 +11,8 @@ import UIKit
 class ReceiptTableViewCell: UITableViewCell {
   var receipt: Receipt? = nil {
     didSet {
-      self.receiptName?.text = receipt?.receiptName
-      self.receiptTotal?.text = receipt?.receiptTotal
+      self.receiptName?.text = receipt?.name
+      self.receiptTotal?.text = receipt?.total
     }
   }
   

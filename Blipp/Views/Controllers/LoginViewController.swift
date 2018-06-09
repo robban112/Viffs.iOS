@@ -13,12 +13,13 @@ import RxCocoa
 class LoginViewController: UIViewController {
   
     private let disposeBag = DisposeBag()
-    private let viewModel: LoginViewModelType = LoginViewModel()
+    // vill be set by Coordinator
+    var viewModel: LoginViewModelType!
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         bindUIToViewModel()

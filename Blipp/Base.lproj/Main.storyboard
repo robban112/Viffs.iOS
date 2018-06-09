@@ -208,30 +208,6 @@
             </objects>
             <point key="canvasLocation" x="1533.5999999999999" y="-1328.1859070464768"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="rqf-DR-Z94">
-            <objects>
-                <viewController id="Vwf-ps-dMM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NU3-yG-HdA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome user!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfW-HX-e27">
-                                <rect key="frame" x="130" y="306" width="114" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="kSw-5x-LUo"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2T7-QW-yo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2513" y="-1181"/>
-        </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -320,7 +296,7 @@
         <!--Receipt Detail View Controller-->
         <scene sceneID="D6r-5w-eJl">
             <objects>
-                <viewController id="fYg-mi-I3W" customClass="ReceiptDetailViewController" customModule="Blipp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptDetail" id="fYg-mi-I3W" customClass="ReceiptDetailViewController" customModule="Blipp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eox-PC-jnw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,9 +307,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-uZ-XDc">
                                 <rect key="frame" x="15" y="35" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="fYg-mi-I3W" eventType="touchUpInside" id="lNT-2d-Oc8"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,6 +322,7 @@
                         <viewLayoutGuide key="safeArea" id="zBE-U7-YAy"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="RTr-uZ-XDc" id="YPw-a7-d5f"/>
                         <outlet property="imageView" destination="qGg-GY-Bo7" id="btV-08-00w"/>
                     </connections>
                 </viewController>

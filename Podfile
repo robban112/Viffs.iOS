@@ -13,6 +13,7 @@ target 'Blipp' do
   pod 'RxCocoa',  '~> 4.0'
   pod 'Overture', '~> 0.2'
   pod 'Result', '~> 4.0.0'
+  pod 'RxDataSources', '~> 3.0'
 end
 
 # For unit testing
