@@ -8,12 +8,16 @@
 
 import UIKit
 
-class ReceiptTableViewCell: UITableViewCell {
+class ReceiptViewCell: UITableViewCell {
   var receipt: Receipt? = nil {
     didSet {
       self.receiptName?.text = receipt?.name
       self.receiptTotal?.text = receipt?.total
     }
+  }
+  
+  override func prepareForReuse() {
+    receipt = nil
   }
   
   @IBOutlet var receiptName: UILabel!

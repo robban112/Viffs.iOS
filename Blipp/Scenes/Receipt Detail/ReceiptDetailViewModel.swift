@@ -20,20 +20,14 @@ protocol ReceiptDetailViewModelOutputs {
   var receiptImage: Single<UIImage?> { get }
 }
 
-protocol ReceiptDetailViewNavigationHandler {
-  var backNavigation: Observable<()> { get }
-}
-
-protocol ReceiptDetailViewModelType {
+protocol ReceiptDetailViewModelType: NavigationViewModelType {
   var inputs: ReceiptDetailViewModelInputs { get }
   var outputs: ReceiptDetailViewModelOutputs { get }
-  var navigation: ReceiptDetailViewNavigationHandler { get }
 }
 
 struct ReceiptDetailViewModel: ReceiptDetailViewModelType
                              , ReceiptDetailViewModelInputs
-                             , ReceiptDetailViewModelOutputs
-, ReceiptDetailViewNavigationHandler {
+                             , ReceiptDetailViewModelOutputs {
   // inputs
   let backButtonPressed: PublishSubject<()> = .init()
   
@@ -42,19 +36,23 @@ struct ReceiptDetailViewModel: ReceiptDetailViewModelType
   var receiptImage: Single<UIImage?>
   
   // navigation
-  let backNavigation: Observable<()>
+  let navigate: Observable<Void>
   
-  init(receipt receiptObj: Receipt) {
+  init(receipt: Receipt) { self.init(receipt: receipt, coordinator: SceneCoordinator.shared) }
+  
+  init(receipt receiptObj: Receipt, coordinator: SceneCoordinatorType) {
     receipt = Single.just(receiptObj)
     
     receiptImage = receipt
       .flatMap(Current.apiService.image)
       .map { res in res.value.flatMap { $0 } }
     
-    backNavigation = backButtonPressed.asObservable()
+    let backNavigation = backButtonPressed.asObservable()
+      .flatMapLatest { coordinator.pop(animated: true) }
+    
+    navigate = backNavigation
   }
   
   var inputs: ReceiptDetailViewModelInputs { return self }
   var outputs: ReceiptDetailViewModelOutputs { return self }
-  var navigation: ReceiptDetailViewNavigationHandler { return self }
 }

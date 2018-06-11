@@ -15,13 +15,7 @@ class LoginViewModelTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     Current = .mock
-  }
-  
-  override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    super.tearDown()
   }
   
   func testCorrectEmail() {
@@ -30,5 +24,17 @@ class LoginViewModelTests: XCTestCase {
     XCTAssertEqual(try blockedCorrEmail.first(), .some(false))
     loginViewModel.inputs.emailString.onNext("test_email@blipp.se")
     XCTAssertEqual(try blockedCorrEmail.first(), .some(true))
+    loginViewModel.inputs.emailString.onNext("test_email@blipp.")
+    XCTAssertEqual(try blockedCorrEmail.first(), .some(false))
+  }
+  
+  func testCorrectPassword() {
+    let loginViewModel = LoginViewModel()
+    let blockedCorrPwd = loginViewModel.correctPassword.toBlocking()
+    XCTAssertEqual(try blockedCorrPwd.first(), .some(false))
+    loginViewModel.inputs.emailString.onNext("pwd123")
+    XCTAssertEqual(try blockedCorrPwd.first(), .some(true))
+    loginViewModel.inputs.emailString.onNext("pwd")
+    XCTAssertEqual(try blockedCorrPwd.first(), .some(false))
   }
 }

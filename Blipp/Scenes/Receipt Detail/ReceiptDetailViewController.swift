@@ -10,29 +10,26 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ReceiptDetailViewController: UIViewController {
+class ReceiptDetailViewController: UIViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
-  
-  // will be set by the Coordinator
   var viewModel: ReceiptDetailViewModelType!
   
   @IBOutlet var imageView: UIImageView!
   @IBOutlet weak var backButton: UIButton!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  func bindViewModel() {
     bindUIToViewModel()
     bindViewModelToUI()
   }
   
-  func bindUIToViewModel() {
+  private func bindUIToViewModel() {
     backButton.rx.tap
       .bind(to: viewModel.inputs.backButtonPressed)
       .disposed(by: disposeBag)
   }
   
-  func bindViewModelToUI() {
+  private func bindViewModelToUI() {
     viewModel.outputs.receiptImage
       .asDriver(onErrorJustReturn: nil)
       .drive(imageView.rx.image)

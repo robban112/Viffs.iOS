@@ -16,6 +16,7 @@ import Overture
 protocol LoginViewModelInputs {
   var emailString: BehaviorSubject<String> { get }
   var passwordString: BehaviorSubject<String> { get }
+  var registerUser: PublishSubject<Void> { get }
   var login: PublishSubject<()> { get }
 }
 
@@ -25,15 +26,18 @@ protocol LoginViewModelOutputs {
   var loginResult: Observable<Result<User, FirebaseError>> { get }
 }
 
-protocol LoginViewModelType {
+protocol LoginViewModelType: NavigationViewModelType {
   var inputs: LoginViewModelInputs { get }
   var outputs: LoginViewModelOutputs { get }
 }
 
-struct LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelOutputs {
+struct LoginViewModel: LoginViewModelType
+                     , LoginViewModelInputs
+                     , LoginViewModelOutputs {
   // inputs
   let emailString = BehaviorSubject<String>(value: "")
   let passwordString = BehaviorSubject<String>(value: "")
+  let registerUser = PublishSubject<Void>()
   let login = PublishSubject<()>()
   
   // outputs
@@ -41,10 +45,14 @@ struct LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelO
   var correctPassword: Driver<Bool>
   let loginResult: Observable<Result<User, FirebaseError>>
   
-  // disposeBag
-  let disposeBag = DisposeBag()
+  // navigation
+  let navigate: Observable<Void>
   
   init() {
+    self.init(coordinator: SceneCoordinator.shared)
+  }
+  
+  init(coordinator: SceneCoordinator) {
     correctEmail = emailString
       .asDriver(onErrorJustReturn: "")
       .map(get(\.isValidEmail))
@@ -55,8 +63,8 @@ struct LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelO
       .map(get(\.isValidPassword))
       .distinctUntilChanged()
     
-    let credentials = Observable<(String,String)>
-      .combineLatest(emailString, passwordString) { ($0,$1) }
+    let credentials: Observable<(String,String)> = Observable
+      .combineLatest(emailString, passwordString)
     
     loginResult = login.withLatestFrom(credentials)
       .flatMapLatest { t -> Observable<Result<User, FirebaseError>> in
@@ -65,14 +73,9 @@ struct LoginViewModel: LoginViewModelType, LoginViewModelInputs, LoginViewModelO
           .catchErrorJustReturn(.failure(.logInError("Unexpected login error")))
       }
     
-    loginResult
-      .subscribe(onNext: { userRes in
-        switch userRes {
-        case let .success(user): print("User \(String(describing: user)) logged in!")
-        case let .failure(err): print("Login error: \(String.init(describing: err))")
-        }
-      })
-      .disposed(by: disposeBag)
+    navigate = registerUser.flatMapLatest {
+      coordinator.transition(to: Scene.registerUser(RegisterUserViewModel()))
+    }
   }
   
   var inputs: LoginViewModelInputs { return self }

@@ -9,17 +9,19 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import RxSwift
 
-class RegisterUserViewController: UIViewController {
+class RegisterUserViewController: UIViewController, ViewModelBindable {
+  
+    let disposeBag = DisposeBag()
+    var viewModel: RegisterUserViewModelType!
+  
 
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var createAccountButton: UIButton!
     var ref: DatabaseReference!
-    
-    @IBAction func cancelButtonPressed(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
+
     @IBAction func createAccountBtnPressed(_ sender: Any) {
         guard let email = emailTextField.text else {
             print("No email")
@@ -54,6 +56,10 @@ class RegisterUserViewController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
     }
+  
+  func bindViewModel() {
+    
+  }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
