@@ -20,13 +20,31 @@ protocol RegisterUserViewModelInputs {
 }
 
 protocol RegisterUserViewModelOutputs {
-  var correctEmail: Driver<Bool> { get }
-  var correctPassword: Driver<Bool> { get }
+  var emailState: Driver<InputState> { get }
+  var passwordState: Driver<InputState> { get }
 }
 
 protocol RegisterUserViewModelType: NavigationViewModelType {
   var inputs: RegisterUserViewModelInputs { get }
   var outputs: RegisterUserViewModelOutputs { get }
+}
+
+enum InputState {
+  case unInitiated
+  case wellFormed
+  case illFormed
+}
+
+func inputState(isWellFormed: @escaping (String) -> Bool)
+  -> (String)
+  -> InputState {
+  return { string in
+    switch (string.isEmpty, isWellFormed(string)) {
+    case (true, _): return .unInitiated
+    case (_, false): return .illFormed
+    case (_, true): return .wellFormed
+    }
+  }
 }
 
 struct RegisterUserViewModel: RegisterUserViewModelType
@@ -42,8 +60,8 @@ struct RegisterUserViewModel: RegisterUserViewModelType
   let createAccount = PublishSubject<Void>()
   
   // outputs
-  let correctEmail: Driver<Bool>
-  var correctPassword: Driver<Bool>
+  let emailState: Driver<InputState>
+  let passwordState: Driver<InputState>
   
   // navigation
   let navigate: Observable<Void>
@@ -53,15 +71,13 @@ struct RegisterUserViewModel: RegisterUserViewModelType
   }
   
   init(coordinator: SceneCoordinator) {
-    correctEmail = emailString
-      .asDriver(onErrorJustReturn: "")
-      .map(get(\.isValidEmail))
-      .distinctUntilChanged()
+    emailState = emailString
+      .map(inputState(isWellFormed: get(\.isValidEmail)))
+      .asDriver(onErrorJustReturn: .unInitiated)
     
-    correctPassword = passwordString
-      .asDriver(onErrorJustReturn: "")
-      .map(get(\.isValidPassword))
-      .distinctUntilChanged()
+    passwordState = passwordString
+      .map(inputState(isWellFormed: get(\.isValidPassword)))
+      .asDriver(onErrorJustReturn: .unInitiated)
     
     let credentials: Observable<(String,String)> = Observable
       .combineLatest(emailString, passwordString)

@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Overture
 
 class LoginViewController: UIViewController, ViewModelBindable {
   
@@ -45,22 +46,7 @@ class LoginViewController: UIViewController, ViewModelBindable {
   }
   
   func bindViewModelToUI() {
-    let corrEmail = viewModel.outputs.correctEmail
-    let corrPwd = viewModel.outputs.correctPassword
-    
-    corrEmail
-      .map { $0 ? .green : .red }
-      .drive(self.emailTextField.rx.backgroundColor)
-      .disposed(by: disposeBag)
-    
-    corrPwd
-      .map { $0 ? .green : .red }
-      .drive(self.passwordTextField.rx.backgroundColor)
-      .disposed(by: disposeBag)
-    
-    Driver
-      .combineLatest(corrEmail, corrPwd) { $0 && $1 }
-      .distinctUntilChanged()
+    viewModel.outputs.loginButtonEnabled
       .drive(loginButton.rx.isEnabled)
       .disposed(by: disposeBag)
   }

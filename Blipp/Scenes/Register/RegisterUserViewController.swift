@@ -9,6 +9,15 @@
 import UIKit
 import RxSwift
 
+// get the text field background color for a given inputState
+func backgroundColor(for inputState: InputState) -> UIColor? {
+  switch inputState {
+  case .unInitiated: return .none
+  case .illFormed: return .some(.red)
+  case .wellFormed: return .some(.green)
+  }
+}
+
 class RegisterUserViewController: UIViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
@@ -38,17 +47,14 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
   }
   
   func bindViewModelToUI() {
-    let corrEmail = viewModel.outputs.correctEmail
-    let corrPwd = viewModel.outputs.correctPassword
-    
-    corrEmail
-      .map { $0 ? .green : .red }
-      .drive(self.emailTextField.rx.backgroundColor)
+    viewModel.outputs.emailState
+      .map(backgroundColor(for:))
+      .drive(emailTextField.rx.backgroundColor)
       .disposed(by: disposeBag)
-    
-    corrPwd
-      .map { $0 ? .green : .red }
-      .drive(self.passwordTextField.rx.backgroundColor)
+
+    viewModel.outputs.passwordState
+      .map(backgroundColor(for:))
+      .drive(passwordTextField.rx.backgroundColor)
       .disposed(by: disposeBag)
   }
 }

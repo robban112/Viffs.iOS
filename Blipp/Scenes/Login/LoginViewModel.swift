@@ -21,9 +21,8 @@ protocol LoginViewModelInputs {
 }
 
 protocol LoginViewModelOutputs {
-  var correctEmail: Driver<Bool> { get }
-  var correctPassword: Driver<Bool> { get }
   var loginResult: Observable<Result<User, FirebaseError>> { get }
+  var loginButtonEnabled: Driver<Bool> { get }
 }
 
 protocol LoginViewModelType: NavigationViewModelType {
@@ -41,9 +40,8 @@ struct LoginViewModel: LoginViewModelType
   let login = PublishSubject<()>()
   
   // outputs
-  let correctEmail: Driver<Bool>
-  var correctPassword: Driver<Bool>
   let loginResult: Observable<Result<User, FirebaseError>>
+  let loginButtonEnabled: Driver<Bool>
   
   // navigation
   let navigate: Observable<Void>
@@ -53,17 +51,7 @@ struct LoginViewModel: LoginViewModelType
   }
   
   init(coordinator: SceneCoordinator) {
-    correctEmail = emailString
-      .asDriver(onErrorJustReturn: "")
-      .map(get(\.isValidEmail))
-      .distinctUntilChanged()
-    
-    correctPassword = passwordString
-      .asDriver(onErrorJustReturn: "")
-      .map(get(\.isValidPassword))
-      .distinctUntilChanged()
-    
-    let credentials: Observable<(String,String)> = Observable
+    let credentials = Observable
       .combineLatest(emailString, passwordString)
     
     loginResult = login.withLatestFrom(credentials)
@@ -73,6 +61,13 @@ struct LoginViewModel: LoginViewModelType
           { $0.catchErrorJustReturn(.failure(.logInError("Unexpected login error"))) }
         )
       )
+    
+    let emptyEmail = emailString.map(get(\.isEmpty))
+    let emptyPwd = passwordString.map(get(\.isEmpty))
+    loginButtonEnabled = Observable
+      .combineLatest(emptyEmail, emptyPwd) { !$0 && !$1 }
+      .distinctUntilChanged()
+      .asDriver(onErrorJustReturn: false)
 
     navigate = registerUser.flatMapLatest {
       coordinator.transition(to: Scene.registerUser(RegisterUserViewModel()))
