@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 
 var Current = Environment()
 

@@ -8,7 +8,7 @@
 
 import Foundation
 import RxSwift
-import Firebase
+import FirebaseAuth
 import Result
 
 enum FirebaseError: Error {
@@ -19,11 +19,11 @@ extension Reactive where Base: Auth {
   // Sign in with a given username and password
   func signIn(withEmail email: String, password: String) -> Single<Result<User, FirebaseError>> {
     return Single.create(subscribe: { single -> Disposable in
-      Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-        if let user = user {
+      Auth.auth().signIn(withEmail: email, password: password, completion: { (userData, error) in
+        if let user = userData?.user {
           single(.success(.success(user)))
         } else if let err = error {
-          single(.success(Result.failure(.logInError(String(describing: err)))))
+          single(.success(.failure(.logInError(String(describing: err)))))
         }
       })
       return Disposables.create()

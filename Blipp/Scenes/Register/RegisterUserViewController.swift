@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseStorage
 import FirebaseDatabase
 import RxSwift
 
@@ -33,11 +34,11 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
             return
         }
         if !email.isEmpty && !password.isEmpty {
-            Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            Auth.auth().createUser(withEmail: email, password: password) { (userData, error) in
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
-                    if let user = user {
+                    if let user = userData?.user {
                         print("Successfully created user!")
                         self.ref.child("users").child(user.uid).setValue(["username": user.email])
                     }

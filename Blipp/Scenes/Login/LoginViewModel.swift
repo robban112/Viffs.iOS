@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Result
-import Firebase
+import FirebaseAuth
 import Overture
 
 protocol LoginViewModelInputs {
