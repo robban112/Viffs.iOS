@@ -67,12 +67,13 @@ struct LoginViewModel: LoginViewModelType
       .combineLatest(emailString, passwordString)
     
     loginResult = login.withLatestFrom(credentials)
-      .flatMapLatest { t -> Observable<Result<User, FirebaseError>> in
-        Auth.auth().rx.signIn(withEmail: t.0, password: t.1)
-          .asObservable()
-          .catchErrorJustReturn(.failure(.logInError("Unexpected login error")))
-      }
-    
+      .flatMapLatest(
+        pipe(
+          Auth.auth().rx.signIn(withEmail:password:),
+          { $0.catchErrorJustReturn(.failure(.logInError("Unexpected login error"))) }
+        )
+      )
+
     navigate = registerUser.flatMapLatest {
       coordinator.transition(to: Scene.registerUser(RegisterUserViewModel()))
     }
