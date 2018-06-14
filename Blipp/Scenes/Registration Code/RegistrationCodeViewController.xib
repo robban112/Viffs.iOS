@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationCodeViewController" customModule="Blipp" customModuleProvider="target">
+            <connections>
+                <outlet property="registrationCodeTextField" destination="wYQ-tW-sv8" id="fg3-Ta-9en"/>
+                <outlet property="view" destination="iN0-l3-epB" id="xNR-ub-7T3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Green Circle Gradient Android Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="zdD-MZ-iUB">
+                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UGR-uM-8Qv">
+                    <rect key="frame" x="40" y="214" width="295" height="156"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the given 8-digit Blipp-registration code" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kb-T3-CGy">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="41"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7zy-ig-MTH">
+                            <rect key="frame" x="0.0" y="56" width="295" height="100"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registration code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-tW-sv8">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-C0-Xjv">
+                                    <rect key="frame" x="0.0" y="35" width="295" height="30"/>
+                                    <color key="backgroundColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Continue">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONt-cV-JUK">
+                                    <rect key="frame" x="0.0" y="70" width="295" height="30"/>
+                                    <color key="backgroundColor" red="0.1856553819" green="0.7766113281" blue="0.034233940970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Scan card">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="scanCardButtonPressed:" destination="-1" eventType="touchUpInside" id="tAu-kr-BXx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="zdD-MZ-iUB" secondAttribute="trailing" id="5zK-ds-thc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UGR-uM-8Qv" secondAttribute="trailing" constant="40" id="Aqe-V9-hkb"/>
+                <constraint firstItem="UGR-uM-8Qv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Myz-h3-iit"/>
+                <constraint firstItem="zdD-MZ-iUB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OVt-yd-VuQ"/>
+                <constraint firstItem="zdD-MZ-iUB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OYz-UE-Kau"/>
+                <constraint firstItem="zdD-MZ-iUB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Rip-4c-MRO"/>
+                <constraint firstItem="UGR-uM-8Qv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="150" id="kMo-MB-Ayk"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="62.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Blue Green Circle Gradient Android Wallpaper" width="1080" height="1920"/>
+    </resources>
+</document>
