@@ -12,14 +12,7 @@ import FirebaseAuth
 var Current = Environment()
 
 struct Environment {
-  let apiService: APIService
-  let currentUser: User?
-  
-  init(
-    apiService: APIService = APIService.live,
-    currentUser: User? = nil
-    ) {
-    self.apiService = apiService
-    self.currentUser = currentUser
-  }
+  private(set) var apiService: APIService = .live
+  private(set) var auth: Auth = Auth()
+  private(set) var currentUser: User? = nil
 }

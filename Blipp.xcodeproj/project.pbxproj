@@ -34,6 +34,7 @@
 		FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */; };
 		FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */; };
 		FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
+		FF1C771420D3DD37009F357B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
 		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
@@ -55,7 +56,6 @@
 		FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
 		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
 		FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */; };
-		FFA681B220C49BD400FE29DA /* RxAuthExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */; };
 		FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */; };
 		FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */; };
 		FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0320CBE1700010FBC4 /* Mocks.swift */; };
@@ -105,6 +105,7 @@
 		FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewController.swift; sourceTree = "<group>"; };
 		FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		FFA681A920C0236000FE29DA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FFA681AC20C03BB200FE29DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIViewExtensions.swift; sourceTree = "<group>"; };
-		FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAuthExtensions.swift; sourceTree = "<group>"; };
 		FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewModel.swift; sourceTree = "<group>"; };
 		FFD95B0320CBE1700010FBC4 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
@@ -399,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */,
-				FFA681B120C49BD400FE29DA /* RxAuthExtensions.swift */,
 			);
 			path = RxExtensions;
 			sourceTree = "<group>";
@@ -408,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */,
+				FF1C771320D3DD37009F357B /* Auth.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -610,12 +610,12 @@
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
+				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
 				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
-				FFA681B220C49BD400FE29DA /* RxAuthExtensions.swift in Sources */,
 				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
 				FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */,
 				FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */,

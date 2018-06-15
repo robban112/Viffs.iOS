@@ -9,8 +9,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import FirebaseDatabase
-import FirebaseAuth
 import Overture
 
 protocol RegisterUserViewModelInputs {
@@ -51,9 +49,6 @@ struct RegisterUserViewModel: RegisterUserViewModelType
                             , RegisterUserViewModelInputs
 , RegisterUserViewModelOutputs {
   
-  // database
-  let database: DatabaseReference = Database.database().reference()
-  
   // inputs
   let emailString = BehaviorSubject<String>(value: "")
   let passwordString = BehaviorSubject<String>(value: "")
@@ -83,13 +78,8 @@ struct RegisterUserViewModel: RegisterUserViewModelType
       .combineLatest(emailString, passwordString)
     
     navigate = createAccount.withLatestFrom(credentials)
-      .flatMapLatest(
-        pipe(
-          Auth.auth().rx.createUser(withEmail:password:),
-          { $0.map { _ in }.catchErrorJustReturn(()) }
-        )
-      )
-      .flatMapLatest { coordinator.pop(animated: true) }
+      .flatMapLatest(Current.auth.createUser)
+      .flatMapLatest { _ in coordinator.pop(animated: true) }
   }
   
   var inputs: RegisterUserViewModelInputs { return self }

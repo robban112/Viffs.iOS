@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Result
-import FirebaseAuth
 import Overture
 
 protocol LoginViewModelInputs {
@@ -55,12 +54,7 @@ struct LoginViewModel: LoginViewModelType
       .combineLatest(emailString, passwordString)
     
     loginResult = login.withLatestFrom(credentials)
-      .flatMapLatest(
-        pipe(
-          Auth.auth().rx.signIn(withEmail:password:),
-          { $0.catchErrorJustReturn(.failure(.logInError("Unexpected login error"))) }
-        )
-      )
+      .flatMapLatest(Current.auth.signIn)
     
     let emptyEmail = emailString.map(get(\.isEmpty))
     let emptyPwd = passwordString.map(get(\.isEmpty))
