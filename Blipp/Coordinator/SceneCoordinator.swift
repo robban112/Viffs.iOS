@@ -13,7 +13,6 @@ import RxCocoa
 /**
  Scene coordinator, manage scene navigation and presentation.
  */
-
 class SceneCoordinator: NSObject, SceneCoordinatorType {
   
   static var shared: SceneCoordinator!
@@ -33,28 +32,17 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
     currentViewController = window.rootViewController ?? UIViewController()
   }
   
-  static func actualViewController(for viewController: UIViewController) -> UIViewController {
-    switch viewController {
-    case let navVC as UINavigationController:
-      return navVC.viewControllers.first ?? viewController
-    case let tabVC as UITabBarController:
-      return tabVC.selectedViewController ?? viewController
-    default:
-      return viewController
-    }
-  }
-  
   @discardableResult
   func transition(to scene: TargetScene) -> Observable<Void> {
     let subject = PublishSubject<Void>()
     
     switch scene.transition {
     case let .root(viewController):
-      currentViewController = SceneCoordinator.actualViewController(for: viewController)
+      currentViewController = displayedViewController(within: viewController)
       window.rootViewController = viewController
       subject.onCompleted()
     case let .push(viewController):
-      guard let navigationController = (currentViewController as? UINavigationController) ?? currentViewController.navigationController else {
+      guard let navigationController = currentViewController.navigationController else {
         fatalError("Can't push a view controller without a current navigation controller")
       }
       
@@ -63,13 +51,13 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         .map { _ in }
         .bind(to: subject)
       
-      navigationController.pushViewController(SceneCoordinator.actualViewController(for: viewController), animated: true)
-      currentViewController = SceneCoordinator.actualViewController(for: viewController)
+      navigationController.pushViewController(displayedViewController(within: viewController), animated: true)
+      currentViewController = displayedViewController(within: viewController)
     case let .present(viewController):
       currentViewController.present(viewController, animated: true) {
         subject.onCompleted()
       }
-      currentViewController = SceneCoordinator.actualViewController(for: viewController)
+      currentViewController = displayedViewController(within: viewController)
     case let .alert(viewController):
       currentViewController.present(viewController, animated: true) {
         subject.onCompleted()
@@ -85,7 +73,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
     let subject = PublishSubject<Void>()
     if let presentingViewController = currentViewController.presentingViewController {
       currentViewController.dismiss(animated: animated) {
-        self.currentViewController = SceneCoordinator.actualViewController(for: presentingViewController)
+        self.currentViewController = displayedViewController(within: presentingViewController)
         subject.onCompleted()
       }
     } else if let navigationController = currentViewController.navigationController {
@@ -101,7 +89,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         fatalError("can't navigate back from \(currentViewController)")
       }
       
-      currentViewController = SceneCoordinator.actualViewController(for: navigationController.viewControllers.last!)
+      currentViewController = displayedViewController(within: navigationController.viewControllers.last!)
     } else {
       fatalError("Not a modal, no navigation controller: can't navigate back from \(currentViewController)")
     }
@@ -115,7 +103,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
 
 extension SceneCoordinator: UINavigationControllerDelegate {
   func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-    currentViewController = SceneCoordinator.actualViewController(for: viewController)
+    currentViewController = displayedViewController(within: viewController)
   }
 }
 
@@ -123,6 +111,20 @@ extension SceneCoordinator: UINavigationControllerDelegate {
 
 extension SceneCoordinator: UITabBarControllerDelegate {
   func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController)  {
-    currentViewController = SceneCoordinator.actualViewController(for: viewController)
+    currentViewController = displayedViewController(within: viewController)
+  }
+}
+
+// MARK: - Extensions
+
+/// Get the view controller currently in view within the view controller
+fileprivate func displayedViewController(within viewController: UIViewController) -> UIViewController {
+  switch viewController {
+  case let navVC as UINavigationController:
+    return navVC.viewControllers.first.flatMap(displayedViewController(within:)) ?? viewController
+  case let tabVC as UITabBarController:
+    return tabVC.selectedViewController.flatMap(displayedViewController(within:)) ?? viewController
+  default:
+    return viewController
   }
 }
