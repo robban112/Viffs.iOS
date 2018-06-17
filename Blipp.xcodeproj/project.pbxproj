@@ -35,9 +35,11 @@
 		FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */; };
 		FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
 		FF1C771420D3DD37009F357B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
+		FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33E00020D6AFE700FF8E5C /* Overture additions.swift */; };
 		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
+		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
 		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
 		FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04620CD1EAA00472FF7 /* LoginViewController.xib */; };
@@ -52,6 +54,8 @@
 		FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05920CE772300472FF7 /* NavigationViewController.swift */; };
 		FF68D05C20CE886500472FF7 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05B20CE886500472FF7 /* RegisterUserViewModel.swift */; };
 		FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */; };
+		FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */; };
+		FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
 		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
 		FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
 		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
@@ -106,9 +110,11 @@
 		FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModelTests.swift; sourceTree = "<group>"; };
 		FF68D03B20CD169100472FF7 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
 		FF68D04620CD1EAA00472FF7 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		FF68D05920CE772300472FF7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		FF68D05B20CE886500472FF7 /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterUserViewController.xib; sourceTree = "<group>"; };
+		FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+MarbleTests.swift"; sourceTree = "<group>"; };
+		FF92D78B20D5D405008B0C52 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		FFA6819D20BF063700FE29DA /* BlippTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlippTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
 		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -373,12 +381,23 @@
 			path = "Nib utils";
 			sourceTree = "<group>";
 		};
+		FF92D78A20D593EC008B0C52 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */,
+			);
+			path = TestUtils;
+			sourceTree = "<group>";
+		};
 		FFA6819E20BF063700FE29DA /* BlippTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF92D78A20D593EC008B0C52 /* TestUtils */,
 				FFA6819F20BF063700FE29DA /* BlippTests.swift */,
 				FFA681A120BF063700FE29DA /* Info.plist */,
 				FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */,
+				FF92D78B20D5D405008B0C52 /* TestCase.swift */,
+				FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */,
 			);
 			path = BlippTests;
 			sourceTree = "<group>";
@@ -391,6 +410,7 @@
 				FFA681AC20C03BB200FE29DA /* LoginValidation.swift */,
 				FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */,
 				FF68D05920CE772300472FF7 /* NavigationViewController.swift */,
+				FF33E00020D6AFE700FF8E5C /* Overture additions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -534,7 +554,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/Overture-framework/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -635,6 +655,7 @@
 				FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */,
 				EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */,
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
+				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,
 				FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,7 +665,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */,
+				FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */,
+				FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */,
 				FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */,
+				FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

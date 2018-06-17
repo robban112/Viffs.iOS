@@ -18,12 +18,17 @@ enum APIServiceError: Error {
 struct APIService {
   // OBS: temporary solution
   var image: (Receipt) -> Single<Result<UIImage?, APIServiceError>>
+  
+  var receipts: () -> Single<[Receipt]>
+  
+  // OBS: this is if we want to handle this logic at the server side
+  var isValidPassword: (String) -> Single<Bool>
 }
 
 func image(for receipt: Receipt) -> Single<Result<UIImage?, APIServiceError>> {
   return Single.create(subscribe: { single -> Disposable in
     guard let url = URL.init(string: receipt.url) else { return Disposables.create() }
-    URLSession.shared.dataTask(with: url) { data, response, error in
+    let task = URLSession.shared.dataTask(with: url) { data, response, error in
       guard
         let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
         let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
@@ -33,13 +38,29 @@ func image(for receipt: Receipt) -> Single<Result<UIImage?, APIServiceError>> {
           return
       }
       single(.success(.success(image)))
-      }.resume()
-    return Disposables.create()
+    }
+    task.resume()
+    return Disposables.create {
+      task.cancel()
+    }
   })
+}
+
+func getReceipts() -> Single<[Receipt]> {
+  // OBS: Should use server when it's up, now just mock data
+  return Single.just([
+    Receipt(name: "Pressbyrån", total: "30", url: ""),
+    Receipt(name: "ICA", total: "200", url: "http://static.feber.se/article_images/19/53/44/195344_980.jpg")
+  ])
+}
+
+func isValidPwd(password: String) -> Single<Bool> {
+  // Dummy implementation right now because this functionality does not exist in the server
+  return .just(password.count > 4)
 }
 
 extension APIService {
   static var live: APIService {
-    return APIService(image: image(for:))
+    return APIService(image: image(for:), receipts: getReceipts, isValidPassword: isValidPwd)
   }
 }

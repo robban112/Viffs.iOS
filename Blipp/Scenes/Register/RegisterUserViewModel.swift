@@ -20,6 +20,7 @@ protocol RegisterUserViewModelInputs {
 protocol RegisterUserViewModelOutputs {
   var emailState: Driver<InputState> { get }
   var passwordState: Driver<InputState> { get }
+  var registerButtonEnabled: Driver<Bool> { get }
 }
 
 protocol RegisterUserViewModelType: NavigationViewModelType {
@@ -47,7 +48,7 @@ func inputState(isWellFormed: @escaping (String) -> Bool)
 
 struct RegisterUserViewModel: RegisterUserViewModelType
                             , RegisterUserViewModelInputs
-, RegisterUserViewModelOutputs {
+                            , RegisterUserViewModelOutputs {
   
   // inputs
   let emailString = BehaviorSubject<String>(value: "")
@@ -57,6 +58,7 @@ struct RegisterUserViewModel: RegisterUserViewModelType
   // outputs
   let emailState: Driver<InputState>
   let passwordState: Driver<InputState>
+  let registerButtonEnabled: Driver<Bool>
   
   // navigation
   let navigate: Observable<Void>
@@ -71,8 +73,20 @@ struct RegisterUserViewModel: RegisterUserViewModelType
       .asDriver(onErrorJustReturn: .unInitiated)
     
     passwordState = passwordString
-      .map(inputState(isWellFormed: get(\.isValidPassword)))
+      .flatMapLatest { pwd in
+        pwd.isEmpty
+          ? Observable.just(.unInitiated)
+          : Current.apiService.isValidPassword(pwd)
+              .map { $0 ? .wellFormed : .illFormed }
+              .asObservable()
+      }
       .asDriver(onErrorJustReturn: .unInitiated)
+    
+    let wellformedEmail = emailState.map { $0 == .wellFormed }
+    let wellformedPassword = passwordState.map { $0 == .wellFormed }
+    registerButtonEnabled = Driver
+      .combineLatest(wellformedEmail, wellformedPassword) { $0 && $1 }
+      .distinctUntilChanged()
     
     let credentials: Observable<(String,String)> = Observable
       .combineLatest(emailString, passwordString)

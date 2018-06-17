@@ -34,9 +34,8 @@ struct ReceiptViewModel: ReceiptViewModelType, ReceiptViewModelInputs, ReceiptVi
   let navigate: Observable<Void>
   
   init(coordinator: SceneCoordinator = SceneCoordinator.shared) {
-    receiptsContents = Driver
-      .just([ Receipt(name: "Pressbyrån", total: "30", url: "")
-            , Receipt(name: "ICA", total: "200", url: "http://static.feber.se/article_images/19/53/44/195344_980.jpg") ])
+    receiptsContents = Current.apiService.receipts()
+      .asDriver(onErrorJustReturn: [])
       .map { receipts in
         [SectionModel(model: 0, items: receipts)]
       }

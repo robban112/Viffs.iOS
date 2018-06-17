@@ -25,7 +25,11 @@ extension Environment {
 // APISerive mock
 extension APIService {
   static var mock: APIService {
-    return APIService(image: { _ in .just(.success(.init())) })
+    return APIService(
+      image: { _ in .just(.success(.init())) },
+      receipts: { .just([]) },
+      isValidPassword: { _ in .just(true) }
+    )
   }
 }
 
