@@ -1,5 +1,5 @@
 //
-//  ReceiptsRootViewModel.swift
+//  HomeViewModel.swift
 //  Blipp
 //
 //  Created by Kristofer P on 2018-06-26.
@@ -12,21 +12,21 @@ import RxCocoa
 import Result
 import Overture
 
-protocol ReceiptsRootViewModelInputs {
+protocol HomeViewModelInputs {
     var receipts: PublishSubject<Void> { get }
-    var sorted: PublishSubject<Void> { get }
+    var stores: PublishSubject<Void> { get }
 }
 
-protocol ReceiptsRootViewModelType: NavigationViewModelType {
-    var inputs: ReceiptsRootViewModelInputs { get }
+protocol HomeViewModelType: NavigationViewModelType {
+    var inputs: HomeViewModelInputs { get }
 }
 
-struct ReceiptsRootViewModel: ReceiptsRootViewModelType
-, ReceiptsRootViewModelInputs {
+struct HomeViewModel: HomeViewModelType
+, HomeViewModelInputs {
     
     // inputs
     let receipts = PublishSubject<Void>()
-    let sorted = PublishSubject<Void>()
+    let stores = PublishSubject<Void>()
     
     // navigation
     let navigate: Observable<Void>
@@ -41,5 +41,5 @@ struct ReceiptsRootViewModel: ReceiptsRootViewModelType
         }
     }
     
-    var inputs: ReceiptsRootViewModelInputs { return self }
+    var inputs: HomeViewModelInputs { return self }
 }

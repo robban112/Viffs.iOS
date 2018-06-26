@@ -13,6 +13,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
+                <outlet property="receiptsButton" destination="xKk-ij-oGs" id="DSo-1P-aDm"/>
+                <outlet property="storesButton" destination="HzS-ux-X3J" id="bN8-R3-usr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="MV5-sT-Knx"/>
             </connections>
         </placeholder>
