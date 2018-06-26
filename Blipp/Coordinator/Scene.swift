@@ -61,7 +61,8 @@ func createBlippTabBarController() -> UITabBarController {
   let homeVC = HomeViewController.instantiateFromNib()
   homeVC.tabBarItem = UITabBarItem(title: "Hem", image: #imageLiteral(resourceName: "home25x25"), tag: 0)
   
-  let receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
+  var receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
+  receiptsRootVC.bind(to: ReceiptsRootViewModel())
   receiptsRootVC.title = "Kvitton"
   let receiptsNav = UINavigationController(rootViewController: receiptsRootVC)
   receiptsNav.tabBarItem = UITabBarItem(title: "Kvitton", image: #imageLiteral(resourceName: "receipt25x25"), tag: 1)

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceiptsRootViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
+                <outlet property="receiptsButton" destination="DpJ-8J-Wo0" id="Z1A-Sk-oNA"/>
+                <outlet property="sortedButton" destination="m1E-Xr-3U1" id="Mv1-Io-tgJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="H7a-tR-lz9"/>
             </connections>
         </placeholder>

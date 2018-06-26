@@ -7,5 +7,31 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import Overture
 
-class ReceiptsRootViewController: UIViewController { }
+class ReceiptsRootViewController: UIViewController, ViewModelBindable {
+    let disposeBag = DisposeBag()
+    // will be set by Coordinator
+    var viewModel: ReceiptsRootViewModelType!
+    
+    @IBOutlet weak var receiptsButton: UIButton!
+    @IBOutlet weak var sortedButton: UIButton!
+    
+    func bindViewModel() {
+        bindUIToViewModel()
+    }
+    
+    func bindUIToViewModel() {
+        
+        receiptsButton.rx.tap
+            .bind(to: viewModel.inputs.receipts)
+            .disposed(by: disposeBag)
+        
+        sortedButton.rx.tap
+            .bind(to: viewModel.inputs.sorted)
+            .disposed(by: disposeBag)
+    }
+}
+
