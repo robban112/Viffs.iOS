@@ -14,6 +14,7 @@ protocol TargetScene {
 
 enum Scene {
   case blipp
+  case login(LoginViewModel)
   case receiptDetail(ReceiptDetailViewModel)
   case registerUser(RegisterUserViewModel)
   case registerCard
@@ -27,6 +28,10 @@ extension Scene: TargetScene {
     case .blipp:
       let blippTabBarController = createBlippTabBarController()
       return .root(blippTabBarController)
+    case let .login(loginViewModel):
+      var loginVC = LoginViewController.instantiateFromNib()
+      loginVC.bind(to: loginViewModel)
+      return .root(loginVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
       receiptDetailVC.bind(to: receiptDetailViewModel)
