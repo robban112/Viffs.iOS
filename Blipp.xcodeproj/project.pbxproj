@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
@@ -79,6 +80,7 @@
 		0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blipp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
+		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			children = (
 				FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */,
 				FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */,
+				5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */,
 			);
 			path = "Receipts Root";
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
+				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,
 				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
 				FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */,
