@@ -28,20 +28,26 @@ struct Auth {
 // MARK: live implementations
 func signIn(withEmail username: String, password: String) -> Single<Result<User, FirebaseError>> {
   return Single.create(subscribe: { single -> Disposable in
-    URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
+    let task = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
       guard
         let responseData = data,
         let users = try? JSONDecoder().decode([User].self, from: responseData),
         let matchingUser = users.first(where: { $0.username == username && $0.password == password }) else {
+          print(String.init(data: data!, encoding: .utf8)!)
+          print(String(describing: try? JSONDecoder().decode([User].self, from: data!)))
           single(.success(.failure(.logInError("Could not log in"))))
           return
       }
       single(.success(.success(matchingUser)))
     }
-    return Disposables.create()
+    task.resume()
+    return Disposables.create {
+      task.cancel()
+    }
   })
 }
 
+// TODO: fix createUser, it doesn't add anything right now for some reason
 func createUser(withEmail username: String, password: String) -> Single<Result<(), FirebaseError>> {
   return Single.create(subscribe: { single in
     let credentials = ["username": username, "password": password]
@@ -51,15 +57,13 @@ func createUser(withEmail username: String, password: String) -> Single<Result<(
       set(\URLRequest.httpBody, jsonCredentials)
     ))
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-      guard
-        let httpURLResponse = response as? HTTPURLResponse,
-        httpURLResponse.statusCode == 200,
-        error == nil else {
-          single(.success(.failure(.logInError(error.map(String.init(describing:)) ?? ""))))
-          return
+      if let error = error {
+        single(.success(.failure(.logInError(String(describing: error)))))
+      } else {
+        single(.success(.success(())))
       }
-      single(.success(.success(())))
     }
+    task.resume()
     return Disposables.create {
       task.cancel()
     }

@@ -11,6 +11,6 @@ import Foundation
 struct User: Decodable {
   let username: String
   let password: String
-  let receipts: [Receipt]
+  let receipts: [Receipt]?
 }
 

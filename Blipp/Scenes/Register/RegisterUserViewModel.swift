@@ -95,7 +95,9 @@ struct RegisterUserViewModel: RegisterUserViewModelType
     
     let navigate1 = createAccount.withLatestFrom(credentials)
       .flatMapLatest(Current.auth.createUser)
-      .flatMapLatest { _ in coordinator.pop(animated: true) }
+      .debug().map { _ in }
+      // TODO: pop is not the right way to do it now
+      //.flatMapLatest { _ in coordinator.pop(animated: true) }
     
     let navigate2 = login.flatMapLatest {
         coordinator.transition(to: Scene.login(LoginViewModel()))
