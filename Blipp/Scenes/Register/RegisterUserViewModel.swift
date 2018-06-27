@@ -15,6 +15,7 @@ protocol RegisterUserViewModelInputs {
   var emailString: BehaviorSubject<String> { get }
   var passwordString: BehaviorSubject<String> { get }
   var createAccount: PublishSubject<Void> { get }
+  var login: PublishSubject<Void> { get }
 }
 
 protocol RegisterUserViewModelOutputs {
@@ -54,6 +55,7 @@ struct RegisterUserViewModel: RegisterUserViewModelType
   let emailString = BehaviorSubject<String>(value: "")
   let passwordString = BehaviorSubject<String>(value: "")
   let createAccount = PublishSubject<Void>()
+  let login = PublishSubject<Void>()
   
   // outputs
   let emailState: Driver<InputState>
@@ -91,9 +93,14 @@ struct RegisterUserViewModel: RegisterUserViewModelType
     let credentials: Observable<(String,String)> = Observable
       .combineLatest(emailString, passwordString)
     
-    navigate = createAccount.withLatestFrom(credentials)
+    let navigate1 = createAccount.withLatestFrom(credentials)
       .flatMapLatest(Current.auth.createUser)
       .flatMapLatest { _ in coordinator.pop(animated: true) }
+    
+    let navigate2 = login.flatMapLatest {
+        coordinator.transition(to: Scene.login(LoginViewModel()))
+    }
+    navigate = Observable.merge(navigate1, navigate2)
   }
   
   var inputs: RegisterUserViewModelInputs { return self }

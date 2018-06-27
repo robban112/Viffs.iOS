@@ -26,6 +26,7 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
   @IBOutlet var emailTextField: UITextField!
   @IBOutlet var passwordTextField: UITextField!
   @IBOutlet var createAccountButton: UIButton!
+  @IBOutlet var loginButton: UIButton!
   
   func bindViewModel() {
     bindUIToViewModel()
@@ -44,6 +45,10 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
     createAccountButton.rx.tap
       .bind(to: viewModel.inputs.createAccount)
       .disposed(by: disposeBag)
+    
+    loginButton.rx.tap
+        .bind(to: viewModel.inputs.login)
+        .disposed(by: disposeBag)
   }
   
   func bindViewModelToUI() {

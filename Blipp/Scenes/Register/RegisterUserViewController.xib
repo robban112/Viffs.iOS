@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="createAccountButton" destination="w5A-oA-B2x" id="LRH-5d-6YI"/>
                 <outlet property="emailTextField" destination="XL9-YV-B0C" id="N6K-z5-KUq"/>
+                <outlet property="loginButton" destination="IlW-t9-fcX" id="ly3-Qn-8Ok"/>
                 <outlet property="passwordTextField" destination="SAF-WO-mcw" id="mhd-bL-37N"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5Vh-Wu-sIA"/>
             </connections>
@@ -53,7 +54,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-oA-B2x">
                                     <rect key="frame" x="0.0" y="70" width="295" height="30"/>
                                     <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Create account">
+                                    <state key="normal" title="Skapa konto">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
@@ -61,6 +62,14 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlW-t9-fcX">
+                    <rect key="frame" x="40" y="532" width="295" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Jag har redan ett konto">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

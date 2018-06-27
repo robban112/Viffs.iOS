@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         let coordinator = SceneCoordinator(window: window!)
         SceneCoordinator.shared = coordinator
-        _ = coordinator.transition(to: Scene.blipp)
+        _ = coordinator.transition(to: Scene.registerUser(RegisterUserViewModel()))
       
         return true
     }
