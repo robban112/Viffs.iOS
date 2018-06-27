@@ -43,7 +43,7 @@ extension Scene: TargetScene {
     case let .registerUser(registerUserViewModel):
       var registerUserVC = RegisterUserViewController.instantiateFromNib()
       registerUserVC.bind(to: registerUserViewModel)
-      return .push(registerUserVC)
+      return .root(registerUserVC)
     case .registerCard:
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
       return .push(registerCardVC)
