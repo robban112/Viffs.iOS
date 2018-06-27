@@ -12,7 +12,7 @@ class ReceiptViewCell: UITableViewCell {
   var receipt: Receipt? = nil {
     didSet {
       self.receiptName?.text = receipt?.name
-      self.receiptTotal?.text = receipt?.total
+      self.receiptTotal?.text = (receipt?.total).map(String.init(describing:))
     }
   }
   

@@ -38,7 +38,7 @@ extension Auth {
   static var mock: Auth {
     return Auth(
       signIn: { _, _ in .just(.success(.mock)) },
-      createUser: { _, _ in .just(.success(.mock)) }
+      createUser: { _, _ in .just(.success(())) }
     )
   }
 }
@@ -46,6 +46,6 @@ extension Auth {
 // User mock
 extension User {
   static var mock: User {
-    return .init(id: "", email: nil)
+    return User.init(username: "", password: "", receipts: [])
   }
 }

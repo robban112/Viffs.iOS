@@ -56,6 +56,8 @@ struct LoginViewModel: LoginViewModelType
     loginResult = login.withLatestFrom(credentials)
       .flatMapLatest(Current.auth.signIn)
     
+    loginResult.subscribe(onNext: { res in print(res) })
+    
     let emptyEmail = emailString.map(get(\.isEmpty))
     let emptyPwd = passwordString.map(get(\.isEmpty))
     loginButtonEnabled = Observable

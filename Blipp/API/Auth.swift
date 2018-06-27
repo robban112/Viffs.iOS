@@ -8,8 +8,6 @@
 
 import Foundation
 import RxSwift
-import FirebaseAuth
-import FirebaseDatabase
 import Result
 import Overture
 
@@ -18,44 +16,52 @@ enum FirebaseError: Error {
   case userCreateError(String)
 }
 
-extension User {
-  init(fbUser: FirebaseAuth.User) {
-    self.id = fbUser.uid
-    self.email = fbUser.email
-  }
-}
+fileprivate let apiURL = URL(string: "https://blipp-6c73b.firebaseio.com/users.json")!
 
 struct Auth {
   /// Sign in with a given username and password
   var signIn: (String, String) -> Single<Result<User, FirebaseError>> = signIn(withEmail:password:)
   /// create a new user
-  var createUser: (String, String) -> Single<Result<User, FirebaseError>> = createUser(withEmail:password:)
+  var createUser: (String, String) -> Single<Result<(), FirebaseError>> = createUser(withEmail:password:)
 }
 
-// MARK: Live implementations
-func signIn(withEmail email: String, password: String) -> Single<Result<User, FirebaseError>> {
+// MARK: live implementations
+func signIn(withEmail username: String, password: String) -> Single<Result<User, FirebaseError>> {
   return Single.create(subscribe: { single -> Disposable in
-    FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password) { (userData, error) in
-      if let user = userData?.user {
-        single(.success(.success(.init(fbUser: user))))
-      } else if let err = error {
-        single(.success(.failure(.logInError(String(describing: err)))))
+    URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
+      guard
+        let responseData = data,
+        let users = try? JSONDecoder().decode([User].self, from: responseData),
+        let matchingUser = users.first(where: { $0.username == username && $0.password == password }) else {
+          single(.success(.failure(.logInError("Could not log in"))))
+          return
       }
+      single(.success(.success(matchingUser)))
     }
     return Disposables.create()
   })
 }
 
-func createUser(withEmail email: String, password: String) -> Single<Result<User, FirebaseError>> {
+func createUser(withEmail username: String, password: String) -> Single<Result<(), FirebaseError>> {
   return Single.create(subscribe: { single in
-    FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password) { (userData, error) in
-      if let user = userData?.user {
-        Database.database().reference().child("users").child(user.uid).setValue(["username": user.email])
-        single(.success(.success(.init(fbUser: user))))
-      } else if let err = error {
-        single(.success(.failure(.userCreateError(String(describing: err)))))
+    let credentials = ["username": username, "password": password]
+    let jsonCredentials = try! JSONSerialization.data(withJSONObject: credentials, options: [])
+    let request = with(URLRequest(url: apiURL), concat(
+      set(\URLRequest.httpMethod, "Path"),
+      set(\URLRequest.httpBody, jsonCredentials)
+    ))
+    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+      guard
+        let httpURLResponse = response as? HTTPURLResponse,
+        httpURLResponse.statusCode == 200,
+        error == nil else {
+          single(.success(.failure(.logInError(error.map(String.init(describing:)) ?? ""))))
+          return
       }
+      single(.success(.success(())))
     }
-    return Disposables.create()
+    return Disposables.create {
+      task.cancel()
+    }
   })
 }

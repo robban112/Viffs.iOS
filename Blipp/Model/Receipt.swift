@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct Receipt {
-    let name: String
-    let total: String
-    let url: String
+struct Receipt: Decodable {
+  let currency: String
+  let name: String
+  let total: Double
+  let url: String
 }
