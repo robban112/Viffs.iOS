@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
     
     @IBOutlet weak var receiptsButton: UIButton!
     @IBOutlet weak var storesButton: UIButton!
+    @IBOutlet weak var addCard: UIImageView!
     
     func bindViewModel() {
         bindUIToViewModel()

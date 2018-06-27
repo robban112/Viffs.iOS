@@ -18,6 +18,8 @@ class ReceiptsRootViewController: UIViewController, ViewModelBindable {
     
     @IBOutlet weak var receiptsButton: UIButton!
     @IBOutlet weak var sortedButton: UIButton!
+    @IBOutlet weak var scanButton: UIButton!
+    
     
     func bindViewModel() {
         bindUIToViewModel()
@@ -31,6 +33,10 @@ class ReceiptsRootViewController: UIViewController, ViewModelBindable {
         
         sortedButton.rx.tap
             .bind(to: viewModel.inputs.sorted)
+            .disposed(by: disposeBag)
+        
+        scanButton.rx.tap
+            .bind(to: viewModel.inputs.scan) 
             .disposed(by: disposeBag)
     }
 }

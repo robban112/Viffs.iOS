@@ -20,6 +20,8 @@ enum Scene {
   case registerCard
   case registrationCode
   case receipt(ReceiptViewModel)
+  case receiptsRoot
+  case stores
 }
 
 extension Scene: TargetScene {
@@ -51,6 +53,13 @@ extension Scene: TargetScene {
       receiptVC.title = "Alla kvitton"
       receiptVC.bind(to: receiptViewModel)
       return .push(receiptVC)
+    case .receiptsRoot:
+      let receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
+      return .push(receiptsRootVC)
+    case .stores:
+      let storesVC = StoresViewController.instantiateFromNib()
+      storesVC.title = "Butiker"
+      return .push(storesVC)
     }
   }
 }
@@ -58,8 +67,11 @@ extension Scene: TargetScene {
 func createBlippTabBarController() -> UITabBarController {
   let blippTabBarController = UITabBarController()
   
-  let homeVC = HomeViewController.instantiateFromNib()
-  homeVC.tabBarItem = UITabBarItem(title: "Hem", image: #imageLiteral(resourceName: "home25x25"), tag: 0)
+  var homeVC = HomeViewController.instantiateFromNib()
+  homeVC.bind(to: HomeViewModel())
+  homeVC.title = "Hem"
+  let homeNav = UINavigationController(rootViewController: homeVC)
+  homeNav.tabBarItem = UITabBarItem(title: "Hem", image: #imageLiteral(resourceName: "home25x25"), tag: 0)
   
   var receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
   receiptsRootVC.bind(to: ReceiptsRootViewModel())
@@ -77,7 +89,7 @@ func createBlippTabBarController() -> UITabBarController {
   let moreNav = UINavigationController(rootViewController: moreVC)
   moreVC.tabBarItem = UITabBarItem(title: "Mer", image: nil, tag: 3)
   
-  blippTabBarController.viewControllers = [ homeVC, receiptsNav, storesNav, moreNav ]
+  blippTabBarController.viewControllers = [ homeNav, receiptsNav, storesNav, moreNav ]
   
   return blippTabBarController
 }
