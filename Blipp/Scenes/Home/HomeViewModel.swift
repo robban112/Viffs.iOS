@@ -39,7 +39,7 @@ struct HomeViewModel: HomeViewModelType
     
     init(coordinator: SceneCoordinator) {
         let navigate1 = receipts.flatMapLatest {
-            coordinator.transition(to: Scene.receipt(ReceiptViewModel()))
+            coordinator.transition(to: Scene.receipts(ReceiptViewModel()))
         }
         let navigate2 = stores.flatMapLatest {
             coordinator.transition(to: Scene.stores)

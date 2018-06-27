@@ -19,9 +19,11 @@ enum Scene {
   case registerUser(RegisterUserViewModel)
   case registerCard
   case registrationCode
-  case receipt(ReceiptViewModel)
+  case receipts(ReceiptViewModel)
+  case receiptsSorted(ReceiptViewModel)
   case receiptsRoot
   case stores
+  case scanReceipt
 }
 
 extension Scene: TargetScene {
@@ -48,11 +50,16 @@ extension Scene: TargetScene {
     case .registrationCode:
       let registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
       return .push(registrationCodeVC)
-    case let .receipt(receiptViewModel):
+    case let .receipts(receiptViewModel):
       var receiptVC = ReceiptViewController.instantiateFromNib()
       receiptVC.title = "Alla kvitton"
       receiptVC.bind(to: receiptViewModel)
       return .push(receiptVC)
+    case let .receiptsSorted(receiptViewModel):
+        var receiptVC = ReceiptViewController.instantiateFromNib()
+        receiptVC.title = "Sorterade kvitton"
+        receiptVC.bind(to: receiptViewModel)
+        return .push(receiptVC)
     case .receiptsRoot:
       let receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
       return .push(receiptsRootVC)
@@ -60,6 +67,10 @@ extension Scene: TargetScene {
       let storesVC = StoresViewController.instantiateFromNib()
       storesVC.title = "Butiker"
       return .push(storesVC)
+    case .scanReceipt:
+      let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
+      scanReceiptVC.title = "Scanna kvitto"
+      return .push(scanReceiptVC)
     }
   }
 }

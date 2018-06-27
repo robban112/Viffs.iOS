@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
 		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
+		5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
+		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
@@ -83,6 +85,8 @@
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanReceiptViewController.xib; sourceTree = "<group>"; };
+		5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReceiptViewController.swift; sourceTree = "<group>"; };
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +190,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5CDFDBD820E3D4C300BA000F /* Scan Card */ = {
+			isa = PBXGroup;
+			children = (
+				5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */,
+				5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */,
+			);
+			path = "Scan Card";
+			sourceTree = "<group>";
+		};
 		EE826E8620AADA4A006A0390 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5CDFDBD820E3D4C300BA000F /* Scan Card */,
 				FF07F64920D26E4C00B011D8 /* Home */,
 				FF07F63E20D26B2500B011D8 /* Stores */,
 				FF07F63D20D26B1F00B011D8 /* Second */,
@@ -531,6 +545,7 @@
 				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
 				FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */,
 				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
+				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
 				FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */,
 				EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */,
 				FF07F64220D26B4A00B011D8 /* SecondViewController.xib in Resources */,
@@ -651,6 +666,7 @@
 				5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */,
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
+				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,

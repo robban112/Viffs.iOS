@@ -40,15 +40,15 @@ struct ReceiptsRootViewModel: ReceiptsRootViewModelType
     init(coordinator: SceneCoordinator) {
         
         let navigate1 = receipts.flatMapLatest {
-            coordinator.transition(to: Scene.receipt(ReceiptViewModel()))
+            coordinator.transition(to: Scene.receipts(ReceiptViewModel()))
         }
         //currently transitions to same as above
         let navigate2 = sorted.flatMapLatest {
-            coordinator.transition(to: Scene.receipt(ReceiptViewModel()))
+            coordinator.transition(to: Scene.receiptsSorted(ReceiptViewModel()))
         }
         //currently transitions to same as above
         let navigate3 = scan.flatMapLatest {
-            coordinator.transition(to: Scene.receipt(ReceiptViewModel()))
+            coordinator.transition(to: Scene.scanReceipt)
         }
         navigate = Observable.merge(navigate1, navigate2, navigate3)
     }
