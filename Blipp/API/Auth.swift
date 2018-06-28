@@ -47,13 +47,13 @@ func signIn(withEmail username: String, password: String) -> Single<Result<User,
   })
 }
 
-// TODO: fix createUser, it doesn't add anything right now for some reason
+// TODO: fix createUser, adds username and password as two separate entries currently, need to nest into an array
 func createUser(withEmail username: String, password: String) -> Single<Result<(), FirebaseError>> {
   return Single.create(subscribe: { single in
     let credentials = ["username": username, "password": password]
     let jsonCredentials = try! JSONSerialization.data(withJSONObject: credentials, options: [])
     let request = with(URLRequest(url: apiURL), concat(
-      set(\URLRequest.httpMethod, "Path"),
+      set(\URLRequest.httpMethod, "PATCH"),
       set(\URLRequest.httpBody, jsonCredentials)
     ))
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
