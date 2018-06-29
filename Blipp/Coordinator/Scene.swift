@@ -39,6 +39,7 @@ extension Scene: TargetScene {
       return .root(loginVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
+      receiptDetailVC.title = "Detaljerad info"
       receiptDetailVC.bind(to: receiptDetailViewModel)
       return .push(receiptDetailVC)
     case let .registerUser(registerUserViewModel):
