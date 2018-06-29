@@ -50,7 +50,7 @@ func getReceipts() -> Single<[Receipt]> {
   // OBS: Should use server when it's up, now just mock data
   return Single.just([
     Receipt(currency: "SEK", name: "Pressbyrån", total: 65, url: "http://photos1.blogger.com/blogger/7644/1950/1600/guns.0.jpg"),
-    Receipt(currency: "SEK", name: "Pressbyrån", total: 23, url: "http://cdn1.cdnme.se/cdn/6-2/860557/images/2012/skarmavbild-2012-03-28-kl-20-16-11_195949945.png")
+    Receipt(currency: "SEK", name: "Pressbyrån", total: 23, url: "http://arkiv.kazarnowicz.se/wp-content/uploads/2008/12/pressbyran-kvitto.png")
   ])
 }
 
