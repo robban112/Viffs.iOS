@@ -53,7 +53,7 @@ func createUser(withEmail username: String, password: String) -> Single<Result<(
     let credentials = ["username": username, "password": password]
     let jsonCredentials = try! JSONSerialization.data(withJSONObject: credentials, options: [])
     let request = with(URLRequest(url: apiURL), concat(
-      set(\URLRequest.httpMethod, "PATCH"),
+      set(\URLRequest.httpMethod, "POST"),
       set(\URLRequest.httpBody, jsonCredentials)
     ))
     let task = URLSession.shared.dataTask(with: request) { (data, response, error) in

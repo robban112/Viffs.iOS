@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
 		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
+		5CADD82B20E695320064222F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CADD82A20E695320064222F /* WelcomeViewController.xib */; };
+		5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
+		5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82E20E69A020064222F /* WelcomeViewModel.swift */; };
 		5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
 		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
@@ -85,6 +88,9 @@
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5CADD82A20E695320064222F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		5CADD82C20E699F70064222F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5CADD82E20E69A020064222F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanReceiptViewController.xib; sourceTree = "<group>"; };
 		5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReceiptViewController.swift; sourceTree = "<group>"; };
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5CADD82920E694F50064222F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				5CADD82A20E695320064222F /* WelcomeViewController.xib */,
+				5CADD82C20E699F70064222F /* WelcomeViewController.swift */,
+				5CADD82E20E69A020064222F /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		5CDFDBD820E3D4C300BA000F /* Scan Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +257,7 @@
 		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5CADD82920E694F50064222F /* Welcome */,
 				5CDFDBD820E3D4C300BA000F /* Scan Card */,
 				FF07F64920D26E4C00B011D8 /* Home */,
 				FF07F63E20D26B2500B011D8 /* Stores */,
@@ -538,6 +555,7 @@
 			files = (
 				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
+				5CADD82B20E695320064222F /* WelcomeViewController.xib in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
@@ -672,6 +690,7 @@
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,
 				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
 				FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */,
+				5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */,
 				EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */,
 				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
 				FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */,
@@ -681,6 +700,7 @@
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
 				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,
 				FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */,
+				5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
