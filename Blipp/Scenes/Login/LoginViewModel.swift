@@ -65,7 +65,7 @@ struct LoginViewModel: LoginViewModelType
       .asDriver(onErrorJustReturn: false)
 
     let navigateLogin = loginResult.filter { $0.value != nil }.flatMapLatest { _ in
-      coordinator.transition(to: Scene.login(LoginViewModel()))
+      coordinator.transition(to: Scene.blipp)
     }
     
     let navigateRegister = registerUser.flatMapLatest {

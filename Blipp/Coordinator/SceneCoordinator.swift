@@ -36,31 +36,33 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   func transition(to scene: TargetScene) -> Observable<Void> {
     let subject = PublishSubject<Void>()
     
-    switch scene.transition {
-    case let .root(viewController):
-      currentViewController = displayedViewController(within: viewController)
-      window.rootViewController = viewController
-      subject.onCompleted()
-    case let .push(viewController):
-      guard let navigationController = currentViewController.navigationController else {
-        fatalError("Can't push a view controller without a current navigation controller")
-      }
-      
-      _ = navigationController.rx.delegate
-        .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
-        .map { _ in }
-        .bind(to: subject)
-      
-      navigationController.pushViewController(displayedViewController(within: viewController), animated: true)
-      currentViewController = displayedViewController(within: viewController)
-    case let .present(viewController):
-      currentViewController.present(viewController, animated: true) {
+    DispatchQueue.main.async {
+      switch scene.transition {
+      case let .root(viewController):
+        self.currentViewController = displayedViewController(within: viewController)
+        self.window.rootViewController = viewController
         subject.onCompleted()
-      }
-      currentViewController = displayedViewController(within: viewController)
-    case let .alert(viewController):
-      currentViewController.present(viewController, animated: true) {
-        subject.onCompleted()
+      case let .push(viewController):
+        guard let navigationController = self.currentViewController.navigationController else {
+          fatalError("Can't push a view controller without a current navigation controller")
+        }
+        
+        _ = navigationController.rx.delegate
+          .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
+          .map { _ in }
+          .bind(to: subject)
+        
+        navigationController.pushViewController(displayedViewController(within: viewController), animated: true)
+        self.currentViewController = displayedViewController(within: viewController)
+      case let .present(viewController):
+        self.currentViewController.present(viewController, animated: true) {
+          subject.onCompleted()
+        }
+        self.currentViewController = displayedViewController(within: viewController)
+      case let .alert(viewController):
+        self.currentViewController.present(viewController, animated: true) {
+          subject.onCompleted()
+        }
       }
     }
     
@@ -71,27 +73,29 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   @discardableResult
   func pop(animated: Bool) -> Observable<Void> {
     let subject = PublishSubject<Void>()
-    if let presentingViewController = currentViewController.presentingViewController {
-      currentViewController.dismiss(animated: animated) {
-        self.currentViewController = displayedViewController(within: presentingViewController)
-        subject.onCompleted()
+    DispatchQueue.main.async {
+      if let presentingViewController = self.currentViewController.presentingViewController {
+        self.currentViewController.dismiss(animated: animated) {
+          self.currentViewController = displayedViewController(within: presentingViewController)
+          subject.onCompleted()
+        }
+      } else if let navigationController = self.currentViewController.navigationController {
+        
+        _ = navigationController
+          .rx
+          .delegate
+          .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
+          .map { _ in }
+          .bind(to: subject)
+        
+        guard navigationController.popViewController(animated: animated) != nil else {
+          fatalError("can't navigate back from \(self.currentViewController)")
+        }
+        
+        self.currentViewController = displayedViewController(within: navigationController.viewControllers.last!)
+      } else {
+        fatalError("Not a modal, no navigation controller: can't navigate back from \(self.currentViewController)")
       }
-    } else if let navigationController = currentViewController.navigationController {
-      
-      _ = navigationController
-        .rx
-        .delegate
-        .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
-        .map { _ in }
-        .bind(to: subject)
-      
-      guard navigationController.popViewController(animated: animated) != nil else {
-        fatalError("can't navigate back from \(currentViewController)")
-      }
-      
-      currentViewController = displayedViewController(within: navigationController.viewControllers.last!)
-    } else {
-      fatalError("Not a modal, no navigation controller: can't navigate back from \(currentViewController)")
     }
     
     return subject.asObservable()

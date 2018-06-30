@@ -31,10 +31,8 @@ func signIn(withEmail username: String, password: String) -> Single<Result<User,
     let task = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
       guard
         let responseData = data,
-        let users = try? JSONDecoder().decode([User].self, from: responseData),
-        let matchingUser = users.first(where: { $0.username == username && $0.password == password }) else {
-          print(String.init(data: data!, encoding: .utf8)!)
-          print(String(describing: try? JSONDecoder().decode([User].self, from: data!)))
+        let users = try? JSONDecoder().decode([String: User].self, from: responseData),
+        let matchingUser = users.map({ $0.1 }).first(where: { $0.username == username && $0.password == password }) else {
           single(.success(.failure(.logInError("Could not log in"))))
           return
       }
