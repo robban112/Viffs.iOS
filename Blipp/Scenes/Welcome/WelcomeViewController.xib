@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
-                <outlet property="loginButton" destination="IlW-t9-fcX" id="ly3-Qn-8Ok"/>
+                <outlet property="loginButton" destination="E8k-yT-t6T" id="kz9-ee-KQy"/>
                 <outlet property="registerUserButton" destination="w5A-oA-B2x" id="r4X-cO-gGR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="5Vh-Wu-sIA"/>
             </connections>
@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0KM-pU-xpp">
-                    <rect key="frame" x="40" y="170" width="295" height="212"/>
+                    <rect key="frame" x="40" y="170" width="295" height="292"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLIPP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-u2-EbN">
                             <rect key="frame" x="0.0" y="0.0" width="295" height="42"/>
@@ -40,21 +40,26 @@
                             <color key="textColor" red="0.93659730716336576" green="0.95894412044408739" blue="0.97884374856948853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-oA-B2x">
-                            <rect key="frame" x="0.0" y="118" width="295" height="44"/>
-                            <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                            <state key="normal" title="Skapa konto">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlW-t9-fcX">
-                            <rect key="frame" x="0.0" y="182" width="295" height="30"/>
-                            <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Jag har redan ett konto">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="MMF-EA-8Dd">
+                            <rect key="frame" x="0.0" y="118" width="295" height="174"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-oA-B2x">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>
+                                    <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="Skapa konto">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8k-yT-t6T">
+                                    <rect key="frame" x="0.0" y="144" width="295" height="30"/>
+                                    <color key="backgroundColor" red="0.39140909909999999" green="0.80894798040000004" blue="0.53211051229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Jag har redan ett konto">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                 </stackView>
             </subviews>
