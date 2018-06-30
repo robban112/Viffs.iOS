@@ -20,7 +20,6 @@ class LoginViewController: UIViewController, ViewModelBindable {
   @IBOutlet var emailTextField: UITextField!
   @IBOutlet var passwordTextField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
-  @IBOutlet weak var registerButton: UIButton!
   
   func bindViewModel() {
     bindUIToViewModel()
@@ -38,10 +37,6 @@ class LoginViewController: UIViewController, ViewModelBindable {
     
     loginButton.rx.tap
       .bind(to: viewModel.inputs.login)
-      .disposed(by: disposeBag)
-    
-    registerButton.rx.tap
-      .bind(to: viewModel.inputs.registerUser)
       .disposed(by: disposeBag)
   }
   

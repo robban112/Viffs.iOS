@@ -15,7 +15,6 @@ import Overture
 protocol LoginViewModelInputs {
   var emailString: BehaviorSubject<String> { get }
   var passwordString: BehaviorSubject<String> { get }
-  var registerUser: PublishSubject<Void> { get }
   var login: PublishSubject<()> { get }
 }
 
@@ -35,7 +34,6 @@ struct LoginViewModel: LoginViewModelType
   // inputs
   let emailString = BehaviorSubject<String>(value: "")
   let passwordString = BehaviorSubject<String>(value: "")
-  let registerUser = PublishSubject<Void>()
   let login = PublishSubject<()>()
   
   // outputs
@@ -68,11 +66,7 @@ struct LoginViewModel: LoginViewModelType
       coordinator.transition(to: Scene.blipp)
     }
     
-    let navigateRegister = registerUser.flatMapLatest {
-      coordinator.pop(animated: true)
-    }
-    
-    navigate = Observable.merge(navigateRegister, navigateLogin)
+    navigate = navigateLogin
   }
   
   var inputs: LoginViewModelInputs { return self }

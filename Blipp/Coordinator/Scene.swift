@@ -35,8 +35,9 @@ extension Scene: TargetScene {
       return .root(blippTabBarController)
     case let .login(loginViewModel):
       var loginVC = LoginViewController.instantiateFromNib()
+      loginVC.title = "Logga in"
       loginVC.bind(to: loginViewModel)
-      return .root(loginVC)
+      return .push(loginVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
       receiptDetailVC.title = "Detaljerad info"
@@ -44,13 +45,16 @@ extension Scene: TargetScene {
       return .push(receiptDetailVC)
     case let .registerUser(registerUserViewModel):
       var registerUserVC = RegisterUserViewController.instantiateFromNib()
+      registerUserVC.title = "Ny användare"
       registerUserVC.bind(to: registerUserViewModel)
-      return .root(registerUserVC)
+      return .push(registerUserVC)
     case .registerCard:
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
+      registerCardVC.title = "Kortinformation"
       return .push(registerCardVC)
     case .registrationCode:
       let registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
+      registrationCodeVC.title = "Registreringskod"
       return .push(registrationCodeVC)
     case let .receipts(receiptViewModel):
       var receiptVC = ReceiptViewController.instantiateFromNib()
@@ -76,12 +80,22 @@ extension Scene: TargetScene {
     case let .welcome(welcomeViewModel):
       var welcomeVC = WelcomeViewController.instantiateFromNib()
       welcomeVC.bind(to: welcomeViewModel)
-      return .root(welcomeVC) 
+      welcomeVC.title = "Välkommen till Blipp!"
+      let welcomeNav = UINavigationController(rootViewController: welcomeVC)
+      
+      // make navigation bar invisible
+      welcomeNav.navigationBar.backgroundColor = .clear
+      welcomeNav.navigationBar.setBackgroundImage(.init(), for: .default)
+      welcomeNav.navigationBar.shadowImage = .init()
+      welcomeNav.navigationBar.isTranslucent = true
+      welcomeNav.view.backgroundColor = welcomeNav.navigationBar.barTintColor
+      
+      return .root(welcomeNav)
     }
   }
 }
 
-func createBlippTabBarController() -> UITabBarController {
+fileprivate func createBlippTabBarController() -> UITabBarController {
   let blippTabBarController = UITabBarController()
   
   var homeVC = HomeViewController.instantiateFromNib()

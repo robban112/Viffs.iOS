@@ -15,7 +15,6 @@ protocol RegisterUserViewModelInputs {
   var emailString: BehaviorSubject<String> { get }
   var passwordString: BehaviorSubject<String> { get }
   var createAccount: PublishSubject<Void> { get }
-  var login: PublishSubject<Void> { get }
 }
 
 protocol RegisterUserViewModelOutputs {
@@ -55,7 +54,6 @@ struct RegisterUserViewModel: RegisterUserViewModelType
   let emailString = BehaviorSubject<String>(value: "")
   let passwordString = BehaviorSubject<String>(value: "")
   let createAccount = PublishSubject<Void>()
-  let login = PublishSubject<Void>()
   
   // outputs
   let emailState: Driver<InputState>
@@ -98,11 +96,7 @@ struct RegisterUserViewModel: RegisterUserViewModelType
       .debug().map { _ in }
       // TODO: pop is not the right way to do it now
       //.flatMapLatest { _ in coordinator.pop(animated: true) }
-    
-    let navigate2 = login.flatMapLatest {
-        coordinator.transition(to: Scene.login(LoginViewModel()))
-    }
-    navigate = Observable.merge(navigate1, navigate2)
+    navigate = navigate1
   }
   
   var inputs: RegisterUserViewModelInputs { return self }
