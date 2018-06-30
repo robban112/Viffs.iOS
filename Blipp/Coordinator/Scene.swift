@@ -24,6 +24,7 @@ enum Scene {
   case receiptsRoot
   case stores
   case scanReceipt
+  case welcome(WelcomeViewModel)
 }
 
 extension Scene: TargetScene {
@@ -38,6 +39,7 @@ extension Scene: TargetScene {
       return .root(loginVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
+      receiptDetailVC.title = "Detaljerad info"
       receiptDetailVC.bind(to: receiptDetailViewModel)
       return .push(receiptDetailVC)
     case let .registerUser(registerUserViewModel):
@@ -71,6 +73,10 @@ extension Scene: TargetScene {
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
       scanReceiptVC.title = "Scanna kvitto"
       return .push(scanReceiptVC)
+    case let .welcome(welcomeViewModel):
+      var welcomeVC = WelcomeViewController.instantiateFromNib()
+      welcomeVC.bind(to: welcomeViewModel)
+      return .root(welcomeVC) 
     }
   }
 }
