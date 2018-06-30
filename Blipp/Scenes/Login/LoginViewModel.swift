@@ -55,8 +55,7 @@ struct LoginViewModel: LoginViewModelType
     
     loginResult = login.withLatestFrom(credentials)
       .flatMapLatest(Current.auth.signIn)
-    
-    loginResult.subscribe(onNext: { res in print(res) })
+      .debug()
     
     let emptyEmail = emailString.map(get(\.isEmpty))
     let emptyPwd = passwordString.map(get(\.isEmpty))
@@ -65,9 +64,15 @@ struct LoginViewModel: LoginViewModelType
       .distinctUntilChanged()
       .asDriver(onErrorJustReturn: false)
 
-    navigate = registerUser.flatMapLatest {
-      coordinator.transition(to: Scene.registerUser(RegisterUserViewModel()))
+    let navigateLogin = loginResult.filter { $0.value != nil }.flatMapLatest { _ in
+      coordinator.transition(to: Scene.login(LoginViewModel()))
     }
+    
+    let navigateRegister = registerUser.flatMapLatest {
+      coordinator.pop(animated: true)
+    }
+    
+    navigate = Observable.merge(navigateRegister, navigateLogin)
   }
   
   var inputs: LoginViewModelInputs { return self }

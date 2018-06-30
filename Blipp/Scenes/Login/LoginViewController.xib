@@ -66,7 +66,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w24-1N-Uc0">
                                     <rect key="frame" x="0.0" y="200" width="295" height="30"/>
                                     <color key="backgroundColor" red="0.39140909909999999" green="0.80894798040000004" blue="0.53211051229999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Register">
+                                    <state key="normal" title="Back to register">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                 </button>
