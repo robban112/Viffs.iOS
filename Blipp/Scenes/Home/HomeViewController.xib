@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,22 +23,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKk-ij-oGs">
-                    <rect key="frame" x="67" y="180" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="6"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
-                    <rect key="frame" x="217" y="180" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" backgroundImage="shopbutton"/>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card50x50" translatesAutoresizingMaskIntoConstraints="NO" id="KKd-f8-F1b">
-                    <rect key="frame" x="309" y="64" width="50" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="YkM-68-ai0"/>
-                    </constraints>
-                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9il-7w-PUs">
+                    <rect key="frame" x="0.0" y="160" width="375" height="140.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MTm-LK-6KC">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="140.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKk-ij-oGs">
+                                    <rect key="frame" x="34" y="0.0" width="120" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="120" id="NEI-e1-e6E"/>
+                                        <constraint firstAttribute="width" secondItem="xKk-ij-oGs" secondAttribute="height" multiplier="1:1" id="fzx-4Y-18o"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="6"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKR-zZ-97M">
+                                    <rect key="frame" x="67.5" y="120" width="53" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eda-j0-1jd">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="140.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
+                                    <rect key="frame" x="30" y="0.0" width="127.5" height="120"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
+                                        <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="17:16" id="i3q-7A-5cp"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="shopbutton"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
+                                    <rect key="frame" x="67" y="120" width="54" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="feN-7F-iC5">
                     <rect key="frame" x="8" y="569" width="359" height="41"/>
                     <subviews>
@@ -67,27 +94,14 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kvitton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKR-zZ-97M">
-                    <rect key="frame" x="91" y="288" width="53" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                    <rect key="frame" x="240" y="288" width="54" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="9il-7w-PUs" secondAttribute="bottom" constant="-236.5" id="71k-p6-v9U"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="feN-7F-iC5" secondAttribute="trailing" constant="8" id="Gwg-sW-tAU"/>
-                <constraint firstItem="KKd-f8-F1b" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="JU4-rR-G2N"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="feN-7F-iC5" secondAttribute="bottom" constant="8" id="L3y-7o-xN0"/>
-                <constraint firstItem="KKd-f8-F1b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ggo-Jh-FN9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9il-7w-PUs" secondAttribute="trailing" id="fSM-Hn-pPj"/>
+                <constraint firstItem="9il-7w-PUs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ix6-FN-FAh"/>
                 <constraint firstItem="feN-7F-iC5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="kgB-sW-vTd"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -97,7 +111,6 @@
     </objects>
     <resources>
         <image name="6" width="512" height="512"/>
-        <image name="card50x50" width="50" height="50"/>
         <image name="shopbutton" width="170" height="160"/>
     </resources>
 </document>

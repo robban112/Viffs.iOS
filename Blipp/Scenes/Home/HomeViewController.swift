@@ -12,26 +12,32 @@ import RxCocoa
 import Overture
 
 class HomeViewController: UIViewController, ViewModelBindable {
-    let disposeBag = DisposeBag()
-    // will be set by Coordinator
-    var viewModel: HomeViewModelType!
+  let disposeBag = DisposeBag()
+  // will be set by Coordinator
+  var viewModel: HomeViewModelType!
+  
+  @IBOutlet weak var receiptsButton: UIButton!
+  @IBOutlet weak var storesButton: UIButton!
+  
+  func bindViewModel() {
+    bindUIToViewModel()
+  }
+  
+  func bindUIToViewModel() {
     
-    @IBOutlet weak var receiptsButton: UIButton!
-    @IBOutlet weak var storesButton: UIButton!
-    @IBOutlet weak var addCard: UIImageView!
+    let cardBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "card25x25"), style: .plain, target: nil, action: nil)
+    navigationItem.setRightBarButton(cardBarButton, animated: false)
     
-    func bindViewModel() {
-        bindUIToViewModel()
-    }
+    cardBarButton.rx.tap
+      .bind(to: viewModel.inputs.addCard)
+      .disposed(by: disposeBag)
     
-    func bindUIToViewModel() {
-        
-        receiptsButton.rx.tap
-            .bind(to: viewModel.inputs.receipts)
-            .disposed(by: disposeBag)
-        
-        storesButton.rx.tap
-            .bind(to: viewModel.inputs.stores)
-            .disposed(by: disposeBag)
-    }
+    receiptsButton.rx.tap
+      .bind(to: viewModel.inputs.receipts)
+      .disposed(by: disposeBag)
+    
+    storesButton.rx.tap
+      .bind(to: viewModel.inputs.stores)
+      .disposed(by: disposeBag)
+  }
 }
