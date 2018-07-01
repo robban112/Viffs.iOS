@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
 		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
-		5CADD82B20E695320064222F /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CADD82A20E695320064222F /* WelcomeViewController.xib */; };
 		5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
 		5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82E20E69A020064222F /* WelcomeViewModel.swift */; };
 		5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
@@ -46,6 +45,7 @@
 		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
+		FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
 		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
 		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
@@ -88,7 +88,6 @@
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5CADD82A20E695320064222F /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		5CADD82C20E699F70064222F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5CADD82E20E69A020064222F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanReceiptViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModelTests.swift; sourceTree = "<group>"; };
 		FF68D03B20CD169100472FF7 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		5CADD82920E694F50064222F /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				5CADD82A20E695320064222F /* WelcomeViewController.xib */,
+				FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */,
 				5CADD82C20E699F70064222F /* WelcomeViewController.swift */,
 				5CADD82E20E69A020064222F /* WelcomeViewModel.swift */,
 			);
@@ -555,10 +555,10 @@
 			files = (
 				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
-				5CADD82B20E695320064222F /* WelcomeViewController.xib in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
+				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
 				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
 				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
 				FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */,
