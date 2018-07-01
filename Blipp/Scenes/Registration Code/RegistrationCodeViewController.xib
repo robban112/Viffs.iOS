@@ -36,7 +36,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7zy-ig-MTH">
                             <rect key="frame" x="0.0" y="56" width="295" height="100"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registration code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-tW-sv8">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Registreringskod" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYQ-tW-sv8">
                                     <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -45,7 +45,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIJ-C0-Xjv">
                                     <rect key="frame" x="0.0" y="35" width="295" height="30"/>
                                     <color key="backgroundColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <state key="normal" title="Continue">
+                                    <state key="normal" title="Fortsätt">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
@@ -58,7 +58,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONt-cV-JUK">
                                     <rect key="frame" x="0.0" y="70" width="295" height="30"/>
                                     <color key="backgroundColor" red="0.1856553819" green="0.7766113281" blue="0.034233940970000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <state key="normal" title="Scan card">
+                                    <state key="normal" title="Scanna in kort">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
