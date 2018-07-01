@@ -48,6 +48,8 @@
 		FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
 		FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */; };
 		FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */; };
+		FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */; };
+		FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */; };
 		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
 		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
@@ -132,6 +134,8 @@
 		FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewModel.swift; sourceTree = "<group>"; };
 		FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeViewModel.swift; sourceTree = "<group>"; };
+		FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCell.xib; sourceTree = "<group>"; };
 		FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModelTests.swift; sourceTree = "<group>"; };
 		FF68D03B20CD169100472FF7 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 		FF07F63520D269E900B011D8 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				FF3AF53420E8CC8D00CF7B67 /* Cell */,
 				FF07F63620D26A6F00B011D8 /* MoreViewController.xib */,
 				FF07F65620D27DAB00B011D8 /* MoreViewController.swift */,
 			);
@@ -352,6 +357,15 @@
 				5C7177E020E2AC95001B4450 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FF3AF53420E8CC8D00CF7B67 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */,
+				FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FF68D03A20CD15BA00472FF7 /* Coordinator */ = {
@@ -563,6 +577,7 @@
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
+				FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
 				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
 				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
@@ -682,6 +697,7 @@
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
 				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
+				FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */,
 				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
 				FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */,
 				FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */,
