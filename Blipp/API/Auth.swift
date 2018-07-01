@@ -16,7 +16,7 @@ enum FirebaseError: Error {
   case userCreateError(String)
 }
 
-fileprivate let apiURL = URL(string: "https://blipp-6c73b.firebaseio.com/users.json")!
+let apiURL = URL(string: "https://blipp-6c73b.firebaseio.com/users.json")!
 
 struct Auth {
   /// Sign in with a given username and password

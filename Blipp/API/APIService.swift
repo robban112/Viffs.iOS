@@ -47,11 +47,7 @@ func image(for receipt: Receipt) -> Single<Result<UIImage?, APIServiceError>> {
 }
 
 func getReceipts() -> Single<[Receipt]> {
-  // OBS: Should use server when it's up, now just mock data
-  return Single.just([
-    Receipt(currency: "SEK", name: "Pressbyrån", total: 65, url: "http://photos1.blogger.com/blogger/7644/1950/1600/guns.0.jpg"),
-    Receipt(currency: "SEK", name: "Pressbyrån", total: 23, url: "http://arkiv.kazarnowicz.se/wp-content/uploads/2008/12/pressbyran-kvitto.png")
-  ])
+  return Single.just(Current.currentUser?.receipts ?? [])
 }
 
 func isValidPwd(password: String) -> Single<Bool> {
