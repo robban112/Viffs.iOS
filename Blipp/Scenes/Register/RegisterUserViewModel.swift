@@ -91,11 +91,20 @@ struct RegisterUserViewModel: RegisterUserViewModelType
     let credentials: Observable<(String,String)> = Observable
       .combineLatest(emailString, passwordString)
     
-    let navigate1 = createAccount.withLatestFrom(credentials)
+    let createUserResult = createAccount.withLatestFrom(credentials)
       .flatMapLatest(Current.auth.createUser)
-      .debug().map { _ in }
-      // TODO: pop is not the right way to do it now
-      //.flatMapLatest { _ in coordinator.pop(animated: true) }
+    
+    let newUser = createUserResult
+      .map(get(\.value))
+      .flatMap { $0.map(Observable.just) ?? .empty() }
+    
+    let setCurrentUser = newUser
+      .do(onNext: {
+        update(&Current, set(\.currentUser, $0))
+      })
+    
+    let navigate1 = setCurrentUser
+      .flatMapLatest { _ in coordinator.transition(to: Scene.registerCard(RegisterCardViewModel())) }
     navigate = navigate1
   }
   

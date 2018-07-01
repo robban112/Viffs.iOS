@@ -61,12 +61,18 @@ struct LoginViewModel: LoginViewModelType
       .combineLatest(emptyEmail, emptyPwd) { !$0 && !$1 }
       .distinctUntilChanged()
       .asDriver(onErrorJustReturn: false)
+    
+    let newUser = loginResult
+      .map(get(\.value))
+      .flatMap { $0.map(Observable.just) ?? .empty() }
+    
+    let setCurrentUser = newUser.do(onNext: {
+        update(&Current, set(\.currentUser, $0))
+    })
 
-    let navigateLogin = loginResult.filter { $0.value != nil }.flatMapLatest { _ in
+    navigate = setCurrentUser.flatMapLatest { _ in
       coordinator.transition(to: Scene.blipp)
     }
-    
-    navigate = navigateLogin
   }
   
   var inputs: LoginViewModelInputs { return self }

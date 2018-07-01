@@ -12,11 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCardViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
-                <outlet property="cardNumberTextField" destination="nvb-vM-m5E" id="RiK-gZ-vfd"/>
-                <outlet property="cvcNumberTextField" destination="Th6-9x-KxE" id="JNX-xj-RPl"/>
-                <outlet property="monthNumberTextField" destination="JcI-GM-dfX" id="VBJ-ar-UuM"/>
-                <outlet property="view" destination="iN0-l3-epB" id="sjd-bH-Qmx"/>
-                <outlet property="yearNumberTextField" destination="65q-EL-fb9" id="eS2-Ut-EiH"/>
+                <outlet property="continueButton" destination="zmi-8X-aKi" id="6lU-rJ-Hf6"/>
+                <outlet property="registerLaterButton" destination="27F-gz-sxw" id="8rI-UQ-EXZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="myV-Nh-OQ8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

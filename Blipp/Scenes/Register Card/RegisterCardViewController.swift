@@ -7,5 +7,24 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class RegisterCardViewController: UIViewController { }
+class RegisterCardViewController: UIViewController, ViewModelBindable {
+  
+  let disposeBag = DisposeBag()
+  var viewModel: RegisterCardViewModelType!
+  
+  @IBOutlet weak var continueButton: UIButton!
+  @IBOutlet weak var registerLaterButton: UIButton!
+  
+  func bindViewModel() {
+    continueButton.rx.tap
+      .bind(to: viewModel.inputs.continueButton)
+      .disposed(by: disposeBag)
+    
+    registerLaterButton.rx.tap
+      .bind(to: viewModel.inputs.registerCardLater)
+      .disposed(by: disposeBag)
+  }
+}

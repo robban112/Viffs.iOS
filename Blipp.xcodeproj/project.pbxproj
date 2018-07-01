@@ -46,6 +46,8 @@
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
 		FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
+		FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */; };
+		FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */; };
 		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
 		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
@@ -128,6 +130,8 @@
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewModel.swift; sourceTree = "<group>"; };
+		FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeViewModel.swift; sourceTree = "<group>"; };
 		FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModelTests.swift; sourceTree = "<group>"; };
 		FF68D03B20CD169100472FF7 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
@@ -307,6 +311,7 @@
 			children = (
 				FF07F64520D26B6F00B011D8 /* RegisterCardViewController.xib */,
 				FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */,
+				FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */,
 			);
 			path = "Register Card";
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			children = (
 				FF07F64320D26B5B00B011D8 /* RegistrationCodeViewController.xib */,
 				FF07F65020D27D3600B011D8 /* RegistrationCodeViewController.swift */,
+				FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */,
 			);
 			path = "Registration Code";
 			sourceTree = "<group>";
@@ -671,6 +677,7 @@
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
 				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
+				FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
@@ -685,6 +692,7 @@
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
 				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
+				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,

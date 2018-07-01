@@ -22,7 +22,7 @@ struct Auth {
   /// Sign in with a given username and password
   var signIn: (String, String) -> Single<Result<User, FirebaseError>> = signIn(withEmail:password:)
   /// create a new user
-  var createUser: (String, String) -> Single<Result<(), FirebaseError>> = createUser(withEmail:password:)
+  var createUser: (String, String) -> Single<Result<User, FirebaseError>> = createUser(withEmail:password:)
 }
 
 // MARK: live implementations
@@ -46,7 +46,7 @@ func signIn(withEmail username: String, password: String) -> Single<Result<User,
 }
 
 // TODO: fix createUser, adds username and password as two separate entries currently, need to nest into an array
-func createUser(withEmail username: String, password: String) -> Single<Result<(), FirebaseError>> {
+func createUser(withEmail username: String, password: String) -> Single<Result<User, FirebaseError>> {
   return Single.create(subscribe: { single in
     let credentials = ["username": username, "password": password]
     let jsonCredentials = try! JSONSerialization.data(withJSONObject: credentials, options: [])
@@ -58,7 +58,7 @@ func createUser(withEmail username: String, password: String) -> Single<Result<(
       if let error = error {
         single(.success(.failure(.logInError(String(describing: error)))))
       } else {
-        single(.success(.success(())))
+        single(.success(.success(User(username: username, password: password, receipts: []))))
       }
     }
     task.resume()

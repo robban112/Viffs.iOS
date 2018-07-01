@@ -38,7 +38,7 @@ extension Auth {
   static var mock: Auth {
     return Auth(
       signIn: { _, _ in .just(.success(.mock)) },
-      createUser: { _, _ in .just(.success(())) }
+      createUser: { _, _ in .just(.success(.mock)) }
     )
   }
 }

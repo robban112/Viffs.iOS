@@ -17,8 +17,8 @@ enum Scene {
   case login(LoginViewModel)
   case receiptDetail(ReceiptDetailViewModel)
   case registerUser(RegisterUserViewModel)
-  case registerCard
-  case registrationCode
+  case registerCard(RegisterCardViewModel)
+  case registrationCode(RegistrationCodeViewModel)
   case receipts(ReceiptViewModel)
   case receiptsSorted(ReceiptViewModel)
   case receiptsRoot
@@ -48,12 +48,14 @@ extension Scene: TargetScene {
       registerUserVC.title = "Ny användare"
       registerUserVC.bind(to: registerUserViewModel)
       return .push(registerUserVC)
-    case .registerCard:
-      let registerCardVC = RegisterCardViewController.instantiateFromNib()
+    case let .registerCard(registerCardViewModel):
+      var registerCardVC = RegisterCardViewController.instantiateFromNib()
+      registerCardVC.bind(to: registerCardViewModel)
       registerCardVC.title = "Kortinformation"
       return .push(registerCardVC)
-    case .registrationCode:
-      let registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
+    case let .registrationCode(registrationCodeViewModel):
+      var registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
+      registrationCodeVC.bind(to: registrationCodeViewModel)
       registrationCodeVC.title = "Registreringskod"
       return .push(registrationCodeVC)
     case let .receipts(receiptViewModel):

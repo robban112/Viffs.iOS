@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationCodeViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
-                <outlet property="registrationCodeTextField" destination="wYQ-tW-sv8" id="fg3-Ta-9en"/>
-                <outlet property="view" destination="iN0-l3-epB" id="xNR-ub-7T3"/>
+                <outlet property="continueButton" destination="jIJ-C0-Xjv" id="H4z-yv-KXS"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rsx-vu-p7c"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -67,9 +67,6 @@
                                             <integer key="value" value="16"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="scanCardButtonPressed:" destination="-1" eventType="touchUpInside" id="tAu-kr-BXx"/>
-                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

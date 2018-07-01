@@ -7,5 +7,19 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class RegistrationCodeViewController: UIViewController { }
+class RegistrationCodeViewController: UIViewController, ViewModelBindable {
+  
+  let disposeBag = DisposeBag()
+  var viewModel: RegistrationCodeViewModelType!
+  
+  @IBOutlet weak var continueButton: UIButton!
+  
+  func bindViewModel() {
+    continueButton.rx.tap
+      .bind(to: viewModel.inputs.continueButton)
+      .disposed(by: disposeBag)
+  }
+}
