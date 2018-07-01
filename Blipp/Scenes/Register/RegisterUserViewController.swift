@@ -18,6 +18,14 @@ func backgroundColor(for inputState: InputState) -> UIColor? {
   }
 }
 
+func textFieldRightView(for inputState: InputState) -> UIView? {
+  switch inputState {
+  case .unInitiated: return .none
+  case .illFormed: return UIImageView(image: #imageLiteral(resourceName: "red_cross"))
+  case .wellFormed: return UIImageView(image: #imageLiteral(resourceName: "green_tick"))
+  }
+}
+
 class RegisterUserViewController: UIViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
@@ -26,6 +34,10 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
   @IBOutlet var emailTextField: UITextField!
   @IBOutlet var passwordTextField: UITextField!
   @IBOutlet var createAccountButton: UIButton!
+  
+  override func viewDidLoad() {
+    emailTextField.becomeFirstResponder()
+  }
   
   func bindViewModel() {
     bindUIToViewModel()
@@ -48,13 +60,17 @@ class RegisterUserViewController: UIViewController, ViewModelBindable {
   
   func bindViewModelToUI() {
     viewModel.outputs.emailState
-      .map(backgroundColor(for:))
-      .drive(emailTextField.rx.backgroundColor)
+      .map(textFieldRightView(for:))
+      .drive(emailTextField.rx.rightView)
       .disposed(by: disposeBag)
-
+    
     viewModel.outputs.passwordState
-      .map(backgroundColor(for:))
-      .drive(passwordTextField.rx.backgroundColor)
+      .map(textFieldRightView(for:))
+      .drive(passwordTextField.rx.rightView)
+      .disposed(by: disposeBag)
+    
+    viewModel.outputs.registerButtonEnabled
+      .drive(createAccountButton.rx.isEnabled)
       .disposed(by: disposeBag)
   }
 }

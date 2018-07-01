@@ -15,7 +15,12 @@ class RegistrationCodeViewController: UIViewController, ViewModelBindable {
   let disposeBag = DisposeBag()
   var viewModel: RegistrationCodeViewModelType!
   
+  @IBOutlet weak var codeTextField: UITextField!
   @IBOutlet weak var continueButton: UIButton!
+  
+  override func viewDidLoad() {
+    codeTextField.becomeFirstResponder()
+  }
   
   func bindViewModel() {
     continueButton.rx.tap

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationCodeViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
+                <outlet property="codeTextField" destination="wYQ-tW-sv8" id="cBs-Ge-ait"/>
                 <outlet property="continueButton" destination="jIJ-C0-Xjv" id="H4z-yv-KXS"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rsx-vu-p7c"/>
             </connections>

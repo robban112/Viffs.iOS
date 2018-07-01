@@ -15,8 +15,13 @@ class RegisterCardViewController: UIViewController, ViewModelBindable {
   let disposeBag = DisposeBag()
   var viewModel: RegisterCardViewModelType!
   
+  @IBOutlet weak var cardNumberTextField: UITextField!
   @IBOutlet weak var continueButton: UIButton!
   @IBOutlet weak var registerLaterButton: UIButton!
+  
+  override func viewDidLoad() {
+    cardNumberTextField.becomeFirstResponder()
+  }
   
   func bindViewModel() {
     continueButton.rx.tap

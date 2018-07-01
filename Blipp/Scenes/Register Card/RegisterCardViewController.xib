@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCardViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
+                <outlet property="cardNumberTextField" destination="nvb-vM-m5E" id="P7F-re-KSv"/>
                 <outlet property="continueButton" destination="zmi-8X-aKi" id="6lU-rJ-Hf6"/>
                 <outlet property="registerLaterButton" destination="27F-gz-sxw" id="8rI-UQ-EXZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="myV-Nh-OQ8"/>

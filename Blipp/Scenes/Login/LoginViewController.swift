@@ -21,6 +21,10 @@ class LoginViewController: UIViewController, ViewModelBindable {
   @IBOutlet var passwordTextField: UITextField!
   @IBOutlet weak var loginButton: UIButton!
   
+  override func viewDidLoad() {
+    emailTextField.becomeFirstResponder()
+  }
+  
   func bindViewModel() {
     bindUIToViewModel()
     bindViewModelToUI()
