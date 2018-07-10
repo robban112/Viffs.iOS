@@ -1,4 +1,4 @@
-module Pods_BlippTests {
+framework module Pods_BlippTests {
   umbrella header "Pods-BlippTests-umbrella.h"
 
   export *

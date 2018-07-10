@@ -7,76 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
-		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
-		5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
-		5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82E20E69A020064222F /* WelcomeViewModel.swift */; };
-		5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
-		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
-		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
+		21F439CF975616BC214586CE /* Pods_BlippFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27466921E5DCA4AB377E77FC /* Pods_BlippFramework.framework */; };
+		B37B0E74AFB9714908572207 /* Pods_BlippTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91DA5A61C5FEFE3F2414C9 /* Pods_BlippTests.framework */; };
+		C1CDE9F1DD0995E0F94E2D10 /* Pods_BlippFrameworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54350021CCC6385378393BE8 /* Pods_BlippFrameworkTests.framework */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
-		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
-		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
 		EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */; };
 		EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9220AADA4A006A0390 /* AppDelegate.swift */; };
-		EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */; };
-		EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE826E9B20AADA4D006A0390 /* Assets.xcassets */; };
 		EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */; };
-		EE826EA720AADE52006A0390 /* ReceiptViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */; };
-		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
-		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
-		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
-		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
-		FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */; };
-		FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
-		FF07F64220D26B4A00B011D8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64120D26B4A00B011D8 /* SecondViewController.xib */; };
-		FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64320D26B5B00B011D8 /* RegistrationCodeViewController.xib */; };
-		FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64520D26B6F00B011D8 /* RegisterCardViewController.xib */; };
-		FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64720D26D3300B011D8 /* SecondViewController.swift */; };
-		FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64A20D26E5800B011D8 /* HomeViewController.xib */; };
-		FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64C20D27D0300B011D8 /* HomeViewController.swift */; };
-		FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64E20D27D2200B011D8 /* StoresViewController.swift */; };
-		FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65020D27D3600B011D8 /* RegistrationCodeViewController.swift */; };
-		FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */; };
-		FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */; };
-		FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
-		FF1C771420D3DD37009F357B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
-		FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33E00020D6AFE700FF8E5C /* Overture additions.swift */; };
-		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
-		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
-		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
-		FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
-		FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */; };
-		FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */; };
-		FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */; };
-		FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */; };
-		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
-		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
-		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
-		FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04620CD1EAA00472FF7 /* LoginViewController.xib */; };
-		FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04820CD396100472FF7 /* ReceiptDetailViewController.xib */; };
-		FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D04A20CD8C7200472FF7 /* SceneTransitionType.swift */; };
-		FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04C20CD8E7200472FF7 /* ReceiptViewController.xib */; };
-		FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04E20CD902600472FF7 /* ReceiptViewCell.xib */; };
-		FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05020CDC07400472FF7 /* NibCellUtils.swift */; };
-		FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05320CDCBC200472FF7 /* SceneCoordinator.swift */; };
-		FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */; };
-		FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */; };
-		FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05920CE772300472FF7 /* NavigationViewController.swift */; };
-		FF68D05C20CE886500472FF7 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05B20CE886500472FF7 /* RegisterUserViewModel.swift */; };
-		FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */; };
-		FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */; };
-		FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
+		FF10467120F4D8D4003F0B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF10467020F4D8D4003F0B01 /* Assets.xcassets */; };
+		FF10467320F4DAC0003F0B01 /* TestScheduler+MarbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */; };
+		FF10467420F4DAF7003F0B01 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
+		FF10467520F4DAF7003F0B01 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
+		FF10467620F4DAF7003F0B01 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
+		FF9D574420F4B78B0088E3B8 /* BlippFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */; };
+		FF9D574B20F4B78B0088E3B8 /* BlippFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D574A20F4B78B0088E3B8 /* BlippFrameworkTests.swift */; };
+		FF9D574D20F4B78B0088E3B8 /* BlippFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = FF9D573D20F4B78B0088E3B8 /* BlippFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9D575020F4B78B0088E3B8 /* BlippFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */; };
+		FF9D575120F4B78B0088E3B8 /* BlippFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF9D575E20F4B8310088E3B8 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
+		FF9D575F20F4B8310088E3B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
+		FF9D579820F4B90D0088E3B8 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
+		FF9D579920F4B90D0088E3B8 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0320CBE1700010FBC4 /* Mocks.swift */; };
+		FF9D579A20F4B90D0088E3B8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
+		FF9D579B20F4B90D0088E3B8 /* SceneTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D04A20CD8C7200472FF7 /* SceneTransitionType.swift */; };
+		FF9D579C20F4B90D0088E3B8 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05320CDCBC200472FF7 /* SceneCoordinator.swift */; };
+		FF9D579D20F4B90D0088E3B8 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */; };
+		FF9D579E20F4B90D0088E3B8 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
+		FF9D579F20F4B90D0088E3B8 /* NibCellUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05020CDC07400472FF7 /* NibCellUtils.swift */; };
+		FF9D57A020F4B90D0088E3B8 /* RxUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */; };
+		FF9D57A120F4B90D0088E3B8 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
+		FF9D57A220F4B90D0088E3B8 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */; };
+		FF9D57A320F4B90D0088E3B8 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05920CE772300472FF7 /* NavigationViewController.swift */; };
+		FF9D57A420F4B90D0088E3B8 /* Overture additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33E00020D6AFE700FF8E5C /* Overture additions.swift */; };
+		FF9D57A520F4B90D0088E3B8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */; };
+		FF9D57A620F4B90D0088E3B8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
+		FF9D57A720F4B90D0088E3B8 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
+		FF9D57A820F4B90D0088E3B8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
+		FF9D57A920F4B90D0088E3B8 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82E20E69A020064222F /* WelcomeViewModel.swift */; };
+		FF9D57AA20F4B90D0088E3B8 /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
+		FF9D57AB20F4B90D0088E3B8 /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
+		FF9D57AC20F4B90D0088E3B8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64A20D26E5800B011D8 /* HomeViewController.xib */; };
+		FF9D57AD20F4B90D0088E3B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64C20D27D0300B011D8 /* HomeViewController.swift */; };
+		FF9D57AE20F4B90D0088E3B8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
+		FF9D57AF20F4B90D0088E3B8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
+		FF9D57B020F4B90D0088E3B8 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64E20D27D2200B011D8 /* StoresViewController.swift */; };
+		FF9D57B120F4B90D0088E3B8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64120D26B4A00B011D8 /* SecondViewController.xib */; };
+		FF9D57B220F4B90D0088E3B8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64720D26D3300B011D8 /* SecondViewController.swift */; };
+		FF9D57B320F4B90D0088E3B8 /* RegistrationCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64320D26B5B00B011D8 /* RegistrationCodeViewController.xib */; };
+		FF9D57B420F4B90D0088E3B8 /* RegistrationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65020D27D3600B011D8 /* RegistrationCodeViewController.swift */; };
+		FF9D57B520F4B90D0088E3B8 /* RegistrationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */; };
+		FF9D57B620F4B90D0088E3B8 /* RegisterCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64520D26B6F00B011D8 /* RegisterCardViewController.xib */; };
+		FF9D57B720F4B90D0088E3B8 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */; };
+		FF9D57B820F4B90D0088E3B8 /* RegisterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */; };
+		FF9D57B920F4B90D0088E3B8 /* ReceiptsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */; };
+		FF9D57BA20F4B90D0088E3B8 /* ReceiptsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */; };
+		FF9D57BB20F4B90D0088E3B8 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
+		FF9D57BC20F4B90D0088E3B8 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */; };
+		FF9D57BD20F4B90D0088E3B8 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */; };
+		FF9D57BE20F4B90D0088E3B8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
+		FF9D57BF20F4B90D0088E3B8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
+		FF9D57C020F4B90D0088E3B8 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
+		FF9D57C120F4B90D0088E3B8 /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05B20CE886500472FF7 /* RegisterUserViewModel.swift */; };
+		FF9D57C220F4B90D0088E3B8 /* RegisterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */; };
+		FF9D57C320F4B90D0088E3B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
+		FF9D57C420F4B90D0088E3B8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
+		FF9D57C520F4B90D0088E3B8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04620CD1EAA00472FF7 /* LoginViewController.xib */; };
+		FF9D57C620F4B90D0088E3B8 /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
+		FF9D57C720F4B90D0088E3B8 /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */; };
+		FF9D57C820F4B90D0088E3B8 /* ReceiptDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04820CD396100472FF7 /* ReceiptDetailViewController.xib */; };
+		FF9D57C920F4B90D0088E3B8 /* ReceiptViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */; };
+		FF9D57CA20F4B90D0088E3B8 /* ReceiptViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04E20CD902600472FF7 /* ReceiptViewCell.xib */; };
+		FF9D57CB20F4B90D0088E3B8 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */; };
+		FF9D57CC20F4B90D0088E3B8 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
+		FF9D57CD20F4B90D0088E3B8 /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04C20CD8E7200472FF7 /* ReceiptViewController.xib */; };
 		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
-		FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
-		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
-		FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */; };
-		FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */; };
-		FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */; };
-		FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0320CBE1700010FBC4 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FF9D574520F4B78B0088E3B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF9D573A20F4B78B0088E3B8;
+			remoteInfo = BlippFramework;
+		};
+		FF9D574720F4B78B0088E3B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE826E8E20AADA4A006A0390;
+			remoteInfo = Blipp;
+		};
+		FF9D574E20F4B78B0088E3B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF9D573A20F4B78B0088E3B8;
+			remoteInfo = BlippFramework;
+		};
 		FFA681A220BF063700FE29DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
@@ -86,26 +114,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FF9D575520F4B78B0088E3B8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF9D575120F4B78B0088E3B8 /* BlippFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0433493437B03AE69F218355 /* Pods-Blipp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp2/Pods-Blipp2.release.xcconfig"; sourceTree = "<group>"; };
+		077BDBCE959A6BF9CB73D036 /* Pods-BlippFrameworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippFrameworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippFrameworkTests/Pods-BlippFrameworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C813864B08FC022152F2829 /* Pods-BlippFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippFramework/Pods-BlippFramework.release.xcconfig"; sourceTree = "<group>"; };
+		27466921E5DCA4AB377E77FC /* Pods_BlippFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlippFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blipp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FEF249E591C6E72C4F1BC2B /* Pods-Blipp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp2/Pods-Blipp2.debug.xcconfig"; sourceTree = "<group>"; };
+		54350021CCC6385378393BE8 /* Pods_BlippFrameworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlippFrameworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5CADD82C20E699F70064222F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5CADD82E20E69A020064222F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanReceiptViewController.xib; sourceTree = "<group>"; };
 		5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReceiptViewController.swift; sourceTree = "<group>"; };
-		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C4CA4E6C47AAACA0238F03 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C91DA5A61C5FEFE3F2414C9 /* Pods_BlippTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlippTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCE4F485A2EE8D9F15AA1F46 /* Pods_Blipp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blipp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
+		D755E997EB7EA314F10F3861 /* Pods-BlippFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippFramework/Pods-BlippFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		E306CDC60E5ECAF49491B130 /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC6AE9BD6C7132743691D099 /* Pods-BlippFrameworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippFrameworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippFrameworkTests/Pods-BlippFrameworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
 		EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE826E8F20AADA4A006A0390 /* Blipp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blipp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE826E9220AADA4A006A0390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
-		EE826E9B20AADA4D006A0390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE826E9E20AADA4D006A0390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE826EA020AADA4D006A0390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +176,7 @@
 		FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewController.swift; sourceTree = "<group>"; };
 		FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		FF10467020F4D8D4003F0B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +204,12 @@
 		FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterUserViewController.xib; sourceTree = "<group>"; };
 		FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+MarbleTests.swift"; sourceTree = "<group>"; };
 		FF92D78B20D5D405008B0C52 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlippFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9D573D20F4B78B0088E3B8 /* BlippFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlippFramework.h; sourceTree = "<group>"; };
+		FF9D573E20F4B78B0088E3B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF9D574320F4B78B0088E3B8 /* BlippFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlippFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9D574A20F4B78B0088E3B8 /* BlippFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippFrameworkTests.swift; sourceTree = "<group>"; };
+		FF9D574C20F4B78B0088E3B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA6819D20BF063700FE29DA /* BlippTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlippTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
 		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +227,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */,
+				FF9D575020F4B78B0088E3B8 /* BlippFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D573720F4B78B0088E3B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F439CF975616BC214586CE /* Pods_BlippFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D574020F4B78B0088E3B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9D574420F4B78B0088E3B8 /* BlippFramework.framework in Frameworks */,
+				C1CDE9F1DD0995E0F94E2D10 /* Pods_BlippFrameworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */,
+				B37B0E74AFB9714908572207 /* Pods_BlippTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */,
-				63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */,
+				27466921E5DCA4AB377E77FC /* Pods_BlippFramework.framework */,
+				54350021CCC6385378393BE8 /* Pods_BlippFrameworkTests.framework */,
+				BCE4F485A2EE8D9F15AA1F46 /* Pods_Blipp2.framework */,
+				9C91DA5A61C5FEFE3F2414C9 /* Pods_BlippTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,8 +276,14 @@
 			children = (
 				C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */,
 				CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */,
-				0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */,
-				2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */,
+				D755E997EB7EA314F10F3861 /* Pods-BlippFramework.debug.xcconfig */,
+				1C813864B08FC022152F2829 /* Pods-BlippFramework.release.xcconfig */,
+				4FEF249E591C6E72C4F1BC2B /* Pods-Blipp2.debug.xcconfig */,
+				0433493437B03AE69F218355 /* Pods-Blipp2.release.xcconfig */,
+				91C4CA4E6C47AAACA0238F03 /* Pods-BlippTests.debug.xcconfig */,
+				E306CDC60E5ECAF49491B130 /* Pods-BlippTests.release.xcconfig */,
+				077BDBCE959A6BF9CB73D036 /* Pods-BlippFrameworkTests.debug.xcconfig */,
+				EC6AE9BD6C7132743691D099 /* Pods-BlippFrameworkTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -228,6 +312,8 @@
 			children = (
 				EE826E9120AADA4A006A0390 /* Blipp */,
 				FFA6819E20BF063700FE29DA /* BlippTests */,
+				FF9D573C20F4B78B0088E3B8 /* BlippFramework */,
+				FF9D574920F4B78B0088E3B8 /* BlippFrameworkTests */,
 				EE826E9020AADA4A006A0390 /* Products */,
 				51B78C2B7EDD5AA579DA57C6 /* Pods */,
 				35CB1C987188EE324ADB6859 /* Frameworks */,
@@ -239,6 +325,8 @@
 			children = (
 				EE826E8F20AADA4A006A0390 /* Blipp.app */,
 				FFA6819D20BF063700FE29DA /* BlippTests.xctest */,
+				FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */,
+				FF9D574320F4B78B0088E3B8 /* BlippFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,48 +335,11 @@
 			isa = PBXGroup;
 			children = (
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
-				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
 				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
-				EE962D4E20BDA804006CEC0F /* Model */,
-				EE962D4D20BDA7EB006CEC0F /* Scenes */,
-				FFD95AFE20CBD59E0010FBC4 /* API */,
-				FFA681AB20C03B9A00FE29DA /* Utils */,
-				FF68D03A20CD15BA00472FF7 /* Coordinator */,
-				FF38274E20C837670046F220 /* Environment.swift */,
-				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
 			);
 			path = Blipp;
-			sourceTree = "<group>";
-		};
-		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				5CADD82920E694F50064222F /* Welcome */,
-				5CDFDBD820E3D4C300BA000F /* Scan Card */,
-				FF07F64920D26E4C00B011D8 /* Home */,
-				FF07F63E20D26B2500B011D8 /* Stores */,
-				FF07F63D20D26B1F00B011D8 /* Second */,
-				FF07F63C20D26B0A00B011D8 /* Registration Code */,
-				FF07F63B20D26AFE00B011D8 /* Register Card */,
-				FF07F63820D26AC600B011D8 /* Receipts Root */,
-				FF07F63520D269E900B011D8 /* More */,
-				FF68D04220CD1DE000472FF7 /* Register */,
-				FF68D04120CD1DD100472FF7 /* Login */,
-				FF68D04020CD1DBC00472FF7 /* Receipt Detail */,
-				FF68D03F20CD1DAA00472FF7 /* Receipt */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		EE962D4E20BDA804006CEC0F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EE826EA820AB64CA006A0390 /* Receipt.swift */,
-				EE962D4F20BDC5B7006CEC0F /* User.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		FF07F63520D269E900B011D8 /* More */ = {
@@ -359,6 +410,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		FF10467220F4DAA3003F0B01 /* TestUtils */ = {
+			isa = PBXGroup;
+			children = (
+				FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */,
+			);
+			path = TestUtils;
+			sourceTree = "<group>";
+		};
 		FF3AF53420E8CC8D00CF7B67 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,17 +425,6 @@
 				FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		FF68D03A20CD15BA00472FF7 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				FF68D03B20CD169100472FF7 /* Scene.swift */,
-				FF68D04A20CD8C7200472FF7 /* SceneTransitionType.swift */,
-				FF68D05320CDCBC200472FF7 /* SceneCoordinator.swift */,
-				FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		FF68D03F20CD1DAA00472FF7 /* Receipt */ = {
@@ -438,28 +486,75 @@
 			path = "Nib utils";
 			sourceTree = "<group>";
 		};
-		FF92D78A20D593EC008B0C52 /* TestUtils */ = {
+		FF9D573C20F4B78B0088E3B8 /* BlippFramework */ = {
 			isa = PBXGroup;
 			children = (
-				FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */,
+				FF38274E20C837670046F220 /* Environment.swift */,
+				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
+				FF9D575D20F4B7FB0088E3B8 /* Coordinator */,
+				FF9D575C20F4B7F60088E3B8 /* Utils */,
+				FF9D575B20F4B7F00088E3B8 /* API */,
+				FF9D575A20F4B7E90088E3B8 /* Scenes */,
+				FF9D575920F4B7E30088E3B8 /* Model */,
+				FF9D573D20F4B78B0088E3B8 /* BlippFramework.h */,
+				FF9D573E20F4B78B0088E3B8 /* Info.plist */,
+				FF10467020F4D8D4003F0B01 /* Assets.xcassets */,
 			);
-			path = TestUtils;
+			path = BlippFramework;
 			sourceTree = "<group>";
 		};
-		FFA6819E20BF063700FE29DA /* BlippTests */ = {
+		FF9D574920F4B78B0088E3B8 /* BlippFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF92D78A20D593EC008B0C52 /* TestUtils */,
-				FFA6819F20BF063700FE29DA /* BlippTests.swift */,
-				FFA681A120BF063700FE29DA /* Info.plist */,
+				FF10467220F4DAA3003F0B01 /* TestUtils */,
+				FF9D574A20F4B78B0088E3B8 /* BlippFrameworkTests.swift */,
 				FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */,
 				FF92D78B20D5D405008B0C52 /* TestCase.swift */,
 				FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */,
+				FF9D574C20F4B78B0088E3B8 /* Info.plist */,
 			);
-			path = BlippTests;
+			path = BlippFrameworkTests;
 			sourceTree = "<group>";
 		};
-		FFA681AB20C03B9A00FE29DA /* Utils */ = {
+		FF9D575920F4B7E30088E3B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE826EA820AB64CA006A0390 /* Receipt.swift */,
+				EE962D4F20BDC5B7006CEC0F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF9D575A20F4B7E90088E3B8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5CADD82920E694F50064222F /* Welcome */,
+				5CDFDBD820E3D4C300BA000F /* Scan Card */,
+				FF07F64920D26E4C00B011D8 /* Home */,
+				FF07F63E20D26B2500B011D8 /* Stores */,
+				FF07F63D20D26B1F00B011D8 /* Second */,
+				FF07F63C20D26B0A00B011D8 /* Registration Code */,
+				FF07F63B20D26AFE00B011D8 /* Register Card */,
+				FF07F63820D26AC600B011D8 /* Receipts Root */,
+				FF07F63520D269E900B011D8 /* More */,
+				FF68D04220CD1DE000472FF7 /* Register */,
+				FF68D04120CD1DD100472FF7 /* Login */,
+				FF68D04020CD1DBC00472FF7 /* Receipt Detail */,
+				FF68D03F20CD1DAA00472FF7 /* Receipt */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FF9D575B20F4B7F00088E3B8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */,
+				FF1C771320D3DD37009F357B /* Auth.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FF9D575C20F4B7F60088E3B8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				FF68D05220CDC07A00472FF7 /* Nib utils */,
@@ -472,6 +567,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FF9D575D20F4B7FB0088E3B8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FF68D03B20CD169100472FF7 /* Scene.swift */,
+				FF68D04A20CD8C7200472FF7 /* SceneTransitionType.swift */,
+				FF68D05320CDCBC200472FF7 /* SceneCoordinator.swift */,
+				FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		FFA6819E20BF063700FE29DA /* BlippTests */ = {
+			isa = PBXGroup;
+			children = (
+				FFA6819F20BF063700FE29DA /* BlippTests.swift */,
+				FFA681A120BF063700FE29DA /* Info.plist */,
+			);
+			path = BlippTests;
+			sourceTree = "<group>";
+		};
 		FFA681AE20C4991900FE29DA /* RxExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,16 +595,18 @@
 			path = RxExtensions;
 			sourceTree = "<group>";
 		};
-		FFD95AFE20CBD59E0010FBC4 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */,
-				FF1C771320D3DD37009F357B /* Auth.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FF9D573820F4B78B0088E3B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9D574D20F4B78B0088E3B8 /* BlippFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		EE826E8E20AADA4A006A0390 /* Blipp */ = {
@@ -501,24 +618,67 @@
 				EE826E8C20AADA4A006A0390 /* Frameworks */,
 				EE826E8D20AADA4A006A0390 /* Resources */,
 				24DDAAA45E00A185C7E857F5 /* [CP] Embed Pods Frameworks */,
+				FF9D575520F4B78B0088E3B8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF9D574F20F4B78B0088E3B8 /* PBXTargetDependency */,
 			);
 			name = Blipp;
 			productName = Blipp;
 			productReference = EE826E8F20AADA4A006A0390 /* Blipp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FF9D573A20F4B78B0088E3B8 /* BlippFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF9D575220F4B78B0088E3B8 /* Build configuration list for PBXNativeTarget "BlippFramework" */;
+			buildPhases = (
+				43BBC36C9423F5CA0F1A4AAB /* [CP] Check Pods Manifest.lock */,
+				FF9D573620F4B78B0088E3B8 /* Sources */,
+				FF9D573720F4B78B0088E3B8 /* Frameworks */,
+				FF9D573820F4B78B0088E3B8 /* Headers */,
+				FF9D573920F4B78B0088E3B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlippFramework;
+			productName = BlippFramework;
+			productReference = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF9D574220F4B78B0088E3B8 /* BlippFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF9D575620F4B78B0088E3B8 /* Build configuration list for PBXNativeTarget "BlippFrameworkTests" */;
+			buildPhases = (
+				7ED3380A8FE4B479F63FF51C /* [CP] Check Pods Manifest.lock */,
+				FF9D573F20F4B78B0088E3B8 /* Sources */,
+				FF9D574020F4B78B0088E3B8 /* Frameworks */,
+				FF9D574120F4B78B0088E3B8 /* Resources */,
+				F10DA2D11C61809793F572D4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF9D574620F4B78B0088E3B8 /* PBXTargetDependency */,
+				FF9D574820F4B78B0088E3B8 /* PBXTargetDependency */,
+			);
+			name = BlippFrameworkTests;
+			productName = BlippFrameworkTests;
+			productReference = FF9D574320F4B78B0088E3B8 /* BlippFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FFA6819C20BF063700FE29DA /* BlippTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "BlippTests" */;
 			buildPhases = (
-				30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */,
+				2787B7BD659211CE6FB88B85 /* [CP] Check Pods Manifest.lock */,
 				FFA6819920BF063700FE29DA /* Sources */,
 				FFA6819A20BF063700FE29DA /* Frameworks */,
 				FFA6819B20BF063700FE29DA /* Resources */,
+				72ACC8277E1EF731AFFD5670 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -536,12 +696,19 @@
 		EE826E8720AADA4A006A0390 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Blipp;
 				TargetAttributes = {
 					EE826E8E20AADA4A006A0390 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					FF9D573A20F4B78B0088E3B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					FF9D574220F4B78B0088E3B8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EE826E8E20AADA4A006A0390;
 					};
 					FFA6819C20BF063700FE29DA = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -564,6 +731,8 @@
 			targets = (
 				EE826E8E20AADA4A006A0390 /* Blipp */,
 				FFA6819C20BF063700FE29DA /* BlippTests */,
+				FF9D573A20F4B78B0088E3B8 /* BlippFramework */,
+				FF9D574220F4B78B0088E3B8 /* BlippFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -573,24 +742,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
-				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
-				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
-				FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */,
-				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
-				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
-				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
-				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
-				FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */,
-				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
-				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
-				FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */,
 				EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */,
-				FF07F64220D26B4A00B011D8 /* SecondViewController.xib in Resources */,
-				FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */,
-				FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */,
-				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D573920F4B78B0088E3B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9D57AF20F4B90D0088E3B8 /* StoresViewController.xib in Resources */,
+				FF9D57CA20F4B90D0088E3B8 /* ReceiptViewCell.xib in Resources */,
+				FF9D57CD20F4B90D0088E3B8 /* ReceiptViewController.xib in Resources */,
+				FF9D57B920F4B90D0088E3B8 /* ReceiptsRootViewController.xib in Resources */,
+				FF9D57AA20F4B90D0088E3B8 /* ScanReceiptViewController.xib in Resources */,
+				FF9D57A720F4B90D0088E3B8 /* WelcomeViewController.xib in Resources */,
+				FF9D57BD20F4B90D0088E3B8 /* MoreCell.xib in Resources */,
+				FF9D57BE20F4B90D0088E3B8 /* MoreViewController.xib in Resources */,
+				FF9D57B620F4B90D0088E3B8 /* RegisterCardViewController.xib in Resources */,
+				FF9D57AC20F4B90D0088E3B8 /* HomeViewController.xib in Resources */,
+				FF9D57C820F4B90D0088E3B8 /* ReceiptDetailViewController.xib in Resources */,
+				FF9D57C520F4B90D0088E3B8 /* LoginViewController.xib in Resources */,
+				FF9D57B320F4B90D0088E3B8 /* RegistrationCodeViewController.xib in Resources */,
+				FF9D57B120F4B90D0088E3B8 /* SecondViewController.xib in Resources */,
+				FF10467120F4D8D4003F0B01 /* Assets.xcassets in Resources */,
+				FF9D57C220F4B90D0088E3B8 /* RegisterUserViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D574120F4B78B0088E3B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,14 +796,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac-framework/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Overture-framework/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb-framework/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -640,7 +823,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */ = {
+		2787B7BD659211CE6FB88B85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -656,6 +839,86 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43BBC36C9423F5CA0F1A4AAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlippFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72ACC8277E1EF731AFFD5670 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7ED3380A8FE4B479F63FF51C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlippFrameworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F10DA2D11C61809793F572D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BlippFrameworkTests/Pods-BlippFrameworkTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlippFrameworkTests/Pods-BlippFrameworkTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAE72E171D82634ABA1C39B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -683,48 +946,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */,
-				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
-				EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */,
-				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
-				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
-				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
-				FF38274F20C837670046F220 /* Environment.swift in Sources */,
-				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
-				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
-				FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */,
-				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
-				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
-				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
-				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
-				FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */,
-				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
-				FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */,
-				FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */,
-				EE826EA720AADE52006A0390 /* ReceiptViewCell.swift in Sources */,
-				FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */,
-				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
-				5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */,
-				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
-				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
-				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
-				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,
-				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
-				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
-				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,
-				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
-				FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */,
-				5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */,
-				EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */,
-				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
-				FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */,
-				FF68D05C20CE886500472FF7 /* RegisterUserViewModel.swift in Sources */,
-				FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */,
 				EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */,
-				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
-				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,
-				FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */,
-				5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D573620F4B78B0088E3B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9D57B220F4B90D0088E3B8 /* SecondViewController.swift in Sources */,
+				FF9D57C020F4B90D0088E3B8 /* RegisterUserViewController.swift in Sources */,
+				FF9D57B720F4B90D0088E3B8 /* RegisterCardViewController.swift in Sources */,
+				FF9D575F20F4B8310088E3B8 /* User.swift in Sources */,
+				FF9D57BA20F4B90D0088E3B8 /* ReceiptsRootViewController.swift in Sources */,
+				FF9D57AE20F4B90D0088E3B8 /* HomeViewModel.swift in Sources */,
+				FF9D57BF20F4B90D0088E3B8 /* MoreViewController.swift in Sources */,
+				FF9D57A020F4B90D0088E3B8 /* RxUIViewExtensions.swift in Sources */,
+				FF9D57C420F4B90D0088E3B8 /* LoginViewModel.swift in Sources */,
+				FF9D57C620F4B90D0088E3B8 /* ReceiptDetailViewController.swift in Sources */,
+				FF9D57C720F4B90D0088E3B8 /* ReceiptDetailViewModel.swift in Sources */,
+				FF9D579D20F4B90D0088E3B8 /* SceneCoordinatorType.swift in Sources */,
+				FF9D57A420F4B90D0088E3B8 /* Overture additions.swift in Sources */,
+				FF9D579820F4B90D0088E3B8 /* Environment.swift in Sources */,
+				FF9D57AD20F4B90D0088E3B8 /* HomeViewController.swift in Sources */,
+				FF9D57A120F4B90D0088E3B8 /* LoginValidation.swift in Sources */,
+				FF9D57A520F4B90D0088E3B8 /* APIService.swift in Sources */,
+				FF9D57CB20F4B90D0088E3B8 /* ReceiptViewController.swift in Sources */,
+				FF9D57A620F4B90D0088E3B8 /* Auth.swift in Sources */,
+				FF9D579A20F4B90D0088E3B8 /* Scene.swift in Sources */,
+				FF9D57C120F4B90D0088E3B8 /* RegisterUserViewModel.swift in Sources */,
+				FF9D57B520F4B90D0088E3B8 /* RegistrationCodeViewModel.swift in Sources */,
+				FF9D57A820F4B90D0088E3B8 /* WelcomeViewController.swift in Sources */,
+				FF9D575E20F4B8310088E3B8 /* Receipt.swift in Sources */,
+				FF9D57BB20F4B90D0088E3B8 /* ReceiptsRootViewModel.swift in Sources */,
+				FF9D579920F4B90D0088E3B8 /* Mocks.swift in Sources */,
+				FF9D579C20F4B90D0088E3B8 /* SceneCoordinator.swift in Sources */,
+				FF9D579F20F4B90D0088E3B8 /* NibCellUtils.swift in Sources */,
+				FF9D57BC20F4B90D0088E3B8 /* MoreCell.swift in Sources */,
+				FF9D57B420F4B90D0088E3B8 /* RegistrationCodeViewController.swift in Sources */,
+				FF9D579E20F4B90D0088E3B8 /* NibInstantiable.swift in Sources */,
+				FF9D579B20F4B90D0088E3B8 /* SceneTransitionType.swift in Sources */,
+				FF9D57C320F4B90D0088E3B8 /* LoginViewController.swift in Sources */,
+				FF9D57A320F4B90D0088E3B8 /* NavigationViewController.swift in Sources */,
+				FF9D57B020F4B90D0088E3B8 /* StoresViewController.swift in Sources */,
+				FF9D57A920F4B90D0088E3B8 /* WelcomeViewModel.swift in Sources */,
+				FF9D57B820F4B90D0088E3B8 /* RegisterCardViewModel.swift in Sources */,
+				FF9D57C920F4B90D0088E3B8 /* ReceiptViewCell.swift in Sources */,
+				FF9D57CC20F4B90D0088E3B8 /* ReceiptViewModel.swift in Sources */,
+				FF9D57AB20F4B90D0088E3B8 /* ScanReceiptViewController.swift in Sources */,
+				FF9D57A220F4B90D0088E3B8 /* ViewModelBindable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9D573F20F4B78B0088E3B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF10467520F4DAF7003F0B01 /* LoginViewModelTests.swift in Sources */,
+				FF10467620F4DAF7003F0B01 /* RegisterUserViewModelTests.swift in Sources */,
+				FF10467320F4DAC0003F0B01 /* TestScheduler+MarbleTests.swift in Sources */,
+				FF9D574B20F4B78B0088E3B8 /* BlippFrameworkTests.swift in Sources */,
+				FF10467420F4DAF7003F0B01 /* TestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,17 +1014,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */,
-				FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */,
-				FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */,
 				FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */,
-				FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FF9D574620F4B78B0088E3B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF9D573A20F4B78B0088E3B8 /* BlippFramework */;
+			targetProxy = FF9D574520F4B78B0088E3B8 /* PBXContainerItemProxy */;
+		};
+		FF9D574820F4B78B0088E3B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE826E8E20AADA4A006A0390 /* Blipp */;
+			targetProxy = FF9D574720F4B78B0088E3B8 /* PBXContainerItemProxy */;
+		};
+		FF9D574F20F4B78B0088E3B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF9D573A20F4B78B0088E3B8 /* BlippFramework */;
+			targetProxy = FF9D574E20F4B78B0088E3B8 /* PBXContainerItemProxy */;
+		};
 		FFA681A320BF063700FE29DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EE826E8E20AADA4A006A0390 /* Blipp */;
@@ -882,7 +1175,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2AQ8FWFADX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Blipp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -901,7 +1194,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2AQ8FWFADX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Blipp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -914,9 +1207,109 @@
 			};
 			name = Release;
 		};
+		FF9D575320F4B78B0088E3B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D755E997EB7EA314F10F3861 /* Pods-BlippFramework.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BlippFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF9D575420F4B78B0088E3B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C813864B08FC022152F2829 /* Pods-BlippFramework.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BlippFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FF9D575720F4B78B0088E3B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 077BDBCE959A6BF9CB73D036 /* Pods-BlippFrameworkTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlippFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+			};
+			name = Debug;
+		};
+		FF9D575820F4B78B0088E3B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6AE9BD6C7132743691D099 /* Pods-BlippFrameworkTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BlippFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+			};
+			name = Release;
+		};
 		FFA681A420BF063700FE29DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */;
+			baseConfigurationReference = 91C4CA4E6C47AAACA0238F03 /* Pods-BlippTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -937,7 +1330,7 @@
 		};
 		FFA681A520BF063700FE29DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */;
+			baseConfigurationReference = E306CDC60E5ECAF49491B130 /* Pods-BlippTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -973,6 +1366,24 @@
 			buildConfigurations = (
 				EE826EA420AADA4D006A0390 /* Debug */,
 				EE826EA520AADA4D006A0390 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF9D575220F4B78B0088E3B8 /* Build configuration list for PBXNativeTarget "BlippFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9D575320F4B78B0088E3B8 /* Debug */,
+				FF9D575420F4B78B0088E3B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF9D575620F4B78B0088E3B8 /* Build configuration list for PBXNativeTarget "BlippFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9D575720F4B78B0088E3B8 /* Debug */,
+				FF9D575820F4B78B0088E3B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,0 @@
-module Overture {
-  umbrella header "Overture-library-umbrella.h"
-
-  export *
-  module * { export * }
-}
