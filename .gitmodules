@@ -1,0 +1,12 @@
+[submodule "Frameworks/RxSwift"]
+	path = Frameworks/RxSwift
+	url = https://github.com/ReactiveX/RxSwift.git
+[submodule "ExternalFrameworks/swift-overture"]
+	path = ExternalFrameworks/swift-overture
+	url = https://github.com/pointfreeco/swift-overture.git
+[submodule "ExternalFrameworks/RxDataSources"]
+	path = ExternalFrameworks/RxDataSources
+	url = https://github.com/RxSwiftCommunity/RxDataSources.git
+[submodule "ExternalFrameworks/Result"]
+	path = ExternalFrameworks/Result
+	url = https://github.com/antitypical/Result.git

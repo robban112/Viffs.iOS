@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Blipp.xcodeproj">
+      location = "group:Blipp.playground">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Blipp.xcodeproj">
    </FileRef>
 </Workspace>
