@@ -10,3 +10,6 @@
 [submodule "Frameworks/Result"]
 	path = Frameworks/Result
 	url = https://github.com/antitypical/Result.git
+[submodule "SnapKit"]
+	path = Frameworks/SnapKit
+	url = https://github.com/SnapKit/SnapKit.git

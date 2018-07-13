@@ -16,6 +16,8 @@
 		FF10467520F4DAF7003F0B01 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF10467620F4DAF7003F0B01 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF3577FB20F7ABAC0086E4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3577FA20F7ABAC0086E4A5 /* Assets.xcassets */; };
+		FF35783420F8FA400086E4A5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35783120F8F7FD0086E4A5 /* SnapKit.framework */; };
+		FF35783520F8FA530086E4A5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35783120F8F7FD0086E4A5 /* SnapKit.framework */; };
 		FF95BA0220F6796B0041C8A8 /* BlippFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */; };
 		FF95BA0420F6797D0041C8A8 /* BlippFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF9D573B20F4B78B0088E3B8 /* BlippFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF95BA0820F679D00041C8A8 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF95B9D820F678D70041C8A8 /* Differentiator.framework */; };
@@ -97,6 +99,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FF35783020F8F7FD0086E4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF35782B20F8F7FC0086E4A5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		FF35783220F8F7FD0086E4A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF35782B20F8F7FC0086E4A5 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
 		FF95B9A120F678CE0041C8A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FF95B98920F678CE0041C8A8 /* Rx.xcodeproj */;
@@ -423,6 +439,7 @@
 		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
 		FF3577FA20F7ABAC0086E4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF35782B20F8F7FC0086E4A5 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = Frameworks/SnapKit/SnapKit.xcodeproj; sourceTree = "<group>"; };
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -474,6 +491,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF35783420F8FA400086E4A5 /* SnapKit.framework in Frameworks */,
 				FF95BA0E20F679F30041C8A8 /* RxBlocking.framework in Frameworks */,
 				FF95BA0F20F679F30041C8A8 /* RxTest.framework in Frameworks */,
 				FF95BA0820F679D00041C8A8 /* Differentiator.framework in Frameworks */,
@@ -490,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF35783520F8FA530086E4A5 /* SnapKit.framework in Frameworks */,
 				FF95BA1E20F67A390041C8A8 /* Differentiator.framework in Frameworks */,
 				FF95BA1F20F67A390041C8A8 /* Overture.framework in Frameworks */,
 				FF95BA2020F67A390041C8A8 /* Result.framework in Frameworks */,
@@ -649,6 +668,15 @@
 			path = TestUtils;
 			sourceTree = "<group>";
 		};
+		FF35782C20F8F7FC0086E4A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF35783120F8F7FD0086E4A5 /* SnapKit.framework */,
+				FF35783320F8F7FD0086E4A5 /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FF3AF53420E8CC8D00CF7B67 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +748,7 @@
 		FF94062F20F51D8C00756881 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF35782B20F8F7FC0086E4A5 /* SnapKit.xcodeproj */,
 				FF95B9F720F678E60041C8A8 /* Overture.xcodeproj */,
 				FF95B9DF20F678DB0041C8A8 /* Result.xcodeproj */,
 				FF95B9CB20F678D60041C8A8 /* RxDataSources.xcodeproj */,
@@ -1042,6 +1071,10 @@
 					ProductGroup = FF95B9CC20F678D60041C8A8 /* Products */;
 					ProjectRef = FF95B9CB20F678D60041C8A8 /* RxDataSources.xcodeproj */;
 				},
+				{
+					ProductGroup = FF35782C20F8F7FC0086E4A5 /* Products */;
+					ProjectRef = FF35782B20F8F7FC0086E4A5 /* SnapKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -1054,6 +1087,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FF35783120F8F7FD0086E4A5 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = FF35783020F8F7FD0086E4A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FF35783320F8F7FD0086E4A5 /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = FF35783220F8F7FD0086E4A5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FF95B9A220F678CE0041C8A8 /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -1587,10 +1634,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Blipp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1610,10 +1653,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = Blipp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
