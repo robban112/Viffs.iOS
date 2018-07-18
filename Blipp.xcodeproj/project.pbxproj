@@ -96,6 +96,7 @@
 		FF9D57CC20F4B90D0088E3B8 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
 		FF9D57CD20F4B90D0088E3B8 /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04C20CD8E7200472FF7 /* ReceiptViewController.xib */; };
 		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
+		FFD8446B20FA037500AC2E3A /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8444220FA037500AC2E3A /* Styling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -481,6 +482,7 @@
 		FFA681A920C0236000FE29DA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FFA681AC20C03BB200FE29DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIViewExtensions.swift; sourceTree = "<group>"; };
+		FFD8444220FA037500AC2E3A /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewModel.swift; sourceTree = "<group>"; };
 		FFD95B0320CBE1700010FBC4 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
@@ -823,6 +825,7 @@
 		FF9D573C20F4B78B0088E3B8 /* BlippFramework */ = {
 			isa = PBXGroup;
 			children = (
+				FFD8444220FA037500AC2E3A /* Styling.swift */,
 				FF38274E20C837670046F220 /* Environment.swift */,
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
 				FF9D575D20F4B7FB0088E3B8 /* Coordinator */,
@@ -1442,6 +1445,7 @@
 				FF9D579F20F4B90D0088E3B8 /* NibCellUtils.swift in Sources */,
 				FF9D57BC20F4B90D0088E3B8 /* MoreCell.swift in Sources */,
 				FF9D57B420F4B90D0088E3B8 /* RegistrationCodeViewController.swift in Sources */,
+				FFD8446B20FA037500AC2E3A /* Styling.swift in Sources */,
 				FF9D579E20F4B90D0088E3B8 /* NibInstantiable.swift in Sources */,
 				FF9D579B20F4B90D0088E3B8 /* SceneTransitionType.swift in Sources */,
 				FF9D57C320F4B90D0088E3B8 /* LoginViewController.swift in Sources */,
