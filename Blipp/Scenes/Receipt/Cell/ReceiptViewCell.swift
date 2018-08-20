@@ -11,8 +11,10 @@ import UIKit
 class ReceiptViewCell: UITableViewCell {
   var receipt: Receipt? = nil {
     didSet {
-      self.receiptName?.text = receipt?.name
-      self.receiptTotal?.text = (receipt?.total).map(String.init(describing:))
+      guard let receipt = receipt else { return }
+      self.receiptName?.text = receipt.name
+      let totalString = receipt.total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", receipt.total) : String(receipt.total)
+      self.receiptTotal?.text = totalString + receipt.currency
     }
   }
   
