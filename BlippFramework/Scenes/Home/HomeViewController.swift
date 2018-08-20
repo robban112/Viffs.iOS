@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
   
   func bindUIToViewModel() {
     
-    let cardBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "card25x25"), style: .plain, target: nil, action: nil)
+    let cardBarButton = UIBarButtonItem(image: .bundledImage(#imageLiteral(resourceName: "card25x25")), style: .plain, target: nil, action: nil)
     navigationItem.setRightBarButton(cardBarButton, animated: false)
     
     cardBarButton.rx.tap

@@ -3,5 +3,6 @@
     <pages>
         <page name='HomeViewController'/>
         <page name='WelcomeViewController'/>
+        <page name='ReceiptViewController'/>
     </pages>
 </playground>

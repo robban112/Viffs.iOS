@@ -15,6 +15,8 @@
 		FF10467420F4DAF7003F0B01 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
 		FF10467520F4DAF7003F0B01 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF10467620F4DAF7003F0B01 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
+		FF1A1053212ABA6D0017626D /* ReceiptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A1052212ABA6D0017626D /* ReceiptCell.swift */; };
+		FF1A1055212ABE750017626D /* BundleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A1054212ABE750017626D /* BundleUtils.swift */; };
 		FF3577FB20F7ABAC0086E4A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3577FA20F7ABAC0086E4A5 /* Assets.xcassets */; };
 		FF35783420F8FA400086E4A5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35783120F8F7FD0086E4A5 /* SnapKit.framework */; };
 		FF35783520F8FA530086E4A5 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35783120F8F7FD0086E4A5 /* SnapKit.framework */; };
@@ -437,6 +439,8 @@
 		FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FF10467020F4D8D4003F0B01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF1A1052212ABA6D0017626D /* ReceiptCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCell.swift; sourceTree = "<group>"; };
+		FF1A1054212ABE750017626D /* BundleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleUtils.swift; sourceTree = "<group>"; };
 		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
 		FF3577FA20F7ABAC0086E4A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -658,6 +662,7 @@
 				FF07F64A20D26E5800B011D8 /* HomeViewController.xib */,
 				FF07F64C20D27D0300B011D8 /* HomeViewController.swift */,
 				5C7177E020E2AC95001B4450 /* HomeViewModel.swift */,
+				FF1A1052212ABA6D0017626D /* ReceiptCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				FFA681AC20C03BB200FE29DA /* LoginValidation.swift */,
 				FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */,
 				FF68D05920CE772300472FF7 /* NavigationViewController.swift */,
+				FF1A1054212ABE750017626D /* BundleUtils.swift */,
 				FF33E00020D6AFE700FF8E5C /* Overture additions.swift */,
 			);
 			path = Utils;
@@ -1426,6 +1432,7 @@
 				FF9D57C420F4B90D0088E3B8 /* LoginViewModel.swift in Sources */,
 				FF9D57C620F4B90D0088E3B8 /* ReceiptDetailViewController.swift in Sources */,
 				FF9D57C720F4B90D0088E3B8 /* ReceiptDetailViewModel.swift in Sources */,
+				FF1A1055212ABE750017626D /* BundleUtils.swift in Sources */,
 				FF9D579D20F4B90D0088E3B8 /* SceneCoordinatorType.swift in Sources */,
 				FF9D57A420F4B90D0088E3B8 /* Overture additions.swift in Sources */,
 				FF9D579820F4B90D0088E3B8 /* Environment.swift in Sources */,
@@ -1434,6 +1441,7 @@
 				FF9D57A520F4B90D0088E3B8 /* APIService.swift in Sources */,
 				FF9D57CB20F4B90D0088E3B8 /* ReceiptViewController.swift in Sources */,
 				FF9D57A620F4B90D0088E3B8 /* Auth.swift in Sources */,
+				FF1A1053212ABA6D0017626D /* ReceiptCell.swift in Sources */,
 				FF9D579A20F4B90D0088E3B8 /* Scene.swift in Sources */,
 				FF9D57C120F4B90D0088E3B8 /* RegisterUserViewModel.swift in Sources */,
 				FF9D57B520F4B90D0088E3B8 /* RegistrationCodeViewModel.swift in Sources */,

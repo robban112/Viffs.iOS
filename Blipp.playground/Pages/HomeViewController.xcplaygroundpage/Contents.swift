@@ -8,16 +8,24 @@ import PlaygroundSupport
 @testable import BlippFramework
 
 public final class ReceiptCell: UITableViewCell {
-  private let titleDateStackView = with(UIStackView(), mut(\.axis, .vertical))
-  private let storeTitleLabel = with(UILabel(), mut(\.font, UIFont(name: "ChalkboardSE-Light", size: 18)))
-  private let dateLabel = with(UILabel(), concat(
-    mut(\.textColor, .darkGray),
-    mut(\.font, UIFont(name: "ChalkboardSE-Light", size: 12))
-  ))
-  private let priceLabel = with(UILabel(), mut(\.font, UIFont(name: "ChalkboardSE-Light", size: 18)))
+  private let titleDateStackView = UIStackView()
+  private let storeTitleLabel = UILabel()
+  private let dateLabel = UILabel()
+  private let priceLabel = UILabel()
   
   public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
+    
+    titleDateStackView.axis = .vertical
+    
+    storeTitleLabel.font = UIFont(name: "ChalkboardSE-Light", size: 18)
+    
+    dateLabel.textColor = .darkGray
+    dateLabel.font = UIFont(name: "ChalkboardSE-Light", size: 12)
+    
+    priceLabel.font = UIFont(name: "ChalkboardSE-Light", size: 18)
+    
+    self.backgroundColor = UIColor.white.withAlphaComponent(0.2)
     
     [dateLabel, storeTitleLabel]
       .forEach(titleDateStackView.addArrangedSubview(_:))
@@ -64,11 +72,11 @@ func makeHomeButton(withImage image: UIImage) -> UIButton {
 }
 
 func makeButtonWithLabelStack() -> UIStackView {
-  return with(UIStackView(), concat(
-    mut(\.axis, .vertical),
-    mut(\.alignment, .center),
-    mut(\.spacing, 5)
-  ))
+  let stackView = UIStackView()
+  stackView.axis = .vertical
+  stackView.alignment = .center
+  stackView.spacing = 5
+  return stackView
 }
 
 // view controller
@@ -95,11 +103,6 @@ final public class HomeVC: UIViewController {
     mut(\.alignment, .center)
   ))
   
-  private let buttonsStackView = with(UIStackView(), concat(
-    mut(\.axis, .horizontal),
-    mut(\.spacing, 50)
-  ))
-  
   private let tableViewWithTitleStackView = with(UIStackView(), concat(
     stackBaseStyle,
     mut(\.spacing, 28)
@@ -107,10 +110,8 @@ final public class HomeVC: UIViewController {
   
   private let tableViewTitleAndButtonView = UIView()
   
-  private let receiptsStack = makeButtonWithLabelStack()
   private let shopsStack = makeButtonWithLabelStack()
   
-  private let receiptsButton = makeHomeButton(withImage: #imageLiteral(resourceName: "Receiptbutton.png"))
   private let shopsButton = makeHomeButton(withImage: #imageLiteral(resourceName: "Shopbutton.png"))
   
   let addCardButton = with(UIButton(), concat(
@@ -124,7 +125,10 @@ final public class HomeVC: UIViewController {
           , Receipt(currency: "SEK", name: "Pressbyrån", total: 35, url: "") ])
     .map { [SectionModel(model: 0, items: $0)] }
   
-  let receiptsTableView = with(UITableView(), mut(\.rowHeight, 60))
+  let receiptsTableView = with(UITableView(), concat(
+    mut(\.rowHeight, 60),
+    mut(\.backgroundColor, .clear)
+  ))
   
   let tableViewTitle = with(UILabel(), concat(
     mut(\.font, UIFont(name: "ChalkboardSE-Regular", size: 18))
@@ -133,6 +137,8 @@ final public class HomeVC: UIViewController {
   
   public init() {
     super.init(nibName: nil, bundle: nil)
+    
+    
 
     buildViewHierarchy()
 
@@ -144,32 +150,21 @@ final public class HomeVC: UIViewController {
   private func buildViewHierarchy() {
     [addCardButton]
       .forEach(topStackView.addArrangedSubview(_:))
-    
-    let receiptLabel = with(UILabel(), concat(
-      mut(\.text, "Kvitton"),
-      mut(\.font, UIFont(name: "ChalkboardSE-Light", size: 20))
-    ))
-    let shopsLabel = with(UILabel(), concat(
-      mut(\.text, "Butiker"),
-      mut(\.font, UIFont(name: "ChalkboardSE-Light", size: 20))
-    ))
-    
-    [receiptsButton, receiptLabel]
-      .forEach(receiptsStack.addArrangedSubview(_:))
+
+    let shopsLabel = UILabel()
+    shopsLabel.text = "Butiker"
+    shopsLabel.font = UIFont(name: "ChalkboardSE-Light", size: 20)
     
     [shopsButton, shopsLabel]
       .forEach(shopsStack.addArrangedSubview(_:))
     
-    [receiptsStack, shopsStack]
-      .forEach(buttonsStackView.addArrangedSubview(_:))
-    
-    [buttonsStackView]
+    [shopsStack]
       .forEach(contentStackView.addArrangedSubview(_:))
     
     [topStackView, contentStackView]
       .forEach(rootStackView.addArrangedSubview(_:))
 
-    tableViewTitle.text = "Dina tre senaste kvitton"
+    tableViewTitle.text = "Senaste kvitton"
 
     tableViewTitleButton.setTitle("Visa alla", for: .normal)
     with(tableViewTitleButton, primaryButtonStyle)
@@ -198,10 +193,6 @@ final public class HomeVC: UIViewController {
 
     addCardButton.snp.makeConstraints { make in
       make.width.height.equalTo(50)
-    }
-
-    receiptsButton.snp.makeConstraints { make in
-      make.width.height.equalTo(view.snp.width).dividedBy(3)
     }
 
     shopsButton.snp.makeConstraints { make in
