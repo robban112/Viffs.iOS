@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
     configureCell: { (_, tv, ip, receipt) in
       let cell = tv.dequeueReusableCell(type: ReceiptViewCell.self, forIndexPath: ip)
       cell.receipt = receipt
+      cell.accessoryType = .disclosureIndicator
       return cell
     }
   )
