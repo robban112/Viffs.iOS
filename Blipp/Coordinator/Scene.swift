@@ -106,23 +106,12 @@ fileprivate func createBlippTabBarController() -> UITabBarController {
   let homeNav = UINavigationController(rootViewController: homeVC)
   homeNav.tabBarItem = UITabBarItem(title: "Hem", image: #imageLiteral(resourceName: "home25x25"), tag: 0)
   
-  var receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
-  receiptsRootVC.bind(to: ReceiptsRootViewModel())
-  receiptsRootVC.title = "Kvitton"
-  let receiptsNav = UINavigationController(rootViewController: receiptsRootVC)
-  receiptsNav.tabBarItem = UITabBarItem(title: "Kvitton", image: #imageLiteral(resourceName: "receipt25x25"), tag: 1)
-  
-  let storesVC = StoresViewController.instantiateFromNib()
-  storesVC.title = "Butiker"
-  let storesNav = UINavigationController(rootViewController: storesVC)
-  storesNav.tabBarItem = UITabBarItem(title: "Butiker", image: #imageLiteral(resourceName: "shop25x25"), tag: 2)
-  
   let moreVC = MoreViewController.instantiateFromNib()
   moreVC.title = "Mer"
   let moreNav = UINavigationController(rootViewController: moreVC)
-  moreVC.tabBarItem = UITabBarItem(title: "Mer", image: nil, tag: 3)
+  moreVC.tabBarItem = UITabBarItem(title: "Mer", image: nil, tag: 1)
   
-  blippTabBarController.viewControllers = [ homeNav, receiptsNav, storesNav, moreNav ]
+  blippTabBarController.viewControllers = [ homeNav, moreNav ]
   
   return blippTabBarController
 }
