@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9il-7w-PUs">
-                    <rect key="frame" x="0.0" y="110" width="375" height="204"/>
+                    <rect key="frame" x="0.0" y="90" width="375" height="224"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eda-j0-1jd">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="204"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
                                     <rect key="frame" x="97.5" y="0.0" width="180" height="180"/>
@@ -39,8 +39,8 @@
                                     <state key="normal" backgroundImage="Shopbutton-1"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                                    <rect key="frame" x="157" y="180" width="61" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <rect key="frame" x="137.5" y="180" width="100.5" height="44"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="31"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
