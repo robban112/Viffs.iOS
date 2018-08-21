@@ -55,6 +55,7 @@ PODS:
   - RxSwift (4.2.0)
   - RxTest (4.2.0):
     - RxSwift (~> 4.0)
+  - XYDoughnutChart (1.3.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -68,6 +69,7 @@ DEPENDENCIES:
   - RxDataSources (~> 3.0)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
+  - XYDoughnutChart
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -90,6 +92,7 @@ SPEC REPOS:
     - RxDataSources
     - RxSwift
     - RxTest
+    - XYDoughnutChart
 
 SPEC CHECKSUMS:
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
@@ -111,7 +114,8 @@ SPEC CHECKSUMS:
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
+  XYDoughnutChart: 7c787ab6f41b6a5fbd70cf5ccb5ded7fef6ad476
 
-PODFILE CHECKSUM: 4558752d33142fc8c46be9c773d0179fd692f323
+PODFILE CHECKSUM: 2b00b9a4396ab8b19fe50e3ffea6505524f77294
 
 COCOAPODS: 1.5.3

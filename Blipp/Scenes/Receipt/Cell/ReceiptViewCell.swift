@@ -15,6 +15,14 @@ class ReceiptViewCell: UITableViewCell {
       self.receiptName?.text = receipt.name
       let totalString = receipt.total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", receipt.total) : String(receipt.total)
       self.receiptTotal?.text = totalString + receipt.currency
+      if let picName = storeToLogo[receipt.name] {
+        guard let image = UIImage(named: picName) else {
+          print("Store exists in storeToLogo dictionary but the image doesn't exist!")
+          return
+        }
+        self.storeLogo.image = image
+      }
+      //TODO: Receipt date
     }
   }
   
@@ -22,6 +30,8 @@ class ReceiptViewCell: UITableViewCell {
     receipt = nil
   }
   
+  @IBOutlet var receiptDate: UILabel!
+  @IBOutlet var storeLogo: UIImageView!
   @IBOutlet var receiptName: UILabel!
   @IBOutlet var receiptTotal: UILabel!
 }

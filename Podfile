@@ -14,6 +14,7 @@ target 'Blipp' do
   pod 'Overture', '~> 0.2'
   pod 'Result', '~> 4.0.0'
   pod 'RxDataSources', '~> 3.0'
+  pod "XYDoughnutChart"
 end
 
 # For unit testing

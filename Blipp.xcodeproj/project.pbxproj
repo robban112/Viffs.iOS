@@ -15,6 +15,7 @@
 		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
+		EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE168A12212C078400AB426A /* StoreToLogo.swift */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
 		EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */; };
@@ -99,6 +100,7 @@
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
+		EE168A12212C078400AB426A /* StoreToLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreToLogo.swift; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
 		EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -232,7 +234,9 @@
 				51B78C2B7EDD5AA579DA57C6 /* Pods */,
 				35CB1C987188EE324ADB6859 /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		EE826E9020AADA4A006A0390 /* Products */ = {
 			isa = PBXGroup;
@@ -258,6 +262,7 @@
 				FF68D03A20CD15BA00472FF7 /* Coordinator */,
 				FF38274E20C837670046F220 /* Environment.swift */,
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
+				EE168A12212C078400AB426A /* StoreToLogo.swift */,
 			);
 			path = Blipp;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-framework/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XYDoughnutChart/XYDoughnutChart.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb-framework/nanopb.framework",
 			);
@@ -632,6 +638,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XYDoughnutChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -709,6 +716,7 @@
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
 				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
 				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,
+				EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,

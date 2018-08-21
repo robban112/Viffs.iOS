@@ -21,18 +21,32 @@
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTX-Sy-M3e">
                         <rect key="frame" x="15" y="15.5" width="345" height="33"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AD4-5t-Aag">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AD4-5t-Aag">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="PR5-wi-1fQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemköp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-lW-kH2">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cs6-Od-ngo">
                                 <rect key="frame" x="50" y="0.0" width="239" height="33"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hemköp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-lW-kH2">
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="Y1S-uC-vF0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="2018-08-20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-ig-hLZ">
+                                        <rect key="frame" x="0.0" y="18" width="239" height="15"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="200kr" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-m8-Cch">
                                 <rect key="frame" x="299" y="0.0" width="46" height="33"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
@@ -50,8 +64,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="receiptDate" destination="lDx-ig-hLZ" id="tSu-rd-mWf"/>
                 <outlet property="receiptName" destination="Nsh-lW-kH2" id="6fC-qC-UIc"/>
                 <outlet property="receiptTotal" destination="wsY-m8-Cch" id="yQ2-tQ-5qB"/>
+                <outlet property="storeLogo" destination="AD4-5t-Aag" id="yqc-va-3PQ"/>
             </connections>
             <point key="canvasLocation" x="358.5" y="-3"/>
         </tableViewCell>
