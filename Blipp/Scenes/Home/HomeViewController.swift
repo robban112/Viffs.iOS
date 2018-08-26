@@ -28,7 +28,8 @@ class HomeViewController: UIViewController, ViewModelBindable {
     }
   )
   
-  @IBOutlet weak var storesButton: UIButton!
+    @IBOutlet var receiptsButton: UIButton!
+    @IBOutlet weak var storesButton: UIButton!
   @IBOutlet weak var receiptsTableView: UITableView!
   @IBOutlet weak var showAllReceiptsButton: UIButton!
   
@@ -58,7 +59,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
       .bind(to: viewModel.inputs.stores)
       .disposed(by: disposeBag)
     
-    showAllReceiptsButton.rx.tap
+    receiptsButton.rx.tap
       .bind(to: viewModel.inputs.showAllReceiptsButtonPressed)
       .disposed(by: disposeBag)
   }

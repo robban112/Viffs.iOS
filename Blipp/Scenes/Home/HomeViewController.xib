@@ -13,8 +13,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
+                <outlet property="receiptsButton" destination="9XJ-F7-P7S" id="dE8-K6-zIw"/>
                 <outlet property="receiptsTableView" destination="gRl-om-Vn0" id="bPp-5Q-G87"/>
-                <outlet property="showAllReceiptsButton" destination="37K-6D-EfF" id="3G8-Xx-E20"/>
                 <outlet property="storesButton" destination="HzS-ux-X3J" id="bN8-R3-usr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="MV5-sT-Knx"/>
             </connections>
@@ -24,30 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9il-7w-PUs">
-                    <rect key="frame" x="0.0" y="90" width="375" height="224"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eda-j0-1jd">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
-                                    <rect key="frame" x="97.5" y="0.0" width="180" height="180"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="180" id="Efe-qv-dqJ"/>
-                                        <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
-                                    </constraints>
-                                    <state key="normal" backgroundImage="Shopbutton-1"/>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                                    <rect key="frame" x="137.5" y="180" width="100.5" height="44"/>
-                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="31"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-om-Vn0">
                     <rect key="frame" x="0.0" y="438" width="375" height="180"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,41 +31,79 @@
                         <constraint firstAttribute="height" constant="180" id="2Kw-iJ-MWa"/>
                     </constraints>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37K-6D-EfF">
-                    <rect key="frame" x="287" y="400" width="80" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="0Jb-xe-9pD"/>
-                    </constraints>
-                    <state key="normal" title="Visa alla"/>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senaste kvitton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-uR-BsL">
-                    <rect key="frame" x="8" y="403" width="271" height="24.5"/>
+                    <rect key="frame" x="8" y="403.5" width="117.5" height="24.5"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9il-7w-PUs">
+                    <rect key="frame" x="0.0" y="104" width="360" height="210"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eda-j0-1jd">
+                            <rect key="frame" x="0.0" y="0.0" width="180" height="210"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="180" id="Efe-qv-dqJ"/>
+                                        <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="Shopbutton-1"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
+                                    <rect key="frame" x="48" y="180" width="84" height="30"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gvl-bE-NUE">
+                            <rect key="frame" x="180" y="0.0" width="180" height="210"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F7-P7S">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
+                                        <constraint firstAttribute="height" constant="180" id="hQ5-pc-eIK"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="receipt_logo"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
+                                    <rect key="frame" x="50" y="180" width="80.5" height="30"/>
+                                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="eda-j0-1jd" firstAttribute="top" secondItem="9il-7w-PUs" secondAttribute="top" id="7a3-7Q-CsP"/>
+                        <constraint firstAttribute="bottom" secondItem="eda-j0-1jd" secondAttribute="bottom" id="nty-hF-EoO"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9il-7w-PUs" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="top" constant="250" id="71k-p6-v9U"/>
+                <constraint firstItem="9il-7w-PUs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="HF1-oa-a4B"/>
                 <constraint firstItem="gRl-om-Vn0" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Uxo-0D-bTE"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="37K-6D-EfF" secondAttribute="trailing" constant="8" id="epx-2O-ckY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9il-7w-PUs" secondAttribute="trailing" id="fSM-Hn-pPj"/>
+                <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="12O-uR-BsL" secondAttribute="bottom" constant="10" id="f9g-h6-jG4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gRl-om-Vn0" secondAttribute="bottom" id="fh8-uG-SLV"/>
                 <constraint firstItem="9il-7w-PUs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ix6-FN-FAh"/>
-                <constraint firstItem="37K-6D-EfF" firstAttribute="leading" secondItem="12O-uR-BsL" secondAttribute="trailing" constant="8" id="lcp-L4-BmG"/>
                 <constraint firstItem="12O-uR-BsL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="m2N-ZL-aZ8"/>
-                <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="37K-6D-EfF" secondAttribute="bottom" constant="8" id="pQk-st-8gC"/>
-                <constraint firstItem="12O-uR-BsL" firstAttribute="centerY" secondItem="37K-6D-EfF" secondAttribute="centerY" id="tIp-yG-Hlq"/>
                 <constraint firstItem="gRl-om-Vn0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wnf-gO-Rm5"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="28" y="54"/>
         </view>
     </objects>
     <resources>
         <image name="Shopbutton-1" width="178" height="178"/>
+        <image name="receipt_logo" width="1600" height="1600"/>
     </resources>
 </document>

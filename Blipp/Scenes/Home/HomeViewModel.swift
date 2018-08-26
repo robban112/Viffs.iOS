@@ -54,7 +54,9 @@ struct HomeViewModel: HomeViewModelType
       .map { receipts in
         [SectionModel(model: 0, items: receipts)]
     }
-    
+    let navigateAddCard = addCard.flatMapLatest {
+      coordinator.transition(to: Scene.registerCard(.init()))
+    }
     let navigateStores = stores.flatMapLatest {
       coordinator.transition(to: Scene.stores)
     }
@@ -65,7 +67,7 @@ struct HomeViewModel: HomeViewModelType
       coordinator.transition(to: Scene.receipts(.init()))
       return coordinator.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
     }
-    navigate = Observable.merge(navigateStores, navigateAllReceipts, navigateReceiptDetail)
+    navigate = Observable.merge(navigateStores, navigateAllReceipts, navigateReceiptDetail, navigateAddCard)
   }
   
   var inputs: HomeViewModelInputs { return self }
