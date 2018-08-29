@@ -96,11 +96,13 @@ fileprivate func createBlippTabBarController() -> UITabBarController {
   let homeNav = UINavigationController(rootViewController: homeVC)
   homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
   homeNav.navigationBar.shadowImage = UIImage()
-  homeNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "home25x25"), tag: 0)
+  homeNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "home30x30"), tag: 0)
+  homeNav.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
   
   let moreVC = MoreViewController.instantiateFromNib()
   let moreNav = UINavigationController(rootViewController: moreVC)
-  moreVC.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "menu"), tag: 1)
+  moreVC.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "menu30x30"), tag: 1)
+  moreVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
   
   blippTabBarController.viewControllers = [ homeNav, moreNav ]
   
