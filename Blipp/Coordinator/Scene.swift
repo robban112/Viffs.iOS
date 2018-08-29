@@ -92,6 +92,7 @@ fileprivate func createBlippTabBarController() -> UITabBarController {
   
   var homeVC = HomeViewController.instantiateFromNib()
   homeVC.bind(to: HomeViewModel())
+  homeVC.title = ""
   let homeNav = UINavigationController(rootViewController: homeVC)
   homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
   homeNav.navigationBar.shadowImage = UIImage()
