@@ -48,7 +48,8 @@ class HomeViewController: UIViewController, ViewModelBindable {
       .bind(to: viewModel.inputs.receiptSelected)
       .disposed(by: disposeBag)
     
-    let cardBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "card25x25"), style: .plain, target: nil, action: nil)
+    let cardBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "addCardBlue"), style: .plain, target: nil, action: nil)
+    
     navigationItem.setRightBarButton(cardBarButton, animated: false)
     
     cardBarButton.rx.tap

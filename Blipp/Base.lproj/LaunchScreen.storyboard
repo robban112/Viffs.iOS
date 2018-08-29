@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,16 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlippLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BxS-xP-sst">
-                                <rect key="frame" x="50" y="170" width="274" height="326"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meny - Blipp" translatesAutoresizingMaskIntoConstraints="NO" id="BxS-xP-sst">
+                                <rect key="frame" x="25" y="170" width="334" height="285"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxS-xP-sst" secondAttribute="trailing" constant="51" id="Fjr-SC-Vcy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxS-xP-sst" secondAttribute="trailing" constant="16" id="Fjr-SC-Vcy"/>
                             <constraint firstItem="BxS-xP-sst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="PpC-3w-bW5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BxS-xP-sst" secondAttribute="bottom" constant="171" id="hAN-Pf-kQx"/>
-                            <constraint firstItem="BxS-xP-sst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pBA-Zt-EX4"/>
+                            <constraint firstItem="BxS-xP-sst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="XMf-v6-lx4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BxS-xP-sst" secondAttribute="bottom" constant="212" id="hAN-Pf-kQx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BxS-xP-sst" secondAttribute="bottom" constant="212" id="li8-BZ-0AO"/>
+                            <constraint firstItem="BxS-xP-sst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="pBA-Zt-EX4"/>
+                            <constraint firstItem="BxS-xP-sst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="tSa-Dn-0nB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxS-xP-sst" secondAttribute="trailing" constant="16" id="uNc-U8-lqk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,6 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlippLogo" width="458" height="502"/>
+        <image name="Meny - Blipp" width="383" height="285"/>
     </resources>
 </document>
