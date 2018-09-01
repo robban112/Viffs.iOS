@@ -1,4 +1,9 @@
 PODS:
+  - AWSCognitoIdentityProvider (2.6.28):
+    - AWSCognitoIdentityProviderASF (= 1.0.1)
+    - AWSCore (= 2.6.28)
+  - AWSCognitoIdentityProviderASF (1.0.1)
+  - AWSCore (2.6.28)
   - Differentiator (3.0.2)
   - Firebase/Auth (5.7.0):
     - Firebase/CoreOnly
@@ -84,6 +89,8 @@ PODS:
     - RxSwift (~> 4.0)
 
 DEPENDENCIES:
+  - AWSCognitoIdentityProvider (~> 2.6.0)
+  - AWSCore (~> 2.6.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -92,12 +99,15 @@ DEPENDENCIES:
   - Result (~> 4.0.0)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
-  - RxDataSources (~> 3.0)
+  - RxDataSources (~> 3.0a)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AWSCognitoIdentityProvider
+    - AWSCognitoIdentityProviderASF
+    - AWSCore
     - Differentiator
     - Firebase
     - FirebaseAnalytics
@@ -121,6 +131,9 @@ SPEC REPOS:
     - RxTest
 
 SPEC CHECKSUMS:
+  AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
+  AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
+  AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   Firebase: 734a4f92957aa6c40e7ae3fda3d9359e1890aa87
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
@@ -143,6 +156,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
 
-PODFILE CHECKSUM: 4c5bddfa179763203fc756cbd3dd55956c38e7d3
+PODFILE CHECKSUM: 6899af4ae03309d43097d4676e1007b0c10df1a8
 
 COCOAPODS: 1.5.3

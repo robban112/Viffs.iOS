@@ -15,6 +15,17 @@
 		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
+		EE13B4B5213AD1D1007743D2 /* AWS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4B4213AD1D1007743D2 /* AWS.storyboard */; };
+		EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */; };
+		EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B8213AD25A007743D2 /* SignInViewController.swift */; };
+		EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BA213AD291007743D2 /* MFAViewController.swift */; };
+		EE13B4BD213AD2BC007743D2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */; };
+		EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */; };
+		EE13B4C1213AD2FF007743D2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */; };
+		EE13B4C3213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */; };
+		EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */; };
+		EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */; };
+		EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4C8213AD406007743D2 /* MFAViewController.xib */; };
 		EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE168A12212C078400AB426A /* StoreToLogo.swift */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
@@ -100,6 +111,17 @@
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
+		EE13B4B4213AD1D1007743D2 /* AWS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AWS.storyboard; sourceTree = "<group>"; };
+		EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
+		EE13B4B8213AD25A007743D2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EE13B4BA213AD291007743D2 /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
+		EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSignUpViewController.swift; sourceTree = "<group>"; };
+		EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
+		EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
+		EE13B4C8213AD406007743D2 /* MFAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MFAViewController.xib; sourceTree = "<group>"; };
 		EE168A12212C078400AB426A /* StoreToLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreToLogo.swift; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +273,17 @@
 			isa = PBXGroup;
 			children = (
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
+				EE13B4B4213AD1D1007743D2 /* AWS.storyboard */,
+				EE13B4B8213AD25A007743D2 /* SignInViewController.swift */,
+				EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */,
+				EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */,
+				EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */,
+				EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */,
+				EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */,
+				EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */,
+				EE13B4BA213AD291007743D2 /* MFAViewController.swift */,
+				EE13B4C8213AD406007743D2 /* MFAViewController.xib */,
+				EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
@@ -587,6 +620,7 @@
 				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
 				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
 				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
+				EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */,
 				FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */,
 				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
 				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
@@ -596,6 +630,7 @@
 				FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */,
 				FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */,
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
+				EE13B4B5213AD1D1007743D2 /* AWS.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +651,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-framework/GoogleUtilities.framework",
@@ -629,6 +667,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -688,17 +729,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE13B4BD213AD2BC007743D2 /* SignUpViewController.swift in Sources */,
 				FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */,
 				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
 				EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */,
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
+				EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */,
+				EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */,
+				EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */,
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
 				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
 				FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
+				EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */,
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
 				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
@@ -710,10 +756,13 @@
 				FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */,
 				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
 				5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */,
+				EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */,
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
 				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
+				EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */,
 				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,
+				EE13B4C3213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift in Sources */,
 				EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
@@ -726,6 +775,7 @@
 				FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */,
 				FF68D05C20CE886500472FF7 /* RegisterUserViewModel.swift in Sources */,
 				FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */,
+				EE13B4C1213AD2FF007743D2 /* ForgotPasswordViewController.swift in Sources */,
 				EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */,
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
 				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,

@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+#Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
 target 'Blipp' do
@@ -13,7 +13,11 @@ target 'Blipp' do
   pod 'RxCocoa',  '~> 4.0'
   pod 'Overture', '~> 0.2'
   pod 'Result', '~> 4.0.0'
-  pod 'RxDataSources', '~> 3.0'
+  pod 'RxDataSources', '~> 3.0a'
+
+  #AWS
+    pod 'AWSCore', '~> 2.6.0'
+    pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
 end
 
 # For unit testing
