@@ -1,6 +1,0 @@
-framework module XYDoughnutChart {
-  umbrella header "XYDoughnutChart-umbrella.h"
-
-  export *
-  module * { export * }
-}
