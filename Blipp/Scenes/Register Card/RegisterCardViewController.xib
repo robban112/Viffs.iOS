@@ -23,11 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Green Circle Gradient Android Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="ygK-gp-3k0">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SgS-Hd-zOH">
-                    <rect key="frame" x="50" y="104" width="275" height="135"/>
+                    <rect key="frame" x="50" y="284" width="275" height="135"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-vM-m5E">
                             <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -95,20 +92,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="ygK-gp-3k0" secondAttribute="trailing" id="2kl-wx-fkD"/>
-                <constraint firstItem="ygK-gp-3k0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5NN-6W-knM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SgS-Hd-zOH" secondAttribute="trailing" constant="50" id="K4D-fz-wN8"/>
-                <constraint firstItem="ygK-gp-3k0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LKG-w3-XUB"/>
                 <constraint firstItem="SgS-Hd-zOH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="bXn-er-Th3"/>
-                <constraint firstItem="SgS-Hd-zOH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="blu-CW-34Z"/>
-                <constraint firstItem="ygK-gp-3k0" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="j6f-gC-Ra7"/>
+                <constraint firstItem="SgS-Hd-zOH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="220" id="blu-CW-34Z"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="63.5" y="53.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Blue Green Circle Gradient Android Wallpaper" width="1080" height="1920"/>
-    </resources>
 </document>

@@ -35,43 +35,54 @@ extension Scene: TargetScene {
       return .root(blippTabBarController)
     case let .login(loginViewModel):
       var loginVC = LoginViewController.instantiateFromNib()
+      loginVC.title = ""
       loginVC.bind(to: loginViewModel)
       return .push(loginVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
+      receiptDetailVC.title = ""
       receiptDetailVC.bind(to: receiptDetailViewModel)
       return .push(receiptDetailVC)
     case let .registerUser(registerUserViewModel):
       var registerUserVC = RegisterUserViewController.instantiateFromNib()
+      registerUserVC.title = ""
       registerUserVC.bind(to: registerUserViewModel)
       return .push(registerUserVC)
     case let .registerCard(registerCardViewModel):
       var registerCardVC = RegisterCardViewController.instantiateFromNib()
+      registerCardVC.title = ""
       registerCardVC.bind(to: registerCardViewModel)
       return .push(registerCardVC)
     case let .registrationCode(registrationCodeViewModel):
       var registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
+      registrationCodeVC.title = ""
       registrationCodeVC.bind(to: registrationCodeViewModel)
       return .push(registrationCodeVC)
     case let .receipts(receiptViewModel):
       var receiptVC = ReceiptViewController.instantiateFromNib()
+      receiptVC.title = ""
       receiptVC.bind(to: receiptViewModel)
       return .push(receiptVC)
     case let .receiptsSorted(receiptViewModel):
         var receiptVC = ReceiptViewController.instantiateFromNib()
+        receiptVC.title = ""
         receiptVC.bind(to: receiptViewModel)
         return .push(receiptVC)
     case .receiptsRoot:
       let receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
+      receiptsRootVC.title = ""
       return .push(receiptsRootVC)
     case .stores:
       let storesVC = StoresViewController.instantiateFromNib()
+      storesVC.title = ""
       return .push(storesVC)
     case .scanReceipt:
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
+      scanReceiptVC.title = ""
       return .push(scanReceiptVC)
     case let .welcome(welcomeViewModel):
       var welcomeVC = WelcomeViewController.instantiateFromNib()
+      welcomeVC.title = ""
       welcomeVC.bind(to: welcomeViewModel)
       let welcomeNav = UINavigationController(rootViewController: welcomeVC)
       

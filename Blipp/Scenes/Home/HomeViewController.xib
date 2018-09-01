@@ -38,7 +38,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F7-P7S">
-                    <rect key="frame" x="40" y="179" width="120" height="120"/>
+                    <rect key="frame" x="40" y="184" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
                         <constraint firstAttribute="height" constant="120" id="hQ5-pc-eIK"/>
@@ -46,13 +46,13 @@
                     <state key="normal" backgroundImage="KvittoIkon"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
-                    <rect key="frame" x="59.5" y="307" width="81" height="37"/>
+                    <rect key="frame" x="59.5" y="312" width="81" height="37"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
                     <color key="textColor" red="0.35751110402487296" green="0.35751110402487296" blue="0.35751110402487296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
-                    <rect key="frame" x="215" y="179" width="120" height="120"/>
+                    <rect key="frame" x="215" y="184" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
                         <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
@@ -60,7 +60,7 @@
                     <state key="normal" backgroundImage="ButikIkon"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                    <rect key="frame" x="233" y="307" width="84" height="37"/>
+                    <rect key="frame" x="233" y="312" width="84" height="37"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
                     <color key="textColor" red="0.35751110400000002" green="0.35751110400000002" blue="0.35751110400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="HzS-ux-X3J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="115" id="6Vh-w3-q0E"/>
+                <constraint firstItem="HzS-ux-X3J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="120" id="6Vh-w3-q0E"/>
                 <constraint firstItem="Lvt-Pb-iRO" firstAttribute="top" secondItem="9XJ-F7-P7S" secondAttribute="bottom" constant="8" id="8IP-Ip-K6U"/>
                 <constraint firstItem="Lvt-Pb-iRO" firstAttribute="centerX" secondItem="9XJ-F7-P7S" secondAttribute="centerX" id="8h9-Vs-fMD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HzS-ux-X3J" secondAttribute="trailing" constant="40" id="IlD-JD-Rtg"/>
@@ -78,7 +78,7 @@
                 <constraint firstItem="9XJ-F7-P7S" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="dp5-l0-Cid"/>
                 <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="12O-uR-BsL" secondAttribute="bottom" constant="10" id="f9g-h6-jG4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gRl-om-Vn0" secondAttribute="bottom" id="fh8-uG-SLV"/>
-                <constraint firstItem="9XJ-F7-P7S" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="115" id="jc0-ky-SZy"/>
+                <constraint firstItem="9XJ-F7-P7S" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="120" id="jc0-ky-SZy"/>
                 <constraint firstItem="12O-uR-BsL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="m2N-ZL-aZ8"/>
                 <constraint firstItem="gRl-om-Vn0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wnf-gO-Rm5"/>
             </constraints>

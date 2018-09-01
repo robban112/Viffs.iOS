@@ -22,11 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Green Circle Gradient Android Wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="zdD-MZ-iUB">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UGR-uM-8Qv">
-                    <rect key="frame" x="40" y="104" width="295" height="156"/>
+                    <rect key="frame" x="40" y="284" width="295" height="156"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skriv in den 8-siffriga Blipp-registreringskoden" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kb-T3-CGy">
                             <rect key="frame" x="0.0" y="0.0" width="295" height="41"/>
@@ -76,20 +73,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="zdD-MZ-iUB" secondAttribute="trailing" id="5zK-ds-thc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UGR-uM-8Qv" secondAttribute="trailing" constant="40" id="Aqe-V9-hkb"/>
                 <constraint firstItem="UGR-uM-8Qv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Myz-h3-iit"/>
-                <constraint firstItem="zdD-MZ-iUB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OVt-yd-VuQ"/>
-                <constraint firstItem="zdD-MZ-iUB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OYz-UE-Kau"/>
-                <constraint firstItem="zdD-MZ-iUB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Rip-4c-MRO"/>
-                <constraint firstItem="UGR-uM-8Qv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="kMo-MB-Ayk"/>
+                <constraint firstItem="UGR-uM-8Qv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="220" id="kMo-MB-Ayk"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="62.5" y="53.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Blue Green Circle Gradient Android Wallpaper" width="1080" height="1920"/>
-    </resources>
 </document>

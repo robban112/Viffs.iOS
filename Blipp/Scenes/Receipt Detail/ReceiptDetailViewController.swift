@@ -19,14 +19,7 @@ class ReceiptDetailViewController: UIViewController, ViewModelBindable {
   @IBOutlet weak var backButton: UIButton!
   
   func bindViewModel() {
-    bindUIToViewModel()
     bindViewModelToUI()
-  }
-  
-  private func bindUIToViewModel() {
-    backButton.rx.tap
-      .bind(to: viewModel.inputs.backButtonPressed)
-      .disposed(by: disposeBag)
   }
   
   private func bindViewModelToUI() {

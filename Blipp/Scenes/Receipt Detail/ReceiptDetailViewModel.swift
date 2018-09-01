@@ -42,10 +42,11 @@ struct ReceiptDetailViewModel: ReceiptDetailViewModelType
   
   init(receipt receiptObj: Receipt, coordinator: SceneCoordinatorType) {
     receipt = Single.just(receiptObj)
-    
-    receiptImage = receipt
-      .flatMap(Current.apiService.image)
-      .map { res in res.value.flatMap { $0 } }
+    if let image = UIImage(named: receiptObj.url) {
+      receiptImage = Single.just(image)
+    } else {
+      receiptImage = Single.just(#imageLiteral(resourceName: "Blue Green Circle Gradient Android Wallpaper"))
+    }
     
     let backNavigation = backButtonPressed.asObservable()
       .flatMapLatest { coordinator.pop(animated: true) }

@@ -25,6 +25,15 @@ struct APIService {
   var isValidPassword: (String) -> Single<Bool>
 }
 
+//Placeholder function
+func imageFromFile(for receipt: Receipt) -> UIImage {
+  if let image = UIImage(named: receipt.url) {
+    return image
+  } else {
+    return #imageLiteral(resourceName: "Blue Green Circle Gradient Android Wallpaper")
+  }
+}
+
 func image(for receipt: Receipt) -> Single<Result<UIImage?, APIServiceError>> {
   return Single.create(subscribe: { single -> Disposable in
     guard let url = URL.init(string: receipt.url) else { return Disposables.create() }

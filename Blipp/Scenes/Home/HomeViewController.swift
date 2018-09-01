@@ -48,7 +48,7 @@ class HomeViewController: UIViewController, ViewModelBindable {
       .bind(to: viewModel.inputs.receiptSelected)
       .disposed(by: disposeBag)
     
-    let cardBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "addCardBlue"), style: .plain, target: nil, action: nil)
+    let cardBarButton = UIBarButtonItem(image: UIImage(named: "addCardBlue")?.withRenderingMode(.alwaysOriginal), style: .plain, target: nil, action: nil)
     
     navigationItem.setRightBarButton(cardBarButton, animated: false)
     
