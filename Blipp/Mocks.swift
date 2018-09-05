@@ -17,7 +17,10 @@ extension Environment {
     return Environment(
       apiService: .mock,
       auth: .mock,
-      currentUser: nil
+      currentUser: nil,
+      currentAWSUser: nil,
+      pool: nil
+      
     )
   }
 }

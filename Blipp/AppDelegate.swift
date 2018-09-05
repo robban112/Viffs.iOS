@@ -67,7 +67,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.storyboard = UIStoryboard(name: "AWS", bundle: nil)
     pool.delegate = self
     
+    setInitialViewController()
+    updateUserDetails(pool: pool)
+    
     return true
+  }
+  
+  
+  func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
+    Current.pool = pool
+    Current.currentAWSUser = pool.currentUser()
+    let user = pool.currentUser()
+    
+    let details = user!.getDetails()
+  }
+  
+  func setInitialViewController() {
+    self.window = UIWindow(frame: UIScreen.main.bounds)
+    self.window?.rootViewController = UIViewController()
+    self.window?.makeKeyAndVisible()
+    
+    let coordinator = SceneCoordinator(window: window!)
+    SceneCoordinator.shared = coordinator
+    _ = coordinator.transition(to: Scene.blipp)
   }
   
   func applicationWillResignActive(_ application: UIApplication) {

@@ -26,6 +26,8 @@
 		EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */; };
 		EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */; };
 		EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4C8213AD406007743D2 /* MFAViewController.xib */; };
+		EE13B4D1213C4CE5007743D2 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4CF213C4CE5007743D2 /* MoreTableViewController.swift */; };
+		EE13B4D2213C4CE5007743D2 /* MoreTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */; };
 		EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE168A12212C078400AB426A /* StoreToLogo.swift */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
@@ -122,6 +124,8 @@
 		EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
 		EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
 		EE13B4C8213AD406007743D2 /* MFAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MFAViewController.xib; sourceTree = "<group>"; };
+		EE13B4CF213C4CE5007743D2 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewController.xib; sourceTree = "<group>"; };
 		EE168A12212C078400AB426A /* StoreToLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreToLogo.swift; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 			path = "Scan Card";
 			sourceTree = "<group>";
 		};
+		EE13B4CE213C4CB2007743D2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				EE13B4CF213C4CE5007743D2 /* MoreTableViewController.swift */,
+				EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		EE826E8620AADA4A006A0390 = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +345,7 @@
 		FF07F63520D269E900B011D8 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				EE13B4CE213C4CB2007743D2 /* TableView */,
 				FF3AF53420E8CC8D00CF7B67 /* Cell */,
 				FF07F63620D26A6F00B011D8 /* MoreViewController.xib */,
 				FF07F65620D27DAB00B011D8 /* MoreViewController.swift */,
@@ -612,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
+				EE13B4D2213C4CE5007743D2 /* MoreTableViewController.xib in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
@@ -759,6 +774,7 @@
 				EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */,
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
+				EE13B4D1213C4CE5007743D2 /* MoreTableViewController.swift in Sources */,
 				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
 				EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */,
 				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,

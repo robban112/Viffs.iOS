@@ -10,16 +10,61 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MoreViewController: UIViewController {
+class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   let disposeBag = DisposeBag()
   @IBOutlet weak var tableView: UITableView!
-  
+  var content = ["Kort", "Hjälp", "Inställningar", "Logga ut"]
+
   override func viewDidLoad() {
-    tableView.registerCell(type: MoreCell.self)
-    Observable.just(["Kort", "Hjälp", "Inställningar", "Logga ut"])
-      .bind(to: tableView.rx.items(cellIdentifier: "MoreCell", cellType: MoreCell.self)) { (_, text, cell) in
-        cell.label.text = text
-      }
-      .disposed(by: disposeBag)
+    loadTableView()
+//    tableView.registerCell(type: MoreCell.self)
+//    Observable.just(["Kort", "Hjälp", "Inställningar", "Logga ut"])
+//      .bind(to: tableView.rx.items(cellIdentifier: "MoreCell", cellType: MoreCell.self)) { (_, text, cell) in
+//        cell.label.text = text
+//      }
+//      .disposed(by: disposeBag)
   }
+  
+  func loadTableView() {
+    tableView.dataSource = self
+    tableView.delegate = self
+    self.tableView.register(UINib(nibName: "MoreCell", bundle: nil), forCellReuseIdentifier: "MoreCell");
+  }
+  
+  // MARK: - Table view data source
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    // #warning Incomplete implementation, return the number of sections
+    return 1
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // #warning Incomplete implementation, return the number of rows
+    return content.count
+  }
+  
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath)
+      as! MoreCell
+    cell.label.text = content[indexPath.row]
+    
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    switch content[indexPath.row] {
+    case "Logga ut":
+      Current.currentAWSUser?.signOut()
+    case "Kort":
+      return
+    case "Hjälp":
+      return
+    case "Inställningar":
+      return
+    default:
+      return
+    }
+  }
+
 }
