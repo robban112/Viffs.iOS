@@ -19,4 +19,5 @@ struct Environment {
   private(set) var currentUser: User? = nil
   var currentAWSUser: AWSCognitoIdentityUser? = nil
   var pool: AWSCognitoIdentityUserPool? = nil
+  var token: 
 }

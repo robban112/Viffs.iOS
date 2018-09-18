@@ -67,6 +67,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.storyboard = UIStoryboard(name: "AWS", bundle: nil)
     pool.delegate = self
     
+    // Initialize the Amazon Cognito credentials provider
+    let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+      identityPoolId:"us-east-1:b022e33e-7f9a-404f-9874-2def6ce79c2e")
+    
+    
+    let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+    
+    AWSServiceManager.default().defaultServiceConfiguration = configuration
+    
+    
+    
     setInitialViewController()
     updateUserDetails(pool: pool)
     
@@ -78,8 +89,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Current.pool = pool
     Current.currentAWSUser = pool.currentUser()
     let user = pool.currentUser()
-    
-    let details = user!.getDetails()
+    getSession()
+  }
+  
+  func getSession(){
+    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
+      DispatchQueue.main.async(execute: {
+        let getSessionResult = getSessionTask.result
+        let idToken = getSessionResult?.idToken?.tokenString
+        let accessToken = getSessionResult?.accessToken?.tokenString
+        print("Accesstoken: " + accessToken!)
+        print("idToken: " + idToken!)
+      })
+      return nil
+    }
   }
   
   func setInitialViewController() {
@@ -119,7 +142,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK:- AWSCognitoIdentityInteractiveAuthenticationDelegate protocol delegate
 
 extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
-  
   func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
     if (self.navigationController == nil) {
       self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController

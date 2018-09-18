@@ -286,6 +286,26 @@
 			isa = PBXGroup;
 			children = (
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
+				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
+				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
+				EE826EA020AADA4D006A0390 /* Info.plist */,
+				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
+				EE8D4D85215126C400341157 /* AWSLoginFiles */,
+				EE962D4E20BDA804006CEC0F /* Model */,
+				EE962D4D20BDA7EB006CEC0F /* Scenes */,
+				FFD95AFE20CBD59E0010FBC4 /* API */,
+				FFA681AB20C03B9A00FE29DA /* Utils */,
+				FF68D03A20CD15BA00472FF7 /* Coordinator */,
+				FF38274E20C837670046F220 /* Environment.swift */,
+				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
+				EE168A12212C078400AB426A /* StoreToLogo.swift */,
+			);
+			path = Blipp;
+			sourceTree = "<group>";
+		};
+		EE8D4D85215126C400341157 /* AWSLoginFiles */ = {
+			isa = PBXGroup;
+			children = (
 				EE13B4B4213AD1D1007743D2 /* AWS.storyboard */,
 				EE13B4B8213AD25A007743D2 /* SignInViewController.swift */,
 				EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */,
@@ -297,20 +317,8 @@
 				EE13B4BA213AD291007743D2 /* MFAViewController.swift */,
 				EE13B4C8213AD406007743D2 /* MFAViewController.xib */,
 				EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */,
-				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
-				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
-				EE826EA020AADA4D006A0390 /* Info.plist */,
-				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
-				EE962D4E20BDA804006CEC0F /* Model */,
-				EE962D4D20BDA7EB006CEC0F /* Scenes */,
-				FFD95AFE20CBD59E0010FBC4 /* API */,
-				FFA681AB20C03B9A00FE29DA /* Utils */,
-				FF68D03A20CD15BA00472FF7 /* Coordinator */,
-				FF38274E20C837670046F220 /* Environment.swift */,
-				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
-				EE168A12212C078400AB426A /* StoreToLogo.swift */,
 			);
-			path = Blipp;
+			path = AWSLoginFiles;
 			sourceTree = "<group>";
 		};
 		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
@@ -669,6 +677,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-framework/GoogleUtilities.framework",
@@ -685,6 +694,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",

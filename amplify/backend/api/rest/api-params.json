@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "test",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        }
+    ],
+    "resourceName": "rest",
+    "apiName": "blipp83a7523b",
+    "functionArns": [
+        {
+            "lambdaFunction": "test"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "lipp-20180910220817-authRole",
+        "unAuthRoleName": "lipp-20180910220817-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "test",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

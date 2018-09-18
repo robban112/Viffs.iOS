@@ -1,0 +1,88 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "lipp-20180910220817-authRole",
+			"UnauthRoleArn": "arn:aws:iam::023975910160:role/lipp-20180910220817-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::023975910160:role/lipp-20180910220817-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "lipp-20180910220817-deployment",
+			"UnauthRoleName": "lipp-20180910220817-unauthRole",
+			"StackName": "lipp-20180910220817",
+			"StackId": "arn:aws:cloudformation:eu-west-1:023975910160:stack/lipp-20180910220817/4203a770-b535-11e8-8a1f-503abe701cfd"
+		}
+	},
+	"function": {
+		"test": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [],
+			"lastBuildTimeStamp": "2018-09-10T20:16:47.241Z",
+			"lastPackageTimeStamp": "2018-09-10T20:16:49.323Z",
+			"distZipFilename": "test-1536610607-latest-build.zip",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/lipp-20180910220817-deployment/amplify-cfn-templates/function/test-cloudformation-template.json",
+				"logicalId": "functiontest"
+			},
+			"lastPushTimeStamp": "2018-09-10T20:19:39.241Z",
+			"output": {
+				"Region": "eu-west-1",
+				"Arn": "arn:aws:lambda:eu-west-1:023975910160:function:test",
+				"Name": "test"
+			},
+			"lastPushDirHash": "nF+thtcjtTrwJe/iIio/hp8p7es="
+		}
+	},
+	"auth": {
+		"cognito665e9afc": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/lipp-20180910220817-deployment/amplify-cfn-templates/auth/cognito665e9afc-cloudformation-template.yml",
+				"logicalId": "authcognito665e9afc"
+			},
+			"lastPushTimeStamp": "2018-09-10T20:19:39.241Z",
+			"output": {
+				"AppClientSecret": "17taulisqttaqssoss62ervb06gpcpa6mfr6m2ftlbg08dc2ovs0",
+				"UserPoolId": "eu-west-1_b5dCPcxP0",
+				"AppClientIDWeb": "5je8qglp8vq7h4ie7o43r0e1j0",
+				"AppClientID": "7k4h7cvqkt6ivfq1vj9jr29r2t",
+				"IdentityPoolId": "eu-west-1:05d2106e-259b-4197-9825-3eae89908dc6",
+				"IdentityPoolName": "blipp_identitypool_d7ce88cf",
+				"UserPoolName": "blipp_userpool_d7ce88cf"
+			},
+			"lastPushDirHash": "1TRF9XHz8m9FXBXEK0yE1eN2bgw="
+		}
+	},
+	"api": {
+		"rest": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "test",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			],
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/lipp-20180910220817-deployment/amplify-cfn-templates/api/rest-cloudformation-template.json",
+				"logicalId": "apirest"
+			},
+			"lastPushTimeStamp": "2018-09-10T20:19:39.241Z",
+			"output": {
+				"ApiName": "rest",
+				"RootUrl": "https://5j8ix00hwd.execute-api.eu-west-1.amazonaws.com/Prod"
+			},
+			"lastPushDirHash": "sHPVZ4PR6UTHzuNnUKnNct51TRU="
+		},
+		"API": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

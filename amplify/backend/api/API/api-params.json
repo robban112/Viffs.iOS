@@ -1,0 +1,28 @@
+{
+    "paths": [
+        {
+            "name": "/receipts",
+            "lambdaArn": "arn:aws:lambda:eu-west-1:023975910160:function:blipp-dev-AspNetCoreFunction-1NCF9K7IH0CP8",
+            "lambdaFunction": "blipp-dev-AspNetCoreFunction-1NCF9K7IH0CP8",
+            "privacy": {
+                "private": true,
+                "auth": "rw"
+            }
+        }
+    ],
+    "resourceName": "API",
+    "apiName": "blipp49f506ce",
+    "functionArns": [
+        {
+            "lambdaFunction": "blipp-dev-AspNetCoreFunction-1NCF9K7IH0CP8",
+            "lambdaArn": "arn:aws:lambda:eu-west-1:023975910160:function:blipp-dev-AspNetCoreFunction-1NCF9K7IH0CP8"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "lipp-20180910220817-authRole",
+        "unAuthRoleName": "lipp-20180910220817-unauthRole"
+    },
+    "dependsOn": []
+}

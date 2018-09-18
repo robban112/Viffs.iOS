@@ -16,8 +16,11 @@ target 'Blipp' do
   pod 'RxDataSources', '~> 3.0a'
 
   #AWS
-    pod 'AWSCore', '~> 2.6.0'
-    pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
+  pod 'AWSCore', '~> 2.6.0'
+  pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
+
+  #Alamofire
+  pod 'Alamofire', '~> 4.7'
 end
 
 # For unit testing
