@@ -65,7 +65,6 @@ struct HomeViewModel: HomeViewModelType
       coordinator.transition(to: Scene.receipts(.init()))
     }
     let navigateReceiptDetail = receiptSelected.flatMapLatest { receipt -> Observable<Void> in
-      coordinator.transition(to: Scene.receipts(.init()))
       return coordinator.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
     }
     navigate = Observable.merge(navigateStores, navigateAllReceipts, navigateReceiptDetail, navigateAddCard)
