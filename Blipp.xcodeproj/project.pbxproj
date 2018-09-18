@@ -38,6 +38,8 @@
 		EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */; };
 		EE826EA720AADE52006A0390 /* ReceiptViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */; };
 		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
+		EE8D4D8721512CE700341157 /* AWSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8621512CE700341157 /* AWSApi.swift */; };
+		EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D4D8821512DC300341157 /* Alamofire.framework */; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
@@ -138,6 +140,8 @@
 		EE826EA020AADA4D006A0390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewCell.swift; sourceTree = "<group>"; };
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		EE8D4D8621512CE700341157 /* AWSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSApi.swift; sourceTree = "<group>"; };
+		EE8D4D8821512DC300341157 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */,
 				CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +220,7 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D4D8821512DC300341157 /* Alamofire.framework */,
 				28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */,
 				63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */,
 			);
@@ -545,6 +551,7 @@
 			children = (
 				FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */,
 				FF1C771320D3DD37009F357B /* Auth.swift */,
+				EE8D4D8621512CE700341157 /* AWSApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -782,6 +789,7 @@
 				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
 				5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */,
 				EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */,
+				EE8D4D8721512CE700341157 /* AWSApi.swift in Sources */,
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
 				EE13B4D1213C4CE5007743D2 /* MoreTableViewController.swift in Sources */,

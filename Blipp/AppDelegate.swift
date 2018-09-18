@@ -97,9 +97,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
         let idToken = getSessionResult?.idToken?.tokenString
-        let accessToken = getSessionResult?.accessToken?.tokenString
-        print("Accesstoken: " + accessToken!)
-        print("idToken: " + idToken!)
+        if let accessToken = getSessionResult?.accessToken?.tokenString {
+          AWSGetReceiptsForUser(token: accessToken)
+          print("Accesstoken: " + accessToken)
+
+        }
+        //print("idToken: " + idToken!)
       })
       return nil
     }
