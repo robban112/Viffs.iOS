@@ -13,10 +13,11 @@ class ReceiptViewCell: UITableViewCell {
     didSet {
       guard let receipt = receipt else { return }
       receiptName.text = loadReceiptName(receipt: receipt)
-      let totalString = receipt.total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", receipt.total) : String(receipt.total)
+      let total = receipt.total/100
+      let totalString = total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", total) : String(total)
       self.receiptTotal?.text = totalString + receipt.currency
       storeLogo.image = loadStoreImage(receiptName: receiptName.text!)
-      receiptDate.text = receipt.date
+      receiptDate.text = String(receipt.date.prefix(10))
     }
   }
   
