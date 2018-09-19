@@ -20,4 +20,5 @@ struct Environment {
   var currentAWSUser: AWSCognitoIdentityUser? = nil
   var pool: AWSCognitoIdentityUserPool? = nil
   var storeDict: [String : Store] = [:]
+  var accessToken: String? = nil
 }

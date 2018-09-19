@@ -13,7 +13,7 @@ struct Receipt: Decodable {
   let currency: String
   var name: String
   let total: Double
-  let url: String
+  let receiptPubID: String
   let date: String
   let storePubID: String
 }

@@ -27,7 +27,7 @@ struct APIService {
 
 //Placeholder function
 func imageFromFile(for receipt: Receipt) -> UIImage {
-  if let image = UIImage(named: receipt.url) {
+  if let image = UIImage(named: receipt.receiptPubID) {
     return image
   } else {
     return #imageLiteral(resourceName: "Blue Green Circle Gradient Android Wallpaper")
@@ -36,7 +36,7 @@ func imageFromFile(for receipt: Receipt) -> UIImage {
 
 func image(for receipt: Receipt) -> Single<Result<UIImage?, APIServiceError>> {
   return Single.create(subscribe: { single -> Disposable in
-    guard let url = URL.init(string: receipt.url) else { return Disposables.create() }
+    guard let url = URL.init(string: receipt.receiptPubID) else { return Disposables.create() }
     let task = URLSession.shared.dataTask(with: url) { data, response, error in
       guard
         let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,

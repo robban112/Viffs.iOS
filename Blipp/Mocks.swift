@@ -20,7 +20,8 @@ extension Environment {
       currentUser: nil,
       currentAWSUser: nil,
       pool: nil,
-      storeDict: [:]
+      storeDict: [:],
+      accessToken: nil
     )
   }
 }

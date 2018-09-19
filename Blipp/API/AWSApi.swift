@@ -9,10 +9,12 @@
 import Foundation
 import Alamofire
 import PromiseKit
+import RxSwift
 
 let baseAWSURL = "http://blipp-dev.eu-west-1.elasticbeanstalk.com/api"
 let receiptAWSURL = baseAWSURL + "/receipts"
 let storesAWSURL = baseAWSURL + "/stores"
+let receiptImageURL = baseAWSURL + "/receiptimage"
 
 func setReceiptsForUser(token: String) {
   firstly {
@@ -91,9 +93,18 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,
     let date: String = dict["date"] as? String {
-    var receipt = Receipt(currency: "SEK", name: "", total: Double(total), url: receiptPubID, date: date, storePubID: storePubID)
+    var receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID)
     addToStoreDict(storePubID: storePubID)
     return receipt
   }
   return nil
 }
+
+  func getImage(for receipt: Receipt) -> Promise<UIImage> {
+    let headers = ["AccessToken" : Current.accessToken ?? ""]
+    return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
+      .responseData()
+      .compactMap { data, _ in
+        return UIImage(data: data)
+      }
+  }

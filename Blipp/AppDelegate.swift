@@ -99,6 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
           setReceiptsForUser(token: accessToken)
+          Current.accessToken = accessToken
           print("Accesstoken: " + accessToken)
         }
       })
