@@ -26,6 +26,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     return cell
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let receipt = Current.currentUser?.receipts?[indexPath.row] {
+      SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
+    }
+  }
+  
   
     @IBOutlet var receiptButton: UIButton!
     @IBOutlet var storeButton: UIButton!
