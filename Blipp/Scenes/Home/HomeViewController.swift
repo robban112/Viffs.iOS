@@ -35,7 +35,16 @@ class HomeViewController: UIViewController, ViewModelBindable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     receiptsTableView.registerCell(type: ReceiptViewCell.self)
+  }
+  
+  func setObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("StoreAdded"), object: nil)
+  }
+  
+  @objc func reloadTable() {
+    receiptsTableView.reloadData()
   }
   
   func bindViewModel() {

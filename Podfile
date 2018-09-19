@@ -21,6 +21,10 @@ target 'Blipp' do
 
   #Alamofire
   pod 'Alamofire', '~> 4.7'
+
+  #Promise
+  pod 'PromiseKit', '~> 6.0'
+  pod 'PromiseKit/Alamofire', '~> 6.0'
 end
 
 # For unit testing

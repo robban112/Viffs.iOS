@@ -40,6 +40,10 @@
 		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
 		EE8D4D8721512CE700341157 /* AWSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8621512CE700341157 /* AWSApi.swift */; };
 		EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D4D8821512DC300341157 /* Alamofire.framework */; };
+		EE8D4D8B215152E900341157 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8A215152E900341157 /* Store.swift */; };
+		EE8D4D8D2151873100341157 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D4D8C2151873100341157 /* PromiseKit.framework */; };
+		EE8D4D9121525EBD00341157 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8F21525EBD00341157 /* MainViewController.swift */; };
+		EE8D4D9221525EBD00341157 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE8D4D9021525EBD00341157 /* MainViewController.xib */; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
@@ -142,6 +146,10 @@
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		EE8D4D8621512CE700341157 /* AWSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSApi.swift; sourceTree = "<group>"; };
 		EE8D4D8821512DC300341157 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8D4D8A215152E900341157 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EE8D4D8C2151873100341157 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8D4D8F21525EBD00341157 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EE8D4D9021525EBD00341157 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8D4D8D2151873100341157 /* PromiseKit.framework in Frameworks */,
 				EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */,
 				CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */,
 			);
@@ -220,6 +229,7 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D4D8C2151873100341157 /* PromiseKit.framework */,
 				EE8D4D8821512DC300341157 /* Alamofire.framework */,
 				28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */,
 				63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */,
@@ -327,9 +337,19 @@
 			path = AWSLoginFiles;
 			sourceTree = "<group>";
 		};
+		EE8D4D8E21525E8900341157 /* New Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D4D8F21525EBD00341157 /* MainViewController.swift */,
+				EE8D4D9021525EBD00341157 /* MainViewController.xib */,
+			);
+			path = "New Home";
+			sourceTree = "<group>";
+		};
 		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D4D8E21525E8900341157 /* New Home */,
 				5CADD82920E694F50064222F /* Welcome */,
 				5CDFDBD820E3D4C300BA000F /* Scan Card */,
 				FF07F64920D26E4C00B011D8 /* Home */,
@@ -352,6 +372,7 @@
 			children = (
 				EE826EA820AB64CA006A0390 /* Receipt.swift */,
 				EE962D4F20BDC5B7006CEC0F /* User.swift */,
+				EE8D4D8A215152E900341157 /* Store.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -645,6 +666,7 @@
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
+				EE8D4D9221525EBD00341157 /* MainViewController.xib in Resources */,
 				FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
 				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
@@ -689,6 +711,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-framework/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture-framework/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-framework/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -706,6 +729,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -768,6 +792,7 @@
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
 				EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */,
+				EE8D4D9121525EBD00341157 /* MainViewController.swift in Sources */,
 				EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */,
 				EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */,
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
@@ -811,6 +836,7 @@
 				FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */,
 				EE13B4C1213AD2FF007743D2 /* ForgotPasswordViewController.swift in Sources */,
 				EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */,
+				EE8D4D8B215152E900341157 /* Store.swift in Sources */,
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
 				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,
 				FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */,

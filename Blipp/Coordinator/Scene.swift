@@ -24,6 +24,7 @@ enum Scene {
   case receiptsRoot
   case stores
   case scanReceipt
+  case main
   case welcome(WelcomeViewModel)
 }
 
@@ -76,6 +77,10 @@ extension Scene: TargetScene {
       let storesVC = StoresViewController.instantiateFromNib()
       storesVC.title = ""
       return .push(storesVC)
+    case .main:
+      let mainVC = MainViewController.instantiateFromNib()
+      mainVC.title = ""
+      return .push(mainVC)
     case .scanReceipt:
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
       scanReceiptVC.title = ""
@@ -101,8 +106,7 @@ extension Scene: TargetScene {
 fileprivate func createBlippTabBarController() -> UITabBarController {
   let blippTabBarController = UITabBarController()
   
-  var homeVC = HomeViewController.instantiateFromNib()
-  homeVC.bind(to: HomeViewModel())
+  let homeVC = MainViewController.instantiateFromNib()
   homeVC.title = ""
   let homeNav = UINavigationController(rootViewController: homeVC)
   homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

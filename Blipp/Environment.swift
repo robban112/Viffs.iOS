@@ -16,8 +16,8 @@ var Current = Environment()
 struct Environment {
   private(set) var apiService: APIService = .live
   private(set) var auth: Auth = Auth()
-  private(set) var currentUser: User? = nil
+  var currentUser: User? = nil
   var currentAWSUser: AWSCognitoIdentityUser? = nil
   var pool: AWSCognitoIdentityUserPool? = nil
-  
+  var storeDict: [String : Store] = [:]
 }

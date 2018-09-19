@@ -30,6 +30,14 @@ class ReceiptViewController: UIViewController, ViewModelBindable {
     receiptTableView.registerCell(type: ReceiptViewCell.self)
   }
   
+  @objc func reloadTable() {
+    receiptTableView.reloadData()
+  }
+  
+  func setObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("StoreAdded"), object: nil)
+  }
+  
   func bindViewModel() {
     bindUIToViewModel()
     bindViewModelToUI()

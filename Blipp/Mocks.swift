@@ -19,8 +19,8 @@ extension Environment {
       auth: .mock,
       currentUser: nil,
       currentAWSUser: nil,
-      pool: nil
-      
+      pool: nil,
+      storeDict: [:]
     )
   }
 }

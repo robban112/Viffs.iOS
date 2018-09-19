@@ -96,13 +96,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
-        let idToken = getSessionResult?.idToken?.tokenString
+        //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
-          AWSGetReceiptsForUser(token: accessToken)
+          setReceiptsForUser(token: accessToken)
           print("Accesstoken: " + accessToken)
-
         }
-        //print("idToken: " + idToken!)
       })
       return nil
     }

@@ -76,6 +76,18 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Overture (0.3.0)
+  - PromiseKit (6.4.0):
+    - PromiseKit/CorePromise (= 6.4.0)
+    - PromiseKit/Foundation (= 6.4.0)
+    - PromiseKit/UIKit (= 6.4.0)
+  - PromiseKit/Alamofire (6.4.0):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.4.0)
+  - PromiseKit/Foundation (6.4.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.4.0):
+    - PromiseKit/CorePromise
   - Result (4.0.0)
   - RxBlocking (4.2.0):
     - RxSwift (~> 4.0)
@@ -98,6 +110,8 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - Overture (~> 0.2)
+  - PromiseKit (~> 6.0)
+  - PromiseKit/Alamofire (~> 6.0)
   - Result (~> 4.0.0)
   - RxBlocking (~> 4.0)
   - RxCocoa (~> 4.0)
@@ -126,6 +140,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Overture
+    - PromiseKit
     - Result
     - RxBlocking
     - RxCocoa
@@ -153,6 +168,7 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
+  PromiseKit: ae3616f45d7bb9bf4ff1e91abc9b7a8c48a340e0
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxBlocking: e339d8a6e752e25ade95ff858466c55436668f59
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
@@ -160,6 +176,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
 
-PODFILE CHECKSUM: 2caccc134836191ea28f1eb75bae4f7dabd38558
+PODFILE CHECKSUM: ac4ff439b4511203ec723fe0cebf2be35f3e8634
 
 COCOAPODS: 1.5.3

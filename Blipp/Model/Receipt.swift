@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct Receipt: Decodable {
   let currency: String
-  let name: String
+  var name: String
   let total: Double
   let url: String
+  let date: String
+  let storePubID: String
 }
