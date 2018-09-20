@@ -26,29 +26,15 @@ func setReceiptsForUser(token: String) {
 }
 func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
   let headers = ["AccessToken" : token]
-  return Promise { seal in
-    Alamofire.request(receiptAWSURL, headers: headers)
-      .validate()
-      .responseJSON(completionHandler: { (response) in
-        switch response.result {
-        case .success(let json):
-          if let receipts = convertToReceipts(json: json) {
-            print(receipts)
-            seal.fulfill(receipts)
-          }
-        case .failure(let error):
-          print(error)
-          seal.reject(error)
-        }
-      })
-  }
+  return Alamofire.request(receiptAWSURL, headers: headers)
+    .validate()
+    .responseJSON()
+    .compactMap { json, _ in convertToReceipts(json: json) }
 }
 
 func convertToReceipts(json: Any) -> [Receipt]? {
-  if let jsonlist = json as? [NSDictionary] {
-    return jsonlist.compactMap(parseResponseToReceipt)
-  }
-  return nil
+  return (json as? [NSDictionary])
+    .map { $0.compactMap(parseResponseToReceipt) }
 }
 
 func convertToStore(json: Any) -> Store? {
@@ -62,19 +48,9 @@ func convertToStore(json: Any) -> Store? {
 }
 
 func AWSGetStoreForPubID(storePubID: String) -> Promise<Store> {
-  return Promise { promise in
-    Alamofire.request(storesAWSURL + "/" + storePubID)
-    .responseJSON { response in
-      switch response.result {
-        case .success(let json):
-          if let store = convertToStore(json: json) {
-            promise.fulfill(store)
-          }
-        case .failure(let error):
-          promise.reject(error)
-      }
-    }
-  }
+  return Alamofire.request("\(storesAWSURL)/\(storePubID)")
+    .responseJSON()
+    .compactMap { json, _ in convertToStore(json: json) }
 }
 
 func addToStoreDict(storePubID: String) {
