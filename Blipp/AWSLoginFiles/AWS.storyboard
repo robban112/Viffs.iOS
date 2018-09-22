@@ -23,17 +23,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdH-zS-hci">
-                                <rect key="frame" x="16" y="460" width="343" height="30"/>
+                                <rect key="frame" x="16" y="289" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-5s-y9B">
-                                <rect key="frame" x="16" y="498" width="343" height="30"/>
+                                <rect key="frame" x="16" y="327" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzC-gK-L3y">
-                                <rect key="frame" x="16" y="534" width="343" height="34"/>
+                                <rect key="frame" x="16" y="363" width="343" height="34"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.60392156860000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign In">
@@ -44,21 +44,21 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meny - Blipp" translatesAutoresizingMaskIntoConstraints="NO" id="m7f-tY-FzQ">
-                                <rect key="frame" x="98" y="194" width="180" height="180"/>
+                                <rect key="frame" x="98" y="23" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="aZf-WV-AUb"/>
                                     <constraint firstAttribute="width" constant="180" id="dJa-v1-03Z"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-qm-Syq">
-                                <rect key="frame" x="16" y="588" width="55" height="30"/>
+                                <rect key="frame" x="16" y="417" width="55" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <segue destination="O2Z-Ld-ZTv" kind="show" id="VLH-5V-Rly"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O01-Qr-hlK">
-                                <rect key="frame" x="244" y="588" width="115" height="30"/>
+                                <rect key="frame" x="244" y="417" width="115" height="30"/>
                                 <state key="normal" title="Forgot Password"/>
                                 <connections>
                                     <segue destination="BkF-2Z-FaF" kind="show" identifier="forgotPasswordSegue" id="999-73-2kk"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="jtg-5s-y9B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EZP-ME-bUw"/>
                             <constraint firstItem="aXe-qm-Syq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EiP-8T-oI4"/>
                             <constraint firstItem="jtg-5s-y9B" firstAttribute="top" secondItem="XdH-zS-hci" secondAttribute="bottom" constant="8" symbolic="YES" id="HoP-L9-gs6"/>
-                            <constraint firstAttribute="bottom" secondItem="DzC-gK-L3y" secondAttribute="bottom" constant="99" id="NTF-2t-t9d"/>
+                            <constraint firstAttribute="bottom" secondItem="DzC-gK-L3y" secondAttribute="bottom" constant="270" id="NTF-2t-t9d"/>
                             <constraint firstItem="aXe-qm-Syq" firstAttribute="baseline" secondItem="O01-Qr-hlK" secondAttribute="baseline" id="SrM-A1-G50"/>
                             <constraint firstItem="XdH-zS-hci" firstAttribute="top" secondItem="m7f-tY-FzQ" secondAttribute="bottom" constant="86" id="Xyx-Y4-nga"/>
                             <constraint firstItem="DzC-gK-L3y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZxD-te-7AC"/>

@@ -10,6 +10,6 @@ import Foundation
 
 struct Store: Decodable {
   let name: String
-  let logoURL: String
   let pubID: String
+  let address: String
 }

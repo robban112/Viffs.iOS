@@ -14,7 +14,7 @@ var storeToLogo: [String : String] = [
     "Pressbyrån" : "pressbyran_logo.png",
     "ICA" : "ica_logo.png",
     "Willys" : "willys_logo.png",
-    "7-ELEVEN" : "7-eleven_logo.png",
+    "7-Eleven" : "7-eleven_logo.png",
     "EasyPark" : "easypark_logo.png"
 ]
 

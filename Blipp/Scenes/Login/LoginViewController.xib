@@ -35,20 +35,20 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ru-7v-VcR">
-                    <rect key="frame" x="40" y="438" width="295" height="30"/>
+                    <rect key="frame" x="40" y="337" width="295" height="30"/>
                     <color key="backgroundColor" red="0.49803921569999998" green="0.75294117650000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Logga in">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Abc123" borderStyle="roundedRect" placeholder="Lösenord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bet-YN-FGX">
-                    <rect key="frame" x="40" y="403" width="295" height="30"/>
+                    <rect key="frame" x="40" y="302" width="295" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="robert@blipp.se" borderStyle="roundedRect" placeholder="Mailadress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-Nn-q5n">
-                    <rect key="frame" x="40" y="368" width="295" height="30"/>
+                    <rect key="frame" x="40" y="267" width="295" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -64,7 +64,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eRa-LS-DLu" secondAttribute="trailing" constant="40" id="QjC-aT-JRv"/>
                 <constraint firstItem="eRa-LS-DLu" firstAttribute="trailing" secondItem="9Ru-7v-VcR" secondAttribute="trailing" id="Rno-PK-JdO"/>
                 <constraint firstItem="eRa-LS-DLu" firstAttribute="leading" secondItem="bet-YN-FGX" secondAttribute="leading" id="T8k-yH-Fwh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Ru-7v-VcR" secondAttribute="bottom" constant="199" id="bh5-QB-gyw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Ru-7v-VcR" secondAttribute="bottom" constant="300" id="bh5-QB-gyw"/>
                 <constraint firstItem="eRa-LS-DLu" firstAttribute="trailing" secondItem="tZy-Nn-q5n" secondAttribute="trailing" id="btw-Yo-MSv"/>
                 <constraint firstAttribute="trailing" secondItem="Axh-BD-eJh" secondAttribute="trailing" id="cJz-RI-7Uc"/>
                 <constraint firstItem="eRa-LS-DLu" firstAttribute="leading" secondItem="tZy-Nn-q5n" secondAttribute="leading" id="eIV-R0-geb"/>

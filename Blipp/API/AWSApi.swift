@@ -39,9 +39,9 @@ func convertToReceipts(json: Any) -> [Receipt]? {
 
 func convertToStore(json: Any) -> Store? {
   if let json = json as? NSDictionary {
-    if let name = json["name"] as? String, let logoURL = json["logoURL"] as? String,
-      let pubID = json["pubID"] as? String {
-      return Store(name: name, logoURL: logoURL, pubID: pubID)
+    if let name = json["name"] as? String, let pubID = json["pubID"] as? String,
+      let address = json["address"] as? String {
+      return Store(name: name, pubID: pubID, address: address)
     }
   }
   return nil
@@ -69,7 +69,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,
     let date: String = dict["date"] as? String {
-    var receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID)
+    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID)
     addToStoreDict(storePubID: storePubID)
     return receipt
   }
