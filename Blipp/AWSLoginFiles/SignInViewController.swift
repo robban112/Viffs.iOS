@@ -30,7 +30,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.password.delegate = self
     self.username.delegate = self
     self.password.text = nil
-    self.username.text = usernameText
+    //self.username.text = usernameText
+    self.username.text = nil
     self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
   
@@ -59,7 +60,7 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
     self.passwordAuthenticationCompletion = passwordAuthenticationCompletionSource
     DispatchQueue.main.async {
       if (self.usernameText == nil) {
-        self.usernameText = authenticationInput.lastKnownUsername
+        //self.usernameText = authenticationInput.lastKnownUsername
       }
     }
   }

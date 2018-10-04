@@ -13,7 +13,7 @@ import RxCocoa
 class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   let disposeBag = DisposeBag()
   @IBOutlet weak var tableView: UITableView!
-  var content = ["Kort", "Hjälp", "Inställningar", "Logga ut"]
+  var content = ["Kort", "Hjälp", "Byt språk" ,"Inställningar"]
 
   override func viewDidLoad() {
     loadTableView()
@@ -54,13 +54,13 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch content[indexPath.row] {
-    case "Logga ut":
-      Current.currentAWSUser?.signOut()
     case "Kort":
       return
     case "Hjälp":
       return
     case "Inställningar":
+      return
+    case "Byt språk":
       return
     default:
       return

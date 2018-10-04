@@ -14,6 +14,9 @@ target 'Blipp' do
   pod 'Overture', '~> 0.2'
   pod 'Result', '~> 4.0.0'
   pod 'RxDataSources', '~> 3.0a'
+  
+  #Hamburger
+  pod 'SideMenu'
 
   #AWS
   pod 'AWSCore', '~> 2.6.0'

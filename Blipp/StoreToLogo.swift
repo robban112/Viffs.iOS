@@ -15,7 +15,8 @@ var storeToLogo: [String : String] = [
     "ICA" : "ica_logo.png",
     "Willys" : "willys_logo.png",
     "7-Eleven" : "7-eleven_logo.png",
-    "EasyPark" : "easypark_logo.png"
+    "EasyPark" : "easypark_logo.png",
+    "Demobutik" : "demokvitto.png"
 ]
 
 var storeToImage: [String:UIImage] = [

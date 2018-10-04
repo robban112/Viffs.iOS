@@ -43,6 +43,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         self.window.rootViewController = viewController
         subject.onCompleted()
       case let .push(viewController):
+        
         guard let navigationController = self.currentViewController.navigationController else {
           fatalError("Can't push a view controller without a current navigation controller")
         }

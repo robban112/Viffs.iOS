@@ -17,20 +17,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Meny - Blipp" translatesAutoresizingMaskIntoConstraints="NO" id="BxS-xP-sst">
-                                <rect key="frame" x="25" y="170" width="334" height="285"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxS-xP-sst" secondAttribute="trailing" constant="16" id="Fjr-SC-Vcy"/>
-                            <constraint firstItem="BxS-xP-sst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="PpC-3w-bW5"/>
-                            <constraint firstItem="BxS-xP-sst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="XMf-v6-lx4"/>
-                            <constraint firstItem="BxS-xP-sst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="pBA-Zt-EX4"/>
-                            <constraint firstItem="BxS-xP-sst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="tSa-Dn-0nB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BxS-xP-sst" secondAttribute="trailing" constant="16" id="uNc-U8-lqk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -39,7 +26,4 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Meny - Blipp" width="383" height="285"/>
-    </resources>
 </document>

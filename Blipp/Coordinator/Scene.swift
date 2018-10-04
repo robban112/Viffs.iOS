@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 protocol TargetScene {
   var transition: SceneTransitionType { get }
@@ -32,6 +33,10 @@ extension Scene: TargetScene {
   var transition: SceneTransitionType {
     switch self {
     case .blipp:
+//      let main = MainViewController.instantiateFromNib()
+//      let nav = UISideMenuNavigationController(rootViewController: main)
+//      main.title = ""
+//      return .push(nav)
       let blippTabBarController = createBlippTabBarController()
       return .root(blippTabBarController)
     case let .login(loginViewModel):
@@ -39,6 +44,10 @@ extension Scene: TargetScene {
       loginVC.title = ""
       loginVC.bind(to: loginViewModel)
       return .push(loginVC)
+    case .scanReceipt:
+      let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
+      scanReceiptVC.title = ""
+      return .push(scanReceiptVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
       receiptDetailVC.title = ""
@@ -105,7 +114,7 @@ extension Scene: TargetScene {
 
 fileprivate func createBlippTabBarController() -> UITabBarController {
   let blippTabBarController = UITabBarController()
-  
+
   let homeVC = MainViewController.instantiateFromNib()
   homeVC.title = ""
   let homeNav = UINavigationController(rootViewController: homeVC)

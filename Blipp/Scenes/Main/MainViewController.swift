@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Foundation
+import SideMenu
 
 class MainViewController: UIViewController, UITableViewDataSource,
 UIGestureRecognizerDelegate {
@@ -37,12 +39,9 @@ UIGestureRecognizerDelegate {
     SceneCoordinator.shared.transition(to: Scene.stores)
   }
   
-  @objc func cardBarButtonAction(sender:UIButton!) {
-    SceneCoordinator.shared.transition(to: Scene.registerCard(.init()))
-  }
-  
   @objc func reloadTable() {
     receiptTableView.reloadData()
+
   }
   
   func setObservers() {
@@ -64,8 +63,30 @@ UIGestureRecognizerDelegate {
     latestReceiptView.addGestureRecognizer(panRecognizer)
     
     setObservers()
-    addCard = UIBarButtonItem(image: UIImage(named: "addCardBlue")?.withRenderingMode(.alwaysOriginal), style: .plain, target: nil, action: #selector(cardBarButtonAction))
+    //addHamburger()
+    addCard = addButton()
     navigationItem.setRightBarButton(addCard, animated: false)
+  }
+  
+  func addHamburger() {
+    // Define the menus
+    let moreVC = MoreViewController.instantiateFromNib()
+    let menuRightNavigationController = UISideMenuNavigationController(rootViewController: moreVC)
+    SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
+    SideMenuManager.default.menuFadeStatusBar = false
+  }
+  
+  func addButton() -> UIBarButtonItem {
+    let btn1 = UIButton(type: .custom)
+    btn1.setImage(UIImage(named: "Camera"), for: .normal)
+    btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+    btn1.addTarget(self, action: #selector(self.scanReceiptButtonPushed(_:)), for: .touchUpInside)
+    return UIBarButtonItem(customView: btn1)
+  }
+  
+  @objc func scanReceiptButtonPushed(_ sender: Any) {
+//    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+    SceneCoordinator.shared.transition(to: Scene.scanReceipt)
   }
   
   func maximizeLatestReceiptView() {

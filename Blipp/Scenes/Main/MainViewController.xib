@@ -11,6 +11,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="MontserratAlternates-Regular.otf">
+            <string>MontserratAlternates-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Blipp" customModuleProvider="target">
             <connections>
@@ -32,7 +40,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-F7-P7S">
-                    <rect key="frame" x="40" y="184" width="120" height="120"/>
+                    <rect key="frame" x="40" y="140" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
                         <constraint firstAttribute="height" constant="120" id="hQ5-pc-eIK"/>
@@ -43,13 +51,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
-                    <rect key="frame" x="60" y="312" width="81" height="37"/>
-                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
+                    <rect key="frame" x="54" y="268" width="93" height="32"/>
+                    <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="26"/>
                     <color key="textColor" red="0.35751110402487296" green="0.35751110402487296" blue="0.35751110402487296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzS-ux-X3J">
-                    <rect key="frame" x="215" y="184" width="120" height="120"/>
+                    <rect key="frame" x="215" y="140" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
                         <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
@@ -60,8 +68,8 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                    <rect key="frame" x="233" y="312" width="84" height="37"/>
-                    <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="26"/>
+                    <rect key="frame" x="227" y="268" width="96" height="32"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
                     <color key="textColor" red="0.35751110400000002" green="0.35751110400000002" blue="0.35751110400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -69,36 +77,51 @@
                     <rect key="frame" x="0.0" y="382" width="375" height="285"/>
                     <subviews>
                         <searchBar hidden="YES" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="EAD-TQ-g0d">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <rect key="frame" x="0.0" y="15" width="375" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="56" id="yvQ-yR-gIx"/>
+                                <constraint firstAttribute="height" constant="45" id="yvQ-yR-gIx"/>
                             </constraints>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senaste kvitton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-uR-BsL">
-                            <rect key="frame" x="8" y="25" width="118" height="25"/>
-                            <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                            <rect key="frame" x="8" y="25" width="132" height="21"/>
+                            <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="17"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gray-line" translatesAutoresizingMaskIntoConstraints="NO" id="b5K-rH-e36">
+                            <rect key="frame" x="-18" y="-10" width="430" height="19"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" red="0.58750396569999996" green="0.58750396569999996" blue="0.58750396569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </imageView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-om-Vn0">
-                            <rect key="frame" x="0.0" y="56" width="375" height="172"/>
+                            <rect key="frame" x="0.0" y="60" width="375" height="168"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-up-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-jt-ehd">
+                            <rect key="frame" x="175" y="0.0" width="26" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="Ui7-fH-k8h"/>
+                                <constraint firstAttribute="width" constant="26" id="gFs-7N-Ic2"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="EAD-TQ-g0d" secondAttribute="bottom" id="08S-Fh-yoV"/>
                         <constraint firstAttribute="trailing" secondItem="EAD-TQ-g0d" secondAttribute="trailing" id="2Eb-wj-VU4"/>
                         <constraint firstItem="gRl-om-Vn0" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" id="4jo-Am-Zwe"/>
+                        <constraint firstAttribute="trailing" secondItem="zJ1-jt-ehd" secondAttribute="trailing" constant="174" id="DxQ-v3-ukh"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="leading" secondItem="gRl-om-Vn0" secondAttribute="leading" id="HLm-kw-Ifg"/>
                         <constraint firstItem="12O-uR-BsL" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="25" id="IFj-UG-Kar"/>
                         <constraint firstAttribute="bottom" secondItem="gRl-om-Vn0" secondAttribute="bottom" constant="57" id="ILP-I1-Qtc"/>
+                        <constraint firstItem="zJ1-jt-ehd" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" id="Orm-LZ-kku"/>
                         <constraint firstAttribute="height" constant="285" id="RM3-d2-a5h"/>
                         <constraint firstItem="12O-uR-BsL" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leadingMargin" id="Xwu-Su-inx"/>
                         <constraint firstAttribute="trailing" secondItem="gRl-om-Vn0" secondAttribute="trailing" id="fka-7q-uvx"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" id="mN5-Ms-dAI"/>
-                        <constraint firstItem="EAD-TQ-g0d" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" id="zaw-TC-So5"/>
+                        <constraint firstItem="zJ1-jt-ehd" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" constant="175" id="y5V-jp-qCL"/>
+                        <constraint firstItem="EAD-TQ-g0d" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="15" id="zaw-TC-So5"/>
                     </constraints>
                 </view>
             </subviews>
@@ -116,14 +139,16 @@
                 <constraint firstAttribute="trailing" secondItem="Uln-q9-OLL" secondAttribute="trailing" id="u7O-nA-w1J"/>
                 <constraint firstItem="Uln-q9-OLL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wHM-C9-QZA"/>
             </constraints>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <nil key="simulatedTopBarMetrics"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="27.5" y="53.5"/>
+            <point key="canvasLocation" x="4.5" y="47.5"/>
         </view>
     </objects>
     <resources>
         <image name="ButikIkon" width="408" height="408"/>
         <image name="KvittoIkon" width="408" height="408"/>
+        <image name="gray-line" width="4488" height="245"/>
+        <image name="white-up-arrow" width="500" height="500"/>
     </resources>
 </document>
