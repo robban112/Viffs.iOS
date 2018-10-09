@@ -10,6 +10,17 @@ import UIKit
 
 class CardRegisterViewController: UIViewController {
 
+    
+    @IBOutlet var cvc: UITextField!
+    @IBOutlet var month: UITextField!
+    @IBOutlet var year: UITextField!
+    @IBOutlet var cardNumber: UITextField!
+    @IBOutlet weak var viewasd: UIView!
+
+    @IBAction func continueAction(_ sender: Any) {
+        //push the card data here
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

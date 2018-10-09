@@ -15,7 +15,6 @@
 		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
 		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
-		EE13B4B5213AD1D1007743D2 /* AWS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4B4213AD1D1007743D2 /* AWS.storyboard */; };
 		EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */; };
 		EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B8213AD25A007743D2 /* SignInViewController.swift */; };
 		EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BA213AD291007743D2 /* MFAViewController.swift */; };
@@ -31,6 +30,28 @@
 		EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE168A12212C078400AB426A /* StoreToLogo.swift */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
+		EE72B6CE216C0B1A005E307E /* Viffs-ikoner_20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */; };
+		EE72B6CF216C0B1A005E307E /* Viffs-ikoner_29.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */; };
+		EE72B6D0216C0B1A005E307E /* Viffs-ikoner_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */; };
+		EE72B6D1216C0B1A005E307E /* Viffs-ikoner_20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */; };
+		EE72B6D2216C0B1A005E307E /* Viffs-ikoner_76.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */; };
+		EE72B6D3216C0B1A005E307E /* Viffs-ikoner_57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */; };
+		EE72B6D4216C0B1A005E307E /* Viffs-ikoner_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */; };
+		EE72B6D5216C0B1A005E307E /* Viffs-ikoner_57.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */; };
+		EE72B6D6216C0B1A005E307E /* Viffs-ikoner_83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */; };
+		EE72B6D7216C0B1A005E307E /* Viffs-ikoner_40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */; };
+		EE72B6D8216C0B1A005E307E /* Viffs-ikoner_40.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */; };
+		EE72B6D9216C0B1A005E307E /* Viffs-ikoner_50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */; };
+		EE72B6DA216C0B1A005E307E /* Viffs-ikoner_76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */; };
+		EE72B6DB216C0B1A005E307E /* Viffs-ikoner_50.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */; };
+		EE72B6DC216C0B1A005E307E /* Viffs-ikoner_40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */; };
+		EE72B6DD216C0B1A005E307E /* Viffs-ikoner_20.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */; };
+		EE72B6DE216C0B1A005E307E /* Viffs-ikoner_60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */; };
+		EE72B6DF216C0B1A005E307E /* Viffs-ikoner_72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */; };
+		EE72B6E0216C0B1A005E307E /* Viffs-ikoner_29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */; };
+		EE72B6E1216C0B1A005E307E /* Viffs-ikoner_29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */; };
+		EE72B6E2216C0B1A005E307E /* Viffs-ikoner_60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */; };
+		EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */; };
 		EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */; };
 		EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9220AADA4A006A0390 /* AppDelegate.swift */; };
 		EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */; };
@@ -83,6 +104,8 @@
 		EE8D4E532157C70800341157 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE8D4E2E2157C70800341157 /* Montserrat-SemiBold.otf */; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
+		EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */; };
+		EEA1EFAF216D5FF40027C7A9 /* CodeRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
 		FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */; };
 		FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
@@ -156,7 +179,6 @@
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
-		EE13B4B4213AD1D1007743D2 /* AWS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AWS.storyboard; sourceTree = "<group>"; };
 		EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
 		EE13B4B8213AD25A007743D2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE13B4BA213AD291007743D2 /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
@@ -172,8 +194,30 @@
 		EE168A12212C078400AB426A /* StoreToLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreToLogo.swift; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
+		EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20@2x.png"; sourceTree = "<group>"; };
+		EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29.png"; sourceTree = "<group>"; };
+		EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_1024.png"; sourceTree = "<group>"; };
+		EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20@3x.png"; sourceTree = "<group>"; };
+		EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_76.png"; sourceTree = "<group>"; };
+		EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_57@2x.png"; sourceTree = "<group>"; };
+		EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_72.png"; sourceTree = "<group>"; };
+		EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_57.png"; sourceTree = "<group>"; };
+		EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_83.5@2x.png"; sourceTree = "<group>"; };
+		EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40@3x.png"; sourceTree = "<group>"; };
+		EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40.png"; sourceTree = "<group>"; };
+		EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_50@2x.png"; sourceTree = "<group>"; };
+		EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_76@2x.png"; sourceTree = "<group>"; };
+		EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_50.png"; sourceTree = "<group>"; };
+		EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40@2x.png"; sourceTree = "<group>"; };
+		EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20.png"; sourceTree = "<group>"; };
+		EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_60@2x.png"; sourceTree = "<group>"; };
+		EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_72@2x.png"; sourceTree = "<group>"; };
+		EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29@3x.png"; sourceTree = "<group>"; };
+		EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29@2x.png"; sourceTree = "<group>"; };
+		EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_60@3x.png"; sourceTree = "<group>"; };
+		EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterViewController.swift; sourceTree = "<group>"; };
 		EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EE826E8F20AADA4A006A0390 /* Blipp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blipp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE826E8F20AADA4A006A0390 /* Viffs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viffs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE826E9220AADA4A006A0390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE826E9420AADA4A006A0390 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		EE826E9B20AADA4D006A0390 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,6 +270,8 @@
 		EE8D4E2E2157C70800341157 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EEA1EFAC216D5B630027C7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AWS.storyboard; sourceTree = "<group>"; };
+		EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRegistrationViewController.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptsRootViewController.xib; sourceTree = "<group>"; };
 		FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoresViewController.xib; sourceTree = "<group>"; };
@@ -267,7 +313,7 @@
 		FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterUserViewController.xib; sourceTree = "<group>"; };
 		FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+MarbleTests.swift"; sourceTree = "<group>"; };
 		FF92D78B20D5D405008B0C52 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
-		FFA6819D20BF063700FE29DA /* BlippTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlippTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA6819D20BF063700FE29DA /* ViffsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViffsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
 		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA681A920C0236000FE29DA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -350,10 +396,39 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		EE72B6B8216C0B19005E307E /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */,
+				EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */,
+				EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */,
+				EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */,
+				EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */,
+				EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */,
+				EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */,
+				EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */,
+				EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */,
+				EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */,
+				EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */,
+				EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */,
+				EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */,
+				EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */,
+				EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */,
+				EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */,
+				EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */,
+				EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */,
+				EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */,
+				EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */,
+				EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */,
+			);
+			name = ios;
+			path = "../../../../Downloads/Icons 9/ios";
+			sourceTree = "<group>";
+		};
 		EE826E8620AADA4A006A0390 = {
 			isa = PBXGroup;
 			children = (
-				EE826E9120AADA4A006A0390 /* Blipp */,
+				EE826E9120AADA4A006A0390 /* Viffs */,
 				FFA6819E20BF063700FE29DA /* BlippTests */,
 				EE826E9020AADA4A006A0390 /* Products */,
 				51B78C2B7EDD5AA579DA57C6 /* Pods */,
@@ -366,17 +441,18 @@
 		EE826E9020AADA4A006A0390 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE826E8F20AADA4A006A0390 /* Blipp.app */,
-				FFA6819D20BF063700FE29DA /* BlippTests.xctest */,
+				EE826E8F20AADA4A006A0390 /* Viffs.app */,
+				FFA6819D20BF063700FE29DA /* ViffsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE826E9120AADA4A006A0390 /* Blipp */ = {
+		EE826E9120AADA4A006A0390 /* Viffs */ = {
 			isa = PBXGroup;
 			children = (
 				EE8D4E552157C76A00341157 /* Fonts */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
+				EE72B6B8216C0B19005E307E /* ios */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
@@ -391,13 +467,13 @@
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
 				EE168A12212C078400AB426A /* StoreToLogo.swift */,
 			);
-			path = Blipp;
+			path = Viffs;
 			sourceTree = "<group>";
 		};
 		EE8D4D85215126C400341157 /* AWSLoginFiles */ = {
 			isa = PBXGroup;
 			children = (
-				EE13B4B4213AD1D1007743D2 /* AWS.storyboard */,
+				EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */,
 				EE13B4B8213AD25A007743D2 /* SignInViewController.swift */,
 				EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */,
 				EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */,
@@ -408,6 +484,8 @@
 				EE13B4BA213AD291007743D2 /* MFAViewController.swift */,
 				EE13B4C8213AD406007743D2 /* MFAViewController.xib */,
 				EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */,
+				EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */,
+				EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */,
 			);
 			path = AWSLoginFiles;
 			sourceTree = "<group>";
@@ -707,9 +785,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE826E8E20AADA4A006A0390 /* Blipp */ = {
+		EE826E8E20AADA4A006A0390 /* Viffs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE826EA320AADA4D006A0390 /* Build configuration list for PBXNativeTarget "Blipp" */;
+			buildConfigurationList = EE826EA320AADA4D006A0390 /* Build configuration list for PBXNativeTarget "Viffs" */;
 			buildPhases = (
 				FAE72E171D82634ABA1C39B9 /* [CP] Check Pods Manifest.lock */,
 				EE826E8B20AADA4A006A0390 /* Sources */,
@@ -721,14 +799,14 @@
 			);
 			dependencies = (
 			);
-			name = Blipp;
+			name = Viffs;
 			productName = Blipp;
-			productReference = EE826E8F20AADA4A006A0390 /* Blipp.app */;
+			productReference = EE826E8F20AADA4A006A0390 /* Viffs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FFA6819C20BF063700FE29DA /* BlippTests */ = {
+		FFA6819C20BF063700FE29DA /* ViffsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "BlippTests" */;
+			buildConfigurationList = FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "ViffsTests" */;
 			buildPhases = (
 				30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */,
 				FFA6819920BF063700FE29DA /* Sources */,
@@ -740,9 +818,9 @@
 			dependencies = (
 				FFA681A320BF063700FE29DA /* PBXTargetDependency */,
 			);
-			name = BlippTests;
+			name = ViffsTests;
 			productName = BlippTests;
-			productReference = FFA6819D20BF063700FE29DA /* BlippTests.xctest */;
+			productReference = FFA6819D20BF063700FE29DA /* ViffsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -753,7 +831,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = Blipp;
+				ORGANIZATIONNAME = Viffs;
 				TargetAttributes = {
 					EE826E8E20AADA4A006A0390 = {
 						CreatedOnToolsVersion = 9.3;
@@ -764,7 +842,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EE826E8A20AADA4A006A0390 /* Build configuration list for PBXProject "Blipp" */;
+			buildConfigurationList = EE826E8A20AADA4A006A0390 /* Build configuration list for PBXProject "Viffs" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -777,8 +855,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE826E8E20AADA4A006A0390 /* Blipp */,
-				FFA6819C20BF063700FE29DA /* BlippTests */,
+				EE826E8E20AADA4A006A0390 /* Viffs */,
+				FFA6819C20BF063700FE29DA /* ViffsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -792,29 +870,43 @@
 				EE8D4E482157C70800341157 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
 				EE13B4D2213C4CE5007743D2 /* MoreTableViewController.xib in Resources */,
+				EE72B6DB216C0B1A005E307E /* Viffs-ikoner_50.png in Resources */,
+				EE72B6DC216C0B1A005E307E /* Viffs-ikoner_40@2x.png in Resources */,
 				EE8D4E402157C70800341157 /* Montserrat-LightItalic.otf in Resources */,
+				EE72B6D2216C0B1A005E307E /* Viffs-ikoner_76.png in Resources */,
 				EE8D4E442157C70800341157 /* Montserrat-ExtraBoldItalic.otf in Resources */,
 				EE8D4E472157C70800341157 /* Montserrat-Regular.otf in Resources */,
 				EE8D4E422157C70800341157 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
+				EE72B6D6216C0B1A005E307E /* Viffs-ikoner_83.5@2x.png in Resources */,
+				EE72B6E2216C0B1A005E307E /* Viffs-ikoner_60@3x.png in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
+				EE72B6D1216C0B1A005E307E /* Viffs-ikoner_20@3x.png in Resources */,
 				EE8D4E362157C70800341157 /* Montserrat-BoldItalic.otf in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
+				EE72B6CE216C0B1A005E307E /* Viffs-ikoner_20@2x.png in Resources */,
+				EE72B6DD216C0B1A005E307E /* Viffs-ikoner_20.png in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				EE8D4E3A2157C70800341157 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				EE8D4E432157C70800341157 /* Montserrat-SemiBoldItalic.otf in Resources */,
 				EE8D4E3F2157C70800341157 /* MontserratAlternates-Thin.otf in Resources */,
 				EE8D4E4F2157C70800341157 /* MontserratAlternates-ThinItalic.otf in Resources */,
+				EE72B6DE216C0B1A005E307E /* Viffs-ikoner_60@2x.png in Resources */,
+				EE72B6E1216C0B1A005E307E /* Viffs-ikoner_29@2x.png in Resources */,
+				EE72B6D4216C0B1A005E307E /* Viffs-ikoner_72.png in Resources */,
 				EE8D4D9221525EBD00341157 /* MainViewController.xib in Resources */,
 				FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */,
 				EE8D4E452157C70800341157 /* Montserrat-Italic.otf in Resources */,
 				EE8D4E512157C70800341157 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
+				EE72B6DF216C0B1A005E307E /* Viffs-ikoner_72@2x.png in Resources */,
 				EE8D4E332157C70800341157 /* MontserratAlternates-Black.otf in Resources */,
 				EE8D4E502157C70800341157 /* Montserrat-Black.otf in Resources */,
 				EE8D4E3E2157C70800341157 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				EE72B6CF216C0B1A005E307E /* Viffs-ikoner_29.png in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
 				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
 				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
 				EE8D4E492157C70800341157 /* MontserratAlternates-BoldItalic.otf in Resources */,
+				EE72B6D5216C0B1A005E307E /* Viffs-ikoner_57.png in Resources */,
 				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
 				EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */,
 				EE8D4E532157C70800341157 /* Montserrat-SemiBold.otf in Resources */,
@@ -823,6 +915,9 @@
 				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
 				EE8D4E342157C70800341157 /* MontserratAlternates-LightItalic.otf in Resources */,
 				EE8D4E4A2157C70800341157 /* Montserrat-ExtraBold.otf in Resources */,
+				EE72B6D8216C0B1A005E307E /* Viffs-ikoner_40.png in Resources */,
+				EE72B6D7216C0B1A005E307E /* Viffs-ikoner_40@3x.png in Resources */,
+				EE72B6D0216C0B1A005E307E /* Viffs-ikoner_1024.png in Resources */,
 				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
 				EE8D4E392157C70800341157 /* Montserrat-Thin.otf in Resources */,
 				FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */,
@@ -836,14 +931,18 @@
 				EE8D4E4C2157C70800341157 /* MontserratAlternates-Light.otf in Resources */,
 				EE8D4E2F2157C70800341157 /* Montserrat-MediumItalic.otf in Resources */,
 				EE8D4E372157C70800341157 /* Montserrat-Light.otf in Resources */,
+				EE72B6DA216C0B1A005E307E /* Viffs-ikoner_76@2x.png in Resources */,
 				EE8D4E352157C70800341157 /* MontserratAlternates-Medium.otf in Resources */,
 				EE8D4E4D2157C70800341157 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */,
+				EE72B6E0216C0B1A005E307E /* Viffs-ikoner_29@3x.png in Resources */,
+				EE72B6D3216C0B1A005E307E /* Viffs-ikoner_57@2x.png in Resources */,
 				EE8D4E412157C70800341157 /* Montserrat-Medium.otf in Resources */,
+				EE72B6D9216C0B1A005E307E /* Viffs-ikoner_50@2x.png in Resources */,
 				FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */,
 				EE8D4E4E2157C70800341157 /* MontserratAlternates-Regular.otf in Resources */,
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
-				EE13B4B5213AD1D1007743D2 /* AWS.storyboard in Resources */,
+				EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */,
 				EE8D4E3C2157C70800341157 /* MontserratAlternates-BlackItalic.otf in Resources */,
 				EE8D4E302157C70800341157 /* Montserrat-Bold.otf in Resources */,
 				EE8D4E3B2157C70800341157 /* Montserrat-ExtraLight.otf in Resources */,
@@ -955,6 +1054,7 @@
 				FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */,
 				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
 				EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */,
+				EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */,
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
 				EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */,
@@ -988,6 +1088,7 @@
 				EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */,
 				FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */,
 				EE13B4C3213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift in Sources */,
+				EEA1EFAF216D5FF40027C7A9 /* CodeRegistrationViewController.swift in Sources */,
 				EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
@@ -1027,7 +1128,7 @@
 /* Begin PBXTargetDependency section */
 		FFA681A320BF063700FE29DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EE826E8E20AADA4A006A0390 /* Blipp */;
+			target = EE826E8E20AADA4A006A0390 /* Viffs */;
 			targetProxy = FFA681A220BF063700FE29DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1039,6 +1140,14 @@
 				EE826E9E20AADA4D006A0390 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA1EFAC216D5B630027C7A9 /* Base */,
+			);
+			name = AWS.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1166,7 +1275,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: robbanl@kth.se (98692X727Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VCRQL947ZX;
-				INFOPLIST_FILE = Blipp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Viffs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1188,7 +1297,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: robbanl@kth.se (98692X727Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VCRQL947ZX;
-				INFOPLIST_FILE = Blipp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Viffs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1219,7 +1328,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viffs.app/Viffs";
 			};
 			name = Debug;
 		};
@@ -1240,14 +1349,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipp.app/Blipp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viffs.app/Viffs";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE826E8A20AADA4A006A0390 /* Build configuration list for PBXProject "Blipp" */ = {
+		EE826E8A20AADA4A006A0390 /* Build configuration list for PBXProject "Viffs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE826EA120AADA4D006A0390 /* Debug */,
@@ -1256,7 +1365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE826EA320AADA4D006A0390 /* Build configuration list for PBXNativeTarget "Blipp" */ = {
+		EE826EA320AADA4D006A0390 /* Build configuration list for PBXNativeTarget "Viffs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE826EA420AADA4D006A0390 /* Debug */,
@@ -1265,7 +1374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "BlippTests" */ = {
+		FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "ViffsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FFA681A420BF063700FE29DA /* Debug */,

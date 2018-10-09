@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,8 +19,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Blipp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Viffs" customModuleProvider="target">
             <connections>
+                <outlet property="arrowUpButton" destination="eGx-Lw-RfU" id="dmv-eJ-iFJ"/>
                 <outlet property="butikerLabel" destination="ZUJ-bb-xGr" id="eKZ-3L-EAU"/>
                 <outlet property="kvittoLabel" destination="Lvt-Pb-iRO" id="jPS-MD-JsV"/>
                 <outlet property="latestReceiptSearchBar" destination="EAD-TQ-g0d" id="o1x-Sh-5zb"/>
@@ -29,8 +29,8 @@
                 <outlet property="latestReceiptViewHeightConstraint" destination="RM3-d2-a5h" id="Abl-9t-o9K"/>
                 <outlet property="receiptButton" destination="9XJ-F7-P7S" id="kvy-JE-ygT"/>
                 <outlet property="receiptTableView" destination="gRl-om-Vn0" id="mAG-Om-Aem"/>
-                <outlet property="senasteKvittonLabel" destination="12O-uR-BsL" id="4T8-xd-cbr"/>
                 <outlet property="storeButton" destination="HzS-ux-X3J" id="cKm-ya-R0Y"/>
+                <outlet property="tableToSuperviewConstraint" destination="fK0-t8-whA" id="Mfk-Cy-apL"/>
                 <outlet property="view" destination="iN0-l3-epB" id="MV5-sT-Knx"/>
             </connections>
         </placeholder>
@@ -51,7 +51,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
-                    <rect key="frame" x="54" y="268" width="93" height="32"/>
+                    <rect key="frame" x="54.5" y="268" width="92.5" height="32"/>
                     <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="26"/>
                     <color key="textColor" red="0.35751110402487296" green="0.35751110402487296" blue="0.35751110402487296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                    <rect key="frame" x="227" y="268" width="96" height="32"/>
+                    <rect key="frame" x="227.5" y="268" width="96" height="32"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
                     <color key="textColor" red="0.35751110400000002" green="0.35751110400000002" blue="0.35751110400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -83,44 +83,34 @@
                             </constraints>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senaste kvitton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12O-uR-BsL">
-                            <rect key="frame" x="8" y="25" width="132" height="21"/>
-                            <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="17"/>
-                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gray-line" translatesAutoresizingMaskIntoConstraints="NO" id="b5K-rH-e36">
                             <rect key="frame" x="-18" y="-10" width="430" height="19"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="tintColor" red="0.58750396569999996" green="0.58750396569999996" blue="0.58750396569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-om-Vn0">
-                            <rect key="frame" x="0.0" y="60" width="375" height="168"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-om-Vn0">
+                            <rect key="frame" x="0.0" y="25" width="375" height="203"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white-up-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-jt-ehd">
-                            <rect key="frame" x="175" y="0.0" width="26" height="19"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="19" id="Ui7-fH-k8h"/>
-                                <constraint firstAttribute="width" constant="26" id="gFs-7N-Ic2"/>
-                            </constraints>
-                        </imageView>
+                        <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-Lw-RfU">
+                            <rect key="frame" x="8" y="-2" width="32" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="arrow-up-2"/>
+                            <connections>
+                                <action selector="arrowUpButtonPushed:" destination="-1" eventType="touchUpInside" id="1xL-qg-KXZ"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="EAD-TQ-g0d" secondAttribute="bottom" id="08S-Fh-yoV"/>
                         <constraint firstAttribute="trailing" secondItem="EAD-TQ-g0d" secondAttribute="trailing" id="2Eb-wj-VU4"/>
                         <constraint firstItem="gRl-om-Vn0" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" id="4jo-Am-Zwe"/>
-                        <constraint firstAttribute="trailing" secondItem="zJ1-jt-ehd" secondAttribute="trailing" constant="174" id="DxQ-v3-ukh"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="leading" secondItem="gRl-om-Vn0" secondAttribute="leading" id="HLm-kw-Ifg"/>
-                        <constraint firstItem="12O-uR-BsL" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="25" id="IFj-UG-Kar"/>
                         <constraint firstAttribute="bottom" secondItem="gRl-om-Vn0" secondAttribute="bottom" constant="57" id="ILP-I1-Qtc"/>
-                        <constraint firstItem="zJ1-jt-ehd" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" id="Orm-LZ-kku"/>
                         <constraint firstAttribute="height" constant="285" id="RM3-d2-a5h"/>
-                        <constraint firstItem="12O-uR-BsL" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leadingMargin" id="Xwu-Su-inx"/>
+                        <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="25" id="fK0-t8-whA"/>
                         <constraint firstAttribute="trailing" secondItem="gRl-om-Vn0" secondAttribute="trailing" id="fka-7q-uvx"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" id="mN5-Ms-dAI"/>
-                        <constraint firstItem="zJ1-jt-ehd" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" constant="175" id="y5V-jp-qCL"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="15" id="zaw-TC-So5"/>
                     </constraints>
                 </view>
@@ -148,7 +138,7 @@
     <resources>
         <image name="ButikIkon" width="408" height="408"/>
         <image name="KvittoIkon" width="408" height="408"/>
+        <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
-        <image name="white-up-arrow" width="500" height="500"/>
     </resources>
 </document>

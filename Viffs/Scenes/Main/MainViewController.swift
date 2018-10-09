@@ -20,17 +20,19 @@ UIGestureRecognizerDelegate {
   var startedAnimation: Bool = false
   let minHeightLatestReceipt: CGFloat = 320
   let maxHeightLatestReceipt: CGFloat = 400
+  var maximized: Bool = false
   
-  @IBOutlet var butikerLabel: UILabel!
+    @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
+    @IBOutlet var butikerLabel: UILabel!
   @IBOutlet var kvittoLabel: UILabel!
   @IBOutlet var latestReceiptSearchBar: UISearchBar!
-  @IBOutlet var senasteKvittonLabel: UILabel!
   @IBOutlet var latestReceiptView: UIView!
   @IBOutlet var receiptButton: UIButton!
   @IBOutlet var storeButton: UIButton!
   @IBOutlet var receiptTableView: UITableView!
   
-  @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var arrowUpButton: UIButton!
+    @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
   
   @IBAction func receiptButtonPushed(_ sender: Any) {
     SceneCoordinator.shared.transition(to: Scene.receipts(.init()))
@@ -38,7 +40,15 @@ UIGestureRecognizerDelegate {
   @IBAction func storeButtonPushed(_ sender: Any) {
     SceneCoordinator.shared.transition(to: Scene.stores)
   }
-  
+  @IBAction func arrowUpButtonPushed(_ sender: Any) {
+    if (maximized) {
+      minimizeLatestReceiptView()
+    } else {
+      maximizeLatestReceiptView()
+    }
+  }
+    
+    
   @objc func reloadTable() {
     receiptTableView.reloadData()
 
@@ -91,24 +101,28 @@ UIGestureRecognizerDelegate {
   
   func maximizeLatestReceiptView() {
     let screenSize: CGRect = UIScreen.main.bounds
+    maximized = true
     self.latestReceiptViewHeightConstraint.constant = screenSize.height - 100
     UIView.animate(withDuration: 0.35) { () -> Void in
-      self.senasteKvittonLabel.isHidden = true
       self.addCard.isEnabled = false
       self.addCard.tintColor = UIColor.clear
       self.latestReceiptSearchBar.isHidden = false
+      self.tableToSuperviewConstraint.constant = 60
+      self.arrowUpButton.setBackgroundImage(#imageLiteral(resourceName: "arrow-down-2"), for: .normal)
       self.view.layoutIfNeeded()
     }
     startedAnimation = false
   }
   
   func minimizeLatestReceiptView() {
+    maximized = false
     self.latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
     UIView.animate(withDuration: 0.35) { () -> Void in
-      self.senasteKvittonLabel.isHidden = false
       self.addCard.isEnabled = true
       self.addCard.tintColor = nil
       self.latestReceiptSearchBar.isHidden = true
+      self.tableToSuperviewConstraint.constant = 25
+      self.arrowUpButton.setBackgroundImage(#imageLiteral(resourceName: "arrow-up-2"), for: .normal)
       self.view.layoutIfNeeded()
     }
     latestReceiptSearchBar.endEditing(true)

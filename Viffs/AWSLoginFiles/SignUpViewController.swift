@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController {
   @IBOutlet weak var username: UITextField!
   @IBOutlet weak var password: UITextField!
   
-  @IBOutlet weak var phone: UITextField!
   @IBOutlet weak var email: UITextField!
   
   override func viewDidLoad() {
@@ -38,12 +37,6 @@ class SignUpViewController: UIViewController {
     self.navigationController?.setNavigationBarHidden(false, animated: false)
   }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let signUpConfirmationViewController = segue.destination as? ConfirmSignUpViewController {
-      signUpConfirmationViewController.sentTo = self.sentTo
-      signUpConfirmationViewController.user = self.pool?.getUser(self.username.text!)
-    }
-  }
   
   @IBAction func signUp(_ sender: AnyObject) {
     
@@ -60,13 +53,14 @@ class SignUpViewController: UIViewController {
     }
     
     var attributes = [AWSCognitoIdentityUserAttributeType]()
-    
-    if let phoneValue = self.phone.text, !phoneValue.isEmpty {
-      let phone = AWSCognitoIdentityUserAttributeType()
-      phone?.name = "phone_number"
-      phone?.value = phoneValue
-      attributes.append(phone!)
-    }
+    let family_name = AWSCognitoIdentityUserAttributeType()
+    family_name?.name = "family_name"
+    family_name?.value = "efternamn"
+    attributes.append(family_name!)
+    let given_name = AWSCognitoIdentityUserAttributeType()
+    given_name?.name = "given_name"
+    given_name?.value = "given name"
+    attributes.append(given_name!)
     
     if let emailValue = self.email.text, !emailValue.isEmpty {
       let email = AWSCognitoIdentityUserAttributeType()
@@ -90,13 +84,8 @@ class SignUpViewController: UIViewController {
           
           self?.present(alertController, animated: true, completion:  nil)
         } else if let result = task.result  {
-          // handle the case where user has to confirm his identity via email / SMS
-          if (result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed) {
-            strongSelf.sentTo = result.codeDeliveryDetails?.destination
-            strongSelf.performSegue(withIdentifier: "confirmSignUpSegue", sender:sender)
-          } else {
-            let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
-          }
+            Current.username = self?.username.text
+            Current.password = self?.password.text
         }
         
       })

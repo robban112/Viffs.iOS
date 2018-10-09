@@ -21,7 +21,9 @@ extension Environment {
       currentAWSUser: nil,
       pool: nil,
       storeDict: [:],
-      accessToken: nil
+      accessToken: nil,
+      username: nil,
+      password: nil
     )
   }
 }

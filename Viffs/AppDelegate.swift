@@ -76,8 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     AWSServiceManager.default().defaultServiceConfiguration = configuration
     
-    
-    
     setInitialViewController()
     updateUserDetails(pool: pool)
     
@@ -96,6 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
+        print("idToken")
+        
+        
         //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
           setReceiptsForUser(token: accessToken)
