@@ -18,12 +18,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
 
   override func viewDidLoad() {
     loadTableView()
-//    tableView.registerCell(type: MoreCell.self)
-//    Observable.just(["Kort", "Hjälp", "Inställningar", "Logga ut"])
-//      .bind(to: tableView.rx.items(cellIdentifier: "MoreCell", cellType: MoreCell.self)) { (_, text, cell) in
-//        cell.label.text = text
-//      }
-//      .disposed(by: disposeBag)
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
   
   func loadTableView() {

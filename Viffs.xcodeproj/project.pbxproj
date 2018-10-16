@@ -89,7 +89,6 @@
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
 		EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */; };
 		EEA1EFAF216D5FF40027C7A9 /* CodeRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */; };
-		EEDDC2C8217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */; };
 		EEDDC2CA21753B90009EA895 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */; };
 		EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
@@ -246,7 +245,6 @@
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EEA1EFAC216D5B630027C7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AWS.storyboard; sourceTree = "<group>"; };
 		EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRegistrationViewController.swift; sourceTree = "<group>"; };
-		EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperAuthenticatedIdentityProvider.swift; sourceTree = "<group>"; };
 		EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSLoginManager.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
@@ -452,7 +450,6 @@
 				EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */,
 				EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */,
 				EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */,
-				EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */,
 			);
 			path = AWSLoginFiles;
 			sourceTree = "<group>";
@@ -1010,7 +1007,6 @@
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
 				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
-				EEDDC2C8217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
 				EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */,
 				EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */,
