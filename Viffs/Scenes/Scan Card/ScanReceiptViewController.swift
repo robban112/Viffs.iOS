@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
@@ -27,7 +28,10 @@ class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelega
       //TODO: add photo to database
     }
   }
-  
+    @IBAction func hamburgerPushed(_ sender: Any) {
+      present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+    }
+    
   private var tookPhoto: Bool = false {
     didSet {
       if tookPhoto {

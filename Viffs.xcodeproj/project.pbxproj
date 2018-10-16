@@ -523,7 +523,7 @@
 				5CDFDBD820E3D4C300BA000F /* Scan receipt */,
 				FF07F64920D26E4C00B011D8 /* Home */,
 				FF07F63E20D26B2500B011D8 /* Stores */,
-				FF07F63D20D26B1F00B011D8 /* Second */,
+				FF07F63D20D26B1F00B011D8 /* NFC Scanner */,
 				FF07F63C20D26B0A00B011D8 /* Registration Code */,
 				FF07F63B20D26AFE00B011D8 /* Register Card */,
 				FF07F63820D26AC600B011D8 /* Receipts Root */,
@@ -586,13 +586,13 @@
 			path = "Registration Code";
 			sourceTree = "<group>";
 		};
-		FF07F63D20D26B1F00B011D8 /* Second */ = {
+		FF07F63D20D26B1F00B011D8 /* NFC Scanner */ = {
 			isa = PBXGroup;
 			children = (
 				FF07F64120D26B4A00B011D8 /* SecondViewController.xib */,
 				FF07F64720D26D3300B011D8 /* SecondViewController.swift */,
 			);
-			path = Second;
+			path = "NFC Scanner";
 			sourceTree = "<group>";
 		};
 		FF07F63E20D26B2500B011D8 /* Stores */ = {
