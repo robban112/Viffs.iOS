@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "lipp-20180910220817-authRole",
+            "UnauthRoleArn": "arn:aws:iam::023975910160:role/lipp-20180910220817-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::023975910160:role/lipp-20180910220817-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "lipp-20180910220817-deployment",
+            "UnauthRoleName": "lipp-20180910220817-unauthRole",
+            "StackName": "lipp-20180910220817",
+            "StackId": "arn:aws:cloudformation:eu-west-1:023975910160:stack/lipp-20180910220817/4203a770-b535-11e8-8a1f-503abe701cfd"
+        }
+    }
+}
