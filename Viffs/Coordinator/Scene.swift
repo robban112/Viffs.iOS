@@ -18,7 +18,7 @@ enum Scene {
   case login(LoginViewModel)
   case receiptDetail(ReceiptDetailViewModel)
   case registerUser(RegisterUserViewModel)
-  case registerCard(RegisterCardViewModel)
+  case registerCard
   case registrationCode(RegistrationCodeViewModel)
   case receipts(ReceiptViewModel)
   case receiptsSorted(ReceiptViewModel)
@@ -33,12 +33,16 @@ extension Scene: TargetScene {
   var transition: SceneTransitionType {
     switch self {
     case .blipp:
-//      let main = MainViewController.instantiateFromNib()
-//      let nav = UISideMenuNavigationController(rootViewController: main)
-//      main.title = ""
-//      return .push(nav)
-      let blippTabBarController = createBlippTabBarController()
-      return .root(blippTabBarController)
+      return .root(setupSideMenu())
+      
+//      let blippTabBarController = createBlippTabBarController()
+//      return .root(blippTabBarController)
+//      let homeVC = MainViewController.instantiateFromNib()
+//      homeVC.title = ""
+//      let homeNav = UINavigationController(rootViewController: homeVC)
+//      homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//      homeNav.navigationBar.shadowImage = UIImage()
+//      return .push(homeNav)
     case let .login(loginViewModel):
       var loginVC = LoginViewController.instantiateFromNib()
       loginVC.title = ""
@@ -58,10 +62,9 @@ extension Scene: TargetScene {
       registerUserVC.title = ""
       registerUserVC.bind(to: registerUserViewModel)
       return .push(registerUserVC)
-    case let .registerCard(registerCardViewModel):
+    case let .registerCard:
       var registerCardVC = RegisterCardViewController.instantiateFromNib()
       registerCardVC.title = ""
-      registerCardVC.bind(to: registerCardViewModel)
       return .push(registerCardVC)
     case let .registrationCode(registrationCodeViewModel):
       var registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
@@ -110,6 +113,31 @@ extension Scene: TargetScene {
       return .root(welcomeNav)
     }
   }
+}
+
+func setupSideMenu() -> UINavigationController {
+  // Define the menus
+  let mainVC = MainViewController.instantiateFromNib()
+  let mainNav = UINavigationController(rootViewController: mainVC)
+  mainNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+  mainNav.navigationBar.shadowImage = UIImage()
+  let moreVC = MoreViewController.instantiateFromNib()
+  mainVC.title = ""
+  moreVC.title = ""
+  let navRight = UISideMenuNavigationController(rootViewController: moreVC)
+  navRight.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+  navRight.navigationBar.shadowImage = UIImage()
+  SideMenuManager.default.menuRightNavigationController = navRight
+  
+  // Enable gestures. The left and/or right menus must be set up above for these to work.
+  // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
+//  SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationController!.navigationBar)
+//  SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationController!.view)
+  
+  // Set up a cool background image for demo purposes
+  //SideMenuManager.default.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+  
+  return mainNav
 }
 
 fileprivate func createBlippTabBarController() -> UITabBarController {

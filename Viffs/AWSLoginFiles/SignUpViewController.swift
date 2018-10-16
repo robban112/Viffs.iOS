@@ -37,6 +37,13 @@ class SignUpViewController: UIViewController {
     self.navigationController?.setNavigationBarHidden(false, animated: false)
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let signUpConfirmationViewController = segue.destination as? ConfirmSignUpViewController {
+      signUpConfirmationViewController.sentTo = self.sentTo
+      signUpConfirmationViewController.user = self.pool?.getUser(self.username.text!)
+    }
+  }
+  
   
   @IBAction func signUp(_ sender: AnyObject) {
     
@@ -61,15 +68,10 @@ class SignUpViewController: UIViewController {
     given_name?.name = "given_name"
     given_name?.value = "given name"
     attributes.append(given_name!)
-    
-    if let emailValue = self.email.text, !emailValue.isEmpty {
-      let email = AWSCognitoIdentityUserAttributeType()
-      email?.name = "email"
-      email?.value = emailValue
-      attributes.append(email!)
-    }
-    
-    
+    let email = AWSCognitoIdentityUserAttributeType()
+    email?.name = "email"
+    email?.value = userNameValue
+    attributes.append(email!)
     
     //sign up the user
     self.pool?.signUp(userNameValue, password: passwordValue, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in

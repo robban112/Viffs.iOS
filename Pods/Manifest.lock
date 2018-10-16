@@ -1,10 +1,13 @@
 PODS:
   - Alamofire (4.7.3)
+  - AWSAuthCore (2.6.28):
+    - AWSCore (= 2.6.28)
   - AWSCognitoIdentityProvider (2.6.28):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
     - AWSCore (= 2.6.28)
   - AWSCognitoIdentityProviderASF (1.0.1)
   - AWSCore (2.6.28)
+  - CardIO (5.4.1)
   - Differentiator (3.0.2)
   - Firebase/Auth (5.7.0):
     - Firebase/CoreOnly
@@ -104,8 +107,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - AWSAuthCore (~> 2.6.0)
   - AWSCognitoIdentityProvider (~> 2.6.0)
   - AWSCore (~> 2.6.0)
+  - CardIO
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -124,9 +129,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AWSAuthCore
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
+    - CardIO
     - Differentiator
     - Firebase
     - FirebaseAnalytics
@@ -153,9 +160,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AWSAuthCore: 0cac96d75993f2d13c5a357b88e965ae497c9eb7
   AWSCognitoIdentityProvider: 9eec83ce5774fc7bf1d9abaa6d74e077acc763ef
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: f75fcf5b2f4325da49ae1f7cb5484778d3b0acc6
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   Firebase: 734a4f92957aa6c40e7ae3fda3d9359e1890aa87
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
@@ -180,6 +189,6 @@ SPEC CHECKSUMS:
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
 
-PODFILE CHECKSUM: 210a1708075fd8724b7a53fd37f2dc2bea7ee1fa
+PODFILE CHECKSUM: 91d64b679b6db2fab4fc5d9056b4bd4aaabe42b9
 
 COCOAPODS: 1.5.3

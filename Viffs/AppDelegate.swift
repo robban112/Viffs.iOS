@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
 import AWSCognitoIdentityProvider
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,21 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    
-    // Override point for customization after application launch.
-    
-    //OLD ----
-    FirebaseApp.configure()
-    //window = UIWindow(frame: UIScreen.main.bounds)
-    //window?.rootViewController = UIViewController()
-    //window?.makeKeyAndVisible()
-    
-    //let coordinator = SceneCoordinator(window: window!)
-    //SceneCoordinator.shared = coordinator
-    //_ = coordinator.transition(to: Scene.welcome(WelcomeViewModel()))
-    // -------
-    
+
     // Warn user if configuration not updated
     if (CognitoIdentityUserPoolId == "YOUR_USER_POOL_ID") {
       let alertController = UIAlertController(title: "Invalid Configuration",
@@ -66,11 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
     self.storyboard = UIStoryboard(name: "AWS", bundle: nil)
     pool.delegate = self
+    Current.pool = pool
     
     // Initialize the Amazon Cognito credentials provider
     let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
       identityPoolId:"us-east-1:b022e33e-7f9a-404f-9874-2def6ce79c2e")
-    
     
     let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
     
@@ -82,38 +68,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
   
-  
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
     Current.pool = pool
     Current.currentAWSUser = pool.currentUser()
     let user = pool.currentUser()
-    getSession()
-  }
-  
-  func getSession(){
-    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
-      DispatchQueue.main.async(execute: {
-        let getSessionResult = getSessionTask.result
-        print("idToken")
-        
-        
-        //let idToken = getSessionResult?.idToken?.tokenString
-        if let accessToken = getSessionResult?.accessToken?.tokenString {
-          setReceiptsForUser(token: accessToken)
-          Current.accessToken = accessToken
-          print("Accesstoken: " + accessToken)
-        }
-      })
-      return nil
-    }
   }
   
   func setInitialViewController() {
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    self.window?.rootViewController = UIViewController()
+//    let main = MainViewController.instantiateFromNib()
+//    let nav = UINavigationController(rootViewController: main)
+//    self.window?.rootViewController = nav
     self.window?.makeKeyAndVisible()
-    
-    let coordinator = SceneCoordinator(window: window!)
+    self.window?.rootViewController = UIViewController()
+    let coordinator = SceneCoordinator(window: window!, storyboard: storyboard!)
     SceneCoordinator.shared = coordinator
     _ = coordinator.transition(to: Scene.blipp)
   }

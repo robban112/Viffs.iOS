@@ -10,8 +10,8 @@ import UIKit
 import RxSwift
 
 protocol SceneCoordinatorType {
-  init(window: UIWindow)
-  
+  init(window: UIWindow, storyboard: UIStoryboard)
+  func transitionToLogin()
   @discardableResult func transition(to scene: TargetScene) -> Observable<Void>
   @discardableResult func pop(animated: Bool) -> Observable<Void>
 }

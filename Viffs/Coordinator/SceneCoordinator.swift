@@ -18,6 +18,8 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   static var shared: SceneCoordinator!
   
   private var window: UIWindow
+  private var storyboard: UIStoryboard
+  
   private var currentViewController: UIViewController {
     didSet {
       currentViewController.navigationController?.rx.delegate
@@ -27,9 +29,30 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
     }
   }
   
-  required init(window: UIWindow) {
+  required init(window: UIWindow, storyboard: UIStoryboard) {
     self.window = window
+    self.storyboard = storyboard
     currentViewController = window.rootViewController ?? UIViewController()
+  }
+  
+  func transitionToLogin() {
+//    let signInVC = self.storyboard.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
+    //transition(to: Scene.blipp)
+//    Current.pool?.clearAll()
+    flushEnvironment()
+    getDetails()
+  }
+  
+  //This is needed to invoke the AWS login delegate
+  func getDetails(){
+    Current.currentAWSUser?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+      DispatchQueue.main.async(execute: {
+//        self.response = task.result
+//        self.title = self.user?.username
+//        self.tableView.reloadData()
+      })
+      return nil
+    }
   }
   
   @discardableResult

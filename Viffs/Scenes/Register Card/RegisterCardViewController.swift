@@ -10,26 +10,41 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RegisterCardViewController: UIViewController, ViewModelBindable {
+class RegisterCardViewController: UIViewController, CardIOPaymentViewControllerDelegate {
   
-  let disposeBag = DisposeBag()
-  var viewModel: RegisterCardViewModelType!
-  
-  @IBOutlet weak var cardNumberTextField: UITextField!
-  @IBOutlet weak var continueButton: UIButton!
-  @IBOutlet weak var registerLaterButton: UIButton!
-  
-  override func viewDidLoad() {
-    cardNumberTextField.becomeFirstResponder()
+  func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+    print("User has canceled the scanner.")
+    paymentViewController.dismiss(animated: true, completion: nil)
   }
   
-  func bindViewModel() {
-    continueButton.rx.tap
-      .bind(to: viewModel.inputs.continueButton)
-      .disposed(by: disposeBag)
+  func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+    if let info = cardInfo {
+      let str = NSString(format: "Received card info. \n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+      print(str)
+    }
+    paymentViewController.dismiss(animated: true, completion: nil)
+  }
+  
+
+  
+  @IBOutlet weak var cardNumberTextField: UITextField!
+    @IBOutlet var month: UITextField!
+    @IBOutlet var year: UITextField!
+    @IBOutlet var cvc: UITextField!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBAction func addCardButtonPushed(_ sender: Any) {
+            print("cvc: \(cvc.text), month: \(month.text), year: \(year.text), cardNumber: \(cardNumberTextField.text)")
+    }
+  
+  @IBAction func scanCardButtonPushed(_ sender: Any) {
+    let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
+    cardIOVC.hideCardIOLogo = true
+    present(cardIOVC, animated: true, completion: nil)
+
+  }
     
-    registerLaterButton.rx.tap
-      .bind(to: viewModel.inputs.registerCardLater)
-      .disposed(by: disposeBag)
+  
+  override func viewDidLoad() {
+    CardIOUtilities.preload()
   }
 }

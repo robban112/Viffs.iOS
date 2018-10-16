@@ -56,7 +56,7 @@ struct HomeViewModel: HomeViewModelType
         [SectionModel(model: 0, items: receipts)]
     }
     let navigateAddCard = addCard.flatMapLatest {
-      coordinator.transition(to: Scene.registerCard(.init()))
+      coordinator.transition(to: Scene.registerCard)
     }
     let navigateStores = stores.flatMapLatest {
       coordinator.transition(to: Scene.stores)

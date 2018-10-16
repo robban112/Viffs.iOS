@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DB622EEA352FECD343F4FEE /* libPods-ViffsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC30279009FD2C170F9F6F3 /* libPods-ViffsTests.a */; };
 		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
 		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
 		5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
@@ -14,7 +15,7 @@
 		5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */; };
 		5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */; };
 		7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */; };
-		CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */; };
+		A9A9A7E687410C19A25AA070 /* Pods_Viffs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A381BD000F3F46747347BBEE /* Pods_Viffs.framework */; };
 		EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */; };
 		EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4B8213AD25A007743D2 /* SignInViewController.swift */; };
 		EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BA213AD291007743D2 /* MFAViewController.swift */; };
@@ -22,35 +23,12 @@
 		EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */; };
 		EE13B4C1213AD2FF007743D2 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */; };
 		EE13B4C3213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */; };
-		EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */; };
-		EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */; };
 		EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4C8213AD406007743D2 /* MFAViewController.xib */; };
 		EE13B4D1213C4CE5007743D2 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE13B4CF213C4CE5007743D2 /* MoreTableViewController.swift */; };
 		EE13B4D2213C4CE5007743D2 /* MoreTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */; };
 		EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE168A12212C078400AB426A /* StoreToLogo.swift */; };
 		EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CB0D320B574A600733817 /* LoginViewController.swift */; };
 		EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */; };
-		EE72B6CE216C0B1A005E307E /* Viffs-ikoner_20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */; };
-		EE72B6CF216C0B1A005E307E /* Viffs-ikoner_29.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */; };
-		EE72B6D0216C0B1A005E307E /* Viffs-ikoner_1024.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */; };
-		EE72B6D1216C0B1A005E307E /* Viffs-ikoner_20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */; };
-		EE72B6D2216C0B1A005E307E /* Viffs-ikoner_76.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */; };
-		EE72B6D3216C0B1A005E307E /* Viffs-ikoner_57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */; };
-		EE72B6D4216C0B1A005E307E /* Viffs-ikoner_72.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */; };
-		EE72B6D5216C0B1A005E307E /* Viffs-ikoner_57.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */; };
-		EE72B6D6216C0B1A005E307E /* Viffs-ikoner_83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */; };
-		EE72B6D7216C0B1A005E307E /* Viffs-ikoner_40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */; };
-		EE72B6D8216C0B1A005E307E /* Viffs-ikoner_40.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */; };
-		EE72B6D9216C0B1A005E307E /* Viffs-ikoner_50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */; };
-		EE72B6DA216C0B1A005E307E /* Viffs-ikoner_76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */; };
-		EE72B6DB216C0B1A005E307E /* Viffs-ikoner_50.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */; };
-		EE72B6DC216C0B1A005E307E /* Viffs-ikoner_40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */; };
-		EE72B6DD216C0B1A005E307E /* Viffs-ikoner_20.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */; };
-		EE72B6DE216C0B1A005E307E /* Viffs-ikoner_60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */; };
-		EE72B6DF216C0B1A005E307E /* Viffs-ikoner_72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */; };
-		EE72B6E0216C0B1A005E307E /* Viffs-ikoner_29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */; };
-		EE72B6E1216C0B1A005E307E /* Viffs-ikoner_29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */; };
-		EE72B6E2216C0B1A005E307E /* Viffs-ikoner_60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */; };
 		EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */; };
 		EE789BE620B5721D00A0AEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */; };
 		EE826E9320AADA4A006A0390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826E9220AADA4A006A0390 /* AppDelegate.swift */; };
@@ -102,10 +80,18 @@
 		EE8D4E512157C70800341157 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE8D4E2C2157C70800341157 /* MontserratAlternates-ExtraBoldItalic.otf */; };
 		EE8D4E522157C70800341157 /* MontserratAlternates-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE8D4E2D2157C70800341157 /* MontserratAlternates-Italic.otf */; };
 		EE8D4E532157C70800341157 /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE8D4E2E2157C70800341157 /* Montserrat-SemiBold.otf */; };
+		EE8F6C19216E2D25003A12A8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C14216E2D24003A12A8 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE8F6C1A216E2D25003A12A8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C15216E2D24003A12A8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE8F6C1B216E2D25003A12A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C16216E2D24003A12A8 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE8F6C1C216E2D25003A12A8 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C17216E2D25003A12A8 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EE8F6C1D216E2D25003A12A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8F6C18216E2D25003A12A8 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */; };
 		EE962D5020BDC5B7006CEC0F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE962D4F20BDC5B7006CEC0F /* User.swift */; };
 		EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */; };
 		EEA1EFAF216D5FF40027C7A9 /* CodeRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */; };
+		EEDDC2C8217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */; };
+		EEDDC2CA21753B90009EA895 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */; };
+		EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
 		FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */; };
 		FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
@@ -126,7 +112,6 @@
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
 		FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */; };
-		FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */; };
 		FF3AF53320E8ACA500CF7B67 /* RegistrationCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */; };
 		FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */; };
 		FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */; };
@@ -169,7 +154,10 @@
 /* Begin PBXFileReference section */
 		0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
 		28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blipp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29655D03DB333273394AF01E /* Pods-ViffsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViffsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViffsTests/Pods-ViffsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E86FB2FFFDCFEDD856FB433 /* Pods-Viffs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viffs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Viffs/Pods-Viffs.release.xcconfig"; sourceTree = "<group>"; };
+		451BE048DF50D156136C99CE /* Pods-Viffs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viffs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viffs/Pods-Viffs.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5CADD82C20E699F70064222F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -177,8 +165,11 @@
 		5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScanReceiptViewController.xib; sourceTree = "<group>"; };
 		5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReceiptViewController.swift; sourceTree = "<group>"; };
 		63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BlippTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A381BD000F3F46747347BBEE /* Pods_Viffs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Viffs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC30279009FD2C170F9F6F3 /* libPods-ViffsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ViffsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.debug.xcconfig"; sourceTree = "<group>"; };
 		CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blipp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blipp/Pods-Blipp.release.xcconfig"; sourceTree = "<group>"; };
+		D2796E19588D85B37874EDD1 /* Pods-ViffsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViffsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViffsTests/Pods-ViffsTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSConstants.swift; sourceTree = "<group>"; };
 		EE13B4B8213AD25A007743D2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE13B4BA213AD291007743D2 /* MFAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAViewController.swift; sourceTree = "<group>"; };
@@ -186,35 +177,12 @@
 		EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSignUpViewController.swift; sourceTree = "<group>"; };
 		EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewController.swift; sourceTree = "<group>"; };
-		EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesDetailTableViewController.swift; sourceTree = "<group>"; };
 		EE13B4C8213AD406007743D2 /* MFAViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MFAViewController.xib; sourceTree = "<group>"; };
 		EE13B4CF213C4CE5007743D2 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreTableViewController.xib; sourceTree = "<group>"; };
 		EE168A12212C078400AB426A /* StoreToLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreToLogo.swift; sourceTree = "<group>"; };
 		EE4CB0D320B574A600733817 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE6A768920BE054800A09CCF /* ReceiptDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewController.swift; sourceTree = "<group>"; };
-		EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20@2x.png"; sourceTree = "<group>"; };
-		EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29.png"; sourceTree = "<group>"; };
-		EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_1024.png"; sourceTree = "<group>"; };
-		EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20@3x.png"; sourceTree = "<group>"; };
-		EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_76.png"; sourceTree = "<group>"; };
-		EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_57@2x.png"; sourceTree = "<group>"; };
-		EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_72.png"; sourceTree = "<group>"; };
-		EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_57.png"; sourceTree = "<group>"; };
-		EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_83.5@2x.png"; sourceTree = "<group>"; };
-		EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40@3x.png"; sourceTree = "<group>"; };
-		EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40.png"; sourceTree = "<group>"; };
-		EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_50@2x.png"; sourceTree = "<group>"; };
-		EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_76@2x.png"; sourceTree = "<group>"; };
-		EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_50.png"; sourceTree = "<group>"; };
-		EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_40@2x.png"; sourceTree = "<group>"; };
-		EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_20.png"; sourceTree = "<group>"; };
-		EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_60@2x.png"; sourceTree = "<group>"; };
-		EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_72@2x.png"; sourceTree = "<group>"; };
-		EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29@3x.png"; sourceTree = "<group>"; };
-		EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_29@2x.png"; sourceTree = "<group>"; };
-		EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Viffs-ikoner_60@3x.png"; sourceTree = "<group>"; };
 		EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterViewController.swift; sourceTree = "<group>"; };
 		EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE826E8F20AADA4A006A0390 /* Viffs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viffs.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,10 +236,19 @@
 		EE8D4E2C2157C70800341157 /* MontserratAlternates-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		EE8D4E2D2157C70800341157 /* MontserratAlternates-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Italic.otf"; sourceTree = "<group>"; };
 		EE8D4E2E2157C70800341157 /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		EE8F6C14216E2D24003A12A8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EE8F6C15216E2D24003A12A8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		EE8F6C16216E2D24003A12A8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EE8F6C17216E2D25003A12A8 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		EE8F6C18216E2D25003A12A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EE8F6C1E216E2D83003A12A8 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		EE90000C20B6BEC100172810 /* RegisterUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewController.swift; sourceTree = "<group>"; };
 		EE962D4F20BDC5B7006CEC0F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EEA1EFAC216D5B630027C7A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AWS.storyboard; sourceTree = "<group>"; };
 		EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRegistrationViewController.swift; sourceTree = "<group>"; };
+		EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperAuthenticatedIdentityProvider.swift; sourceTree = "<group>"; };
+		EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSLoginManager.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptsRootViewController.xib; sourceTree = "<group>"; };
 		FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoresViewController.xib; sourceTree = "<group>"; };
@@ -292,7 +269,6 @@
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FF3AF52E20E89DE500CF7B67 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
-		FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewModel.swift; sourceTree = "<group>"; };
 		FF3AF53220E8ACA500CF7B67 /* RegistrationCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeViewModel.swift; sourceTree = "<group>"; };
 		FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCell.xib; sourceTree = "<group>"; };
@@ -329,9 +305,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDDC2CA21753B90009EA895 /* AWSAuthCore.framework in Frameworks */,
+				EE8F6C19216E2D25003A12A8 /* AudioToolbox.framework in Frameworks */,
+				EE8F6C1A216E2D25003A12A8 /* CoreMedia.framework in Frameworks */,
+				EE8F6C1B216E2D25003A12A8 /* MobileCoreServices.framework in Frameworks */,
+				EE8F6C1C216E2D25003A12A8 /* Accelerate.framework in Frameworks */,
+				EE8F6C1D216E2D25003A12A8 /* AVFoundation.framework in Frameworks */,
 				EE8D4D8D2151873100341157 /* PromiseKit.framework in Frameworks */,
 				EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */,
-				CF631041EC71339EE8699AE9 /* Pods_Blipp.framework in Frameworks */,
+				A9A9A7E687410C19A25AA070 /* Pods_Viffs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C06D7C1F67BFE9F9F6FC8B4 /* libPods-BlippTests.a in Frameworks */,
+				1DB622EEA352FECD343F4FEE /* libPods-ViffsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +332,18 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */,
+				EE8F6C17216E2D25003A12A8 /* Accelerate.framework */,
+				EE8F6C14216E2D24003A12A8 /* AudioToolbox.framework */,
+				EE8F6C18216E2D25003A12A8 /* AVFoundation.framework */,
+				EE8F6C15216E2D24003A12A8 /* CoreMedia.framework */,
+				EE8F6C16216E2D24003A12A8 /* MobileCoreServices.framework */,
 				EE8D4D8C2151873100341157 /* PromiseKit.framework */,
 				EE8D4D8821512DC300341157 /* Alamofire.framework */,
 				28198A1F951B6E0C9A8E9385 /* Pods_Blipp.framework */,
 				63ECBBA2A232C380CE8858AC /* libPods-BlippTests.a */,
+				A381BD000F3F46747347BBEE /* Pods_Viffs.framework */,
+				ACC30279009FD2C170F9F6F3 /* libPods-ViffsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -364,6 +355,10 @@
 				CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */,
 				0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */,
 				2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */,
+				451BE048DF50D156136C99CE /* Pods-Viffs.debug.xcconfig */,
+				2E86FB2FFFDCFEDD856FB433 /* Pods-Viffs.release.xcconfig */,
+				29655D03DB333273394AF01E /* Pods-ViffsTests.debug.xcconfig */,
+				D2796E19588D85B37874EDD1 /* Pods-ViffsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -378,12 +373,13 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
-		5CDFDBD820E3D4C300BA000F /* Scan Card */ = {
+		5CDFDBD820E3D4C300BA000F /* Scan receipt */ = {
 			isa = PBXGroup;
 			children = (
 				5CDFDBD920E3D58C00BA000F /* ScanReceiptViewController.xib */,
 				5CDFDBDB20E3D6FC00BA000F /* ScanReceiptViewController.swift */,
 			);
+			name = "Scan receipt";
 			path = "Scan Card";
 			sourceTree = "<group>";
 		};
@@ -394,35 +390,6 @@
 				EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */,
 			);
 			path = TableView;
-			sourceTree = "<group>";
-		};
-		EE72B6B8216C0B19005E307E /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				EE72B6B9216C0B19005E307E /* Viffs-ikoner_20@2x.png */,
-				EE72B6BA216C0B19005E307E /* Viffs-ikoner_29.png */,
-				EE72B6BB216C0B19005E307E /* Viffs-ikoner_1024.png */,
-				EE72B6BC216C0B19005E307E /* Viffs-ikoner_20@3x.png */,
-				EE72B6BD216C0B19005E307E /* Viffs-ikoner_76.png */,
-				EE72B6BE216C0B19005E307E /* Viffs-ikoner_57@2x.png */,
-				EE72B6BF216C0B19005E307E /* Viffs-ikoner_72.png */,
-				EE72B6C0216C0B19005E307E /* Viffs-ikoner_57.png */,
-				EE72B6C1216C0B19005E307E /* Viffs-ikoner_83.5@2x.png */,
-				EE72B6C2216C0B19005E307E /* Viffs-ikoner_40@3x.png */,
-				EE72B6C3216C0B19005E307E /* Viffs-ikoner_40.png */,
-				EE72B6C4216C0B19005E307E /* Viffs-ikoner_50@2x.png */,
-				EE72B6C5216C0B19005E307E /* Viffs-ikoner_76@2x.png */,
-				EE72B6C6216C0B19005E307E /* Viffs-ikoner_50.png */,
-				EE72B6C7216C0B19005E307E /* Viffs-ikoner_40@2x.png */,
-				EE72B6C8216C0B19005E307E /* Viffs-ikoner_20.png */,
-				EE72B6C9216C0B19005E307E /* Viffs-ikoner_60@2x.png */,
-				EE72B6CA216C0B19005E307E /* Viffs-ikoner_72@2x.png */,
-				EE72B6CB216C0B19005E307E /* Viffs-ikoner_29@3x.png */,
-				EE72B6CC216C0B19005E307E /* Viffs-ikoner_29@2x.png */,
-				EE72B6CD216C0B19005E307E /* Viffs-ikoner_60@3x.png */,
-			);
-			name = ios;
-			path = "../../../../Downloads/Icons 9/ios";
 			sourceTree = "<group>";
 		};
 		EE826E8620AADA4A006A0390 = {
@@ -450,9 +417,10 @@
 		EE826E9120AADA4A006A0390 /* Viffs */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F6C1E216E2D83003A12A8 /* BridgingHeader.h */,
 				EE8D4E552157C76A00341157 /* Fonts */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
-				EE72B6B8216C0B19005E307E /* ios */,
+				EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */,
 				EE826E9B20AADA4D006A0390 /* Assets.xcassets */,
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
@@ -478,14 +446,13 @@
 				EE13B4BC213AD2BC007743D2 /* SignUpViewController.swift */,
 				EE13B4C0213AD2FF007743D2 /* ForgotPasswordViewController.swift */,
 				EE13B4C2213AD31A007743D2 /* ConfirmForgotPasswordViewController.swift */,
-				EE13B4C4213AD340007743D2 /* UserDetailTableViewController.swift */,
-				EE13B4C6213AD365007743D2 /* DevicesDetailTableViewController.swift */,
 				EE13B4BE213AD2DB007743D2 /* ConfirmSignUpViewController.swift */,
 				EE13B4BA213AD291007743D2 /* MFAViewController.swift */,
 				EE13B4C8213AD406007743D2 /* MFAViewController.xib */,
 				EE13B4B6213AD1E0007743D2 /* AWSConstants.swift */,
 				EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */,
 				EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */,
+				EEDDC2C7217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift */,
 			);
 			path = AWSLoginFiles;
 			sourceTree = "<group>";
@@ -556,7 +523,7 @@
 			children = (
 				EE8D4D8E21525E8900341157 /* Main */,
 				5CADD82920E694F50064222F /* Welcome */,
-				5CDFDBD820E3D4C300BA000F /* Scan Card */,
+				5CDFDBD820E3D4C300BA000F /* Scan receipt */,
 				FF07F64920D26E4C00B011D8 /* Home */,
 				FF07F63E20D26B2500B011D8 /* Stores */,
 				FF07F63D20D26B1F00B011D8 /* Second */,
@@ -608,7 +575,6 @@
 			children = (
 				FF07F64520D26B6F00B011D8 /* RegisterCardViewController.xib */,
 				FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */,
-				FF3AF53020E8AC9000CF7B67 /* RegisterCardViewModel.swift */,
 			);
 			path = "Register Card";
 			sourceTree = "<group>";
@@ -870,43 +836,29 @@
 				EE8D4E482157C70800341157 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				FF68D04F20CD902600472FF7 /* ReceiptViewCell.xib in Resources */,
 				EE13B4D2213C4CE5007743D2 /* MoreTableViewController.xib in Resources */,
-				EE72B6DB216C0B1A005E307E /* Viffs-ikoner_50.png in Resources */,
-				EE72B6DC216C0B1A005E307E /* Viffs-ikoner_40@2x.png in Resources */,
 				EE8D4E402157C70800341157 /* Montserrat-LightItalic.otf in Resources */,
-				EE72B6D2216C0B1A005E307E /* Viffs-ikoner_76.png in Resources */,
 				EE8D4E442157C70800341157 /* Montserrat-ExtraBoldItalic.otf in Resources */,
 				EE8D4E472157C70800341157 /* Montserrat-Regular.otf in Resources */,
 				EE8D4E422157C70800341157 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
-				EE72B6D6216C0B1A005E307E /* Viffs-ikoner_83.5@2x.png in Resources */,
-				EE72B6E2216C0B1A005E307E /* Viffs-ikoner_60@3x.png in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
-				EE72B6D1216C0B1A005E307E /* Viffs-ikoner_20@3x.png in Resources */,
 				EE8D4E362157C70800341157 /* Montserrat-BoldItalic.otf in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
-				EE72B6CE216C0B1A005E307E /* Viffs-ikoner_20@2x.png in Resources */,
-				EE72B6DD216C0B1A005E307E /* Viffs-ikoner_20.png in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				EE8D4E3A2157C70800341157 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				EE8D4E432157C70800341157 /* Montserrat-SemiBoldItalic.otf in Resources */,
 				EE8D4E3F2157C70800341157 /* MontserratAlternates-Thin.otf in Resources */,
 				EE8D4E4F2157C70800341157 /* MontserratAlternates-ThinItalic.otf in Resources */,
-				EE72B6DE216C0B1A005E307E /* Viffs-ikoner_60@2x.png in Resources */,
-				EE72B6E1216C0B1A005E307E /* Viffs-ikoner_29@2x.png in Resources */,
-				EE72B6D4216C0B1A005E307E /* Viffs-ikoner_72.png in Resources */,
 				EE8D4D9221525EBD00341157 /* MainViewController.xib in Resources */,
 				FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */,
 				EE8D4E452157C70800341157 /* Montserrat-Italic.otf in Resources */,
 				EE8D4E512157C70800341157 /* MontserratAlternates-ExtraBoldItalic.otf in Resources */,
-				EE72B6DF216C0B1A005E307E /* Viffs-ikoner_72@2x.png in Resources */,
 				EE8D4E332157C70800341157 /* MontserratAlternates-Black.otf in Resources */,
 				EE8D4E502157C70800341157 /* Montserrat-Black.otf in Resources */,
 				EE8D4E3E2157C70800341157 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
-				EE72B6CF216C0B1A005E307E /* Viffs-ikoner_29.png in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
 				FF3AF52F20E89DE500CF7B67 /* WelcomeViewController.xib in Resources */,
 				FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */,
 				EE8D4E492157C70800341157 /* MontserratAlternates-BoldItalic.otf in Resources */,
-				EE72B6D5216C0B1A005E307E /* Viffs-ikoner_57.png in Resources */,
 				FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */,
 				EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */,
 				EE8D4E532157C70800341157 /* Montserrat-SemiBold.otf in Resources */,
@@ -915,9 +867,6 @@
 				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
 				EE8D4E342157C70800341157 /* MontserratAlternates-LightItalic.otf in Resources */,
 				EE8D4E4A2157C70800341157 /* Montserrat-ExtraBold.otf in Resources */,
-				EE72B6D8216C0B1A005E307E /* Viffs-ikoner_40.png in Resources */,
-				EE72B6D7216C0B1A005E307E /* Viffs-ikoner_40@3x.png in Resources */,
-				EE72B6D0216C0B1A005E307E /* Viffs-ikoner_1024.png in Resources */,
 				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
 				EE8D4E392157C70800341157 /* Montserrat-Thin.otf in Resources */,
 				FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */,
@@ -931,14 +880,10 @@
 				EE8D4E4C2157C70800341157 /* MontserratAlternates-Light.otf in Resources */,
 				EE8D4E2F2157C70800341157 /* Montserrat-MediumItalic.otf in Resources */,
 				EE8D4E372157C70800341157 /* Montserrat-Light.otf in Resources */,
-				EE72B6DA216C0B1A005E307E /* Viffs-ikoner_76@2x.png in Resources */,
 				EE8D4E352157C70800341157 /* MontserratAlternates-Medium.otf in Resources */,
 				EE8D4E4D2157C70800341157 /* MontserratAlternates-ExtraLight.otf in Resources */,
 				FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */,
-				EE72B6E0216C0B1A005E307E /* Viffs-ikoner_29@3x.png in Resources */,
-				EE72B6D3216C0B1A005E307E /* Viffs-ikoner_57@2x.png in Resources */,
 				EE8D4E412157C70800341157 /* Montserrat-Medium.otf in Resources */,
-				EE72B6D9216C0B1A005E307E /* Viffs-ikoner_50@2x.png in Resources */,
 				FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */,
 				EE8D4E4E2157C70800341157 /* MontserratAlternates-Regular.otf in Resources */,
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
@@ -965,7 +910,8 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Viffs/Pods-Viffs-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
@@ -985,6 +931,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
@@ -1004,7 +951,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blipp/Pods-Blipp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Viffs/Pods-Viffs-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		30678F429CB10B674D7EA12E /* [CP] Check Pods Manifest.lock */ = {
@@ -1018,7 +965,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BlippTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ViffsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1036,7 +983,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Blipp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Viffs-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1057,17 +1004,16 @@
 				EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */,
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
-				EE13B4C7213AD365007743D2 /* DevicesDetailTableViewController.swift in Sources */,
 				EE8D4D9121525EBD00341157 /* MainViewController.swift in Sources */,
-				EE13B4C5213AD340007743D2 /* UserDetailTableViewController.swift in Sources */,
 				EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */,
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
 				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
-				FF3AF53120E8AC9000CF7B67 /* RegisterCardViewModel.swift in Sources */,
+				EEDDC2C8217539EF009EA895 /* DeveloperAuthenticatedIdentityProvider.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
 				EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */,
+				EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */,
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
 				FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */,
@@ -1269,21 +1215,114 @@
 		};
 		EE826EA420AADA4D006A0390 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C781250CE0DF10DF20CC79C0 /* Pods-Blipp.debug.xcconfig */;
+			baseConfigurationReference = 451BE048DF50D156136C99CE /* Pods-Viffs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: robbanl@kth.se (98692X727Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VCRQL947ZX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Viffs/BridgingHeader.h";
 				INFOPLIST_FILE = "$(SRCROOT)/Viffs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CardIO\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"opencv_core\"",
+					"-l\"opencv_imgproc\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AWSCognitoIdentityProvider\"",
+					"-framework",
+					"\"AWSCognitoIdentityProviderASF\"",
+					"-framework",
+					"\"AWSCore\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MeasurementNanoPB\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Overture\"",
+					"-framework",
+					"\"PromiseKit\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SideMenu\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"\"-lc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BlippAB.Blipp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;
+				SWIFT_OBJC_BRIDGING_HEADER = Viffs/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1291,21 +1330,114 @@
 		};
 		EE826EA520AADA4D006A0390 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD373BDB91CDD8F838CE0521 /* Pods-Blipp.release.xcconfig */;
+			baseConfigurationReference = 2E86FB2FFFDCFEDD856FB433 /* Pods-Viffs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: robbanl@kth.se (98692X727Q)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VCRQL947ZX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Viffs/BridgingHeader.h";
 				INFOPLIST_FILE = "$(SRCROOT)/Viffs/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CardIO\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"opencv_core\"",
+					"-l\"opencv_imgproc\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AWSCognitoIdentityProvider\"",
+					"-framework",
+					"\"AWSCognitoIdentityProviderASF\"",
+					"-framework",
+					"\"AWSCore\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"MeasurementNanoPB\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"Overture\"",
+					"-framework",
+					"\"PromiseKit\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SideMenu\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"\"-lc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BlippAB.Blipp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;
+				SWIFT_OBJC_BRIDGING_HEADER = Viffs/BridgingHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1313,11 +1445,11 @@
 		};
 		FFA681A420BF063700FE29DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */;
+			baseConfigurationReference = 29655D03DB333273394AF01E /* Pods-ViffsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2AQ8FWFADX;
 				INFOPLIST_FILE = BlippTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1334,11 +1466,11 @@
 		};
 		FFA681A520BF063700FE29DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */;
+			baseConfigurationReference = D2796E19588D85B37874EDD1 /* Pods-ViffsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2AQ8FWFADX;
 				INFOPLIST_FILE = BlippTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

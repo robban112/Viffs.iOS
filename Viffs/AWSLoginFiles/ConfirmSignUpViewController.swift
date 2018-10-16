@@ -30,7 +30,7 @@ class ConfirmSignUpViewController : UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.username.text = self.user!.username;
-    self.sentToLabel.text = "Code sent to: \(self.sentTo!)"
+    //self.sentToLabel.text = "Code sent to: \(self.sentTo!)"
   }
   
   // MARK: IBActions
@@ -59,7 +59,7 @@ class ConfirmSignUpViewController : UIViewController {
           
           strongSelf.present(alertController, animated: true, completion:  nil)
         } else {
-          let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
+          //let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
         }
       })
       return nil

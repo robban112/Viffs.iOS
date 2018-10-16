@@ -8,7 +8,21 @@
 
 import UIKit
 
-class CardRegisterViewController: UIViewController {
+class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+  
+  func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+    print("User has canceled the scanner.")
+    paymentViewController.dismiss(animated: true, completion: nil)
+  }
+  
+  func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+    if let info = cardInfo {
+      let str = NSString(format: "Received card info. \n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+      print(str)
+    }
+    paymentViewController.dismiss(animated: true, completion: nil)
+  }
+  
 
     
     @IBOutlet var cvc: UITextField!
@@ -19,28 +33,23 @@ class CardRegisterViewController: UIViewController {
 
     @IBAction func continueAction(_ sender: Any) {
         //push the card data here
+      print("cvc: \(cvc.text), month: \(month.text), year: \(year.text), cardNumber: \(cardNumber.text)")
     }
+    @IBAction func scanCardAction(_ sender: Any) {
+      let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
+      cardIOVC.hideCardIOLogo = true
+      present(cardIOVC, animated: true, completion: nil)
+      
+    }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    print("cvc: \(cvc?.text), month: \(month?.text), year: \(year?.text), cardNumber: \(cardNumber?.text)")
+  }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

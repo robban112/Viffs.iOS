@@ -10,12 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCardViewController" customModule="Blipp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCardViewController" customModule="Viffs" customModuleProvider="target">
             <connections>
                 <outlet property="cardNumberTextField" destination="nvb-vM-m5E" id="P7F-re-KSv"/>
                 <outlet property="continueButton" destination="zmi-8X-aKi" id="6lU-rJ-Hf6"/>
-                <outlet property="registerLaterButton" destination="27F-gz-sxw" id="8rI-UQ-EXZ"/>
+                <outlet property="cvc" destination="Th6-9x-KxE" id="n9e-aE-slP"/>
+                <outlet property="month" destination="JcI-GM-dfX" id="zJ6-DN-7AZ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="myV-Nh-OQ8"/>
+                <outlet property="year" destination="65q-EL-fb9" id="Oph-hE-MIJ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,7 +28,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SgS-Hd-zOH">
                     <rect key="frame" x="50" y="284" width="275" height="135"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-vM-m5E">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kortnummer" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvb-vM-m5E">
                             <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -63,29 +65,23 @@
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmi-8X-aKi">
                             <rect key="frame" x="0.0" y="70" width="275" height="30"/>
-                            <color key="backgroundColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Fortsätt">
+                            <color key="backgroundColor" red="0.99321859140000002" green="0.89048951970000001" blue="0.8632473397" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Lägg till">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="16"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="addCardButtonPushed:" destination="-1" eventType="touchUpInside" id="13Y-H2-Ihl"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27F-gz-sxw">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vx-UJ-1ca">
                             <rect key="frame" x="0.0" y="105" width="275" height="30"/>
-                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Registrera kort senare">
+                            <color key="backgroundColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Scanna kort">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="16"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="scanCardButtonPushed:" destination="-1" eventType="touchUpInside" id="KuI-qc-NZO"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

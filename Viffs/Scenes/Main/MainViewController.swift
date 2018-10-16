@@ -47,6 +47,10 @@ UIGestureRecognizerDelegate {
       maximizeLatestReceiptView()
     }
   }
+  
+  @IBAction func hamburgerButtonPushed(_ sender: Any) {
+    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+  }
     
     
   @objc func reloadTable() {
@@ -73,17 +77,17 @@ UIGestureRecognizerDelegate {
     latestReceiptView.addGestureRecognizer(panRecognizer)
     
     setObservers()
-    //addHamburger()
+    setupSideMenu()
     addCard = addButton()
     navigationItem.setRightBarButton(addCard, animated: false)
   }
   
-  func addHamburger() {
+  func setupSideMenu() {
     // Define the menus
     let moreVC = MoreViewController.instantiateFromNib()
-    let menuRightNavigationController = UISideMenuNavigationController(rootViewController: moreVC)
-    SideMenuManager.default.menuRightNavigationController = menuRightNavigationController
-    SideMenuManager.default.menuFadeStatusBar = false
+    moreVC.title = ""
+    let navRight = UISideMenuNavigationController(rootViewController: moreVC)
+    SideMenuManager.default.menuRightNavigationController = navRight
   }
   
   func addButton() -> UIBarButtonItem {

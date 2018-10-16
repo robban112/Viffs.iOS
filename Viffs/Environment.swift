@@ -26,3 +26,7 @@ struct Environment {
   var username: String? = nil
   var password: String? = nil
 }
+
+func flushEnvironment() {
+  Current.currentUser = nil
+}

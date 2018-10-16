@@ -17,6 +17,7 @@
 
 import Foundation
 import AWSCognitoIdentityProvider
+import AWSAuthCore
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var username: UITextField!
@@ -29,10 +30,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     
     self.password.delegate = self
     self.username.delegate = self
-    self.password.text = nil
+    self.password.text = Current.password
     //self.username.text = usernameText
-    self.username.text = nil
+    self.username.text = Current.username
     self.navigationController?.setNavigationBarHidden(true, animated: false)
+    getSession()
   }
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -40,10 +42,29 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     return false
   }
   
+  func getSession(){
+    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
+      DispatchQueue.main.async(execute: {
+        let getSessionResult = getSessionTask.result
+        
+        //let idToken = getSessionResult?.idToken?.tokenString
+        if let accessToken = getSessionResult?.accessToken?.tokenString {
+          setReceiptsForUser(token: accessToken)
+          Current.accessToken = accessToken
+          print("Accesstoken: " + accessToken)
+        }
+      })
+      return nil
+    }
+  }
+  
   @IBAction func signInPressed(_ sender: AnyObject) {
     if (self.username.text != nil && self.password.text != nil) {
+      
       let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.username.text!, password: self.password.text! )
       self.passwordAuthenticationCompletion?.set(result: authDetails)
+      
+      
     } else {
       let alertController = UIAlertController(title: "Missing information",
                                               message: "Please enter a valid user name and password",

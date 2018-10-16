@@ -1,7 +1,8 @@
 #Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '11.4'
+project 'Viffs.xcworkspace'
 
-target 'Blipp' do
+target 'Viffs' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
@@ -17,11 +18,14 @@ target 'Blipp' do
   
   #Hamburger
   pod 'SideMenu'
+  
+  #CardReader
+  pod 'CardIO'
 
   #AWS
   pod 'AWSCore', '~> 2.6.0'
   pod 'AWSCognitoIdentityProvider', '~> 2.6.0'
-
+  pod 'AWSAuthCore', '~> 2.6.0'
   #Alamofire
   pod 'Alamofire', '~> 4.7'
 
@@ -31,7 +35,7 @@ target 'Blipp' do
 end
 
 # For unit testing
-target 'BlippTests' do
+target 'ViffsTests' do
     pod 'RxSwift',  '~> 4.0'
     pod 'RxCocoa',  '~> 4.0'
     pod 'Overture', '~> 0.2'

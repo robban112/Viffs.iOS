@@ -104,7 +104,7 @@ struct RegisterUserViewModel: RegisterUserViewModelType
       })
     
     let navigate1 = setCurrentUser
-      .flatMapLatest { _ in coordinator.transition(to: Scene.registerCard(RegisterCardViewModel())) }
+      .flatMapLatest { _ in coordinator.transition(to: Scene.registerCard)}
     navigate = navigate1
   }
   
