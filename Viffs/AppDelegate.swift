@@ -22,17 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-    // Warn user if configuration not updated
-    if (CognitoIdentityUserPoolId == "YOUR_USER_POOL_ID") {
-      let alertController = UIAlertController(title: "Invalid Configuration",
-                                              message: "Please configure user pool constants in Constants.swift file.",
-                                              preferredStyle: .alert)
-      let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-      alertController.addAction(okAction)
-      
-      self.window?.rootViewController!.present(alertController, animated: true, completion:  nil)
-    }
     
     // setup logging
     AWSDDLog.sharedInstance.logLevel = .verbose
@@ -62,10 +51,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     AWSServiceManager.default().defaultServiceConfiguration = configuration
     
+    loginManager.updateSession()
     setInitialViewController()
+    loginManager.updateUserDetails(pool: pool)
     updateUserDetails(pool: pool)
-    
+    getSession()
     return true
+  }
+  
+  func getSession(){
+    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
+      DispatchQueue.main.async(execute: {
+        let getSessionResult = getSessionTask.result
+        
+        //let idToken = getSessionResult?.idToken?.tokenString
+        if let accessToken = getSessionResult?.accessToken?.tokenString {
+          setReceiptsForUser(token: accessToken)
+          Current.accessToken = accessToken
+          print("Accesstoken: " + accessToken)
+        }
+      })
+      return nil
+    }
   }
   
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
