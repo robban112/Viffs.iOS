@@ -18,7 +18,7 @@ UIGestureRecognizerDelegate {
   var beganAnimation: Bool = false
   var ignoreFollowingSwipes: Bool = false
   var startedAnimation: Bool = false
-  let minHeightLatestReceipt: CGFloat = 320
+  let minHeightLatestReceipt: CGFloat = 230
   let maxHeightLatestReceipt: CGFloat = 400
   var maximized: Bool = false
   
@@ -75,7 +75,7 @@ UIGestureRecognizerDelegate {
     let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
     panRecognizer.delegate = self
     latestReceiptView.addGestureRecognizer(panRecognizer)
-    
+    let a = Current
     setObservers()
     setupSideMenu()
     addCard = addButton()

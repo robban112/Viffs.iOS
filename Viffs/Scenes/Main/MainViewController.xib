@@ -51,7 +51,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
-                    <rect key="frame" x="54.5" y="268" width="92.5" height="32"/>
+                    <rect key="frame" x="54" y="268" width="92.5" height="32"/>
                     <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="26"/>
                     <color key="textColor" red="0.35751110402487296" green="0.35751110402487296" blue="0.35751110402487296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -68,13 +68,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Butiker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUJ-bb-xGr">
-                    <rect key="frame" x="227.5" y="268" width="96" height="32"/>
+                    <rect key="frame" x="227" y="268" width="96" height="32"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
                     <color key="textColor" red="0.35751110400000002" green="0.35751110400000002" blue="0.35751110400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uln-q9-OLL">
-                    <rect key="frame" x="0.0" y="382" width="375" height="285"/>
+                    <rect key="frame" x="0.0" y="437" width="375" height="230"/>
                     <subviews>
                         <searchBar hidden="YES" contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="EAD-TQ-g0d">
                             <rect key="frame" x="0.0" y="15" width="375" height="45"/>
@@ -89,7 +89,7 @@
                             <color key="tintColor" red="0.58750396569999996" green="0.58750396569999996" blue="0.58750396569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gRl-om-Vn0">
-                            <rect key="frame" x="0.0" y="25" width="375" height="203"/>
+                            <rect key="frame" x="0.0" y="25" width="375" height="148"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-Lw-RfU">
@@ -101,7 +101,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28J-Xl-YQ9">
-                            <rect key="frame" x="303" y="164" width="64" height="64"/>
+                            <rect key="frame" x="303" y="109" width="64" height="64"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="64" id="1Vj-E3-8Lm"/>
                                 <constraint firstAttribute="width" constant="64" id="kOf-Q1-bPV"/>
@@ -118,7 +118,7 @@
                         <constraint firstItem="gRl-om-Vn0" firstAttribute="leading" secondItem="Uln-q9-OLL" secondAttribute="leading" id="4jo-Am-Zwe"/>
                         <constraint firstItem="EAD-TQ-g0d" firstAttribute="leading" secondItem="gRl-om-Vn0" secondAttribute="leading" id="HLm-kw-Ifg"/>
                         <constraint firstAttribute="bottom" secondItem="gRl-om-Vn0" secondAttribute="bottom" constant="57" id="ILP-I1-Qtc"/>
-                        <constraint firstAttribute="height" constant="285" id="RM3-d2-a5h"/>
+                        <constraint firstAttribute="height" constant="230" id="RM3-d2-a5h"/>
                         <constraint firstAttribute="bottom" secondItem="28J-Xl-YQ9" secondAttribute="bottom" constant="57" id="c3B-qf-Cky"/>
                         <constraint firstItem="gRl-om-Vn0" firstAttribute="top" secondItem="Uln-q9-OLL" secondAttribute="top" constant="25" id="fK0-t8-whA"/>
                         <constraint firstAttribute="trailing" secondItem="gRl-om-Vn0" secondAttribute="trailing" id="fka-7q-uvx"/>

@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SideMenu
 
 class ReceiptViewController: UIViewController, ViewModelBindable {
   var viewModel: ReceiptViewModelType!
@@ -24,7 +25,10 @@ class ReceiptViewController: UIViewController, ViewModelBindable {
   )
   
   @IBOutlet var receiptTableView: UITableView!
-  
+  @IBAction func hamburgerPressed(_ sender: Any) {
+    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+  }
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     receiptTableView.registerCell(type: ReceiptViewCell.self)

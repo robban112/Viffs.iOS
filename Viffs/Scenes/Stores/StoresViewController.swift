@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SideMenu
 
 class StoresViewController: UIViewController {
     
     
     @IBOutlet var storeCollectionView: UICollectionView!
     
+    @IBAction func hamburgerPushed(_ sender: Any) {
+        present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+    }
     
 }

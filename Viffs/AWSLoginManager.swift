@@ -1,65 +1,94 @@
-////
-////  AWSLoginManager.swift
-////  Viffs
-////
-////  Created by Robert Lorentz on 2018-10-16.
-////  Copyright © 2018 Viffs. All rights reserved.
-////
 //
-//import Foundation
-//import AWSCognitoIdentityProvider
+//  AWSLoginManager.swift
+//  Viffs
 //
-//class AWSLoginManager {
-//  
-//  static var shared: AWSLoginManager!
-//  var pool: AWSCognitoIdentityUserPool? = nil
-//  
-//  func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
-//    Current.pool = pool
-//    Current.currentAWSUser = pool.currentUser()
-//    let user = pool.currentUser()
-//  }
-//  
+//  Created by Robert Lorentz on 2018-10-16.
+//  Copyright © 2018 Viffs. All rights reserved.
+//
+
+import Foundation
+import AWSCognitoIdentityProvider
+import PromiseKit
+
+var loginManager = AWSLoginManager()
+
+class AWSLoginManager {
+  
+  var pool: AWSCognitoIdentityUserPool? = nil
+  
+  func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
+    Current.pool = pool
+    Current.currentAWSUser = pool.currentUser()
+    let user = pool.currentUser()
+  }
+  
+  func updateSession() {
+    firstly {
+      getSession()
+    }.done { accessToken in
+      setReceiptsForUser(token: accessToken)
+      Current.accessToken = accessToken
+      print("Accesstoken: " + accessToken)
+    }
+  }
+  
+  func getSession() -> Promise<String> {
+    return Promise { seal in
+      Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) in
+        DispatchQueue.main.async(execute: {
+          let getSessionResult = getSessionTask.result
+          
+          //let idToken = getSessionResult?.idToken?.tokenString
+          if let accessToken = getSessionResult?.accessToken?.tokenString {
+            seal.fulfill(accessToken)
+          } else {
+            seal.fulfill("")
+          }
+        })
+      }
+    }
+  }
+  
 //  func initialize() {
 //    // setup logging
 //    AWSDDLog.sharedInstance.logLevel = .verbose
-//    
+//
 //    // setup service configuration
 //    let serviceConfiguration = AWSServiceConfiguration(region: CognitoIdentityUserPoolRegion, credentialsProvider: nil)
-//    
+//
 //    // create pool configuration
 //    let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
 //                                                                    clientSecret: CognitoIdentityUserPoolAppClientSecret,
 //                                                                    poolId: CognitoIdentityUserPoolId)
-//    
+//
 //    // initialize user pool client
 //    AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
-//    
+//
 //    // fetch the user pool client we initialized in above step
 //    let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
 //    pool.delegate = self
 //    Current.pool = pool
-//    
+//
 //    // Initialize the Amazon Cognito credentials provider
 //    let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
 //                                                            identityPoolId:"us-east-1:b022e33e-7f9a-404f-9874-2def6ce79c2e")
-//    
+//
 //    let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-//    
+//
 //    AWSServiceManager.default().defaultServiceConfiguration = configuration
 //  }
-//}
-//
+}
+
 //extension AWSLoginManager: AWSCognitoIdentityInteractiveAuthenticationDelegate {
 //  func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
 //    if (self.navigationController == nil) {
 //      self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
 //    }
-//    
+//
 //    if (self.signInViewController == nil) {
 //      self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
 //    }
-//    
+//
 //    DispatchQueue.main.async {
 //      self.navigationController!.popToRootViewController(animated: true)
 //      if (!self.navigationController!.isViewLoaded
@@ -68,11 +97,11 @@
 //                                                 animated: true,
 //                                                 completion: nil)
 //      }
-//      
+//
 //    }
 //    return self.signInViewController!
 //  }
-//  
+//
 //  func startMultiFactorAuthentication() -> AWSCognitoIdentityMultiFactorAuthentication {
 //    if (self.mfaViewController == nil) {
 //      self.mfaViewController = MFAViewController()
@@ -86,7 +115,7 @@
 //        viewController?.present(self.mfaViewController!,
 //                                animated: true,
 //                                completion: nil)
-//        
+//
 //        // configure popover vc
 //        let presentationController = self.mfaViewController!.popoverPresentationController
 //        presentationController?.permittedArrowDirections = UIPopoverArrowDirection.left
@@ -96,7 +125,7 @@
 //    }
 //    return self.mfaViewController!
 //  }
-//  
+//
 //  func startRememberDevice() -> AWSCognitoIdentityRememberDevice {
 //    return self
 //  }

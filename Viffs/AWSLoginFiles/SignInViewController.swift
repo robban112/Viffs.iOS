@@ -1,4 +1,4 @@
-//
+	//
 // Copyright 2014-2018 Amazon.com,
 // Inc. or its affiliates. All Rights Reserved.
 //
@@ -35,6 +35,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.username.text = Current.username
     self.navigationController?.setNavigationBarHidden(true, animated: false)
     getSession()
+    self.navigationController?.navigationBar.backItem?.title = ""
   }
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
