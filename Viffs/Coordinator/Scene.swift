@@ -22,11 +22,12 @@ enum Scene {
   case registrationCode(RegistrationCodeViewModel)
   case receipts(ReceiptViewModel)
   case receiptsSorted(ReceiptViewModel)
-  case receiptsRoot
+  case mittViffs(MittViffsViewModel)
   case stores
   case scanReceipt
   case main
   case welcome(WelcomeViewModel)
+  case cards
 }
 
 extension Scene: TargetScene {
@@ -81,10 +82,11 @@ extension Scene: TargetScene {
         receiptVC.title = ""
         receiptVC.bind(to: receiptViewModel)
         return .push(receiptVC)
-    case .receiptsRoot:
-      let receiptsRootVC = ReceiptsRootViewController.instantiateFromNib()
-      receiptsRootVC.title = ""
-      return .push(receiptsRootVC)
+    case let .mittViffs(mittViffsViewModel):
+      var mittViffsVC = MittViffsViewController.instantiateFromNib()
+      mittViffsVC.title = ""
+      mittViffsVC.bind(to: mittViffsViewModel)
+      return .push(mittViffsVC)
     case .stores:
       let storesVC = StoresViewController.instantiateFromNib()
       storesVC.title = ""
@@ -111,6 +113,10 @@ extension Scene: TargetScene {
       welcomeNav.view.backgroundColor = welcomeNav.navigationBar.barTintColor
       
       return .root(welcomeNav)
+    case .cards:
+      let cardsVC = CardsViewController.instantiateFromNib()
+      cardsVC.title = ""
+      return .push(cardsVC)
     }
   }
 }

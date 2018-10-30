@@ -20,10 +20,10 @@ var storeToLogo: [String : String] = [
 ]
 
 var storeToImage: [String:UIImage] = [
-  "Hemköp" :  #imageLiteral(resourceName: "hemkop_logo"),
-  "Pressbyrån" : #imageLiteral(resourceName: "pressbyran_logo"),
-  "ICA" : #imageLiteral(resourceName: "ica_logo"),
-  "Willys" :  #imageLiteral(resourceName: "willys_logo"),
-  "7-ELEVEN" : #imageLiteral(resourceName: "7-eleven_logo"),
-  "EasyPark" : #imageLiteral(resourceName: "easypark_logo")
+  "Demobutik" : UIImage(named: "demokvitto")!
+]
+
+var cardTypeToImage: [String:UIImage] = [
+  "MasterCard" : UIImage(named: "mastercard_logo")!,
+  "Visa" : UIImage(named: "visa_logo")!
 ]

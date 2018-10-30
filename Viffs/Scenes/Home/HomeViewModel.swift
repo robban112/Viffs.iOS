@@ -62,7 +62,7 @@ struct HomeViewModel: HomeViewModelType
       coordinator.transition(to: Scene.stores)
     }
     let navigateAllReceipts = showAllReceiptsButtonPressed.flatMapLatest {
-      coordinator.transition(to: Scene.receipts(.init()))
+      coordinator.transition(to: Scene.mittViffs(.init()))
     }
     let navigateReceiptDetail = receiptSelected.flatMapLatest { receipt -> Observable<Void> in
       return coordinator.transition(to: Scene.receiptDetail(.init(receipt: receipt)))

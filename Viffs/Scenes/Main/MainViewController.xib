@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Montserrat-Regular.otf">
             <string>Montserrat-Regular</string>
-        </array>
-        <array key="MontserratAlternates-Regular.otf">
-            <string>MontserratAlternates-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -50,9 +46,9 @@
                         <action selector="receiptButtonPushed:" destination="-1" eventType="touchUpInside" id="AWV-vV-2Sl"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kvitton" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
-                    <rect key="frame" x="54" y="268" width="92.5" height="32"/>
-                    <fontDescription key="fontDescription" name="MontserratAlternates-Regular" family="Montserrat Alternates" pointSize="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mitt Viffs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-Pb-iRO">
+                    <rect key="frame" x="43" y="268" width="114.5" height="32"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="26"/>
                     <color key="textColor" red="0.35751110402487296" green="0.35751110402487296" blue="0.35751110402487296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -149,10 +145,10 @@
         </view>
     </objects>
     <resources>
-        <image name="ButikIkon" width="408" height="408"/>
-        <image name="KvittoIkon" width="408" height="408"/>
+        <image name="ButikIkon" width="306" height="306"/>
+        <image name="KvittoIkon" width="306" height="306"/>
         <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
-        <image name="hamburger_menu" width="64" height="64"/>
+        <image name="hamburger_menu" width="48" height="48"/>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DB622EEA352FECD343F4FEE /* libPods-ViffsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC30279009FD2C170F9F6F3 /* libPods-ViffsTests.a */; };
-		5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */; };
+		5C7177DF20E2AB15001B4450 /* MittViffsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177DE20E2AB15001B4450 /* MittViffsViewModel.swift */; };
 		5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7177E020E2AC95001B4450 /* HomeViewModel.swift */; };
 		5CADD82D20E699F70064222F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82C20E699F70064222F /* WelcomeViewController.swift */; };
 		5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CADD82E20E69A020064222F /* WelcomeViewModel.swift */; };
@@ -92,7 +92,7 @@
 		EEDDC2CA21753B90009EA895 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */; };
 		EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
-		FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */; };
+		FF07F63A20D26AD600B011D8 /* MittViffsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */; };
 		FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
 		FF07F64220D26B4A00B011D8 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64120D26B4A00B011D8 /* SecondViewController.xib */; };
 		FF07F64420D26B5B00B011D8 /* RegistrationCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F64320D26B5B00B011D8 /* RegistrationCodeViewController.xib */; };
@@ -103,9 +103,17 @@
 		FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F64E20D27D2200B011D8 /* StoresViewController.swift */; };
 		FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65020D27D3600B011D8 /* RegistrationCodeViewController.swift */; };
 		FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */; };
-		FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */; };
+		FF07F65520D27D9C00B011D8 /* MittViffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* MittViffsViewController.swift */; };
 		FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
 		FF1C771420D3DD37009F357B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
+		FF29E7A521887A7000F56F2B /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7A421887A7000F56F2B /* Offer.swift */; };
+		FF29E7A921887C1200F56F2B /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7A721887C1200F56F2B /* OfferCell.swift */; };
+		FF29E7AA21887C1200F56F2B /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF29E7A821887C1200F56F2B /* OfferCell.xib */; };
+		FF29E7AE2188809A00F56F2B /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7AC2188809A00F56F2B /* CardsViewController.swift */; };
+		FF29E7AF2188809A00F56F2B /* CardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF29E7AD2188809A00F56F2B /* CardsViewController.xib */; };
+		FF29E7B32188823D00F56F2B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7B12188823D00F56F2B /* CardCell.swift */; };
+		FF29E7B42188823D00F56F2B /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF29E7B22188823D00F56F2B /* CardCell.xib */; };
+		FF29E7B62188827B00F56F2B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7B52188827B00F56F2B /* Card.swift */; };
 		FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33E00020D6AFE700FF8E5C /* Overture additions.swift */; };
 		FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */; };
 		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
@@ -131,6 +139,9 @@
 		FF68D05E20CE8D6A00472FF7 /* RegisterUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */; };
 		FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */; };
 		FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
+		FFA2EBE32176333E00B1CBB6 /* MittViffsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA2EBE12176333E00B1CBB6 /* MittViffsCell.swift */; };
+		FFA2EBE42176333E00B1CBB6 /* MittViffsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */; };
+		FFA2EBE62176376700B1CBB6 /* ReceiptCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */; };
 		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
 		FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681A920C0236000FE29DA /* LoginViewModel.swift */; };
 		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
@@ -138,6 +149,10 @@
 		FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */; };
 		FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */; };
 		FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0320CBE1700010FBC4 /* Mocks.swift */; };
+		FFE53CD12177C1480096EA0B /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE53CCF2177C1480096EA0B /* StoreCell.swift */; };
+		FFE53CD22177C1480096EA0B /* StoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE53CD02177C1480096EA0B /* StoreCell.xib */; };
+		FFE53CD62177C9F90096EA0B /* PictogramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE53CD42177C9F90096EA0B /* PictogramCell.swift */; };
+		FFE53CD72177C9F90096EA0B /* PictogramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE53CD52177C9F90096EA0B /* PictogramCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,7 +172,7 @@
 		2C84FFFB9742F4B28EC5CF6C /* Pods-BlippTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.release.xcconfig"; sourceTree = "<group>"; };
 		2E86FB2FFFDCFEDD856FB433 /* Pods-Viffs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viffs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Viffs/Pods-Viffs.release.xcconfig"; sourceTree = "<group>"; };
 		451BE048DF50D156136C99CE /* Pods-Viffs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Viffs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Viffs/Pods-Viffs.debug.xcconfig"; sourceTree = "<group>"; };
-		5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewModel.swift; sourceTree = "<group>"; };
+		5C7177DE20E2AB15001B4450 /* MittViffsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittViffsViewModel.swift; sourceTree = "<group>"; };
 		5C7177E020E2AC95001B4450 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5CADD82C20E699F70064222F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5CADD82E20E69A020064222F /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -248,7 +263,7 @@
 		EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSLoginManager.swift; sourceTree = "<group>"; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
-		FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptsRootViewController.xib; sourceTree = "<group>"; };
+		FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MittViffsViewController.xib; sourceTree = "<group>"; };
 		FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoresViewController.xib; sourceTree = "<group>"; };
 		FF07F64120D26B4A00B011D8 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		FF07F64320D26B5B00B011D8 /* RegistrationCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationCodeViewController.xib; sourceTree = "<group>"; };
@@ -259,9 +274,17 @@
 		FF07F64E20D27D2200B011D8 /* StoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresViewController.swift; sourceTree = "<group>"; };
 		FF07F65020D27D3600B011D8 /* RegistrationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCodeViewController.swift; sourceTree = "<group>"; };
 		FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewController.swift; sourceTree = "<group>"; };
-		FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsRootViewController.swift; sourceTree = "<group>"; };
+		FF07F65420D27D9C00B011D8 /* MittViffsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittViffsViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		FF29E7A421887A7000F56F2B /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		FF29E7A721887C1200F56F2B /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
+		FF29E7A821887C1200F56F2B /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
+		FF29E7AC2188809A00F56F2B /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		FF29E7AD2188809A00F56F2B /* CardsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsViewController.xib; sourceTree = "<group>"; };
+		FF29E7B12188823D00F56F2B /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		FF29E7B22188823D00F56F2B /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		FF29E7B52188827B00F56F2B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
 		FF38274620C7D0E40046F220 /* ReceiptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewModel.swift; sourceTree = "<group>"; };
 		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
@@ -287,6 +310,9 @@
 		FF68D05D20CE8D6A00472FF7 /* RegisterUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterUserViewController.xib; sourceTree = "<group>"; };
 		FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+MarbleTests.swift"; sourceTree = "<group>"; };
 		FF92D78B20D5D405008B0C52 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		FFA2EBE12176333E00B1CBB6 /* MittViffsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittViffsCell.swift; sourceTree = "<group>"; };
+		FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MittViffsCell.xib; sourceTree = "<group>"; };
+		FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCollection.swift; sourceTree = "<group>"; };
 		FFA6819D20BF063700FE29DA /* ViffsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViffsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
 		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -296,6 +322,10 @@
 		FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewModel.swift; sourceTree = "<group>"; };
 		FFD95B0320CBE1700010FBC4 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		FFE53CCF2177C1480096EA0B /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		FFE53CD02177C1480096EA0B /* StoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCell.xib; sourceTree = "<group>"; };
+		FFE53CD42177C9F90096EA0B /* PictogramCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictogramCell.swift; sourceTree = "<group>"; };
+		FFE53CD52177C9F90096EA0B /* PictogramCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictogramCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +548,7 @@
 		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FF29E7AB2188806F00F56F2B /* Cards */,
 				EE8D4D8E21525E8900341157 /* Main */,
 				5CADD82920E694F50064222F /* Welcome */,
 				5CDFDBD820E3D4C300BA000F /* Scan receipt */,
@@ -526,7 +557,7 @@
 				FF07F63D20D26B1F00B011D8 /* NFC Scanner */,
 				FF07F63C20D26B0A00B011D8 /* Registration Code */,
 				FF07F63B20D26AFE00B011D8 /* Register Card */,
-				FF07F63820D26AC600B011D8 /* Receipts Root */,
+				FF07F63820D26AC600B011D8 /* Mitt Viffs */,
 				FF07F63520D269E900B011D8 /* More */,
 				FF68D04220CD1DE000472FF7 /* Register */,
 				FF68D04120CD1DD100472FF7 /* Login */,
@@ -542,6 +573,9 @@
 				EE826EA820AB64CA006A0390 /* Receipt.swift */,
 				EE962D4F20BDC5B7006CEC0F /* User.swift */,
 				EE8D4D8A215152E900341157 /* Store.swift */,
+				FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */,
+				FF29E7A421887A7000F56F2B /* Offer.swift */,
+				FF29E7B52188827B00F56F2B /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -557,14 +591,16 @@
 			path = More;
 			sourceTree = "<group>";
 		};
-		FF07F63820D26AC600B011D8 /* Receipts Root */ = {
+		FF07F63820D26AC600B011D8 /* Mitt Viffs */ = {
 			isa = PBXGroup;
 			children = (
-				FF07F63920D26AD600B011D8 /* ReceiptsRootViewController.xib */,
-				FF07F65420D27D9C00B011D8 /* ReceiptsRootViewController.swift */,
-				5C7177DE20E2AB15001B4450 /* ReceiptsRootViewModel.swift */,
+				FF29E7A621887BDA00F56F2B /* OfferCell */,
+				FFA2EBE02176329400B1CBB6 /* Cell */,
+				FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */,
+				FF07F65420D27D9C00B011D8 /* MittViffsViewController.swift */,
+				5C7177DE20E2AB15001B4450 /* MittViffsViewModel.swift */,
 			);
-			path = "Receipts Root";
+			path = "Mitt Viffs";
 			sourceTree = "<group>";
 		};
 		FF07F63B20D26AFE00B011D8 /* Register Card */ = {
@@ -598,6 +634,8 @@
 		FF07F63E20D26B2500B011D8 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				FFE53CD32177C9CA0096EA0B /* Pictogram Cell */,
+				FFE53CCE2177C0FD0096EA0B /* Store Cell */,
 				FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */,
 				FF07F64E20D27D2200B011D8 /* StoresViewController.swift */,
 			);
@@ -612,6 +650,34 @@
 				5C7177E020E2AC95001B4450 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FF29E7A621887BDA00F56F2B /* OfferCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF29E7A721887C1200F56F2B /* OfferCell.swift */,
+				FF29E7A821887C1200F56F2B /* OfferCell.xib */,
+			);
+			path = OfferCell;
+			sourceTree = "<group>";
+		};
+		FF29E7AB2188806F00F56F2B /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				FF29E7B02188821D00F56F2B /* Cell */,
+				FF29E7AC2188809A00F56F2B /* CardsViewController.swift */,
+				FF29E7AD2188809A00F56F2B /* CardsViewController.xib */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		FF29E7B02188821D00F56F2B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF29E7B12188823D00F56F2B /* CardCell.swift */,
+				FF29E7B22188823D00F56F2B /* CardCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FF3AF53420E8CC8D00CF7B67 /* Cell */ = {
@@ -701,6 +767,15 @@
 			path = TestUtils;
 			sourceTree = "<group>";
 		};
+		FFA2EBE02176329400B1CBB6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFA2EBE12176333E00B1CBB6 /* MittViffsCell.swift */,
+				FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FFA6819E20BF063700FE29DA /* BlippTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -743,6 +818,24 @@
 				EE8D4D8621512CE700341157 /* AWSApi.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		FFE53CCE2177C0FD0096EA0B /* Store Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFE53CCF2177C1480096EA0B /* StoreCell.swift */,
+				FFE53CD02177C1480096EA0B /* StoreCell.xib */,
+			);
+			path = "Store Cell";
+			sourceTree = "<group>";
+		};
+		FFE53CD32177C9CA0096EA0B /* Pictogram Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FFE53CD42177C9F90096EA0B /* PictogramCell.swift */,
+				FFE53CD52177C9F90096EA0B /* PictogramCell.xib */,
+			);
+			path = "Pictogram Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -836,10 +929,12 @@
 				EE8D4E402157C70800341157 /* Montserrat-LightItalic.otf in Resources */,
 				EE8D4E442157C70800341157 /* Montserrat-ExtraBoldItalic.otf in Resources */,
 				EE8D4E472157C70800341157 /* Montserrat-Regular.otf in Resources */,
+				FF29E7B42188823D00F56F2B /* CardCell.xib in Resources */,
 				EE8D4E422157C70800341157 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				FF68D04720CD1EAA00472FF7 /* LoginViewController.xib in Resources */,
 				EE8D4E362157C70800341157 /* Montserrat-BoldItalic.otf in Resources */,
 				FF07F64B20D26E5800B011D8 /* HomeViewController.xib in Resources */,
+				FF29E7AA21887C1200F56F2B /* OfferCell.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				EE8D4E3A2157C70800341157 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				EE8D4E432157C70800341157 /* Montserrat-SemiBoldItalic.otf in Resources */,
@@ -879,10 +974,14 @@
 				EE8D4E372157C70800341157 /* Montserrat-Light.otf in Resources */,
 				EE8D4E352157C70800341157 /* MontserratAlternates-Medium.otf in Resources */,
 				EE8D4E4D2157C70800341157 /* MontserratAlternates-ExtraLight.otf in Resources */,
-				FF07F63A20D26AD600B011D8 /* ReceiptsRootViewController.xib in Resources */,
+				FFA2EBE42176333E00B1CBB6 /* MittViffsCell.xib in Resources */,
+				FF29E7AF2188809A00F56F2B /* CardsViewController.xib in Resources */,
+				FF07F63A20D26AD600B011D8 /* MittViffsViewController.xib in Resources */,
 				EE8D4E412157C70800341157 /* Montserrat-Medium.otf in Resources */,
+				FFE53CD22177C1480096EA0B /* StoreCell.xib in Resources */,
 				FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */,
 				EE8D4E4E2157C70800341157 /* MontserratAlternates-Regular.otf in Resources */,
+				FFE53CD72177C9F90096EA0B /* PictogramCell.xib in Resources */,
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
 				EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */,
 				EE8D4E3C2157C70800341157 /* MontserratAlternates-BlackItalic.otf in Resources */,
@@ -995,6 +1094,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE13B4BD213AD2BC007743D2 /* SignUpViewController.swift in Sources */,
+				FFA2EBE62176376700B1CBB6 /* ReceiptCollection.swift in Sources */,
 				FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */,
 				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
 				EE4CB0D420B574A600733817 /* LoginViewController.swift in Sources */,
@@ -1003,11 +1103,14 @@
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
 				EE8D4D9121525EBD00341157 /* MainViewController.swift in Sources */,
 				EE13B4B7213AD1E0007743D2 /* AWSConstants.swift in Sources */,
+				FF29E7A521887A7000F56F2B /* Offer.swift in Sources */,
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
+				FFE53CD62177C9F90096EA0B /* PictogramCell.swift in Sources */,
 				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
+				FF29E7B62188827B00F56F2B /* Card.swift in Sources */,
 				EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */,
 				EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */,
 				FFA681AA20C0236000FE29DA /* LoginViewModel.swift in Sources */,
@@ -1020,11 +1123,13 @@
 				EE826EA720AADE52006A0390 /* ReceiptViewCell.swift in Sources */,
 				FF38274720C7D0E40046F220 /* ReceiptViewModel.swift in Sources */,
 				EE6A768A20BE054800A09CCF /* ReceiptDetailViewController.swift in Sources */,
+				FF29E7AE2188809A00F56F2B /* CardsViewController.swift in Sources */,
 				5C7177E120E2AC95001B4450 /* HomeViewModel.swift in Sources */,
 				EE13B4B9213AD25A007743D2 /* SignInViewController.swift in Sources */,
 				EE8D4D8721512CE700341157 /* AWSApi.swift in Sources */,
 				FF07F64F20D27D2200B011D8 /* StoresViewController.swift in Sources */,
 				FF68D03C20CD169100472FF7 /* Scene.swift in Sources */,
+				FF29E7B32188823D00F56F2B /* CardCell.swift in Sources */,
 				EE13B4D1213C4CE5007743D2 /* MoreTableViewController.swift in Sources */,
 				5CDFDBDC20E3D6FC00BA000F /* ScanReceiptViewController.swift in Sources */,
 				EE13B4BB213AD291007743D2 /* MFAViewController.swift in Sources */,
@@ -1033,14 +1138,17 @@
 				EEA1EFAF216D5FF40027C7A9 /* CodeRegistrationViewController.swift in Sources */,
 				EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
-				5C7177DF20E2AB15001B4450 /* ReceiptsRootViewModel.swift in Sources */,
+				5C7177DF20E2AB15001B4450 /* MittViffsViewModel.swift in Sources */,
 				FF07F64D20D27D0300B011D8 /* HomeViewController.swift in Sources */,
 				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
 				FF07F65120D27D3600B011D8 /* RegistrationCodeViewController.swift in Sources */,
 				5CADD82F20E69A020064222F /* WelcomeViewModel.swift in Sources */,
 				EE90000D20B6BEC100172810 /* RegisterUserViewController.swift in Sources */,
+				FFA2EBE32176333E00B1CBB6 /* MittViffsCell.swift in Sources */,
 				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
-				FF07F65520D27D9C00B011D8 /* ReceiptsRootViewController.swift in Sources */,
+				FF07F65520D27D9C00B011D8 /* MittViffsViewController.swift in Sources */,
+				FFE53CD12177C1480096EA0B /* StoreCell.swift in Sources */,
+				FF29E7A921887C1200F56F2B /* OfferCell.swift in Sources */,
 				FF68D05C20CE886500472FF7 /* RegisterUserViewModel.swift in Sources */,
 				FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */,
 				EE13B4C1213AD2FF007743D2 /* ForgotPasswordViewController.swift in Sources */,

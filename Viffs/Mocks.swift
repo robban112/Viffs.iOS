@@ -22,6 +22,9 @@ extension Environment {
       pool: nil,
       storeDict: [:],
       accessToken: nil,
+      stores: [],
+      offers: [],
+      cards: [],
       username: nil,
       password: nil
     )

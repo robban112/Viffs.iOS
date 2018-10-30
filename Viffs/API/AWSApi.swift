@@ -24,6 +24,30 @@ func setReceiptsForUser(token: String) {
     NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
   }
 }
+  
+func setStores() {
+  let store = Store.init(name: "Demobutik", pubID: "78c259ca-c59b-11e8-af09-027c671add7e", address: "Birger Jarlsgatan 29")
+  Current.stores = [store]
+}
+  
+func setCards() {
+  let card = Card.init(date: "05/20", number: "1234567812345678", cardType: "MasterCard")
+  let card2 = Card.init(date: "05/20", number: "1234567812345678", cardType: "MasterCard")
+  let card3 = Card.init(date: "05/20", number: "1234567812345678", cardType: "Visa")
+  Current.cards = [card, card2, card3]
+}
+  
+func setOffers() {
+  let offer = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer2 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer3 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer4 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer5 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer6 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer7 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  Current.offers = [offer, offer2, offer3, offer4, offer5, offer6, offer7]
+}
+  
 func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
   let headers = ["AccessToken" : token]
   return Alamofire.request(receiptAWSURL, headers: headers)

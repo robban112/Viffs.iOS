@@ -14,13 +14,16 @@ import AWSCognitoIdentityProvider
 var Current = Environment()
 
 struct Environment {
-  private(set) var apiService: APIService = .live
-  private(set) var auth: Auth = Auth()
+  var apiService: APIService = .live
+  var auth: Auth = Auth()
   var currentUser: User? = nil
   var currentAWSUser: AWSCognitoIdentityUser? = nil
   var pool: AWSCognitoIdentityUserPool? = nil
   var storeDict: [String : Store] = [:]
   var accessToken: String? = nil
+  var stores: [Store] = []
+  var offers: [Offer] = []
+  var cards: [Card] = []
   
   //Tillfälligt!!
   var username: String? = nil

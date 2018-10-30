@@ -35,7 +35,7 @@ UIGestureRecognizerDelegate {
     @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
   
   @IBAction func receiptButtonPushed(_ sender: Any) {
-    SceneCoordinator.shared.transition(to: Scene.receipts(.init()))
+    SceneCoordinator.shared.transition(to: Scene.mittViffs(.init()))
   }
   @IBAction func storeButtonPushed(_ sender: Any) {
     SceneCoordinator.shared.transition(to: Scene.stores)

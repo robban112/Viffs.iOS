@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MittViffsCell" customModule="Viffs" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xg3-PA-pOr">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="xg3-PA-pOr" secondAttribute="height" multiplier="1:1" id="BVc-Ib-68i"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-VF-cOT">
+                        <rect key="frame" x="0.0" y="123" width="120" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xg3-PA-pOr" firstAttribute="centerX" secondItem="qPR-VF-cOT" secondAttribute="centerX" id="1l8-vA-1lh"/>
+                <constraint firstItem="xg3-PA-pOr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="C0K-my-UbR"/>
+                <constraint firstItem="xg3-PA-pOr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="F2J-G3-Vfz"/>
+                <constraint firstAttribute="trailing" secondItem="xg3-PA-pOr" secondAttribute="trailing" id="GSb-Ia-71W"/>
+                <constraint firstItem="qPR-VF-cOT" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" id="OxX-da-WhH"/>
+                <constraint firstItem="qPR-VF-cOT" firstAttribute="top" secondItem="xg3-PA-pOr" secondAttribute="bottom" constant="3" id="QHQ-Hk-juW"/>
+                <constraint firstAttribute="bottom" secondItem="qPR-VF-cOT" secondAttribute="bottom" constant="6" id="zB3-ol-5Z2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="logo" destination="xg3-PA-pOr" id="NSI-g8-THO"/>
+                <outlet property="title" destination="qPR-VF-cOT" id="iMF-kM-Ox8"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
+        </collectionViewCell>
+    </objects>
+</document>
