@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import SideMenu
 
 class CardsViewController: UIViewController {
   
   @IBOutlet weak var cardsTableView: UITableView!
+  
+  @IBAction func hamburgerButtonPushed(_ sender: Any) {
+    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,6 +40,6 @@ extension CardsViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    SceneCoordinator.shared.transition(to: Scene.receipts(.init()))
+    SceneCoordinator.shared.transition(to: Scene.receipts())
   }
 }

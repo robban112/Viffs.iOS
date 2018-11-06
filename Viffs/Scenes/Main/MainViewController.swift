@@ -75,7 +75,6 @@ UIGestureRecognizerDelegate {
     let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
     panRecognizer.delegate = self
     latestReceiptView.addGestureRecognizer(panRecognizer)
-    let a = Current
     setObservers()
     setupSideMenu()
     addCard = addButton()
@@ -92,7 +91,7 @@ UIGestureRecognizerDelegate {
   
   func addButton() -> UIBarButtonItem {
     let btn1 = UIButton(type: .custom)
-    btn1.setImage(UIImage(named: "Camera"), for: .normal)
+    btn1.setImage(UIImage(named: "Kamera-Grön"), for: .normal)
     btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
     btn1.addTarget(self, action: #selector(self.scanReceiptButtonPushed(_:)), for: .touchUpInside)
     return UIBarButtonItem(customView: btn1)

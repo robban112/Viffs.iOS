@@ -1,13 +1,10 @@
 #Uncomment the next line to define a global platform for your project
 platform :ios, '11.4'
 project 'Viffs.xcworkspace'
+use_modular_headers!
+use_frameworks!
 
 target 'Viffs' do
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Database'
-  use_frameworks!
 
   # Pods for Blipp
   pod 'RxSwift',  '~> 4.0'
@@ -32,14 +29,4 @@ target 'Viffs' do
   #Promise
   pod 'PromiseKit', '~> 6.0'
   pod 'PromiseKit/Alamofire', '~> 6.0'
-end
-
-# For unit testing
-target 'ViffsTests' do
-    pod 'RxSwift',  '~> 4.0'
-    pod 'RxCocoa',  '~> 4.0'
-    pod 'Overture', '~> 0.2'
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
-    pod 'Firebase/Core'
 end

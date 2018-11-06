@@ -12,9 +12,7 @@ import RxCocoa
 import RxDataSources
 import SideMenu
 
-class ReceiptViewController: UIViewController, ViewModelBindable {
-  var viewModel: ReceiptViewModelType!
-  let disposeBag = DisposeBag()
+class ReceiptViewController: UIViewController {
   
   let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<Int, Receipt>>(
     configureCell: { (_, tv, ip, receipt) in
@@ -28,9 +26,11 @@ class ReceiptViewController: UIViewController, ViewModelBindable {
   @IBAction func hamburgerPressed(_ sender: Any) {
     present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
   }
-    
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    receiptTableView.delegate = self
+    receiptTableView.dataSource = self
     receiptTableView.registerCell(type: ReceiptViewCell.self)
   }
   
@@ -41,21 +41,22 @@ class ReceiptViewController: UIViewController, ViewModelBindable {
   func setObservers() {
     NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("StoreAdded"), object: nil)
   }
-  
-  func bindViewModel() {
-    bindUIToViewModel()
-    bindViewModelToUI()
+}
+
+extension ReceiptViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return Current.receipts.count
   }
   
-  func bindUIToViewModel() {
-    receiptTableView.rx.modelSelected(Receipt.self)
-      .bind(to: viewModel.inputs.receiptSelected)
-      .disposed(by: disposeBag)
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(type: ReceiptViewCell.self, forIndexPath: indexPath)
+    let receipt = Current.receipts[indexPath.row]
+    cell.receipt = receipt
+    return cell
   }
   
-  func bindViewModelToUI() {
-    viewModel.outputs.receiptsContents
-      .drive(receiptTableView.rx.items(dataSource: dataSource))
-      .disposed(by: disposeBag)
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let receipt = Current.receipts[indexPath.row]
+    SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
   }
 }

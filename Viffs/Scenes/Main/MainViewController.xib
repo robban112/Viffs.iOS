@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,7 +41,7 @@
                         <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
                         <constraint firstAttribute="height" constant="120" id="hQ5-pc-eIK"/>
                     </constraints>
-                    <state key="normal" backgroundImage="KvittoIkon"/>
+                    <state key="normal" backgroundImage="Mitt-Viffs-Beige"/>
                     <connections>
                         <action selector="receiptButtonPushed:" destination="-1" eventType="touchUpInside" id="AWV-vV-2Sl"/>
                     </connections>
@@ -58,7 +58,7 @@
                         <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
                         <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
                     </constraints>
-                    <state key="normal" backgroundImage="ButikIkon"/>
+                    <state key="normal" backgroundImage="Butiker - Beige"/>
                     <connections>
                         <action selector="storeButtonPushed:" destination="-1" eventType="touchUpInside" id="T8e-m8-ODh"/>
                     </connections>
@@ -102,7 +102,7 @@
                                 <constraint firstAttribute="height" constant="64" id="1Vj-E3-8Lm"/>
                                 <constraint firstAttribute="width" constant="64" id="kOf-Q1-bPV"/>
                             </constraints>
-                            <state key="normal" backgroundImage="hamburger_menu"/>
+                            <state key="normal" backgroundImage="Tab-grön"/>
                             <connections>
                                 <action selector="hamburgerButtonPushed:" destination="-1" eventType="touchUpInside" id="Q9m-1K-hJy"/>
                             </connections>
@@ -145,10 +145,10 @@
         </view>
     </objects>
     <resources>
-        <image name="ButikIkon" width="306" height="306"/>
-        <image name="KvittoIkon" width="306" height="306"/>
+        <image name="Butiker - Beige" width="36" height="36"/>
+        <image name="Mitt-Viffs-Beige" width="36" height="36"/>
+        <image name="Tab-grön" width="36" height="36"/>
         <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
-        <image name="hamburger_menu" width="48" height="48"/>
     </resources>
 </document>

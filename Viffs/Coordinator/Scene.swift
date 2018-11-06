@@ -15,18 +15,14 @@ protocol TargetScene {
 
 enum Scene {
   case blipp
-  case login(LoginViewModel)
   case receiptDetail(ReceiptDetailViewModel)
-  case registerUser(RegisterUserViewModel)
   case registerCard
-  case registrationCode(RegistrationCodeViewModel)
-  case receipts(ReceiptViewModel)
-  case receiptsSorted(ReceiptViewModel)
+  case receipts()
+  case receiptsSorted()
   case mittViffs(MittViffsViewModel)
   case stores
   case scanReceipt
   case main
-  case welcome(WelcomeViewModel)
   case cards
 }
 
@@ -44,11 +40,6 @@ extension Scene: TargetScene {
 //      homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
 //      homeNav.navigationBar.shadowImage = UIImage()
 //      return .push(homeNav)
-    case let .login(loginViewModel):
-      var loginVC = LoginViewController.instantiateFromNib()
-      loginVC.title = ""
-      loginVC.bind(to: loginViewModel)
-      return .push(loginVC)
     case .scanReceipt:
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
       scanReceiptVC.title = ""
@@ -58,29 +49,17 @@ extension Scene: TargetScene {
       receiptDetailVC.title = ""
       receiptDetailVC.bind(to: receiptDetailViewModel)
       return .push(receiptDetailVC)
-    case let .registerUser(registerUserViewModel):
-      var registerUserVC = RegisterUserViewController.instantiateFromNib()
-      registerUserVC.title = ""
-      registerUserVC.bind(to: registerUserViewModel)
-      return .push(registerUserVC)
-    case let .registerCard:
-      var registerCardVC = RegisterCardViewController.instantiateFromNib()
+    case .registerCard:
+      let registerCardVC = RegisterCardViewController.instantiateFromNib()
       registerCardVC.title = ""
       return .push(registerCardVC)
-    case let .registrationCode(registrationCodeViewModel):
-      var registrationCodeVC = RegistrationCodeViewController.instantiateFromNib()
-      registrationCodeVC.title = ""
-      registrationCodeVC.bind(to: registrationCodeViewModel)
-      return .push(registrationCodeVC)
-    case let .receipts(receiptViewModel):
-      var receiptVC = ReceiptViewController.instantiateFromNib()
+    case .receipts():
+      let receiptVC = ReceiptViewController.instantiateFromNib()
       receiptVC.title = ""
-      receiptVC.bind(to: receiptViewModel)
       return .push(receiptVC)
-    case let .receiptsSorted(receiptViewModel):
-        var receiptVC = ReceiptViewController.instantiateFromNib()
+    case .receiptsSorted():
+      let receiptVC = ReceiptViewController.instantiateFromNib()
         receiptVC.title = ""
-        receiptVC.bind(to: receiptViewModel)
         return .push(receiptVC)
     case let .mittViffs(mittViffsViewModel):
       var mittViffsVC = MittViffsViewController.instantiateFromNib()
@@ -95,24 +74,6 @@ extension Scene: TargetScene {
       let mainVC = MainViewController.instantiateFromNib()
       mainVC.title = ""
       return .push(mainVC)
-    case .scanReceipt:
-      let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
-      scanReceiptVC.title = ""
-      return .push(scanReceiptVC)
-    case let .welcome(welcomeViewModel):
-      var welcomeVC = WelcomeViewController.instantiateFromNib()
-      welcomeVC.title = ""
-      welcomeVC.bind(to: welcomeViewModel)
-      let welcomeNav = UINavigationController(rootViewController: welcomeVC)
-      
-      // make navigation bar invisible
-      welcomeNav.navigationBar.backgroundColor = .clear
-      welcomeNav.navigationBar.setBackgroundImage(.init(), for: .default)
-      welcomeNav.navigationBar.shadowImage = .init()
-      welcomeNav.navigationBar.isTranslucent = true
-      welcomeNav.view.backgroundColor = welcomeNav.navigationBar.barTintColor
-      
-      return .root(welcomeNav)
     case .cards:
       let cardsVC = CardsViewController.instantiateFromNib()
       cardsVC.title = ""
