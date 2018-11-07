@@ -42,13 +42,13 @@ func setCards() {
 }
   
 func setOffers() {
-  let offer = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer2 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer3 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer4 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer5 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer6 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer7 = Offer.init(name: "Penis", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer2 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer3 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer4 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer5 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer6 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
+  let offer7 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
   Current.offers = [offer, offer2, offer3, offer4, offer5, offer6, offer7]
 }
   
@@ -86,6 +86,9 @@ func addToStoreDict(storePubID: String) {
     AWSGetStoreForPubID(storePubID: storePubID).done { store in
       Current.storeDict[storePubID] = store
       NotificationCenter.default.post(name: Notification.Name("StoreAdded"), object: nil)
+      }.catch { (error) in
+        print("Error at addToStoreDict()")
+        print(error)
     }
   }
 }

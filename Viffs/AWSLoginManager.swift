@@ -19,7 +19,7 @@ class AWSLoginManager {
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
     Current.pool = pool
     Current.currentAWSUser = pool.currentUser()
-    let user = pool.currentUser()
+    let _ = pool.currentUser()
   }
   
   func updateSession() {
@@ -29,6 +29,8 @@ class AWSLoginManager {
       setReceiptsForUser(token: accessToken)
       Current.accessToken = accessToken
       print("Accesstoken: " + accessToken)
+      }.catch { (error) in
+        print(error)
     }
   }
   

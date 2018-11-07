@@ -33,7 +33,7 @@ class RegisterCardViewController: UIViewController, CardIOPaymentViewControllerD
     @IBOutlet var cvc: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBAction func addCardButtonPushed(_ sender: Any) {
-            print("cvc: \(cvc.text), month: \(month.text), year: \(year.text), cardNumber: \(cardNumberTextField.text)")
+      print("cvc: \(String(describing: cvc.text)), month: \(String(describing: month.text)), year: \(year.text), cardNumber: \(String(describing: cardNumberTextField.text))")
     }
   
   @IBAction func scanCardButtonPushed(_ sender: Any) {

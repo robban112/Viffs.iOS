@@ -105,7 +105,6 @@
 		FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */; };
 		FF07F65520D27D9C00B011D8 /* MittViffsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65420D27D9C00B011D8 /* MittViffsViewController.swift */; };
 		FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF07F65620D27DAB00B011D8 /* MoreViewController.swift */; };
-		FF1C771420D3DD37009F357B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1C771320D3DD37009F357B /* Auth.swift */; };
 		FF29E7A521887A7000F56F2B /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7A421887A7000F56F2B /* Offer.swift */; };
 		FF29E7A921887C1200F56F2B /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7A721887C1200F56F2B /* OfferCell.swift */; };
 		FF29E7AA21887C1200F56F2B /* OfferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF29E7A821887C1200F56F2B /* OfferCell.xib */; };
@@ -115,11 +114,9 @@
 		FF29E7B42188823D00F56F2B /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF29E7B22188823D00F56F2B /* CardCell.xib */; };
 		FF29E7B62188827B00F56F2B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29E7B52188827B00F56F2B /* Card.swift */; };
 		FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF33E00020D6AFE700FF8E5C /* Overture additions.swift */; };
-		FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */; };
 		FF38274F20C837670046F220 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38274E20C837670046F220 /* Environment.swift */; };
 		FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */; };
 		FF3AF53A20E8CCE900CF7B67 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */; };
-		FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */; };
 		FF68D03C20CD169100472FF7 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03B20CD169100472FF7 /* Scene.swift */; };
 		FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */; };
 		FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68D04820CD396100472FF7 /* ReceiptDetailViewController.xib */; };
@@ -131,15 +128,11 @@
 		FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */; };
 		FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */; };
 		FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68D05920CE772300472FF7 /* NavigationViewController.swift */; };
-		FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */; };
-		FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92D78B20D5D405008B0C52 /* TestCase.swift */; };
 		FFA2EBE32176333E00B1CBB6 /* MittViffsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA2EBE12176333E00B1CBB6 /* MittViffsCell.swift */; };
 		FFA2EBE42176333E00B1CBB6 /* MittViffsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */; };
 		FFA2EBE62176376700B1CBB6 /* ReceiptCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */; };
-		FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA6819F20BF063700FE29DA /* BlippTests.swift */; };
 		FFA681AD20C03BB200FE29DA /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AC20C03BB200FE29DA /* LoginValidation.swift */; };
 		FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */; };
-		FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */; };
 		FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */; };
 		FFD95B0420CBE1700010FBC4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD95B0320CBE1700010FBC4 /* Mocks.swift */; };
 		FFE53CD12177C1480096EA0B /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE53CCF2177C1480096EA0B /* StoreCell.swift */; };
@@ -147,16 +140,6 @@
 		FFE53CD62177C9F90096EA0B /* PictogramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE53CD42177C9F90096EA0B /* PictogramCell.swift */; };
 		FFE53CD72177C9F90096EA0B /* PictogramCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE53CD52177C9F90096EA0B /* PictogramCell.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FFA681A220BF063700FE29DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE826E8720AADA4A006A0390 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EE826E8E20AADA4A006A0390;
-			remoteInfo = Blipp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0969995428831FD99A57B870 /* Pods-BlippTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlippTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlippTests/Pods-BlippTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,7 +251,6 @@
 		FF07F65220D27D5400B011D8 /* RegisterCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCardViewController.swift; sourceTree = "<group>"; };
 		FF07F65420D27D9C00B011D8 /* MittViffsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittViffsViewController.swift; sourceTree = "<group>"; };
 		FF07F65620D27DAB00B011D8 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		FF1C771320D3DD37009F357B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		FF29E7A421887A7000F56F2B /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		FF29E7A721887C1200F56F2B /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		FF29E7A821887C1200F56F2B /* OfferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferCell.xib; sourceTree = "<group>"; };
@@ -278,11 +260,9 @@
 		FF29E7B22188823D00F56F2B /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		FF29E7B52188827B00F56F2B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FF33E00020D6AFE700FF8E5C /* Overture additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Overture additions.swift"; sourceTree = "<group>"; };
-		FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		FF38274E20C837670046F220 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		FF3AF53720E8CCE900CF7B67 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
 		FF3AF53820E8CCE900CF7B67 /* MoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCell.xib; sourceTree = "<group>"; };
-		FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModelTests.swift; sourceTree = "<group>"; };
 		FF68D03B20CD169100472FF7 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		FF68D03D20CD1C6200472FF7 /* NibInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInstantiable.swift; sourceTree = "<group>"; };
 		FF68D04820CD396100472FF7 /* ReceiptDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptDetailViewController.xib; sourceTree = "<group>"; };
@@ -294,17 +274,11 @@
 		FF68D05520CDCCA500472FF7 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
 		FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		FF68D05920CE772300472FF7 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
-		FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestScheduler+MarbleTests.swift"; sourceTree = "<group>"; };
-		FF92D78B20D5D405008B0C52 /* TestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		FFA2EBE12176333E00B1CBB6 /* MittViffsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MittViffsCell.swift; sourceTree = "<group>"; };
 		FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MittViffsCell.xib; sourceTree = "<group>"; };
 		FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCollection.swift; sourceTree = "<group>"; };
-		FFA6819D20BF063700FE29DA /* ViffsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViffsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFA6819F20BF063700FE29DA /* BlippTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlippTests.swift; sourceTree = "<group>"; };
-		FFA681A120BF063700FE29DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA681AC20C03BB200FE29DA /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		FFA681AF20C4994B00FE29DA /* RxUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUIViewExtensions.swift; sourceTree = "<group>"; };
-		FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FFD95B0120CBD9090010FBC4 /* ReceiptDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewModel.swift; sourceTree = "<group>"; };
 		FFD95B0320CBE1700010FBC4 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		FFE53CCF2177C1480096EA0B /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
@@ -338,13 +312,6 @@
 				EE8D4D8D2151873100341157 /* PromiseKit.framework in Frameworks */,
 				EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */,
 				C04E052826ED8CE5970BF259 /* Pods_Viffs.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFA6819A20BF063700FE29DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +383,6 @@
 			isa = PBXGroup;
 			children = (
 				EE826E9120AADA4A006A0390 /* Viffs */,
-				FFA6819E20BF063700FE29DA /* BlippTests */,
 				EE826E9020AADA4A006A0390 /* Products */,
 				51B78C2B7EDD5AA579DA57C6 /* Pods */,
 				35CB1C987188EE324ADB6859 /* Frameworks */,
@@ -429,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				EE826E8F20AADA4A006A0390 /* Viffs.app */,
-				FFA6819D20BF063700FE29DA /* ViffsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -445,9 +410,9 @@
 				EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */,
 				EE826EA020AADA4D006A0390 /* Info.plist */,
 				EE789BE520B5721D00A0AEA3 /* GoogleService-Info.plist */,
-				EE8D4D85215126C400341157 /* AWSLoginFiles */,
+				EE8D4D85215126C400341157 /* Scenes - Login */,
 				EE962D4E20BDA804006CEC0F /* Model */,
-				EE962D4D20BDA7EB006CEC0F /* Scenes */,
+				EE962D4D20BDA7EB006CEC0F /* Scenes - Logged in */,
 				FFD95AFE20CBD59E0010FBC4 /* API */,
 				FFA681AB20C03B9A00FE29DA /* Utils */,
 				FF68D03A20CD15BA00472FF7 /* Coordinator */,
@@ -458,7 +423,7 @@
 			path = Viffs;
 			sourceTree = "<group>";
 		};
-		EE8D4D85215126C400341157 /* AWSLoginFiles */ = {
+		EE8D4D85215126C400341157 /* Scenes - Login */ = {
 			isa = PBXGroup;
 			children = (
 				EEA1EFAD216D5B630027C7A9 /* AWS.storyboard */,
@@ -473,7 +438,7 @@
 				EE72B6E5216D58D1005E307E /* CardRegisterViewController.swift */,
 				EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */,
 			);
-			path = AWSLoginFiles;
+			path = "Scenes - Login";
 			sourceTree = "<group>";
 		};
 		EE8D4D8E21525E8900341157 /* Main */ = {
@@ -537,7 +502,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		EE962D4D20BDA7EB006CEC0F /* Scenes */ = {
+		EE962D4D20BDA7EB006CEC0F /* Scenes - Logged in */ = {
 			isa = PBXGroup;
 			children = (
 				FF29E7AB2188806F00F56F2B /* Cards */,
@@ -551,7 +516,7 @@
 				FF68D04020CD1DBC00472FF7 /* Receipt Detail */,
 				FF68D03F20CD1DAA00472FF7 /* Receipt */,
 			);
-			path = Scenes;
+			path = "Scenes - Logged in";
 			sourceTree = "<group>";
 		};
 		EE962D4E20BDA804006CEC0F /* Model */ = {
@@ -705,14 +670,6 @@
 			path = "Nib utils";
 			sourceTree = "<group>";
 		};
-		FF92D78A20D593EC008B0C52 /* TestUtils */ = {
-			isa = PBXGroup;
-			children = (
-				FF92D78720D593A2008B0C52 /* TestScheduler+MarbleTests.swift */,
-			);
-			path = TestUtils;
-			sourceTree = "<group>";
-		};
 		FFA2EBE02176329400B1CBB6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,19 +677,6 @@
 				FFA2EBE22176333E00B1CBB6 /* MittViffsCell.xib */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		FFA6819E20BF063700FE29DA /* BlippTests */ = {
-			isa = PBXGroup;
-			children = (
-				FF92D78A20D593EC008B0C52 /* TestUtils */,
-				FFA6819F20BF063700FE29DA /* BlippTests.swift */,
-				FFA681A120BF063700FE29DA /* Info.plist */,
-				FF38274C20C7D29B0046F220 /* LoginViewModelTests.swift */,
-				FF92D78B20D5D405008B0C52 /* TestCase.swift */,
-				FF5C4B2920D6939400CC88B2 /* RegisterUserViewModelTests.swift */,
-			);
-			path = BlippTests;
 			sourceTree = "<group>";
 		};
 		FFA681AB20C03B9A00FE29DA /* Utils */ = {
@@ -759,8 +703,6 @@
 		FFD95AFE20CBD59E0010FBC4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				FFD95AFF20CBD5AF0010FBC4 /* APIService.swift */,
-				FF1C771320D3DD37009F357B /* Auth.swift */,
 				EE8D4D8621512CE700341157 /* AWSApi.swift */,
 			);
 			path = API;
@@ -806,24 +748,6 @@
 			productReference = EE826E8F20AADA4A006A0390 /* Viffs.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FFA6819C20BF063700FE29DA /* ViffsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "ViffsTests" */;
-			buildPhases = (
-				FFA6819920BF063700FE29DA /* Sources */,
-				FFA6819A20BF063700FE29DA /* Frameworks */,
-				FFA6819B20BF063700FE29DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FFA681A320BF063700FE29DA /* PBXTargetDependency */,
-			);
-			name = ViffsTests;
-			productName = BlippTests;
-			productReference = FFA6819D20BF063700FE29DA /* ViffsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -836,10 +760,7 @@
 				TargetAttributes = {
 					EE826E8E20AADA4A006A0390 = {
 						CreatedOnToolsVersion = 9.3;
-					};
-					FFA6819C20BF063700FE29DA = {
-						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = EE826E8E20AADA4A006A0390;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -857,7 +778,6 @@
 			projectRoot = "";
 			targets = (
 				EE826E8E20AADA4A006A0390 /* Viffs */,
-				FFA6819C20BF063700FE29DA /* ViffsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -927,13 +847,6 @@
 				EE8D4E3C2157C70800341157 /* MontserratAlternates-BlackItalic.otf in Resources */,
 				EE8D4E302157C70800341157 /* Montserrat-Bold.otf in Resources */,
 				EE8D4E3B2157C70800341157 /* Montserrat-ExtraLight.otf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFA6819B20BF063700FE29DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,7 +924,6 @@
 			files = (
 				EE13B4BD213AD2BC007743D2 /* SignUpViewController.swift in Sources */,
 				FFA2EBE62176376700B1CBB6 /* ReceiptCollection.swift in Sources */,
-				FFD95B0020CBD5AF0010FBC4 /* APIService.swift in Sources */,
 				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
 				EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */,
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
@@ -1022,7 +934,6 @@
 				FF68D04B20CD8C7200472FF7 /* SceneTransitionType.swift in Sources */,
 				FF38274F20C837670046F220 /* Environment.swift in Sources */,
 				FFE53CD62177C9F90096EA0B /* PictogramCell.swift in Sources */,
-				FF1C771420D3DD37009F357B /* Auth.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
 				FF29E7B62188827B00F56F2B /* Card.swift in Sources */,
@@ -1066,27 +977,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFA6819920BF063700FE29DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF38274D20C7D29B0046F220 /* LoginViewModelTests.swift in Sources */,
-				FF5C4B2A20D6939400CC88B2 /* RegisterUserViewModelTests.swift in Sources */,
-				FF92D78C20D5D405008B0C52 /* TestCase.swift in Sources */,
-				FFA681A020BF063700FE29DA /* BlippTests.swift in Sources */,
-				FF92D78920D593C9008B0C52 /* TestScheduler+MarbleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FFA681A320BF063700FE29DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EE826E8E20AADA4A006A0390 /* Viffs */;
-			targetProxy = FFA681A220BF063700FE29DA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */ = {
@@ -1306,7 +1197,7 @@
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;
 				SWIFT_OBJC_BRIDGING_HEADER = Viffs/BridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1395,48 +1286,8 @@
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;
 				SWIFT_OBJC_BRIDGING_HEADER = Viffs/BridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		FFA681A420BF063700FE29DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2AQ8FWFADX;
-				INFOPLIST_FILE = BlippTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viffs.app/Viffs";
-			};
-			name = Debug;
-		};
-		FFA681A520BF063700FE29DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2AQ8FWFADX;
-				INFOPLIST_FILE = BlippTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Blipp.BlippTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viffs.app/Viffs";
 			};
 			name = Release;
 		};
@@ -1457,15 +1308,6 @@
 			buildConfigurations = (
 				EE826EA420AADA4D006A0390 /* Debug */,
 				EE826EA520AADA4D006A0390 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FFA681A620BF063700FE29DA /* Build configuration list for PBXNativeTarget "ViffsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FFA681A420BF063700FE29DA /* Debug */,
-				FFA681A520BF063700FE29DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

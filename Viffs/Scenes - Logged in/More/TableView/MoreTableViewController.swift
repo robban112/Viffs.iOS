@@ -53,7 +53,7 @@ class MoreTableViewController: UITableViewController {
         Current.currentAWSUser?.signOut()
         let user = Current.pool?.currentUser()
         user?.signOut()
-        let details = user!.getDetails()
+        let _ = user!.getDetails()
       case "Kort":
         return
       case "Hjälp":

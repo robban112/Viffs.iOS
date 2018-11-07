@@ -33,7 +33,7 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
 
     @IBAction func continueAction(_ sender: Any) {
         //push the card data here
-      print("cvc: \(cvc.text), month: \(month.text), year: \(year.text), cardNumber: \(cardNumber.text)")
+      print("cvc: \(String(describing: cvc.text)), month: \(String(describing: month.text)), year: \(String(describing: year.text)), cardNumber: \(String(describing: cardNumber.text))")
     }
     @IBAction func scanCardAction(_ sender: Any) {
       let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
@@ -43,7 +43,7 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
     }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    print("cvc: \(cvc?.text), month: \(month?.text), year: \(year?.text), cardNumber: \(cardNumber?.text)")
+    print("cvc: \(String(describing: cvc?.text)), month: \(String(describing: month?.text)), year: \(year?.text), cardNumber: \(String(describing: cardNumber?.text))")
   }
     
     override func viewDidLoad() {

@@ -76,7 +76,7 @@ class SignUpViewController: UIViewController {
     
     //sign up the user
     self.pool?.signUp(userNameValue, password: passwordValue, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in
-      guard let strongSelf = self else { return nil }
+      guard self != nil else { return nil }
       DispatchQueue.main.async(execute: {
         if let error = task.error as NSError? {
           let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
@@ -86,7 +86,7 @@ class SignUpViewController: UIViewController {
           alertController.addAction(retryAction)
           
           self?.present(alertController, animated: true, completion:  nil)
-        } else if let result = task.result  {
+        } else if task.result != nil  {
             Current.username = self?.username.text
             Current.password = self?.password.text
         }
