@@ -17,10 +17,10 @@ class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelega
   @IBAction func takePhoto(_ sender: Any) {
     print("Take photo button pushed!")
     if (!tookPhoto) {
-      if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+      if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+        imagePicker.sourceType = UIImagePickerController.SourceType.camera
         imagePicker.allowsEditing = false
         self.present(imagePicker, animated: true, completion: nil)
       }
@@ -44,8 +44,8 @@ class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelega
     }
   }
   
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let pickedImage = info[.originalImage] as? UIImage {
       receiptImage.contentMode = .scaleToFill
       receiptImage.image = pickedImage
     }
