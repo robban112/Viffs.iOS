@@ -205,7 +205,7 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let receipts = Current.currentUser?.receipts {
+    if let receipts = Current.user?.receipts {
       return receipts.count >= 2 ? 2 : receipts.count
     }
     return 0
@@ -213,14 +213,14 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = ReceiptViewCell.instantiateFromNib()
-    if let receipt = Current.currentUser?.receipts?[indexPath.row] {
+    if let receipt = Current.user?.receipts?[indexPath.row] {
       cell.receipt = receipt
     }
     return cell
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if let receipt = Current.currentUser?.receipts?[indexPath.row] {
+    if let receipt = Current.user?.receipts?[indexPath.row] {
       SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
     }
   }

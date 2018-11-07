@@ -18,7 +18,7 @@ class AWSLoginManager {
   
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
     Current.pool = pool
-    Current.currentAWSUser = pool.currentUser()
+    Current.AWSUser = pool.currentUser()
     let _ = pool.currentUser()
   }
   
@@ -36,7 +36,7 @@ class AWSLoginManager {
   
   func getSession() -> Promise<String> {
     return Promise { seal in
-      Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) in
+      Current.AWSUser?.getSession().continueOnSuccessWith { (getSessionTask) in
         DispatchQueue.main.async(execute: {
           let getSessionResult = getSessionTask.result
           

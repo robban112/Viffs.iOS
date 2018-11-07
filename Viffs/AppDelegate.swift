@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func getSession(){
-    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
+    Current.AWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
         
@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
     Current.pool = pool
-    Current.currentAWSUser = pool.currentUser()
+    Current.AWSUser = pool.currentUser()
     let user = pool.currentUser()
   }
   

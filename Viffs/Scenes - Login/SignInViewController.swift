@@ -44,7 +44,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
   }
   
   func getSession(){
-    Current.currentAWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
+    Current.AWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
         

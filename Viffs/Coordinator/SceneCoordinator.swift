@@ -45,7 +45,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   
   //This is needed to invoke the AWS login delegate
   func getDetails(){
-    Current.currentAWSUser?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+    Current.AWSUser?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
       DispatchQueue.main.async(execute: {
 //        self.response = task.result
 //        self.title = self.user?.username

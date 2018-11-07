@@ -63,7 +63,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     case "Byt språk":
       return
     case "Logga ut":
-      Current.currentAWSUser?.signOut()
+      Current.AWSUser?.signOut()
       SceneCoordinator.shared.transitionToLogin()
       return
     default:

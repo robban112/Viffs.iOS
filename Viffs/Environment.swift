@@ -13,8 +13,8 @@ import AWSCognitoIdentityProvider
 var Current = Environment()
 
 struct Environment {
-  var currentUser: User? = nil
-  var currentAWSUser: AWSCognitoIdentityUser? = nil
+  var user: User? = nil
+  var AWSUser: AWSCognitoIdentityUser? = nil
   var pool: AWSCognitoIdentityUserPool? = nil
   var storeDict: [String : Store] = [:]
   var accessToken: String? = nil
@@ -29,5 +29,5 @@ struct Environment {
 }
 
 func flushEnvironment() {
-  Current.currentUser = nil
+  Current.user = nil
 }

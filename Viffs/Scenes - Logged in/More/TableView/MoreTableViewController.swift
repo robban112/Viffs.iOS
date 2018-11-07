@@ -50,7 +50,7 @@ class MoreTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       switch content[indexPath.row] {
       case "Logga ut":
-        Current.currentAWSUser?.signOut()
+        Current.AWSUser?.signOut()
         let user = Current.pool?.currentUser()
         user?.signOut()
         let _ = user!.getDetails()
