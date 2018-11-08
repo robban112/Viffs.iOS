@@ -115,3 +115,22 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
         return UIImage(data: data)
       }
   }
+    
+  func uploadImage(base64: String) {
+    let headers = ["AccessToken" : Current.accessToken ?? ""]
+    
+    Alamofire.request(receiptImageURL, method: .post, parameters: [:], encoding: JSONEncoding.default, headers: headers).responseJSON
+      { (response:DataResponse) in
+        switch(response.result)
+        {
+        case .success(let value):
+          print("----------------\nsuccessfully posted receipt\n--------------------")
+          print(value)
+        case .failure(let value):
+          print("failed to post receipt")
+          print(response.result)
+          print(value)
+    }
+  }
+}
+

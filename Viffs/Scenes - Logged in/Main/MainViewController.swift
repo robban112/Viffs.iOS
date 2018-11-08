@@ -205,10 +205,11 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let receipts = Current.user?.receipts {
-      return receipts.count >= 2 ? 2 : receipts.count
+    if maximized {
+      return Current.receipts.count
+    } else {
+      return Current.receipts.count >= 2 ? 2 : Current.receipts.count
     }
-    return 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

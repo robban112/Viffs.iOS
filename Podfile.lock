@@ -33,6 +33,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SideMenu (5.0.3)
+  - WeScan (0.9.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - RxDataSources (~> 3.0a)
   - RxSwift (~> 4.0)
   - SideMenu
+  - WeScan (from `https://github.com/WeTransfer/WeScan.git`, branch `develop`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -67,6 +69,16 @@ SPEC REPOS:
     - RxSwift
     - SideMenu
 
+EXTERNAL SOURCES:
+  WeScan:
+    :branch: develop
+    :git: https://github.com/WeTransfer/WeScan.git
+
+CHECKOUT OPTIONS:
+  WeScan:
+    :commit: d188f1387971023613dc6bd586f1a208c2c6baf6
+    :git: https://github.com/WeTransfer/WeScan.git
+
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   AWSAuthCore: 349738e72c5ecbdd6fcf9f153ae01842dd90a725
@@ -83,7 +95,8 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+  WeScan: 69ec5d7e43d49822627a78a45fb553a26ab5de89
 
-PODFILE CHECKSUM: d05dbbd53bf84866e9b82e0bc270fb91f336cc7c
+PODFILE CHECKSUM: a559ab81958141b4e7ac33b1c8f1a4da26eafb79
 
 COCOAPODS: 1.5.3

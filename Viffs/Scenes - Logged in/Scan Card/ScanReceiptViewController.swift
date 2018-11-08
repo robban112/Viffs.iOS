@@ -1,37 +1,53 @@
 //
 //  ScanReceiptViewController.swift
-//  Blipp
+//  Viffs
 //
-//  Created by Kristofer Pitkäjärvi on 2018-06-27.
+//  Created by Robert Lorentz on 2018-06-27.
 //  Copyright © 2018 Blipp. All rights reserved.
 //
 
 import UIKit
 import SideMenu
+import Vision
+import WeScan
 
-class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageScannerControllerDelegate {
   
   @IBOutlet var receiptImage: UIImageView!
   @IBOutlet var takePhotoButton: UIButton!
   
   @IBAction func takePhoto(_ sender: Any) {
     print("Take photo button pushed!")
+    
     if (!tookPhoto) {
-      if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera)) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerController.SourceType.camera
-        imagePicker.allowsEditing = false
-        self.present(imagePicker, animated: true, completion: nil)
-      }
+      let scannerVC = ImageScannerController()
+      scannerVC.imageScannerDelegate = self
+      self.present(scannerVC, animated: true)
     } else {
-      //TODO: add photo to database
+      //receiptImage To base64 and post request
+      let imageData = receiptImage.image!.pngData()!
+      let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+      uploadImage(base64: strBase64)
     }
   }
-    @IBAction func hamburgerPushed(_ sender: Any) {
-      present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
-    }
-    
+  @IBAction func hamburgerPushed(_ sender: Any) {
+    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
+  }
+  
+  func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
+    print(error)
+  }
+  
+  func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+    receiptImage.image = results.scannedImage
+    tookPhoto = true
+    scanner.dismiss(animated: true)
+  }
+  
+  func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
+    scanner.dismiss(animated: true)
+  }
+  
   private var tookPhoto: Bool = false {
     didSet {
       if tookPhoto {

@@ -241,6 +241,7 @@
 		EEA1EFAE216D5FF40027C7A9 /* CodeRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRegistrationViewController.swift; sourceTree = "<group>"; };
 		EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSLoginManager.swift; sourceTree = "<group>"; };
+		EEFD60212193364300A2957B /* WeScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MittViffsViewController.xib; sourceTree = "<group>"; };
 		FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoresViewController.xib; sourceTree = "<group>"; };
@@ -321,6 +322,7 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEFD60212193364300A2957B /* WeScan.framework */,
 				EE1E2D942191CB99002396F7 /* Overture.framework */,
 				EE1E2D922191CB94002396F7 /* Result.framework */,
 				EE1E2D902191CB62002396F7 /* SideMenu.framework */,
@@ -874,6 +876,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/WeScan/WeScan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -891,6 +894,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeScan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1193,6 +1197,7 @@
 					"\"-lc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BlippAB.Blipp;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;
@@ -1282,6 +1287,7 @@
 					"\"-lc++\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.BlippAB.Blipp;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "ff438b47-85d0-43bf-8a7d-b54976d5b3f2";
 				PROVISIONING_PROFILE_SPECIFIER = Rob;

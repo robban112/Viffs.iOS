@@ -29,4 +29,6 @@ target 'Viffs' do
   #Promise
   pod 'PromiseKit', '~> 6.0'
   pod 'PromiseKit/Alamofire', '~> 6.0'
+
+  pod 'WeScan', :git => 'https://github.com/WeTransfer/WeScan.git', :branch => 'develop'
 end
