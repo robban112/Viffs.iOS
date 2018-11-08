@@ -102,7 +102,7 @@
                                 <constraint firstAttribute="height" constant="64" id="1Vj-E3-8Lm"/>
                                 <constraint firstAttribute="width" constant="64" id="kOf-Q1-bPV"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Tab-grön"/>
+                            <state key="normal" backgroundImage="Tab-green"/>
                             <connections>
                                 <action selector="hamburgerButtonPushed:" destination="-1" eventType="touchUpInside" id="Q9m-1K-hJy"/>
                             </connections>
@@ -147,7 +147,7 @@
     <resources>
         <image name="Butiker - Beige" width="36" height="36"/>
         <image name="Mitt-Viffs-Beige" width="36" height="36"/>
-        <image name="Tab-grön" width="36" height="36"/>
+        <image name="Tab-green" width="36" height="36"/>
         <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
     </resources>

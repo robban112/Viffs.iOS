@@ -45,7 +45,7 @@
                         <constraint firstAttribute="height" constant="64" id="AuJ-y3-nnB"/>
                         <constraint firstAttribute="width" constant="64" id="b1j-Gn-r3O"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Tab-grön"/>
+                    <state key="normal" backgroundImage="Tab-green"/>
                     <connections>
                         <action selector="hamburgerPushed:" destination="-1" eventType="touchUpInside" id="D5V-kT-Edd"/>
                     </connections>
@@ -77,6 +77,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Tab-grön" width="36" height="36"/>
+        <image name="Tab-green" width="36" height="36"/>
     </resources>
 </document>
