@@ -21,7 +21,8 @@ func setReceiptsForUser(token: String) {
     AWSGetReceiptsForUser(token: token)
   }.done { receipts in
     //FIX: Remove receipts from currentUser.
-    Current.user = User(username: "", password: "", receipts: receipts)
+    let reversedReceipts = receipts.reversed()
+    Current.user = User(username: "", password: "", receipts: reversedReceipts)
     Current.receipts = receipts
     NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
     }.catch { (error) in
