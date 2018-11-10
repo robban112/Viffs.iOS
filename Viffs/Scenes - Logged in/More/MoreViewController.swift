@@ -14,7 +14,7 @@ import SideMenu
 class MoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   let disposeBag = DisposeBag()
   @IBOutlet weak var tableView: UITableView!
-  var content = ["Kort","Lägg till kort" ,"Hjälp", "Byt språk" ,"Inställningar", "Logga ut"]
+  var content = ["Hem","Mitt Viffs","Butiker","Kort","Hjälp","Inställningar", "Logga ut"]
 
   override func viewDidLoad() {
     loadTableView()
@@ -51,16 +51,21 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     dismiss(animated: true, completion: nil)
     switch content[indexPath.row] {
-    case "Kort":
+    case "Hem":
+      _ = SceneCoordinator.shared.transition(to: Scene.blipp)
       return
-    case "Lägg till kort":
-      _ = SceneCoordinator.shared.transition(to: Scene.registerCard)
+    case "Mitt Viffs":
+      _ = SceneCoordinator.shared.transition(to: Scene.mittViffs(.init()))
+      return
+    case "Butiker":
+      _ = SceneCoordinator.shared.transition(to: Scene.stores)
+      return
+    case "Kort":
+      _ = SceneCoordinator.shared.transition(to: Scene.cards)
       return
     case "Hjälp":
       return
     case "Inställningar":
-      return
-    case "Byt språk":
       return
     case "Logga ut":
       Current.AWSUser?.signOut()

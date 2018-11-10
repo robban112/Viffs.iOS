@@ -29,5 +29,6 @@ struct Environment {
 }
 
 func flushEnvironment() {
-  Current.user = nil
+  let newEnv = Environment()
+  
 }
