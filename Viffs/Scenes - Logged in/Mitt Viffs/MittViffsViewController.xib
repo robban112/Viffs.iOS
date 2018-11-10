@@ -22,9 +22,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xSZ-bb-LhK">
-                    <rect key="frame" x="10" y="74" width="355" height="534"/>
+                    <rect key="frame" x="30" y="94" width="315" height="494"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qu6-LP-I0Z">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="30" id="Qu6-LP-I0Z">
                         <size key="itemSize" width="80" height="105"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,7 +37,7 @@
                         <constraint firstAttribute="width" constant="64" id="iAp-Uj-MeN"/>
                         <constraint firstAttribute="height" constant="64" id="jey-Zs-61u"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Tab-green"/>
+                    <state key="normal" backgroundImage="Tab-beige"/>
                     <connections>
                         <action selector="hamburgerButtonPushed:" destination="-1" eventType="touchUpInside" id="CdH-3Z-gzu"/>
                     </connections>
@@ -45,12 +45,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="xSZ-bb-LhK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="39i-Wt-oL4"/>
-                <constraint firstAttribute="trailing" secondItem="xSZ-bb-LhK" secondAttribute="trailing" constant="10" id="A2w-pS-Ct0"/>
-                <constraint firstItem="xSZ-bb-LhK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="A7w-72-Z5e"/>
+                <constraint firstItem="xSZ-bb-LhK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="39i-Wt-oL4"/>
+                <constraint firstAttribute="trailing" secondItem="xSZ-bb-LhK" secondAttribute="trailing" constant="30" id="A2w-pS-Ct0"/>
+                <constraint firstItem="xSZ-bb-LhK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="A7w-72-Z5e"/>
                 <constraint firstAttribute="bottom" secondItem="obw-aQ-NkW" secondAttribute="bottom" constant="57" id="GJv-bH-zN6"/>
                 <constraint firstAttribute="trailing" secondItem="obw-aQ-NkW" secondAttribute="trailing" constant="8" id="vby-Ta-u9R"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xSZ-bb-LhK" secondAttribute="bottom" constant="10" id="xgp-jx-8Wu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xSZ-bb-LhK" secondAttribute="bottom" constant="30" id="xgp-jx-8Wu"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -59,6 +59,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Tab-green" width="36" height="36"/>
+        <image name="Tab-beige" width="36" height="36"/>
     </resources>
 </document>

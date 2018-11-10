@@ -35,7 +35,7 @@
                         <constraint firstAttribute="width" constant="64" id="RIN-ZM-rem"/>
                         <constraint firstAttribute="height" constant="64" id="hwR-Cf-arF"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Tab-green"/>
+                    <state key="normal" backgroundImage="Tab-beige"/>
                     <connections>
                         <action selector="hamburgerPressed:" destination="-1" eventType="touchUpInside" id="Vef-LF-3ww"/>
                     </connections>
@@ -59,6 +59,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Tab-green" width="36" height="36"/>
+        <image name="Tab-beige" width="36" height="36"/>
     </resources>
 </document>

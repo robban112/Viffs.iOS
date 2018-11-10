@@ -41,7 +41,7 @@
                         <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
                         <constraint firstAttribute="height" constant="120" id="hQ5-pc-eIK"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Mitt-Viffs-Beige"/>
+                    <state key="normal" backgroundImage="Mitt-Viffs-green"/>
                     <connections>
                         <action selector="receiptButtonPushed:" destination="-1" eventType="touchUpInside" id="AWV-vV-2Sl"/>
                     </connections>
@@ -58,7 +58,7 @@
                         <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
                         <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Butiker - Beige"/>
+                    <state key="normal" backgroundImage="Butiker - Green"/>
                     <connections>
                         <action selector="storeButtonPushed:" destination="-1" eventType="touchUpInside" id="T8e-m8-ODh"/>
                     </connections>
@@ -102,7 +102,7 @@
                                 <constraint firstAttribute="height" constant="64" id="1Vj-E3-8Lm"/>
                                 <constraint firstAttribute="width" constant="64" id="kOf-Q1-bPV"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Tab-green"/>
+                            <state key="normal" backgroundImage="Tab-beige"/>
                             <connections>
                                 <action selector="hamburgerButtonPushed:" destination="-1" eventType="touchUpInside" id="Q9m-1K-hJy"/>
                             </connections>
@@ -145,9 +145,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Butiker - Beige" width="36" height="36"/>
-        <image name="Mitt-Viffs-Beige" width="36" height="36"/>
-        <image name="Tab-green" width="36" height="36"/>
+        <image name="Butiker - Green" width="36" height="36"/>
+        <image name="Mitt-Viffs-green" width="36" height="36"/>
+        <image name="Tab-beige" width="36" height="36"/>
         <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
     </resources>
