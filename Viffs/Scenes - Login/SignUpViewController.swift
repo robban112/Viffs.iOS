@@ -33,10 +33,6 @@ class SignUpViewController: UIViewController {
     self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
-
-  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let signUpConfirmationViewController = segue.destination as? ConfirmSignUpViewController {
