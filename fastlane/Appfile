@@ -1,0 +1,10 @@
+app_identifier("com.BlippAB.Blipp") # The bundle identifier of your app
+apple_id("robbanl@kth.se") # Your Apple email address
+
+itc_team_id("119123823") # App Store Connect Team ID
+team_id("VCRQL947ZX") # Developer Portal Team ID
+itc_team_id("119123823") # App Store Connect Team ID
+team_id("VCRQL947ZX") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
