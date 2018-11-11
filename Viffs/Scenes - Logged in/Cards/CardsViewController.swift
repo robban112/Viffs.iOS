@@ -12,7 +12,11 @@ class CardsViewController: ViffsViewController {
   
   @IBOutlet weak var cardsTableView: UITableView!
   
-  override func viewDidLoad() {
+    @IBAction func AddCardButtonPushed(_ sender: Any) {
+        SceneCoordinator.shared.transition(to: Scene.registerCard)
+    }
+    
+    override func viewDidLoad() {
     super.viewDidLoad()
     cardsTableView.registerCell(type: CardCell.self)
     cardsTableView.delegate = self

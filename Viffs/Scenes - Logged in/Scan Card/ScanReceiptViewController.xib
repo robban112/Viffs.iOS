@@ -28,32 +28,38 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-AM-Wn0">
-                    <rect key="frame" x="40" y="70" width="295" height="415"/>
+                    <rect key="frame" x="40" y="70" width="295" height="389"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs2-Vl-5tU">
-                    <rect key="frame" x="40" y="504" width="295" height="34"/>
-                    <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="67.5" y="478" width="240" height="60"/>
+                    <color key="backgroundColor" red="0.52156862749999999" green="0.83137254900000002" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="34" id="ojR-YV-ysH"/>
+                        <constraint firstAttribute="width" constant="240" id="GSY-Nn-XbJ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WIH-3U-Bor"/>
+                        <constraint firstAttribute="height" constant="60" id="ojR-YV-ysH"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                    <state key="normal" title="Scanna kvittto">
+                    <state key="normal" title="Spara kvitto">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="u8D-5u-8WU"/>
+                        <action selector="sparaKvitto:" destination="-1" eventType="touchUpInside" id="u8D-5u-8WU"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="gMA-AM-Wn0" firstAttribute="leading" secondItem="Cs2-Vl-5tU" secondAttribute="leading" id="3u8-wH-zjs"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="leading" secondItem="gNB-b5-lbW" secondAttribute="leading" constant="40" id="ABS-TY-aIC"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="centerX" secondItem="CpF-q2-nBt" secondAttribute="centerX" id="Ksl-5s-1Og"/>
+                <constraint firstItem="Cs2-Vl-5tU" firstAttribute="centerX" secondItem="CpF-q2-nBt" secondAttribute="centerX" id="OBs-Pc-g75"/>
                 <constraint firstAttribute="bottom" secondItem="Cs2-Vl-5tU" secondAttribute="bottom" constant="129" id="Ujp-YC-C5s"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="top" secondItem="gNB-b5-lbW" secondAttribute="top" constant="50" id="YMg-g6-Lb2"/>
                 <constraint firstItem="Cs2-Vl-5tU" firstAttribute="top" secondItem="gMA-AM-Wn0" secondAttribute="bottom" constant="19" id="ZsR-Ie-ZH7"/>
-                <constraint firstItem="gMA-AM-Wn0" firstAttribute="trailing" secondItem="Cs2-Vl-5tU" secondAttribute="trailing" id="tnA-PM-iy3"/>
             </constraints>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="gNB-b5-lbW"/>

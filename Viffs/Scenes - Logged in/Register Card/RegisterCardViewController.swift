@@ -45,6 +45,7 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     
   
   override func viewDidLoad() {
+    super.viewDidLoad()
     CardIOUtilities.preload()
   }
 }

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardsViewController" customModule="Viffs" customModuleProvider="target">
             <connections>
@@ -22,15 +27,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V66-9y-ngU">
-                    <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                    <rect key="frame" x="0.0" y="84" width="375" height="313"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVN-Yq-3uO">
+                    <rect key="frame" x="67.5" y="527" width="240" height="60"/>
+                    <color key="backgroundColor" red="0.52156862749999999" green="0.83137254900000002" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Grb-N5-MFb"/>
+                        <constraint firstAttribute="width" constant="240" id="K99-ts-3wZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Lägg till kort">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="AddCardButtonPushed:" destination="-1" eventType="touchUpInside" id="k9e-ka-TgO"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="V66-9y-ngU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="1vD-v6-RTi"/>
+                <constraint firstItem="V66-9y-ngU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-270" id="1vD-v6-RTi"/>
                 <constraint firstItem="V66-9y-ngU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="7BX-Mr-S35"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FVN-Yq-3uO" secondAttribute="bottom" constant="80" id="D1j-xI-n0q"/>
+                <constraint firstItem="FVN-Yq-3uO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DBO-de-qF6"/>
                 <constraint firstItem="V66-9y-ngU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aOj-9i-MwM"/>
+                <constraint firstItem="FVN-Yq-3uO" firstAttribute="centerX" secondItem="V66-9y-ngU" secondAttribute="centerX" id="jEc-fK-rNT"/>
                 <constraint firstAttribute="trailing" secondItem="V66-9y-ngU" secondAttribute="trailing" id="p6E-wH-7g0"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
