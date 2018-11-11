@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import SideMenu
 
-class MainViewController: UIViewController, UITableViewDataSource,
+class MainViewController: ViffsViewController, UITableViewDataSource,
 UIGestureRecognizerDelegate {
   
   var addCard: UIBarButtonItem!
@@ -46,10 +46,6 @@ UIGestureRecognizerDelegate {
     } else {
       maximizeLatestReceiptView()
     }
-  }
-  
-  @IBAction func hamburgerButtonPushed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
   }
     
     
@@ -205,11 +201,7 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if maximized {
-      return Current.receipts.count
-    } else {
-      return Current.receipts.count >= 2 ? 2 : Current.receipts.count
-    }
+    return Current.receipts.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

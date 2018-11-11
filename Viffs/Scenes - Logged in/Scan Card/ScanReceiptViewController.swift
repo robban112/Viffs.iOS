@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import SideMenu
 import Vision
 import WeScan
 
-class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageScannerControllerDelegate {
+class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageScannerControllerDelegate {
   
   @IBOutlet var receiptImage: UIImageView!
   @IBOutlet var takePhotoButton: UIButton!
@@ -29,9 +28,6 @@ class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelega
       let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
       uploadImage(base64: strBase64)
     }
-  }
-  @IBAction func hamburgerPushed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
   }
   
   func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
@@ -70,6 +66,7 @@ class ScanReceiptViewController: UIViewController, UIImagePickerControllerDelega
   }
   
   override func viewDidLoad() {
+    super.viewDidLoad()
     tookPhoto = false
   }
 }

@@ -7,15 +7,10 @@
 //
 
 import UIKit
-import SideMenu
 
-class CardsViewController: UIViewController {
+class CardsViewController: ViffsViewController {
   
   @IBOutlet weak var cardsTableView: UITableView!
-  
-  @IBAction func hamburgerButtonPushed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
-  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

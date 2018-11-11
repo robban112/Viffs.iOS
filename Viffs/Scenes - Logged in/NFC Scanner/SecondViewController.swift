@@ -8,7 +8,7 @@
 import UIKit
 import CoreNFC
 
-class SecondViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+class SecondViewController: ViffsViewController, NFCNDEFReaderSessionDelegate {
   
   var nfcSession: NFCNDEFReaderSession?
   

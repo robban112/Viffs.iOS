@@ -36,20 +36,9 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qaw-KD-p6M">
-                    <rect key="frame" x="16" y="256" width="343" height="354"/>
+                    <rect key="frame" x="16" y="271" width="343" height="339"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-hJ-Wsc">
-                    <rect key="frame" x="303" y="546" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="AuJ-y3-nnB"/>
-                        <constraint firstAttribute="width" constant="64" id="b1j-Gn-r3O"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="Tab-beige"/>
-                    <connections>
-                        <action selector="hamburgerPushed:" destination="-1" eventType="touchUpInside" id="D5V-kT-Edd"/>
-                    </connections>
-                </button>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="BOf-5c-80h">
                     <rect key="frame" x="16" y="200" width="343" height="56"/>
                     <textInputTraits key="textInputTraits"/>
@@ -60,15 +49,13 @@
                 <constraint firstItem="sFa-rQ-AAp" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="4fc-fK-R1e"/>
                 <constraint firstItem="sFa-rQ-AAp" firstAttribute="trailing" secondItem="BOf-5c-80h" secondAttribute="trailing" id="9Vx-3G-9eb"/>
                 <constraint firstItem="BOf-5c-80h" firstAttribute="top" secondItem="sFa-rQ-AAp" secondAttribute="bottom" id="HV0-nE-GgJ"/>
-                <constraint firstAttribute="bottom" secondItem="TvT-hJ-Wsc" secondAttribute="bottom" constant="57" id="Hg4-oE-kWU"/>
                 <constraint firstItem="sFa-rQ-AAp" firstAttribute="leading" secondItem="BOf-5c-80h" secondAttribute="leading" id="M6x-bs-Jt6"/>
                 <constraint firstItem="BOf-5c-80h" firstAttribute="trailing" secondItem="Qaw-KD-p6M" secondAttribute="trailing" id="RTP-B4-VNw"/>
                 <constraint firstItem="BOf-5c-80h" firstAttribute="leading" secondItem="Qaw-KD-p6M" secondAttribute="leading" id="WLn-go-iqS"/>
-                <constraint firstItem="Qaw-KD-p6M" firstAttribute="top" secondItem="BOf-5c-80h" secondAttribute="bottom" id="YJJ-4g-Ekq"/>
-                <constraint firstItem="Qaw-KD-p6M" firstAttribute="bottom" secondItem="TvT-hJ-Wsc" secondAttribute="bottom" id="ooT-q5-35r"/>
                 <constraint firstItem="sFa-rQ-AAp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="pnq-SI-hl7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qaw-KD-p6M" secondAttribute="bottom" constant="8" id="s1p-9W-Re6"/>
                 <constraint firstItem="sFa-rQ-AAp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="tJW-Fk-zsS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TvT-hJ-Wsc" secondAttribute="trailing" constant="8" id="vVY-jp-VO5"/>
+                <constraint firstItem="Qaw-KD-p6M" firstAttribute="top" secondItem="BOf-5c-80h" secondAttribute="bottom" constant="15" id="vxd-ib-6gY"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -76,7 +63,4 @@
             <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
         </view>
     </objects>
-    <resources>
-        <image name="Tab-beige" width="36" height="36"/>
-    </resources>
 </document>

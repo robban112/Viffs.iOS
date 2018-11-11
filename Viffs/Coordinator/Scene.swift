@@ -24,6 +24,10 @@ enum Scene {
   case scanReceipt
   case main
   case cards
+  case settings
+  case help
+  case changeLanguage
+  case store
 }
 
 extension Scene: TargetScene {
@@ -42,7 +46,8 @@ extension Scene: TargetScene {
 //      return .push(homeNav)
     case .scanReceipt:
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
-      scanReceiptVC.title = ""
+      
+      scanReceiptVC.title = "Skanna kvitto"
       return .push(scanReceiptVC)
     case let .receiptDetail(receiptDetailViewModel):
       var receiptDetailVC = ReceiptDetailViewController.instantiateFromNib()
@@ -51,37 +56,57 @@ extension Scene: TargetScene {
       return .push(receiptDetailVC)
     case .registerCard:
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
-      registerCardVC.title = ""
+      registerCardVC.title = "Registrera kort"
       return .push(registerCardVC)
     case .receipts():
       let receiptVC = ReceiptViewController.instantiateFromNib()
-      receiptVC.title = ""
+      receiptVC.title = "Kvitton"
       return .push(receiptVC)
     case .receiptsSorted():
       let receiptVC = ReceiptViewController.instantiateFromNib()
-        receiptVC.title = ""
+        receiptVC.title = "Kvitton Sorterat"
         return .push(receiptVC)
     case let .mittViffs(mittViffsViewModel):
       var mittViffsVC = MittViffsViewController.instantiateFromNib()
-      mittViffsVC.title = ""
+      mittViffsVC.title = "Mitt Viffs"
       mittViffsVC.bind(to: mittViffsViewModel)
       return .push(mittViffsVC)
     case .stores:
       let storesVC = StoresViewController.instantiateFromNib()
-      storesVC.title = ""
+      storesVC.title = "Butiker"
       return .push(storesVC)
+    case .store:
+      let storeVC = StoreViewController.instantiateFromNib()
+      storeVC.title = "Butik" //Set to store name
+      return .push(storeVC)
     case .main:
       let mainVC = MainViewController.instantiateFromNib()
-      mainVC.title = ""
+      mainVC.title = "Hem"
       return .push(mainVC)
     case .cards:
       let cardsVC = CardsViewController.instantiateFromNib()
-      cardsVC.title = ""
+      cardsVC.title = "Kort"
       return .push(cardsVC)
+    case .help:
+      let helpVC = HelpViewController.instantiateFromNib()
+      helpVC.title = "Hjälp"
+      return .push(helpVC)
+    case .settings:
+      let settingsVC = SettingsViewController.instantiateFromNib()
+      settingsVC.title = "Inställningar"
+      return .push(settingsVC)
+    case .changeLanguage:
+      let changeLanguageVC = ChangeLanguageViewController.instantiateFromNib()
+      changeLanguageVC.title = "Byt språk"
+      return .push(changeLanguageVC)
     }
   }
 }
 
+/*
+ Function responsible for creating main viewcontroller and more viewcontroller, with the side menu as the connection between.
+ Returns the navigationcontroller of main
+ */
 func setupSideMenu() -> UINavigationController {
   // Define the menus
   let mainVC = MainViewController.instantiateFromNib()
@@ -96,6 +121,8 @@ func setupSideMenu() -> UINavigationController {
   navRight.navigationBar.shadowImage = UIImage()
   SideMenuManager.default.menuRightNavigationController = navRight
   
+  mainNav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 18)!]
+
   // Enable gestures. The left and/or right menus must be set up above for these to work.
   // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
 //  SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationController!.navigationBar)

@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ReceiptDetailViewController: UIViewController, ViewModelBindable {
+class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
   var viewModel: ReceiptDetailViewModelType!

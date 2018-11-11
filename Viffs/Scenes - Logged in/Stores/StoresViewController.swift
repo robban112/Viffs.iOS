@@ -7,18 +7,14 @@
 //
 
 import UIKit
-import SideMenu
 
-class StoresViewController: UIViewController {
+class StoresViewController: ViffsViewController {
   
   @IBOutlet weak var offersCollectionView: UICollectionView!
   @IBOutlet weak var storesTableView: UITableView!
   
-  @IBAction func hamburgerPushed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
-  }
-  
   override func viewDidLoad() {
+    super.viewDidLoad()
     storesTableView.registerCell(type: StoreCell.self)
     offersCollectionView.registerCell(type: OfferCell.self)
     storesTableView.delegate = self

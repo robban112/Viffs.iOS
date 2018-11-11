@@ -30,17 +30,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-AM-Wn0">
                     <rect key="frame" x="40" y="70" width="295" height="415"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c1-MZ-keG">
-                    <rect key="frame" x="303" y="546" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="GaB-lk-Hal"/>
-                        <constraint firstAttribute="width" constant="64" id="MnL-bc-udC"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="Tab-beige"/>
-                    <connections>
-                        <action selector="hamburgerPushed:" destination="-1" eventType="touchUpInside" id="SLQ-Ud-0xZ"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs2-Vl-5tU">
                     <rect key="frame" x="40" y="504" width="295" height="34"/>
                     <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,8 +53,6 @@
                 <constraint firstAttribute="bottom" secondItem="Cs2-Vl-5tU" secondAttribute="bottom" constant="129" id="Ujp-YC-C5s"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="top" secondItem="gNB-b5-lbW" secondAttribute="top" constant="50" id="YMg-g6-Lb2"/>
                 <constraint firstItem="Cs2-Vl-5tU" firstAttribute="top" secondItem="gMA-AM-Wn0" secondAttribute="bottom" constant="19" id="ZsR-Ie-ZH7"/>
-                <constraint firstAttribute="bottom" secondItem="7c1-MZ-keG" secondAttribute="bottom" constant="57" id="d9x-eN-roB"/>
-                <constraint firstItem="gNB-b5-lbW" firstAttribute="trailing" secondItem="7c1-MZ-keG" secondAttribute="trailing" constant="8" id="tAo-yR-WpP"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="trailing" secondItem="Cs2-Vl-5tU" secondAttribute="trailing" id="tnA-PM-iy3"/>
             </constraints>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -73,7 +60,4 @@
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Tab-beige" width="36" height="36"/>
-    </resources>
 </document>

@@ -11,9 +11,8 @@ import RxSwift
 import RxCocoa
 import Overture
 import RxDataSources
-import SideMenu
 
-class MittViffsViewController: UIViewController, ViewModelBindable {
+class MittViffsViewController: ViffsViewController, ViewModelBindable {
   typealias ReceiptCollectionDataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<Int, ReceiptCollection>>
   
   let dataSource = ReceiptCollectionDataSource(configureCell: { (_, cv, ip, coll) in
@@ -29,13 +28,8 @@ class MittViffsViewController: UIViewController, ViewModelBindable {
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var hamburgerButton: UIButton!
   
-  @IBAction func hamburgerButtonPushed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     collectionView.registerCell(type: MittViffsCell.self)
   }
   

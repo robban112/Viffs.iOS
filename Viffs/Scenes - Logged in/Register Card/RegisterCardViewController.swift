@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RegisterCardViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControllerDelegate {
   
   func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
     print("User has canceled the scanner.")

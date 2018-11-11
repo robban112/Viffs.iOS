@@ -10,9 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
-import SideMenu
 
-class ReceiptViewController: UIViewController {
+class ReceiptViewController: ViffsViewController {
   
   let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<Int, Receipt>>(
     configureCell: { (_, tv, ip, receipt) in
@@ -23,9 +22,6 @@ class ReceiptViewController: UIViewController {
   )
   
   @IBOutlet var receiptTableView: UITableView!
-  @IBAction func hamburgerPressed(_ sender: Any) {
-    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
-  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

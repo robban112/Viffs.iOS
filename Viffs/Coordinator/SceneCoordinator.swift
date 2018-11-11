@@ -39,8 +39,10 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
 //    let signInVC = self.storyboard.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
     //transition(to: Scene.blipp)
 //    Current.pool?.clearAll()
+    //getDetails()
+    
     flushEnvironment()
-    getDetails()
+    LoginManager.initialize()
   }
   
   //This is needed to invoke the AWS login delegate
@@ -55,6 +57,10 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
     }
   }
   
+  func transitionToRoot() {
+    self.currentViewController.navigationController?.popToRootViewController(animated: true)
+  }
+  
   @discardableResult
   func transition(to scene: TargetScene) -> Observable<Void> {
     let subject = PublishSubject<Void>()
@@ -66,7 +72,6 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         self.window.rootViewController = viewController
         subject.onCompleted()
       case let .push(viewController):
-        
         guard let navigationController = self.currentViewController.navigationController else {
           fatalError("Can't push a view controller without a current navigation controller")
         }

@@ -29,13 +29,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
   
   // MARK: - Table view data source
   
-  func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-    return 1
-  }
-  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
     return content.count
   }
   
@@ -52,7 +46,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
     dismiss(animated: true, completion: nil)
     switch content[indexPath.row] {
     case "Hem":
-      _ = SceneCoordinator.shared.transition(to: Scene.blipp)
+      SceneCoordinator.shared.transitionToRoot()
       return
     case "Mitt Viffs":
       _ = SceneCoordinator.shared.transition(to: Scene.mittViffs(.init()))
@@ -64,8 +58,10 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
       _ = SceneCoordinator.shared.transition(to: Scene.cards)
       return
     case "Hjälp":
+      _ = SceneCoordinator.shared.transition(to: Scene.help)
       return
     case "Inställningar":
+      _ = SceneCoordinator.shared.transition(to: Scene.settings)
       return
     case "Logga ut":
       Current.AWSUser?.signOut()
