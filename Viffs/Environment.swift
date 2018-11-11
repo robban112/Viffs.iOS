@@ -29,6 +29,6 @@ struct Environment {
 }
 
 func flushEnvironment() {
-  let newEnv = Environment()
+  Current = .init()
   
 }
