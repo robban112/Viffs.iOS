@@ -98,13 +98,11 @@ class AWSLoginManager: NSObject {
 
 extension AWSLoginManager: AWSCognitoIdentityInteractiveAuthenticationDelegate {
   func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
-    if (self.navigationController == nil) {
-      self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
-    }
+    self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
+    
 
-    if (self.signInViewController == nil) {
-      self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
-    }
+    
+    self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
 
     DispatchQueue.main.async {
       self.navigationController!.popToRootViewController(animated: true)

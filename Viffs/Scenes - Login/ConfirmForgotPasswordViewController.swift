@@ -27,6 +27,8 @@ class ConfirmForgotPasswordViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.backItem?.title = ""
+
   }
   
   // MARK: - IBActions

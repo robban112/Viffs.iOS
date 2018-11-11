@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.backItem?.title = ""
     self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
   }
   
@@ -43,7 +44,6 @@ class SignUpViewController: UIViewController {
   
   
   @IBAction func signUp(_ sender: AnyObject) {
-    
     guard let userNameValue = self.username.text, !userNameValue.isEmpty,
       let passwordValue = self.password.text, !passwordValue.isEmpty else {
         let alertController = UIAlertController(title: "Missing Required Fields",

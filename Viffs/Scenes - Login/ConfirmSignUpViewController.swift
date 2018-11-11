@@ -30,6 +30,8 @@ class ConfirmSignUpViewController : UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.username.text = self.user!.username;
+    self.navigationController?.navigationBar.backItem?.title = ""
+
     //self.sentToLabel.text = "Code sent to: \(self.sentTo!)"
   }
   

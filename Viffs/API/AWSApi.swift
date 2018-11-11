@@ -117,7 +117,8 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let headers = ["AccessToken" : Current.accessToken ?? ""]
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
       .responseData()
-      .compactMap { data, _ in
+      .compactMap { data, response in
+        
         return UIImage(data: data)
       }
   }
@@ -126,7 +127,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let headers = ["AccessToken" : Current.accessToken ?? ""]
     let json: [String : Any] = [
       "ReceiptImageData" : base64,
-      "ReceiptImageMIME" : "image/jpeg"
+      "ReceiptImageMIME" : "image/png"
     ]
     Alamofire.request(receiptImageURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
       { (response:DataResponse) in

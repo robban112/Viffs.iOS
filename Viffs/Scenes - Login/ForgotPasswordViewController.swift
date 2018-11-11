@@ -27,6 +27,8 @@ class ForgotPasswordViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.backItem?.title = ""
+
     self.pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
   }
   

@@ -35,6 +35,8 @@ class MFAViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.backItem?.title = ""
+
     // perform any action, if required, once the view is loaded
   }
   

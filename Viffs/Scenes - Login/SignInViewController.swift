@@ -33,9 +33,15 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.password.text = Current.password
     //self.username.text = usernameText
     self.username.text = Current.username
-    self.navigationController?.setNavigationBarHidden(true, animated: false)
+    setNavBar()
     getSession()
+  }
+  
+  func setNavBar() {
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.backItem?.title = ""
+
   }
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
