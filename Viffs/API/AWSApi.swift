@@ -128,7 +128,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let headers = ["AccessToken" : Current.accessToken ?? ""]
     let json: [String : Any] = [
       "ReceiptImageData" : base64,
-      "ReceiptImageMIME" : "image/png"
+      "ReceiptImageMIME" : "image/jpeg"
     ]
     Alamofire.request(receiptImageURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
       { (response:DataResponse) in
