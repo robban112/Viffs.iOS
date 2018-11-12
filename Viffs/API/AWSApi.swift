@@ -62,9 +62,10 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
 }
 
   func convertToReceipts(json: Any) -> [Receipt]? {
+    let d = json as? [NSDictionary]
     return (json as? [NSDictionary])
       .map { $0.compactMap(parseResponseToReceipt) }
-      .map { print("im here"); return $0.isEmpty
+      .map { return $0.isEmpty
         ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "", date: "2017-03-08", storePubID: "")]
         : $0
         

@@ -56,7 +56,6 @@ UIGestureRecognizerDelegate {
   
   func setObservers() {
     NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("ReceiptsSet"), object: nil)
-    
     NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("StoreAdded"), object: nil)
   }
   
