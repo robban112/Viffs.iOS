@@ -29,7 +29,7 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
   }
   
   func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
-    receiptImage.image = results.scannedImage
+    receiptImage.image = results.scannedImage.convertToBlackAndWhite()
     scanner.dismiss(animated: true)
   }
   
@@ -42,7 +42,7 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let pickedImage = info[.originalImage] as? UIImage {
       receiptImage.contentMode = .scaleToFill
-      receiptImage.image = pickedImage
+      receiptImage.image = pickedImage.convertToBlackAndWhite()
     }
     picker.dismiss(animated: true, completion: nil)
   }
@@ -52,6 +52,5 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
     scannerVC.imageScannerDelegate = self
     self.present(scannerVC, animated: true)
     super.viewDidLoad()
-
   }
 }
