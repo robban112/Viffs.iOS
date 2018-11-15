@@ -18,6 +18,9 @@ target 'Viffs' do
   
   #CardReader
   pod 'CardIO'
+  
+  #QRReader  
+  pod 'QRCodeReader.swift', '~> 9.0.1'
 
   #AWS
   pod 'AWSCore', '~> 2.6.0'

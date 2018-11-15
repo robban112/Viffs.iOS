@@ -15,6 +15,7 @@ let baseAWSURL = "http://blipp-dev.eu-west-1.elasticbeanstalk.com/api"
 let receiptAWSURL = baseAWSURL + "/receipts"
 let storesAWSURL = baseAWSURL + "/stores"
 let receiptImageURL = baseAWSURL + "/receiptimage"
+let cardURL = baseAWSURL + "/cards"
 
 func setReceiptsForUser(token: String) {
   firstly {
@@ -144,4 +145,25 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     }
   }
 }
+  
+  func postReceiptCode(code: String) {
+    let headers = ["AccessToken" : Current.accessToken ?? "",
+                   "Content-Type" : "application/json"]
+    let json: [ String : Any] = [
+      "RegCode": code
+    ]
+    Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
+      { (response:DataResponse) in
+        switch(response.result)
+        {
+        case .success(let value):
+          print("----------------successfully posted receipt code--------------------")
+          print(value)
+        case .failure(let value):
+          print("failed to post receipt code")
+          print(response.result)
+          print(value)
+        }
+    }
+  }
 

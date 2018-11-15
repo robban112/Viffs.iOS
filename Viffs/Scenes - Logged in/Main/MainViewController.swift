@@ -86,7 +86,7 @@ UIGestureRecognizerDelegate {
   
   func addButton() -> UIBarButtonItem {
     let btn1 = UIButton(type: .custom)
-    btn1.setImage(UIImage(named: "Kamera-Beige"), for: .normal)
+    btn1.setImage(UIImage(named: "Kamera-green-small"), for: .normal)
     btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
     btn1.addTarget(self, action: #selector(self.scanReceiptButtonPushed(_:)), for: .touchUpInside)
     return UIBarButtonItem(customView: btn1)

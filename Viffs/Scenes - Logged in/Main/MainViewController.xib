@@ -41,7 +41,7 @@
                         <constraint firstAttribute="width" secondItem="9XJ-F7-P7S" secondAttribute="height" multiplier="1:1" id="PjL-go-ccW"/>
                         <constraint firstAttribute="height" constant="120" id="hQ5-pc-eIK"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Mitt-Viffs-green"/>
+                    <state key="normal" backgroundImage="MittKonto-green-2"/>
                     <connections>
                         <action selector="receiptButtonPushed:" destination="-1" eventType="touchUpInside" id="AWV-vV-2Sl"/>
                     </connections>
@@ -58,7 +58,7 @@
                         <constraint firstAttribute="height" constant="120" id="Efe-qv-dqJ"/>
                         <constraint firstAttribute="width" secondItem="HzS-ux-X3J" secondAttribute="height" multiplier="1:1" id="i3q-7A-5cp"/>
                     </constraints>
-                    <state key="normal" backgroundImage="Butiker - Green"/>
+                    <state key="normal" backgroundImage="Butiker-green-2"/>
                     <connections>
                         <action selector="storeButtonPushed:" destination="-1" eventType="touchUpInside" id="T8e-m8-ODh"/>
                     </connections>
@@ -132,8 +132,8 @@
         </view>
     </objects>
     <resources>
-        <image name="Butiker - Green" width="36" height="36"/>
-        <image name="Mitt-Viffs-green" width="36" height="36"/>
+        <image name="Butiker-green-2" width="360" height="360"/>
+        <image name="MittKonto-green-2" width="360" height="360"/>
         <image name="arrow-up-2" width="512" height="512"/>
         <image name="gray-line" width="4488" height="245"/>
     </resources>

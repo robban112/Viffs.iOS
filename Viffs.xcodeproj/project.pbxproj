@@ -29,6 +29,9 @@
 		EE1E2D912191CB62002396F7 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1E2D902191CB62002396F7 /* SideMenu.framework */; };
 		EE1E2D932191CB94002396F7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1E2D922191CB94002396F7 /* Result.framework */; };
 		EE1E2D952191CB99002396F7 /* Overture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1E2D942191CB99002396F7 /* Overture.framework */; };
+		EE210AEC219CCB3800F490E7 /* ReceiptCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210AEA219CCB3800F490E7 /* ReceiptCodeViewController.swift */; };
+		EE210AED219CCB3800F490E7 /* ReceiptCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */; };
+		EE210AEF219CD12E00F490E7 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
 		EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F3D2198911A00C27912 /* SettingsViewController.swift */; };
@@ -181,6 +184,9 @@
 		EE1E2D902191CB62002396F7 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1E2D922191CB94002396F7 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1E2D942191CB99002396F7 /* Overture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Overture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE210AEA219CCB3800F490E7 /* ReceiptCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCodeViewController.swift; sourceTree = "<group>"; };
+		EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptCodeViewController.xib; sourceTree = "<group>"; };
+		EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		EE617F3D2198911A00C27912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +317,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE210AEF219CD12E00F490E7 /* QRCodeReader.framework in Frameworks */,
 				EE1E2D952191CB99002396F7 /* Overture.framework in Frameworks */,
 				EE1E2D932191CB94002396F7 /* Result.framework in Frameworks */,
 				EE1E2D912191CB62002396F7 /* SideMenu.framework in Frameworks */,
@@ -340,6 +347,7 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */,
 				EEFD60212193364300A2957B /* WeScan.framework */,
 				EE1E2D942191CB99002396F7 /* Overture.framework */,
 				EE1E2D922191CB94002396F7 /* Result.framework */,
@@ -397,6 +405,15 @@
 				EE13B4D0213C4CE5007743D2 /* MoreTableViewController.xib */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		EE210AE9219CCAF300F490E7 /* Register Receipt Code */ = {
+			isa = PBXGroup;
+			children = (
+				EE210AEA219CCB3800F490E7 /* ReceiptCodeViewController.swift */,
+				EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */,
+			);
+			path = "Register Receipt Code";
 			sourceTree = "<group>";
 		};
 		EE617F37219890DF00C27912 /* Help */ = {
@@ -572,6 +589,7 @@
 				EE617F492198AF8A00C27912 /* Store */,
 				FF07F63D20D26B1F00B011D8 /* NFC Scanner */,
 				FF07F63B20D26AFE00B011D8 /* Register Card */,
+				EE210AE9219CCAF300F490E7 /* Register Receipt Code */,
 				FF07F63820D26AC600B011D8 /* Mitt Viffs */,
 				FF07F63520D269E900B011D8 /* More */,
 				FF68D04020CD1DBC00472FF7 /* Receipt Detail */,
@@ -873,6 +891,7 @@
 				EE617F4521989AB300C27912 /* ChangeLanguageViewController.xib in Resources */,
 				EE8D4E502157C70800341157 /* Montserrat-Black.otf in Resources */,
 				EE8D4E3E2157C70800341157 /* MontserratAlternates-ExtraLightItalic.otf in Resources */,
+				EE210AED219CCB3800F490E7 /* ReceiptCodeViewController.xib in Resources */,
 				FF07F64620D26B6F00B011D8 /* RegisterCardViewController.xib in Resources */,
 				EE8D4E492157C70800341157 /* MontserratAlternates-BoldItalic.otf in Resources */,
 				EE617F402198911A00C27912 /* SettingsViewController.xib in Resources */,
@@ -933,6 +952,7 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -951,6 +971,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -1005,6 +1026,7 @@
 				FFE53CD62177C9F90096EA0B /* PictogramCell.swift in Sources */,
 				FFA681B020C4994B00FE29DA /* RxUIViewExtensions.swift in Sources */,
 				FF68D05120CDC07400472FF7 /* NibCellUtils.swift in Sources */,
+				EE210AEC219CCB3800F490E7 /* ReceiptCodeViewController.swift in Sources */,
 				FF29E7B62188827B00F56F2B /* Card.swift in Sources */,
 				EE13B4BF213AD2DB007743D2 /* ConfirmSignUpViewController.swift in Sources */,
 				EE617F472198A08100C27912 /* ViffsViewController.swift in Sources */,

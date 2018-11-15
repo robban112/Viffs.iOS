@@ -22,6 +22,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.5.2):
     - PromiseKit/CorePromise
+  - QRCodeReader.swift (9.0.1)
   - Result (4.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - Overture (~> 0.2)
   - PromiseKit (~> 6.0)
   - PromiseKit/Alamofire (~> 6.0)
+  - QRCodeReader.swift (~> 9.0.1)
   - Result (~> 4.0.0)
   - RxCocoa (~> 4.0)
   - RxDataSources (~> 3.0a)
@@ -62,6 +64,7 @@ SPEC REPOS:
     - Differentiator
     - Overture
     - PromiseKit
+    - QRCodeReader.swift
     - Result
     - RxAtomic
     - RxCocoa
@@ -89,6 +92,7 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
   PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
+  QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
@@ -97,6 +101,6 @@ SPEC CHECKSUMS:
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   WeScan: 69ec5d7e43d49822627a78a45fb553a26ab5de89
 
-PODFILE CHECKSUM: a559ab81958141b4e7ac33b1c8f1a4da26eafb79
+PODFILE CHECKSUM: 281f8ca8d56b3d9080b31159cd1a70c26fe272b9
 
 COCOAPODS: 1.5.3

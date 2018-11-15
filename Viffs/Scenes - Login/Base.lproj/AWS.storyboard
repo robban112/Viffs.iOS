@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -44,6 +43,11 @@
                                 <state key="normal" title="Logga in">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGV-Ac-v2h"/>
                                 </connections>
@@ -128,6 +132,11 @@
                                 <state key="normal" title="Glömt lösenord">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="forgotPassword:" destination="BkF-2Z-FaF" eventType="touchUpInside" id="djR-KA-1NK"/>
                                 </connections>
@@ -182,9 +191,14 @@
                                 <state key="normal" title="Registrera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signUp:" destination="O2Z-Ld-ZTv" eventType="touchUpInside" id="K1f-Qq-UM6"/>
-                                    <segue destination="KuK-2h-Gkh" kind="show" id="iPf-99-HLQ"/>
+                                    <segue destination="KuK-2h-Gkh" kind="show" id="3iq-Ca-YVC"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozv-Iw-42u">
@@ -257,12 +271,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="continueAction:" destination="p2u-dp-0sD" eventType="touchUpInside" id="2Y7-Ln-FAf"/>
-                                    <segue destination="lKW-Gc-yLc" kind="show" id="eqH-Dq-YBq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDE-pc-TYg">
                                 <rect key="frame" x="16" y="335" width="343" height="34"/>
-                                <color key="backgroundColor" red="0.49957646490000002" green="0.75196138270000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.52156862749999999" green="0.83137254900000002" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="5gQ-Yo-ksz"/>
                                     <constraint firstAttribute="height" constant="34" id="ZoC-6n-lrD"/>
@@ -298,7 +311,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="lKW-Gc-yLc" kind="show" id="UQ0-1R-fAl"/>
+                                    <action selector="submitCardLaterAction:" destination="p2u-dp-0sD" eventType="touchUpInside" id="cDK-2k-Zdf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-JC-njz">
@@ -373,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rH9-Jy-cBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.5999999999999" y="71.514242878560722"/>
+            <point key="canvasLocation" x="2606" y="80"/>
         </scene>
         <!--Code Registration View Controller-->
         <scene sceneID="Jix-ag-F5x">
@@ -387,26 +400,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S01-QR-ogT">
-                                <rect key="frame" x="16" y="334" width="343" height="34"/>
-                                <color key="backgroundColor" white="0.83013237849999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="86T-T1-7Ay"/>
-                                    <constraint firstAttribute="height" constant="34" id="Ko5-ZM-9MY"/>
-                                </constraints>
-                                <state key="normal" title="Ange kvittokod senare">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="submitCodeLaterAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="27G-PR-nOe"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="12g-ap-ICl">
                                 <rect key="frame" x="16" y="225" width="343" height="101"/>
                                 <subviews>
@@ -431,8 +424,14 @@
                                                 <state key="normal" title="Fortsätt">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="continueAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="8eO-rY-6tB"/>
+                                                    <segue destination="p2u-dp-0sD" kind="show" id="8Pi-k5-FbS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -442,13 +441,59 @@
                                     <constraint firstAttribute="width" constant="343" id="cLQ-JI-Rp4"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVp-Nf-7eo">
+                                <rect key="frame" x="16" y="334" width="343" height="34"/>
+                                <color key="backgroundColor" red="0.52156862749999999" green="0.83137254900000002" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8hC-yL-6pt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Htx-as-snV"/>
+                                    <constraint firstAttribute="width" constant="343" id="ew6-UO-yUL"/>
+                                </constraints>
+                                <state key="normal" title="Scanna in QR-kod">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scanCardAction:" destination="p2u-dp-0sD" eventType="touchUpInside" id="qG7-F7-Qvt"/>
+                                    <action selector="scanQRcodeButtonPushed:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="4eP-78-Sgj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S01-QR-ogT">
+                                <rect key="frame" x="16" y="376" width="343" height="34"/>
+                                <color key="backgroundColor" white="0.83013237849999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="a0A-xN-nR3"/>
+                                </constraints>
+                                <state key="normal" title="Ange kvittokod senare">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitCardLater:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="bX8-AG-Jxs"/>
+                                    <action selector="submitCodeLaterAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="27G-PR-nOe"/>
+                                    <segue destination="p2u-dp-0sD" kind="show" id="Eit-JC-YcU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="S01-QR-ogT" firstAttribute="leading" secondItem="12g-ap-ICl" secondAttribute="leading" id="5Hk-aM-Eoq"/>
+                            <constraint firstItem="sVp-Nf-7eo" firstAttribute="leading" secondItem="S01-QR-ogT" secondAttribute="leading" id="5to-a4-ej8"/>
+                            <constraint firstItem="S01-QR-ogT" firstAttribute="top" secondItem="sVp-Nf-7eo" secondAttribute="bottom" constant="8" symbolic="YES" id="9YM-xD-0sS"/>
+                            <constraint firstItem="sVp-Nf-7eo" firstAttribute="trailing" secondItem="S01-QR-ogT" secondAttribute="trailing" id="Isw-j1-NX5"/>
                             <constraint firstItem="12g-ap-ICl" firstAttribute="centerX" secondItem="9ZS-hI-2LG" secondAttribute="centerX" id="Mcb-or-l1R"/>
                             <constraint firstItem="12g-ap-ICl" firstAttribute="top" secondItem="44T-pM-aK9" secondAttribute="bottom" constant="161" id="T9P-F6-7Z0"/>
-                            <constraint firstItem="S01-QR-ogT" firstAttribute="top" secondItem="12g-ap-ICl" secondAttribute="bottom" constant="8" symbolic="YES" id="cmo-wQ-Gan"/>
+                            <constraint firstItem="sVp-Nf-7eo" firstAttribute="top" secondItem="12g-ap-ICl" secondAttribute="bottom" constant="8" symbolic="YES" id="eCz-G1-LVS"/>
+                            <constraint firstItem="sVp-Nf-7eo" firstAttribute="leading" secondItem="12g-ap-ICl" secondAttribute="leading" id="wN2-qG-6lg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -458,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GQ-lS-dCz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2714" y="72"/>
+            <point key="canvasLocation" x="1865" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aJU-rz-AOc">
@@ -530,6 +575,11 @@
                                 <state key="normal" title="Uppdatera lösenord">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updatePassword:" destination="1Z9-ek-DYA" eventType="touchUpInside" id="miO-j4-aW3"/>
                                 </connections>
@@ -591,13 +641,18 @@
                                 <state key="normal" title="Konfirmera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="confirm:" destination="KuK-2h-Gkh" eventType="touchUpInside" id="5bw-zC-K1n"/>
-                                    <segue destination="p2u-dp-0sD" kind="show" id="cKi-Qy-Cqu"/>
+                                    <segue destination="lKW-Gc-yLc" kind="show" id="3fy-48-fgp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwj-KA-Ufw">
-                                <rect key="frame" x="96" y="335" width="184" height="30"/>
+                                <rect key="frame" x="95.5" y="335" width="184" height="30"/>
                                 <state key="normal" title="Återsänd konfirmationskod"/>
                                 <connections>
                                     <action selector="resend:" destination="KuK-2h-Gkh" eventType="touchUpInside" id="MJh-rc-pR8"/>
@@ -644,6 +699,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eqH-Dq-YBq"/>
+        <segue reference="8Pi-k5-FbS"/>
     </inferredMetricsTieBreakers>
 </document>

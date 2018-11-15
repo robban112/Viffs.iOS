@@ -33,6 +33,8 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     @IBOutlet var cvc: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBAction func addCardButtonPushed(_ sender: Any) {
+      self.navigationController?.popViewController(animated: false)
+      self.navigationController?.popViewController(animated: false)
       print("cvc: \(String(describing: cvc.text)), month: \(String(describing: month.text)), year: \(year.text), cardNumber: \(String(describing: cardNumberTextField.text))")
     }
   

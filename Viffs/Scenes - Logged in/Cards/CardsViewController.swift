@@ -13,7 +13,7 @@ class CardsViewController: ViffsViewController {
   @IBOutlet weak var cardsTableView: UITableView!
   
     @IBAction func AddCardButtonPushed(_ sender: Any) {
-        SceneCoordinator.shared.transition(to: Scene.registerCard)
+        SceneCoordinator.shared.transition(to: Scene.receiptCode)
     }
     
     override func viewDidLoad() {

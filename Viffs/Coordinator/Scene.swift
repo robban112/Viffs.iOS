@@ -17,6 +17,7 @@ enum Scene {
   case blipp
   case receiptDetail(ReceiptDetailViewModel)
   case registerCard
+  case receiptCode
   case receipts()
   case receiptsSorted()
   case mittViffs(MittViffsViewModel)
@@ -99,6 +100,10 @@ extension Scene: TargetScene {
       let changeLanguageVC = ChangeLanguageViewController.instantiateFromNib()
       changeLanguageVC.title = "Byt språk"
       return .push(changeLanguageVC)
+    case .receiptCode:
+      let receiptCodeVC = ReceiptCodeViewController.instantiateFromNib()
+      receiptCodeVC.title = "Lägg till kort"
+      return .push(receiptCodeVC)
     }
   }
 }

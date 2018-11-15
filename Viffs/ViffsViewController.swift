@@ -27,7 +27,7 @@ class ViffsViewController: UIViewController {
   
   func addSideMenuButton() {
     let button = UIButton(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
-    button.setImage(UIImage(named: "Tab-beige"), for: .normal)
+    button.setImage(UIImage(named: "Tab-green-2"), for: .normal)
     
     button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     self.view.addSubview(button)

@@ -33,6 +33,7 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
 
     @IBAction func continueAction(_ sender: Any) {
         //push the card data here
+      self.navigationController?.popToRootViewController(animated: true)
       print("cvc: \(String(describing: cvc.text)), month: \(String(describing: month.text)), year: \(String(describing: year.text)), cardNumber: \(String(describing: cardNumber.text))")
     }
     @IBAction func scanCardAction(_ sender: Any) {
@@ -42,7 +43,12 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
       
     }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @IBAction func submitCardLaterAction(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    self.navigationController?.popToRootViewController(animated: true)
     print("cvc: \(String(describing: cvc?.text)), month: \(String(describing: month?.text)), year: \(year?.text), cardNumber: \(String(describing: cardNumber?.text))")
   }
     
