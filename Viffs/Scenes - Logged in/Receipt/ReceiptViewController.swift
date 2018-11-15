@@ -54,5 +54,6 @@ extension ReceiptViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let receipt = Current.receipts[indexPath.row]
     SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

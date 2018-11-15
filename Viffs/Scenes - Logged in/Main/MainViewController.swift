@@ -215,5 +215,7 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
     if let receipt = Current.user?.receipts?[indexPath.row] {
       SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
     }
+    tableView.deselectRow(at: indexPath, animated: true)
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }

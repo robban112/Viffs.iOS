@@ -41,6 +41,9 @@ class SettingsViewController: ViffsViewController, UITableViewDelegate, UITableV
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    defer {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
     dismiss(animated: true, completion: nil)
     switch content[indexPath.row] {
     case "Byt språk":

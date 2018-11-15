@@ -39,6 +39,7 @@ extension StoresViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     SceneCoordinator.shared.transition(to: Scene.store)
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }
 
