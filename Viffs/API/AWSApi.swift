@@ -63,11 +63,10 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
 }
 
   func convertToReceipts(json: Any) -> [Receipt]? {
-    let d = json as? [NSDictionary]
     return (json as? [NSDictionary])
       .map { $0.compactMap(parseResponseToReceipt) }
       .map { return $0.isEmpty
-        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "", date: "2017-03-08", storePubID: "")]
+        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "")]
         : $0
         
     }
@@ -117,6 +116,10 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
 
   func getImage(for receipt: Receipt) -> Promise<UIImage> {
     let headers = ["AccessToken" : Current.accessToken ?? ""]
+    //extreeeem fullösning
+    guard receipt.receiptPubID != "demo-mock" else {
+      return Promise { $0.fulfill(UIImage(named: "demo_receipt")!) }
+    }
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
       .responseData()
       .compactMap { data, response in
