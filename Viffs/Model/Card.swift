@@ -9,7 +9,8 @@
 import Foundation
 
 struct Card {
-  let date: String
   let number: String
   let cardType: String
+  let pubID: String
+  let image: UIImage
 }

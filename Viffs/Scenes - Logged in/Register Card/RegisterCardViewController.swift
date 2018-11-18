@@ -19,27 +19,35 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
   
   func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
     if let info = cardInfo {
-      let str = NSString(format: "Received card info. \n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
-      print(str)
+ //     let str = NSString(format: "Received card info. \n Number: %@\n expiry: %02lu/%lu\n cvv: %@.", info.redactedCardNumber, info.expiryMonth, info.expiryYear, info.cvv)
+      cardNumberTextField.text = replaceCardNumber(cardNumber: info.cardNumber!)
     }
     paymentViewController.dismiss(animated: true, completion: nil)
   }
   
+  func replaceCardNumber(cardNumber: String) -> String {
+    if cardNumber.count > 12 {
+      let start = cardNumber.index(cardNumber.startIndex, offsetBy: 4);
+      let end = cardNumber.index(cardNumber.startIndex, offsetBy: 12);
+      return cardNumber.replacingCharacters(in: start..<end, with: "********")
+    }
+    return cardNumber
+  }
 
   
   @IBOutlet weak var cardNumberTextField: UITextField!
-    @IBOutlet var month: UITextField!
-    @IBOutlet var year: UITextField!
-    @IBOutlet var cvc: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     @IBAction func addCardButtonPushed(_ sender: Any) {
-      self.navigationController?.popViewController(animated: false)
-      self.navigationController?.popViewController(animated: false)
-      print("cvc: \(String(describing: cvc.text)), month: \(String(describing: month.text)), year: \(year.text), cardNumber: \(String(describing: cardNumberTextField.text))")
+      if let receiptCode = Current.receiptCode, let cardNumber = cardNumberTextField.text {
+        postReceiptCodeAndCard(code: receiptCode, cardNumber: replaceCardNumber(cardNumber: cardNumber))
+        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: false)
+      }
     }
   
   @IBAction func scanCardButtonPushed(_ sender: Any) {
     let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
+    
     cardIOVC.hideCardIOLogo = true
     present(cardIOVC, animated: true, completion: nil)
 

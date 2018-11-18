@@ -36,10 +36,10 @@ class AWSLoginManager: NSObject {
         
         //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
-          setReceiptsForUser(token: accessToken)
+          setReceipts(token: accessToken)
           setStores()
           setOffers()
-          setCards()
+          setCards(token: accessToken)
           Current.accessToken = accessToken
           print("Accesstoken: " + accessToken)
         }

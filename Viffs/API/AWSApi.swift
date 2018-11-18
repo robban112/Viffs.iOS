@@ -17,7 +17,7 @@ let storesAWSURL = baseAWSURL + "/stores"
 let receiptImageURL = baseAWSURL + "/receiptimage"
 let cardURL = baseAWSURL + "/cards"
 
-func setReceiptsForUser(token: String) {
+func setReceipts(token: String) {
   firstly {
     AWSGetReceiptsForUser(token: token)
   }.done { receipts in
@@ -36,11 +36,15 @@ func setStores() {
   Current.stores = [store]
 }
   
-func setCards() {
-  let card = Card.init(date: "05/20", number: "1234567812345678", cardType: "MasterCard")
-  let card2 = Card.init(date: "05/20", number: "1234567812345678", cardType: "MasterCard")
-  let card3 = Card.init(date: "05/20", number: "1234567812345678", cardType: "Visa")
-  Current.cards = [card, card2, card3]
+  func setCards(token: String) {
+  firstly {
+    AWSGetCards(token: token)
+  }.done { cards in
+    Current.cards = cards
+  }.catch { (error) in
+    print("Unable to retrieve cards")
+    print(error)
+  }
 }
   
 func setOffers() {
@@ -63,13 +67,11 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
 }
 
   func convertToReceipts(json: Any) -> [Receipt]? {
-    let d = json as? [NSDictionary]
     return (json as? [NSDictionary])
       .map { $0.compactMap(parseResponseToReceipt) }
       .map { return $0.isEmpty
         ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "", date: "2017-03-08", storePubID: "")]
         : $0
-        
     }
   }
 
@@ -101,8 +103,6 @@ func addToStoreDict(storePubID: String) {
   }
 }
 
-//func AWSGetReceiptImage(receiptPubID: String) -> Promise<
-
 func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
   if let storePubID: String = dict["storePubID"] as? String,
     let receiptPubID: String = dict["pubID"] as? String,
@@ -120,7 +120,6 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
       .responseData()
       .compactMap { data, response in
-        
         return UIImage(data: data)
       }
   }
@@ -136,7 +135,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
         switch(response.result)
         {
         case .success(let value):
-          print("----------------\nsuccessfully posted receipt\n--------------------")
+          print("Successfully posted receipt")
           print(value)
         case .failure(let value):
           print("failed to post receipt")
@@ -146,24 +145,119 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
   }
 }
   
-  func postReceiptCode(code: String) {
+  /*
+   * Receipt code has to be posted first, and then the card
+   */
+  func postReceiptCodeAndCard(code: String, cardNumber: String) {
     let headers = ["AccessToken" : Current.accessToken ?? "",
                    "Content-Type" : "application/json"]
     let json: [ String : Any] = [
       "RegCode": code
     ]
+    
     Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
       { (response:DataResponse) in
         switch(response.result)
         {
         case .success(let value):
-          print("----------------successfully posted receipt code--------------------")
+          if let accessToken = Current.accessToken {
+            setReceipts(token: accessToken)
+          }
+          print("Successfully posted receipt code")
           print(value)
+          postCard(receiptCode: code, cardNumber: cardNumber)
         case .failure(let value):
           print("failed to post receipt code")
           print(response.result)
           print(value)
         }
     }
+  }
+  
+  func postCard(receiptCode: String, cardNumber: String) {
+    let headers = ["AccessToken" : Current.accessToken ?? "",
+                   "Content-Type" : "application/json"]
+    let parameters: [ String : Any] = [
+      "RegCode": receiptCode, "CardNumber" : cardNumber
+    ]
+    
+    Alamofire.request(cardURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseData
+      { (response:DataResponse) in
+        switch(response.result)
+        {
+        case .success(let value):
+          print("Successfully added card")
+          print(value)
+        case .failure(let value):
+          print("Failed to add card")
+          print(response.result)
+          print(value)
+        }
+    }
+  }
+  
+  //OLD
+  func postReceiptCode(code: String) {
+    let headers = ["AccessToken" : Current.accessToken ?? "",
+                   "Content-Type" : "application/json"]
+    let json: [ String : Any] = [
+      "RegCode": code
+    ]
+
+    Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
+      { (response:DataResponse) in
+        switch(response.result)
+        {
+        case .success(let value):
+          if let accessToken = Current.accessToken {
+            setReceipts(token: accessToken)
+          }
+          print("Successfully posted receipt code")
+          print(value)
+        case .failure(let value):
+          print("failed to post receipt code")
+          print(response.result)
+          print(value)
+        }
+      }
+    }
+  
+  func AWSGetCards(token: String) -> Promise<[Card]> {
+    let headers = ["AccessToken" : token, "Content-Type" : "application/json"]
+
+    let req = Alamofire.request("\(cardURL)", headers: headers)
+      .responseJSON()
+      .compactMap { json, response in
+        return parseJsonToCards(json: json)
+    }
+    req.catch({ (error) in
+      print("Failed to get cards from server")
+      print(error)
+    })
+    return req
+  }
+  
+  func parseJsonToCards(json: Any) -> [Card]? {
+    return (json as? [NSDictionary])
+      .map { $0.compactMap(parseJsonToCard) }
+    }
+  
+  func parseJsonToCard(json: Any) -> Card? {
+    guard let json = json as? NSDictionary else {
+      print("failed to parse card json to NSDictionary")
+      return nil
+    }
+    if let cardNumber = json["cardNumber"] as? String, let pubID = json["pubID"] as? String {
+      if let type = CardUtils.cardNumberToType(cardNumber: cardNumber) {
+        if let image = CardUtils.cardTypeToImage(cardType: type) {
+          return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+        }
+      } else {
+        let image = UIImage(named: "question_mark")!
+        let type = "Okänd"
+        return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+      }
+    }
+    return nil
   }
 

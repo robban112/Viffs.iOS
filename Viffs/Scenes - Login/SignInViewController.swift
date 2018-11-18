@@ -56,7 +56,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
-          setReceiptsForUser(token: accessToken)
+          setReceipts(token: accessToken)
           Current.accessToken = accessToken
           print("Accesstoken: " + accessToken)
         }
