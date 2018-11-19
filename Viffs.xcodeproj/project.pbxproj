@@ -32,6 +32,8 @@
 		EE210AEC219CCB3800F490E7 /* ReceiptCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210AEA219CCB3800F490E7 /* ReceiptCodeViewController.swift */; };
 		EE210AED219CCB3800F490E7 /* ReceiptCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */; };
 		EE210AEF219CD12E00F490E7 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */; };
+		EE210B9D219DF59500F490E7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */; };
+		EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9F21A1F8C300F490E7 /* CardUtils.swift */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
 		EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F3D2198911A00C27912 /* SettingsViewController.swift */; };
@@ -187,6 +189,8 @@
 		EE210AEA219CCB3800F490E7 /* ReceiptCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCodeViewController.swift; sourceTree = "<group>"; };
 		EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptCodeViewController.xib; sourceTree = "<group>"; };
 		EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		EE210B9F21A1F8C300F490E7 /* CardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtils.swift; sourceTree = "<group>"; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		EE617F3D2198911A00C27912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -414,6 +418,14 @@
 				EE210AEB219CCB3800F490E7 /* ReceiptCodeViewController.xib */,
 			);
 			path = "Register Receipt Code";
+			sourceTree = "<group>";
+		};
+		EE210B9E21A1F8A100F490E7 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				EE210B9F21A1F8C300F490E7 /* CardUtils.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		EE617F37219890DF00C27912 /* Help */ = {
@@ -761,12 +773,14 @@
 		FFA681AB20C03B9A00FE29DA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EE210B9E21A1F8A100F490E7 /* Card */,
 				FF68D05220CDC07A00472FF7 /* Nib utils */,
 				FFA681AE20C4991900FE29DA /* RxExtensions */,
 				FFA681AC20C03BB200FE29DA /* LoginValidation.swift */,
 				FF68D05720CE6D3200472FF7 /* ViewModelBindable.swift */,
 				FF68D05920CE772300472FF7 /* NavigationViewController.swift */,
 				FF33E00020D6AFE700FF8E5C /* Overture additions.swift */,
+				EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1013,6 +1027,7 @@
 				EE13B4BD213AD2BC007743D2 /* SignUpViewController.swift in Sources */,
 				FFA2EBE62176376700B1CBB6 /* ReceiptCollection.swift in Sources */,
 				FF68D03E20CD1C6200472FF7 /* NibInstantiable.swift in Sources */,
+				EE210B9D219DF59500F490E7 /* UIImageExtensions.swift in Sources */,
 				EE72B6E6216D58D1005E307E /* CardRegisterViewController.swift in Sources */,
 				FF68D05420CDCBC200472FF7 /* SceneCoordinator.swift in Sources */,
 				FF07F64820D26D3300B011D8 /* SecondViewController.swift in Sources */,
@@ -1054,6 +1069,7 @@
 				EE168A13212C078400AB426A /* StoreToLogo.swift in Sources */,
 				FF68D05620CDCCA500472FF7 /* SceneCoordinatorType.swift in Sources */,
 				5C7177DF20E2AB15001B4450 /* MittViffsViewModel.swift in Sources */,
+				EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */,
 				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
 				FFA2EBE32176333E00B1CBB6 /* MittViffsCell.swift in Sources */,
 				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,

@@ -26,6 +26,7 @@ struct Environment {
   //Tillfälligt!!
   var username: String? = nil
   var password: String? = nil
+  var receiptCode: String? = nil
 }
 
 func flushEnvironment() {

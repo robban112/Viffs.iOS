@@ -21,7 +21,8 @@ class ReceiptCodeViewController: ViffsViewController, QRCodeReaderViewController
     @IBAction func continueAction(_ sender: Any) {
       _ = SceneCoordinator.shared.transition(to: Scene.registerCard)
       if receiptCode.text!.count != 0 {
-        postReceiptCode(code: receiptCode.text!)
+        Current.receiptCode = receiptCode.text!
+        //postReceiptCode(code: receiptCode.text!)
       }
     }
   
@@ -38,11 +39,6 @@ class ReceiptCodeViewController: ViffsViewController, QRCodeReaderViewController
       // By using the delegate pattern
       readerVC.delegate = self
       
-      // Or by using the closure pattern
-      readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-        print(result)
-      }
-      
       // Presents the readerVC as modal form sheet
       readerVC.modalPresentationStyle = .formSheet
       present(readerVC, animated: true, completion: nil)
@@ -53,7 +49,7 @@ class ReceiptCodeViewController: ViffsViewController, QRCodeReaderViewController
     receiptCode.text = result.value
     dismiss(animated: true, completion: nil)
   }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
