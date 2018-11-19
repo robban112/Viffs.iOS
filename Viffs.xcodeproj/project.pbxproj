@@ -428,6 +428,14 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		EE210BA121A2E66D00F490E7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				EE168A12212C078400AB426A /* StoreToLogo.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		EE617F37219890DF00C27912 /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,7 +512,6 @@
 				FF38274E20C837670046F220 /* Environment.swift */,
 				EE617F462198A08100C27912 /* ViffsViewController.swift */,
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
-				EE168A12212C078400AB426A /* StoreToLogo.swift */,
 			);
 			path = Viffs;
 			sourceTree = "<group>";
@@ -773,6 +780,7 @@
 		FFA681AB20C03B9A00FE29DA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EE210BA121A2E66D00F490E7 /* Store */,
 				EE210B9E21A1F8A100F490E7 /* Card */,
 				FF68D05220CDC07A00472FF7 /* Nib utils */,
 				FFA681AE20C4991900FE29DA /* RxExtensions */,

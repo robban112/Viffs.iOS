@@ -27,9 +27,9 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
   
   func replaceCardNumber(cardNumber: String) -> String {
     if cardNumber.count > 12 {
-      let start = cardNumber.index(cardNumber.startIndex, offsetBy: 4);
+      let start = cardNumber.index(cardNumber.startIndex, offsetBy: 5);
       let end = cardNumber.index(cardNumber.startIndex, offsetBy: 12);
-      return cardNumber.replacingCharacters(in: start..<end, with: "********")
+      return cardNumber.replacingCharacters(in: start..<end, with: "*******")
     }
     return cardNumber
   }

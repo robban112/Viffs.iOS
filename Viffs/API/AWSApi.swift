@@ -31,6 +31,18 @@ func setReceipts(token: String) {
     }
 }
   
+
+  
+func scheduleRefreshUserData(token: String) -> Timer {
+  return Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
+    if let accessToken = Current.accessToken {
+      print("Refreshing user data...")
+      setReceipts(token: accessToken)
+      setCards(token: accessToken)
+    }
+  }
+}
+  
 func setStores() {
   let store = Store.init(name: "Demobutik", pubID: "78c259ca-c59b-11e8-af09-027c671add7e", address: "Birger Jarlsgatan 29")
   Current.stores = [store]

@@ -133,7 +133,6 @@ UIGestureRecognizerDelegate {
     //Flip
     transformedAlpha = -transformedAlpha + 1
     transformedAlpha = 0.3 + 0.7*transformedAlpha
-    print("transformedAlpha: \(transformedAlpha)")
     setAlpha(alpha: transformedAlpha)
   }
   

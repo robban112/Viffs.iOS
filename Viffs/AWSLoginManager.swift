@@ -40,6 +40,7 @@ class AWSLoginManager: NSObject {
           setStores()
           setOffers()
           setCards(token: accessToken)
+          Current.timer = scheduleRefreshUserData(token: accessToken)
           Current.accessToken = accessToken
           print("Accesstoken: " + accessToken)
         }
