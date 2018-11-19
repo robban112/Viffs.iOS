@@ -21,9 +21,10 @@ UIGestureRecognizerDelegate {
   let minHeightLatestReceipt: CGFloat = 230
   let maxHeightLatestReceipt: CGFloat = 400
   var maximized: Bool = false
+  var receiptTableViewScrollIndex: CGFloat = 0
   
-    @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
-    @IBOutlet var butikerLabel: UILabel!
+  @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
+  @IBOutlet var butikerLabel: UILabel!
   @IBOutlet var kvittoLabel: UILabel!
   @IBOutlet var latestReceiptSearchBar: UISearchBar!
   @IBOutlet var latestReceiptView: UIView!
@@ -31,8 +32,8 @@ UIGestureRecognizerDelegate {
   @IBOutlet var storeButton: UIButton!
   @IBOutlet var receiptTableView: UITableView!
   
-    @IBOutlet var arrowUpButton: UIButton!
-    @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
+  @IBOutlet var arrowUpButton: UIButton!
+  @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
   
   @IBAction func receiptButtonPushed(_ sender: Any) {
     SceneCoordinator.shared.transition(to: Scene.mittViffs(.init()))
@@ -45,6 +46,32 @@ UIGestureRecognizerDelegate {
       minimizeLatestReceiptView()
     } else {
       maximizeLatestReceiptView()
+    }
+  }
+  
+  enum ScrollState {
+    case maximizedAndAtTop
+    case maximized
+    case minimized
+  }
+  
+  private var currentScrollState: ScrollState = .minimized {
+    didSet {
+      switch currentScrollState {
+      case .maximizedAndAtTop:
+        //Only scroll down
+        print("Maximized and at top")
+        receiptTableView.isScrollEnabled = false
+        break
+      case .maximized:
+        print("Maximized")
+        receiptTableView.isScrollEnabled = true
+        break
+      case .minimized:
+        print("Minimized")
+        receiptTableView.isScrollEnabled = false
+        break
+      }
     }
   }
     
@@ -63,6 +90,7 @@ UIGestureRecognizerDelegate {
     super.viewDidLoad()
     receiptTableView.delegate = self
     receiptTableView.dataSource = self
+    
     
     latestReceiptSearchBar.delegate = self
     latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
@@ -100,6 +128,7 @@ UIGestureRecognizerDelegate {
   func maximizeLatestReceiptView() {
     let screenSize: CGRect = UIScreen.main.bounds
     maximized = true
+    currentScrollState = currentScrollState == .maximized ? .maximized : .maximizedAndAtTop
     self.latestReceiptViewHeightConstraint.constant = screenSize.height - 100
     UIView.animate(withDuration: 0.35) { () -> Void in
       self.addCard.isEnabled = false
@@ -114,6 +143,7 @@ UIGestureRecognizerDelegate {
   
   func minimizeLatestReceiptView() {
     maximized = false
+    currentScrollState = .minimized
     self.latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
     UIView.animate(withDuration: 0.35) { () -> Void in
       self.addCard.isEnabled = true
@@ -143,14 +173,38 @@ UIGestureRecognizerDelegate {
     kvittoLabel.alpha = alpha
   }
   
+  func updateCurtainPosition(newLocation: CGFloat, diff: CGFloat) {
+    latestReceiptViewHeightConstraint.constant += diff
+    swipeCoordLoc = newLocation
+  }
+  
+  func handleReceiptTableViewScroll(diff: CGFloat) {
+    receiptTableViewScrollIndex += diff
+    print(receiptTableViewScrollIndex)
+    if receiptTableViewScrollIndex < 10 {
+      currentScrollState = .maximizedAndAtTop
+    }
+  }
+  
   func gestureChanged(translation: CGPoint) {
     let diff = swipeCoordLoc - translation.y
     if latestReceiptViewHeightConstraint.constant >= minHeightLatestReceipt {
       if latestReceiptViewHeightConstraint.constant + diff < minHeightLatestReceipt {
         latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
       } else {
-        latestReceiptViewHeightConstraint.constant += diff
-        swipeCoordLoc = translation.y
+        switch currentScrollState {
+        case .maximizedAndAtTop:
+          if diff < 0 {
+            updateCurtainPosition(newLocation: translation.y, diff: diff)
+          } else {
+            currentScrollState = .maximized
+          }
+        case .maximized:
+          handleReceiptTableViewScroll(diff: diff)
+          //updateCurtainPosition(newLocation: translation.y, diff: diff)
+        case .minimized:
+          if diff > 0 { updateCurtainPosition(newLocation: translation.y, diff: diff) }
+        }
       }
       
       if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt && latestReceiptViewHeightConstraint.constant < maxHeightLatestReceipt {
@@ -192,7 +246,7 @@ UIGestureRecognizerDelegate {
   
 }
 
-extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
+extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScrollViewDelegate {
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     searchBar.endEditing(true)
@@ -217,4 +271,8 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate {
     tableView.deselectRow(at: indexPath, animated: true)
     tableView.deselectRow(at: indexPath, animated: true)
   }
+  
+//  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//    print("scroll penis")
+//  }
 }
