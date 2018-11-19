@@ -22,6 +22,7 @@ struct Environment {
   var stores: [Store] = []
   var offers: [Offer] = []
   var cards: [Card] = []
+  var timer: Timer? = nil
   
   //Tillfälligt!!
   var username: String? = nil
@@ -31,5 +32,4 @@ struct Environment {
 
 func flushEnvironment() {
   Current = .init()
-  
 }

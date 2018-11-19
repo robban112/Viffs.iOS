@@ -35,7 +35,6 @@ class ReceiptViewCell: UITableViewCell {
   }
   
   func loadReceiptName(receipt: Receipt) -> String {
-    print(Current.storeDict)
     if let store = Current.storeDict[receipt.storePubID] {
       return store.name
     }
