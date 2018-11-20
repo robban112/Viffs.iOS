@@ -82,11 +82,11 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
 }
 
   func convertToReceipts(json: Any) -> [Receipt]? {
-    let d = json as? [NSDictionary]
-    return (json as? [NSDictionary])
+    let dict = json as? [NSDictionary]
+    return dict
       .map { $0.compactMap(parseResponseToReceipt) }
       .map { return $0.isEmpty
-        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "")]
+        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "", cardPubID: "")]
         : $0
     }
   }
@@ -123,8 +123,10 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
   if let storePubID: String = dict["storePubID"] as? String,
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,
-    let date: String = dict["date"] as? String {
-    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID)
+    let date: String = dict["date"] as? String,
+    let cardPubID: String = dict["cardPubID"] as? String {
+    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID,
+                          date: date, storePubID: storePubID, cardPubID: cardPubID)
     addToStoreDict(storePubID: storePubID)
     return receipt
   }

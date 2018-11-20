@@ -18,7 +18,7 @@ enum Scene {
   case receiptDetail(ReceiptDetailViewModel)
   case registerCard
   case receiptCode
-  case receipts()
+  case receipts
   case receiptsSorted()
   case mittViffs(MittViffsViewModel)
   case stores
@@ -36,18 +36,8 @@ extension Scene: TargetScene {
     switch self {
     case .blipp:
       return .root(setupSideMenu())
-      
-//      let blippTabBarController = createBlippTabBarController()
-//      return .root(blippTabBarController)
-//      let homeVC = MainViewController.instantiateFromNib()
-//      homeVC.title = ""
-//      let homeNav = UINavigationController(rootViewController: homeVC)
-//      homeNav.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//      homeNav.navigationBar.shadowImage = UIImage()
-//      return .push(homeNav)
     case .scanReceipt:
       let scanReceiptVC = ScanReceiptViewController.instantiateFromNib()
-      
       scanReceiptVC.title = "Skanna kvitto"
       return .push(scanReceiptVC)
     case let .receiptDetail(receiptDetailViewModel):
@@ -59,7 +49,7 @@ extension Scene: TargetScene {
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
       registerCardVC.title = "Registrera kort"
       return .push(registerCardVC)
-    case .receipts():
+    case .receipts:
       let receiptVC = ReceiptViewController.instantiateFromNib()
       receiptVC.title = "Kvitton"
       return .push(receiptVC)

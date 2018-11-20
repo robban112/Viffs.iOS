@@ -16,4 +16,5 @@ struct Receipt: Decodable {
   let receiptPubID: String
   let date: String
   let storePubID: String
+  let cardPubID: String
 }

@@ -18,8 +18,8 @@ UIGestureRecognizerDelegate {
   var beganAnimation: Bool = false
   var ignoreFollowingSwipes: Bool = false
   var startedAnimation: Bool = false
-  let minHeightLatestReceipt: CGFloat = 230
-  let maxHeightLatestReceipt: CGFloat = 400
+  let minHeightLatestReceipt: CGFloat = UIScreen.main.bounds.height*0.25
+  let maxHeightLatestReceipt: CGFloat = UIScreen.main.bounds.height*0.5
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
   
@@ -50,9 +50,9 @@ UIGestureRecognizerDelegate {
   }
   
   enum ScrollState {
-    case maximizedAndAtTop
-    case maximized
-    case minimized
+    case maximizedAndAtTop      //Curtain at top and tableView at top
+    case maximized              //Curtain at top and tableView not at top
+    case minimized              //Curtain not at top
   }
   
   private var currentScrollState: ScrollState = .minimized {
@@ -180,38 +180,34 @@ UIGestureRecognizerDelegate {
   
   func updateCurtainPosition(newLocation: CGFloat, diff: CGFloat) {
     latestReceiptViewHeightConstraint.constant += diff
-    swipeCoordLoc = newLocation
   }
   
   func gestureChanged(translation: CGPoint) {
     let diff = swipeCoordLoc - translation.y
-    print()
-    if latestReceiptViewHeightConstraint.constant >= minHeightLatestReceipt {
-
+    let constraint = latestReceiptViewHeightConstraint.constant
+    if constraint >= minHeightLatestReceipt {
       switch currentScrollState {
       case .maximizedAndAtTop:
         if diff <= 0 {
           updateCurtainPosition(newLocation: translation.y, diff: diff)
-        } else if latestReceiptViewHeightConstraint.constant == UIScreen.main.bounds.height-100 {
+          currentScrollState = .minimized
+        } else if constraint == UIScreen.main.bounds.height-100 {
           currentScrollState = .maximized
         }
       case .maximized:
         break
-        //handleReceiptTableViewScroll(diff: diff)
-        //updateCurtainPosition(newLocation: translation.y, diff: diff)
       case .minimized:
-        print(diff)
         if diff > 0 { updateCurtainPosition(newLocation: translation.y, diff: diff) }
-        else if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt { updateCurtainPosition(newLocation: translation.y, diff: diff) }
+        else if constraint > minHeightLatestReceipt
+        { updateCurtainPosition(newLocation: translation.y, diff: diff) }
       }
-      
-      
       if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt && latestReceiptViewHeightConstraint.constant < maxHeightLatestReceipt {
         setAlphaOnButtonsAccordingToLatestReceiptHeight(height: latestReceiptViewHeightConstraint.constant)
       }
     } else {
       latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
     }
+    swipeCoordLoc = translation.y
   }
   
   func gestureEnded(verticalVelocity: CGFloat) {
