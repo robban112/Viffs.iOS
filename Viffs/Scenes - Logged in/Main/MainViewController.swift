@@ -22,7 +22,6 @@ UIGestureRecognizerDelegate {
   let maxHeightLatestReceipt: CGFloat = 400
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
-  var maxReceiptTableViewHeight: CGFloat = 0
   
   @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
   @IBOutlet var butikerLabel: UILabel!
@@ -76,7 +75,6 @@ UIGestureRecognizerDelegate {
     
   @objc func reloadTable() {
     receiptTableView.reloadData()
-    maxReceiptTableViewHeight = receiptTableView.rowHeight * CGFloat(Current.receipts.count)
   }
   
   func setObservers() {
@@ -88,8 +86,6 @@ UIGestureRecognizerDelegate {
     super.viewDidLoad()
     receiptTableView.delegate = self
     receiptTableView.dataSource = self
-    
-    maxReceiptTableViewHeight = receiptTableView.rowHeight * CGFloat(Current.receipts.count)
     
     latestReceiptSearchBar.delegate = self
     latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
@@ -186,20 +182,6 @@ UIGestureRecognizerDelegate {
     latestReceiptViewHeightConstraint.constant += diff
     swipeCoordLoc = newLocation
   }
-  
-//  func handleReceiptTableViewScroll(diff: CGFloat) {
-//    if diff > 0 {
-//      if receiptTableViewScrollIndex < maxReceiptTableViewHeight {
-//        receiptTableViewScrollIndex += diff
-//      }
-//    } else {
-//      receiptTableViewScrollIndex += diff
-//    }
-//    //print(receiptTableViewScrollIndex)
-//    if receiptTableViewScrollIndex < 10 {
-//      currentScrollState = .maximizedAndAtTop
-//    }
-//  }
   
   func gestureChanged(translation: CGPoint) {
     let diff = swipeCoordLoc - translation.y
