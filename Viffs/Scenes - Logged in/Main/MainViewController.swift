@@ -20,6 +20,7 @@ UIGestureRecognizerDelegate {
   var startedAnimation: Bool = false
   let minHeightLatestReceipt: CGFloat = UIScreen.main.bounds.height*0.25
   let maxHeightLatestReceipt: CGFloat = UIScreen.main.bounds.height*0.5
+  let curtainMaxPostion: CGFloat = UIScreen.main.bounds.height-100
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
   
@@ -131,10 +132,9 @@ UIGestureRecognizerDelegate {
   }
   
   func maximizeLatestReceiptView() {
-    let screenSize: CGRect = UIScreen.main.bounds
     maximized = true
     currentScrollState = .maximized
-    self.latestReceiptViewHeightConstraint.constant = screenSize.height - 100
+    self.latestReceiptViewHeightConstraint.constant = curtainMaxPostion
     UIView.animate(withDuration: 0.35) { () -> Void in
       self.addCard.isEnabled = false
       self.addCard.tintColor = UIColor.clear
@@ -179,13 +179,19 @@ UIGestureRecognizerDelegate {
   }
   
   func updateCurtainPosition(newLocation: CGFloat, diff: CGFloat) {
-    latestReceiptViewHeightConstraint.constant += diff
+    if latestReceiptViewHeightConstraint.constant + diff >= curtainMaxPostion {
+      latestReceiptViewHeightConstraint.constant = curtainMaxPostion
+    } else if latestReceiptViewHeightConstraint.constant + diff <= minHeightLatestReceipt {
+      latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
+    } else {
+      latestReceiptViewHeightConstraint.constant += diff
+    }
   }
   
   func gestureChanged(translation: CGPoint) {
     let diff = swipeCoordLoc - translation.y
     let constraint = latestReceiptViewHeightConstraint.constant
-    if constraint >= minHeightLatestReceipt {
+    if constraint >= minHeightLatestReceipt && constraint <= curtainMaxPostion {
       switch currentScrollState {
       case .maximizedAndAtTop:
         if diff <= 0 {
@@ -204,9 +210,7 @@ UIGestureRecognizerDelegate {
       if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt && latestReceiptViewHeightConstraint.constant < maxHeightLatestReceipt {
         setAlphaOnButtonsAccordingToLatestReceiptHeight(height: latestReceiptViewHeightConstraint.constant)
       }
-    } else {
-      latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
-    }
+    } 
     swipeCoordLoc = translation.y
   }
   
