@@ -39,7 +39,8 @@ extension CardsViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    SceneCoordinator.shared.transition(to: Scene.receipts)
+    let card = Current.cards[indexPath.row]
+    SceneCoordinator.shared.transition(to: Scene.receipts([card]))
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }

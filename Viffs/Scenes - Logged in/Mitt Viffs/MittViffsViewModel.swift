@@ -44,9 +44,9 @@ struct MittViffsViewModel: MittViffsViewModelType
   
   init(coordinator: SceneCoordinator) {
     receiptCollectionsContents = Driver.just([
-      ReceiptCollection(name: "Alla kvitton", logo: UIImage(named: "Inbox-green-2")!, scene: Scene.receipts),
-      ReceiptCollection(name: "Importerat", logo: UIImage(named: "Imported-green-2")!, scene: Scene.receipts),
-      ReceiptCollection(name: "Scannat", logo: UIImage(named: "Scanned-green-2")!, scene: Scene.receipts),
+      ReceiptCollection(name: "Alla kvitton", logo: UIImage(named: "Inbox-green-2")!, scene: Scene.receipts(Current.cards)),
+      ReceiptCollection(name: "Importerat", logo: UIImage(named: "Imported-green-2")!, scene: Scene.receipts(Current.cards)),
+      ReceiptCollection(name: "Scannat", logo: UIImage(named: "Scanned-green-2")!, scene: Scene.receipts(Current.cards)),
       ReceiptCollection(name: "Butiker", logo: UIImage(named: "Butiker-green-2")!, scene: Scene.stores),
       ReceiptCollection(name: "Kort", logo: UIImage(named: "Kort-green-2")!, scene: Scene.cards)
       ])

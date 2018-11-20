@@ -23,6 +23,7 @@ UIGestureRecognizerDelegate {
   let curtainMaxPostion: CGFloat = UIScreen.main.bounds.height-100
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
+  var cameraButtonIsShown: Bool = false
   
   @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
   @IBOutlet var butikerLabel: UILabel!
@@ -61,12 +62,15 @@ UIGestureRecognizerDelegate {
       switch currentScrollState {
       case .maximizedAndAtTop:
         //Only scroll down
+        hideCameraButton()
         receiptTableView.isScrollEnabled = false
         break
       case .maximized:
+        hideCameraButton()
         receiptTableView.isScrollEnabled = true
         break
       case .minimized:
+        showCameraButton()
         receiptTableView.isScrollEnabled = false
         break
       }
@@ -96,9 +100,7 @@ UIGestureRecognizerDelegate {
     latestReceiptView.addGestureRecognizer(panRecognizer)
     setObservers()
     setupSideMenu()
-    
-    toggleNavButton()
-
+    showCameraButton()
   }
   
   func setupSideMenu() {
@@ -109,12 +111,18 @@ UIGestureRecognizerDelegate {
     SideMenuManager.default.menuRightNavigationController = navRight
   }
   
-  func toggleNavButton() {
-    if !maximized {
+  func hideCameraButton() {
+    if cameraButtonIsShown {
+      cameraButtonIsShown = false
+      navigationItem.setRightBarButton(nil, animated: true)
+    }
+  }
+  
+  func showCameraButton() {
+    if !cameraButtonIsShown {
+      cameraButtonIsShown = true
       addCard = addButton()
       navigationItem.setRightBarButton(addCard, animated: true)
-    } else {
-      navigationItem.setRightBarButton(nil, animated: true)
     }
   }
   
@@ -133,17 +141,14 @@ UIGestureRecognizerDelegate {
   
   func maximizeLatestReceiptView() {
     maximized = true
-    currentScrollState = .maximized
     self.latestReceiptViewHeightConstraint.constant = curtainMaxPostion
     UIView.animate(withDuration: 0.35) { () -> Void in
-      self.addCard.isEnabled = false
-      self.addCard.tintColor = UIColor.clear
-      self.toggleNavButton()
       self.latestReceiptSearchBar.isHidden = false
       self.tableToSuperviewConstraint.constant = 60
       self.arrowUpButton.setBackgroundImage(#imageLiteral(resourceName: "arrow-down-2"), for: .normal)
       self.view.layoutIfNeeded()
     }
+    currentScrollState = .maximized
     startedAnimation = false
   }
   
@@ -152,7 +157,6 @@ UIGestureRecognizerDelegate {
     currentScrollState = .minimized
     self.latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
     UIView.animate(withDuration: 0.35) { () -> Void in
-      self.toggleNavButton()
       self.latestReceiptSearchBar.isHidden = true
       self.tableToSuperviewConstraint.constant = 25
       self.arrowUpButton.setBackgroundImage(#imageLiteral(resourceName: "arrow-up-2"), for: .normal)

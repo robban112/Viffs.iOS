@@ -23,6 +23,8 @@ class ReceiptViewController: ViffsViewController {
   
   @IBOutlet var receiptTableView: UITableView!
   
+  var cards: [Card]?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     receiptTableView.delegate = self
