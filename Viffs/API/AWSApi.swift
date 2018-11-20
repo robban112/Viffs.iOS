@@ -21,11 +21,14 @@ func setReceipts(token: String) {
   firstly {
     AWSGetReceiptsForUser(token: token)
   }.done { receipts in
-    //FIX: Remove receipts from currentUser.
-    let rev: [Receipt] = receipts.reversed()
-    Current.user = User(username: "", password: "", receipts: rev)
-    Current.receipts = receipts
-    NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
+    
+    //NOTE: Only update receipts when the total receipt length is different than current.
+    if Current.receipts.count != receipts.count {
+      let rev: [Receipt] = receipts.reversed()
+      Current.user = User(username: "", password: "", receipts: rev)
+      Current.receipts = receipts
+      NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
+    }
     }.catch { (error) in
       print(error)
     }
@@ -79,6 +82,7 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
 }
 
   func convertToReceipts(json: Any) -> [Receipt]? {
+    let d = json as? [NSDictionary]
     return (json as? [NSDictionary])
       .map { $0.compactMap(parseResponseToReceipt) }
       .map { return $0.isEmpty
