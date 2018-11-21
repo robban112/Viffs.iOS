@@ -111,7 +111,6 @@
 		EEDDC2CA21753B90009EA895 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDDC2C921753B90009EA895 /* AWSAuthCore.framework */; };
 		EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */; };
 		EEF9657621A588F700B0A952 /* SwiftGifOrigin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF9657521A588F700B0A952 /* SwiftGifOrigin.framework */; };
-		EEF9657821A58C1300B0A952 /* Loading-Spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEF9657721A58C1300B0A952 /* Loading-Spinner.gif */; };
 		FF07F63720D26A6F00B011D8 /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63620D26A6F00B011D8 /* MoreViewController.xib */; };
 		FF07F63A20D26AD600B011D8 /* MittViffsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */; };
 		FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF07F63F20D26B3E00B011D8 /* StoresViewController.xib */; };
@@ -277,7 +276,6 @@
 		EEF9657121A584B300B0A952 /* SwiftSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF9657321A585DD00B0A952 /* Macaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Macaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF9657521A588F700B0A952 /* SwiftGifOrigin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftGifOrigin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEF9657721A58C1300B0A952 /* Loading-Spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Loading-Spinner.gif"; path = "../../../../Downloads/Loading-Spinner.gif"; sourceTree = "<group>"; };
 		EEFD60212193364300A2957B /* WeScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF07F63620D26A6F00B011D8 /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		FF07F63920D26AD600B011D8 /* MittViffsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MittViffsViewController.xib; sourceTree = "<group>"; };
@@ -511,7 +509,6 @@
 			isa = PBXGroup;
 			children = (
 				EE8F6C1E216E2D83003A12A8 /* BridgingHeader.h */,
-				EEF9657721A58C1300B0A952 /* Loading-Spinner.gif */,
 				EE8D4E552157C76A00341157 /* Fonts */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
 				EEDDC2CB21754F95009EA895 /* AWSLoginManager.swift */,
@@ -968,7 +965,6 @@
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
 				EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */,
 				EE8D4E3C2157C70800341157 /* MontserratAlternates-BlackItalic.otf in Resources */,
-				EEF9657821A58C1300B0A952 /* Loading-Spinner.gif in Resources */,
 				EE8D4E302157C70800341157 /* Montserrat-Bold.otf in Resources */,
 				EE8D4E3B2157C70800341157 /* Montserrat-ExtraLight.otf in Resources */,
 			);
