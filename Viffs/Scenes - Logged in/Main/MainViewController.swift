@@ -65,7 +65,7 @@ UIGestureRecognizerDelegate {
       case .maximizedAndAtTop:
         //Only scroll down
         hideCameraButton()
-        receiptTableView.isScrollEnabled = false
+        receiptTableView.isScrollEnabled = true
         break
       case .maximized:
         hideCameraButton()
