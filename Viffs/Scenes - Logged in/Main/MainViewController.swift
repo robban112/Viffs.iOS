@@ -149,7 +149,7 @@ UIGestureRecognizerDelegate {
       self.arrowUpButton.setBackgroundImage(#imageLiteral(resourceName: "arrow-down-2"), for: .normal)
       self.view.layoutIfNeeded()
     }
-    currentScrollState = .maximized
+    currentScrollState = .maximizedAndAtTop
     startedAnimation = false
   }
   
