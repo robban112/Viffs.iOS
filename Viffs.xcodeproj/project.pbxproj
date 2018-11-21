@@ -35,6 +35,7 @@
 		EE210B9D219DF59500F490E7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */; };
 		EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9F21A1F8C300F490E7 /* CardUtils.swift */; };
 		EE46AFE621A560CD00C283C8 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE46AFE521A560CD00C283C8 /* SkeletonView.framework */; };
+		EE4CFF0121A5F3D5004BBF64 /* FilterParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
 		EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F3D2198911A00C27912 /* SettingsViewController.swift */; };
@@ -194,6 +195,7 @@
 		EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		EE210B9F21A1F8C300F490E7 /* CardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtils.swift; sourceTree = "<group>"; };
 		EE46AFE521A560CD00C283C8 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterParameters.swift; sourceTree = "<group>"; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		EE617F3D2198911A00C27912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 				FFA2EBE52176376700B1CBB6 /* ReceiptCollection.swift */,
 				FF29E7A421887A7000F56F2B /* Offer.swift */,
 				FF29E7B52188827B00F56F2B /* Card.swift */,
+				EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				5C7177DF20E2AB15001B4450 /* MittViffsViewModel.swift in Sources */,
 				EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */,
 				FFD95B0220CBD9090010FBC4 /* ReceiptDetailViewModel.swift in Sources */,
+				EE4CFF0121A5F3D5004BBF64 /* FilterParameters.swift in Sources */,
 				FFA2EBE32176333E00B1CBB6 /* MittViffsCell.swift in Sources */,
 				EE962D5020BDC5B7006CEC0F /* User.swift in Sources */,
 				FF07F65520D27D9C00B011D8 /* MittViffsViewController.swift in Sources */,

@@ -30,7 +30,7 @@ struct Environment {
     }
   }
   
-  //Tillfälligt!!
+  //Tillfälligt!! Andvänds vid reg processen
   var username: String? = nil
   var password: String? = nil
   var receiptCode: String? = nil

@@ -18,7 +18,7 @@ enum Scene {
   case receiptDetail(ReceiptDetailViewModel)
   case registerCard
   case receiptCode
-  case receipts([Card])
+  case receipts(FilterParameters)
   case receiptsSorted()
   case mittViffs(MittViffsViewModel)
   case stores
@@ -49,10 +49,10 @@ extension Scene: TargetScene {
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
       registerCardVC.title = "Registrera kort"
       return .push(registerCardVC)
-    case .receipts(let cards):
+    case .receipts(let filterParameters):
       
       let receiptVC = ReceiptViewController.instantiateFromNib()
-      receiptVC.cards = cards
+      receiptVC.filterParameters = filterParameters
       receiptVC.title = "Kvitton"
       return .push(receiptVC)
     case .receiptsSorted():

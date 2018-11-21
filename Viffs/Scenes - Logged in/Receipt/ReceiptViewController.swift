@@ -25,17 +25,36 @@ class ReceiptViewController: ViffsViewController {
   
   var cards: [Card]?
   var filteredReceipts: [Receipt] = []
+  var filterParameters: FilterParameters?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     receiptTableView.delegate = self
     receiptTableView.dataSource = self
     receiptTableView.registerCell(type: ReceiptViewCell.self)
-    filterReceiptByCards(cards: cards ?? Current.cards)
+    filterWithCurrentParameters()
+    //filteredReceipts = filterReceiptByCards(cards: cards ?? Current.cards, receipts: Current.receipts)
   }
   
-  func filterReceiptByCards(cards: [Card]) {
-    filteredReceipts = Current.receipts.filter({ (receipt) -> Bool in
+  func filterWithCurrentParameters() {
+    filteredReceipts = filterByParameters(filterParameters: filterParameters ?? FilterParameters.init(cards: Current.cards, filterByUserUpload: false), filteredReceipts: Current.receipts)
+  }
+  
+  func filterByParameters(filterParameters: FilterParameters, filteredReceipts: [Receipt]) -> [Receipt] {
+    var filtered = filteredReceipts
+    if filterParameters.cards.count != Current.cards.count {
+      filtered = filterReceiptByCards(cards: filterParameters.cards, receipts: filteredReceipts)
+    }
+    if filterParameters.filterByUserUpload {
+      filtered = filteredReceipts.filter { (receipt) -> Bool in
+        return receipt.userUploaded
+      }
+    }
+    return filtered
+  }
+  
+  func filterReceiptByCards(cards: [Card], receipts: [Receipt]) -> [Receipt] {
+    return receipts.filter({ (receipt) -> Bool in
       for card in cards {
         if card.pubID == receipt.cardPubID { return true }
       }
@@ -45,7 +64,7 @@ class ReceiptViewController: ViffsViewController {
   
   @objc func reloadTable() {
     receiptTableView.reloadData()
-    filterReceiptByCards(cards: cards ?? Current.cards)
+    filterWithCurrentParameters()
   }
   
   func setObservers() {

@@ -88,7 +88,7 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
     return dict
       .map { $0.compactMap(parseResponseToReceipt) }
       .map { return $0.isEmpty
-        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "", cardPubID: "")]
+        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "", cardPubID: "", userUploaded: false)]
         : $0
     }
   }
@@ -126,9 +126,9 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,
     let date: String = dict["date"] as? String,
-    let cardPubID: String = dict["cardPubID"] as? String {
-    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID,
-                          date: date, storePubID: storePubID, cardPubID: cardPubID)
+    let cardPubID: String = dict["cardPubID"] as? String,
+    let userUploaded: Bool = dict["userUploaded"] as? Bool {
+    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID, cardPubID: cardPubID, userUploaded: userUploaded)
     addToStoreDict(storePubID: storePubID)
     return receipt
   }
