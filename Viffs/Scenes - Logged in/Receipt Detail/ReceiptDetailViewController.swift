@@ -10,13 +10,15 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SkeletonView
+import SwiftGifOrigin
 
 class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
   var viewModel: ReceiptDetailViewModelType!
-  
-  @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet var loadingImage: UIImageView!
+    @IBOutlet var imageView: UIImageView!
   @IBOutlet weak var backButton: UIButton!
   
   func bindViewModel() {
@@ -24,11 +26,23 @@ class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   }
   
   func setIsLoading() {
-    imageView.showAnimatedGradientSkeleton()
+    //imageView.showAnimatedGradientSkeleton()
+    let gif = UIImage.gif(name: "Loading-Spinner")
+    loadingImage.image = gif
   }
   
-  func setIsNotLoading() {
-    imageView.hideSkeleton()
+  @objc func setIsNotLoading() {
+    loadingImage.image = nil
+  }
+  
+  override func viewDidLoad() {
+    setObservers()
+    setIsLoading()
+    
+  }
+  
+  func setObservers() {
+    NotificationCenter.default.addObserver(self, selector: #selector(setIsNotLoading), name: Notification.Name("ReceiptImageSet"), object: nil)
   }
   
   private func bindViewModelToUI() {

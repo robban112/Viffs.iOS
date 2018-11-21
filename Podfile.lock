@@ -35,6 +35,7 @@ PODS:
     - RxAtomic (~> 4.4)
   - SideMenu (5.0.3)
   - SkeletonView (1.4.1)
+  - SwiftGifOrigin (1.6.1)
   - WeScan (0.9.1)
 
 DEPENDENCIES:
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SideMenu
   - SkeletonView
+  - SwiftGifOrigin (~> 1.6.1)
   - WeScan (from `https://github.com/WeTransfer/WeScan.git`, branch `develop`)
 
 SPEC REPOS:
@@ -74,6 +76,7 @@ SPEC REPOS:
     - RxSwift
     - SideMenu
     - SkeletonView
+    - SwiftGifOrigin
 
 EXTERNAL SOURCES:
   WeScan:
@@ -103,8 +106,9 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   WeScan: 69ec5d7e43d49822627a78a45fb553a26ab5de89
 
-PODFILE CHECKSUM: 6c2244514c11658a4baeeeea9ba0d46909585c64
+PODFILE CHECKSUM: b794ca363e68b106c94bfbac5d2b8c708f7a1ce6
 
 COCOAPODS: 1.5.3

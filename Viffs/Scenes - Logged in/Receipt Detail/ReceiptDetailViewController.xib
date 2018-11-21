@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReceiptDetailViewController" customModule="Viffs" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="WiC-ym-d9e" id="F4U-Li-rDs"/>
+                <outlet property="loadingImage" destination="PsT-Vc-td3" id="fwj-8j-wbj"/>
                 <outlet property="view" destination="iN0-l3-epB" id="UUk-8J-ziz"/>
             </connections>
         </placeholder>
@@ -27,19 +28,26 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-Vc-td3">
+                    <rect key="frame" x="123" y="279" width="128" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="WiC-ym-d9e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="9oM-1Q-buF"/>
                 <constraint firstAttribute="trailing" secondItem="WiC-ym-d9e" secondAttribute="trailing" id="Ahw-yp-x24"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="PsT-Vc-td3" secondAttribute="bottom" constant="260" id="G4a-bC-SI3"/>
                 <constraint firstItem="WiC-ym-d9e" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="WCo-Ac-rCm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PsT-Vc-td3" secondAttribute="trailing" constant="124" id="d9V-gL-ErW"/>
+                <constraint firstItem="PsT-Vc-td3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="123" id="f5a-SI-zSg"/>
+                <constraint firstItem="PsT-Vc-td3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="259" id="oCU-oV-f14"/>
                 <constraint firstItem="WiC-ym-d9e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vag-cQ-0Qd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
             </userDefinedRuntimeAttributes>
-            <point key="canvasLocation" x="102.5" y="53.5"/>
+            <point key="canvasLocation" x="101.59999999999999" y="52.623688155922046"/>
         </view>
     </objects>
 </document>

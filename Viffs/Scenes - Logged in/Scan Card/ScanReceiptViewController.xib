@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanReceiptViewController" customModule="Viffs" customModuleProvider="target">
             <connections>
+                <outlet property="loadingImage" destination="cG7-gZ-R7u" id="sKu-Qy-DzV"/>
                 <outlet property="receiptImage" destination="gMA-AM-Wn0" id="uLb-k9-MLu"/>
                 <outlet property="takePhotoButton" destination="Cs2-Vl-5tU" id="Ity-xE-XjX"/>
                 <outlet property="view" destination="CpF-q2-nBt" id="Xta-Y2-K89"/>
@@ -28,7 +29,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMA-AM-Wn0">
-                    <rect key="frame" x="40" y="70" width="295" height="389"/>
+                    <rect key="frame" x="67" y="107" width="241" height="301"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs2-Vl-5tU">
                     <rect key="frame" x="67.5" y="478" width="240" height="60"/>
@@ -51,15 +52,24 @@
                         <action selector="sparaKvitto:" destination="-1" eventType="touchUpInside" id="u8D-5u-8WU"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cG7-gZ-R7u">
+                    <rect key="frame" x="170" y="427" width="35" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="tkY-kT-dW4"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="gMA-AM-Wn0" firstAttribute="leading" secondItem="gNB-b5-lbW" secondAttribute="leading" constant="40" id="ABS-TY-aIC"/>
+                <constraint firstItem="gMA-AM-Wn0" firstAttribute="leading" secondItem="gNB-b5-lbW" secondAttribute="leading" constant="67" id="ABS-TY-aIC"/>
                 <constraint firstItem="gMA-AM-Wn0" firstAttribute="centerX" secondItem="CpF-q2-nBt" secondAttribute="centerX" id="Ksl-5s-1Og"/>
                 <constraint firstItem="Cs2-Vl-5tU" firstAttribute="centerX" secondItem="CpF-q2-nBt" secondAttribute="centerX" id="OBs-Pc-g75"/>
+                <constraint firstItem="cG7-gZ-R7u" firstAttribute="leading" secondItem="gNB-b5-lbW" secondAttribute="leading" constant="170" id="OV5-NJ-Wqs"/>
                 <constraint firstAttribute="bottom" secondItem="Cs2-Vl-5tU" secondAttribute="bottom" constant="129" id="Ujp-YC-C5s"/>
-                <constraint firstItem="gMA-AM-Wn0" firstAttribute="top" secondItem="gNB-b5-lbW" secondAttribute="top" constant="50" id="YMg-g6-Lb2"/>
-                <constraint firstItem="Cs2-Vl-5tU" firstAttribute="top" secondItem="gMA-AM-Wn0" secondAttribute="bottom" constant="19" id="ZsR-Ie-ZH7"/>
+                <constraint firstItem="gMA-AM-Wn0" firstAttribute="top" secondItem="gNB-b5-lbW" secondAttribute="top" constant="87" id="YMg-g6-Lb2"/>
+                <constraint firstItem="Cs2-Vl-5tU" firstAttribute="top" secondItem="cG7-gZ-R7u" secondAttribute="bottom" constant="15" id="gxB-Pq-tIb"/>
+                <constraint firstItem="gNB-b5-lbW" firstAttribute="trailing" secondItem="cG7-gZ-R7u" secondAttribute="trailing" constant="170" id="yLz-PX-T5z"/>
+                <constraint firstItem="cG7-gZ-R7u" firstAttribute="top" secondItem="gMA-AM-Wn0" secondAttribute="bottom" constant="19" id="zFA-3V-gpc"/>
             </constraints>
             <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="gNB-b5-lbW"/>

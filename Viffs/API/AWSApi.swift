@@ -144,7 +144,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
       .responseData()
       .compactMap { data, response in
-        Current.isLoadingReceiptDetail = false
+        NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
         return UIImage(data: data)
       }
   }
@@ -160,6 +160,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
         switch(response.result)
         {
         case .success(let value):
+          NotificationCenter.default.post(name: Notification.Name("UploadedImage"), object: nil)
           print("Successfully posted receipt")
           print(value)
         case .failure(let value):

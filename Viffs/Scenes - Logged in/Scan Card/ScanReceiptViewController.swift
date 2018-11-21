@@ -14,6 +14,7 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
   
   @IBOutlet var receiptImage: UIImageView!
   @IBOutlet var takePhotoButton: UIButton!
+    @IBOutlet var loadingImage: UIImageView!
     
   @IBAction func sparaKvitto(_ sender: Any) {
     //receiptImage To base64 and post request
@@ -21,7 +22,18 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
     let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
     let size = strBase64.utf8.count
     let s = strBase64.count
+    setLoading()
     uploadImage(base64: strBase64)
+  }
+  
+  func setLoading() {
+    let gif = UIImage.gif(name: "Loading-Spinner")
+    loadingImage.image = gif
+    NotificationCenter.default.addObserver(self, selector: #selector(setNotLoading), name: Notification.Name("UploadedImage"), object: nil)
+  }
+  
+  @objc func setNotLoading() {
+    loadingImage.image = nil
   }
   
   func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
