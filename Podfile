@@ -21,6 +21,9 @@ target 'Viffs' do
   
   #QRReader  
   pod 'QRCodeReader.swift', '~> 9.0.1'
+  
+  #Loading 
+  pod 'SkeletonView'
 
   #AWS
   pod 'AWSCore', '~> 2.6.0'

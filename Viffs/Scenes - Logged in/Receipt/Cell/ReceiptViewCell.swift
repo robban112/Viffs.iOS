@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SkeletonView
 
 class ReceiptViewCell: UITableViewCell {
+  
   var receipt: Receipt? = nil {
     didSet {
       guard let receipt = receipt else { return }
@@ -20,9 +22,22 @@ class ReceiptViewCell: UITableViewCell {
       receiptDate.text = String(receipt.date.prefix(10))
     }
   }
-  
   override func prepareForReuse() {
     receipt = nil
+  }
+  
+  func setIsLoading() {
+    receiptDate.showAnimatedGradientSkeleton()
+    storeLogo.showAnimatedGradientSkeleton()
+    receiptName.showAnimatedGradientSkeleton()
+    receiptTotal.showAnimatedGradientSkeleton()
+  }
+  
+  func setNotLoading() {
+    receiptDate.hideSkeleton()
+    storeLogo.hideSkeleton()
+    receiptName.hideSkeleton()
+    receiptTotal.hideSkeleton()
   }
   
   func loadStoreImage(receiptName: String) -> UIImage? {

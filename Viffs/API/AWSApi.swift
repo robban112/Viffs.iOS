@@ -24,6 +24,7 @@ func setReceipts(token: String) {
     
     //NOTE: Only update receipts when the total receipt length is different than current.
     if Current.receipts.count != receipts.count {
+      Current.isLoadingReceipts = false
       let rev: [Receipt] = receipts.reversed()
       Current.user = User(username: "", password: "", receipts: rev)
       Current.receipts = receipts

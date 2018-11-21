@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import SideMenu
+import SkeletonView
 
 class MainViewController: ViffsViewController, UITableViewDataSource,
 UIGestureRecognizerDelegate {
@@ -24,6 +25,7 @@ UIGestureRecognizerDelegate {
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
   var cameraButtonIsShown: Bool = false
+  var placeHolderReceipts = [1,2,3]
   
   @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
   @IBOutlet var butikerLabel: UILabel!
@@ -91,7 +93,6 @@ UIGestureRecognizerDelegate {
     super.viewDidLoad()
     receiptTableView.delegate = self
     receiptTableView.dataSource = self
-    
     latestReceiptSearchBar.delegate = self
     latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
     
@@ -202,6 +203,7 @@ UIGestureRecognizerDelegate {
           updateCurtainPosition(newLocation: translation.y, diff: diff)
           currentScrollState = .minimized
         } else if constraint == UIScreen.main.bounds.height-100 {
+
           currentScrollState = .maximized
         }
       case .maximized:
@@ -251,6 +253,18 @@ UIGestureRecognizerDelegate {
   
 }
 
+extension MainViewController: SkeletonTableViewDataSource {
+  func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 2
+  }
+  func numSections(in collectionSkeletonView: UITableView) -> Int {
+    return 1
+  }
+  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+    return "ReceiptViewCell"
+  }
+}
+
 extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScrollViewDelegate {
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -258,11 +272,19 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScroll
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if Current.isLoadingReceipts {
+      return 2
+    }
     return Current.receipts.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = ReceiptViewCell.instantiateFromNib()
+    if Current.isLoadingReceipts {
+      cell.setIsLoading()
+      return cell
+    }
+    cell.setNotLoading()
     if let receipt = Current.user?.receipts?[indexPath.row] {
       cell.receipt = receipt
     }

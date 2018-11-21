@@ -34,6 +34,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SideMenu (5.0.3)
+  - SkeletonView (1.4.1)
   - WeScan (0.9.1)
 
 DEPENDENCIES:
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - RxDataSources (~> 3.0a)
   - RxSwift (~> 4.0)
   - SideMenu
+  - SkeletonView
   - WeScan (from `https://github.com/WeTransfer/WeScan.git`, branch `develop`)
 
 SPEC REPOS:
@@ -71,6 +73,7 @@ SPEC REPOS:
     - RxDataSources
     - RxSwift
     - SideMenu
+    - SkeletonView
 
 EXTERNAL SOURCES:
   WeScan:
@@ -99,8 +102,9 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
   WeScan: 69ec5d7e43d49822627a78a45fb553a26ab5de89
 
-PODFILE CHECKSUM: 281f8ca8d56b3d9080b31159cd1a70c26fe272b9
+PODFILE CHECKSUM: 6c2244514c11658a4baeeeea9ba0d46909585c64
 
 COCOAPODS: 1.5.3

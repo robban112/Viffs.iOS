@@ -34,6 +34,7 @@
 		EE210AEF219CD12E00F490E7 /* QRCodeReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */; };
 		EE210B9D219DF59500F490E7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */; };
 		EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9F21A1F8C300F490E7 /* CardUtils.swift */; };
+		EE46AFE621A560CD00C283C8 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE46AFE521A560CD00C283C8 /* SkeletonView.framework */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
 		EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F3D2198911A00C27912 /* SettingsViewController.swift */; };
@@ -191,6 +192,7 @@
 		EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		EE210B9F21A1F8C300F490E7 /* CardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtils.swift; sourceTree = "<group>"; };
+		EE46AFE521A560CD00C283C8 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		EE617F3D2198911A00C27912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE46AFE621A560CD00C283C8 /* SkeletonView.framework in Frameworks */,
 				EE210AEF219CD12E00F490E7 /* QRCodeReader.framework in Frameworks */,
 				EE1E2D952191CB99002396F7 /* Overture.framework in Frameworks */,
 				EE1E2D932191CB94002396F7 /* Result.framework in Frameworks */,
@@ -351,6 +354,7 @@
 		35CB1C987188EE324ADB6859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE46AFE521A560CD00C283C8 /* SkeletonView.framework */,
 				EE210AEE219CD12E00F490E7 /* QRCodeReader.framework */,
 				EEFD60212193364300A2957B /* WeScan.framework */,
 				EE1E2D942191CB99002396F7 /* Overture.framework */,
@@ -981,6 +985,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
 				"${BUILT_PRODUCTS_DIR}/WeScan/WeScan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1000,6 +1005,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeScan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
