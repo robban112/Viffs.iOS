@@ -14,7 +14,7 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
   
   @IBOutlet var receiptImage: UIImageView!
   @IBOutlet var takePhotoButton: UIButton!
-  
+    
   @IBAction func sparaKvitto(_ sender: Any) {
     //receiptImage To base64 and post request
     let imageData = receiptImage.image!.jpegData(compressionQuality: 0.5)!
@@ -50,7 +50,7 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
   override func viewDidLoad() {
     let scannerVC = ImageScannerController()
     scannerVC.imageScannerDelegate = self
-    self.present(scannerVC, animated: true)
+    self.present(scannerVC, animated: false)
     super.viewDidLoad()
   }
 }

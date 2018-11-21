@@ -24,6 +24,7 @@ struct Environment {
   var cards: [Card] = []
   var timer: Timer? = nil
   var isLoadingReceipts: Bool = true
+  var isLoadingReceiptDetail: Bool = true
   
   //Tillfälligt!!
   var username: String? = nil

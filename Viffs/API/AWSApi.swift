@@ -135,6 +135,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
 }
 
   func getImage(for receipt: Receipt) -> Promise<UIImage> {
+    Current.isLoadingReceiptDetail = true
     let headers = ["AccessToken" : Current.accessToken ?? ""]
     //extreeeem fullösning
     guard receipt.receiptPubID != "demo-mock" else {
@@ -143,6 +144,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
       .responseData()
       .compactMap { data, response in
+        Current.isLoadingReceiptDetail = false
         return UIImage(data: data)
       }
   }

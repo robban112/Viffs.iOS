@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SkeletonView
 
 class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   
@@ -20,6 +21,14 @@ class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   
   func bindViewModel() {
     bindViewModelToUI()
+  }
+  
+  func setIsLoading() {
+    imageView.showAnimatedGradientSkeleton()
+  }
+  
+  func setIsNotLoading() {
+    imageView.hideSkeleton()
   }
   
   private func bindViewModelToUI() {
