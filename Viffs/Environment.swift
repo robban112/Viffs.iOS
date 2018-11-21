@@ -34,6 +34,7 @@ struct Environment {
   var username: String? = nil
   var password: String? = nil
   var receiptCode: String? = nil
+  var cardNumber: String? = nil
 }
 
 func flushEnvironment() {

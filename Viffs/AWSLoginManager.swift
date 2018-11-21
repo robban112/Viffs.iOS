@@ -42,6 +42,11 @@ class AWSLoginManager: NSObject {
           setCards(token: accessToken)
           Current.timer = scheduleRefreshUserData(token: accessToken)
           Current.accessToken = accessToken
+          
+          //Reg, Tillfälligt!
+          if let receiptCode = Current.receiptCode, let cardNumber = Current.cardNumber {
+            postReceiptCodeAndCard(code: receiptCode, cardNumber: cardNumber)
+          }
           print("Accesstoken: " + accessToken)
         }
       })

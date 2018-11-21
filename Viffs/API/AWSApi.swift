@@ -56,6 +56,7 @@ func setStores() {
   firstly {
     AWSGetCards(token: token)
   }.done { cards in
+    NotificationCenter.default.post(name: Notification.Name("CardsSet"), object: nil)
     Current.cards = cards
   }.catch { (error) in
     print("Unable to retrieve cards")
@@ -178,7 +179,8 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let headers = ["AccessToken" : Current.accessToken ?? "",
                    "Content-Type" : "application/json"]
     let json: [ String : Any] = [
-      "RegCode": code
+      "RegCode": code,
+      "CardNumber": cardNumber
     ]
     
     Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
@@ -191,7 +193,6 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
           }
           print("Successfully posted receipt code")
           print(value)
-          postCard(receiptCode: code, cardNumber: cardNumber)
         case .failure(let value):
           print("failed to post receipt code")
           print(response.result)
@@ -264,7 +265,8 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
   }
   
   func parseJsonToCards(json: Any) -> [Card]? {
-    return (json as? [NSDictionary])
+    let json = json as? [NSDictionary]
+    return json
       .map { $0.compactMap(parseJsonToCard) }
     }
   

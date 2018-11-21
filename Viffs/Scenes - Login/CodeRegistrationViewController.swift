@@ -18,7 +18,8 @@ class CodeRegistrationViewController: UIViewController , QRCodeReaderViewControl
   @IBAction func continueAction(_ sender: Any) {
     print("registercode: \(registerCode?.text)")
     if registerCode.text?.count != 0 {
-      postReceiptCode(code: registerCode.text!)
+      Current.receiptCode = registerCode.text
+
     }
     //self.navigationController?.popToRootViewController(animated: true)
   }

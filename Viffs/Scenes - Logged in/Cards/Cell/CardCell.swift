@@ -19,7 +19,7 @@ class CardCell: UITableViewCell {
       guard let card = card else { return }
       name.text = card.cardType
       picture.image = cardTypeToImage[card.cardType]
-      
+      lastfour.text = String(card.number.characters.suffix(4))
     }
   }
   

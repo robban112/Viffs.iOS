@@ -52,6 +52,7 @@ extension Scene: TargetScene {
     case .receipts(let cards):
       
       let receiptVC = ReceiptViewController.instantiateFromNib()
+      receiptVC.cards = cards
       receiptVC.title = "Kvitton"
       return .push(receiptVC)
     case .receiptsSorted():

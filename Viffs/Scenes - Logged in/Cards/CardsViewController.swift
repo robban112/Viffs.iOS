@@ -15,9 +15,14 @@ class CardsViewController: ViffsViewController {
     @IBAction func AddCardButtonPushed(_ sender: Any) {
         SceneCoordinator.shared.transition(to: Scene.receiptCode)
     }
+  
+    @objc func reloadTable() {
+      cardsTableView.reloadData()
+    }
     
     override func viewDidLoad() {
     super.viewDidLoad()
+    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("CardsSet"), object: nil)
     cardsTableView.registerCell(type: CardCell.self)
     cardsTableView.delegate = self
     cardsTableView.dataSource = self

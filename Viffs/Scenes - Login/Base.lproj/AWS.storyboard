@@ -279,7 +279,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="5gQ-Yo-ksz"/>
                                     <constraint firstAttribute="height" constant="34" id="ZoC-6n-lrD"/>
-                                    <constraint firstAttribute="width" constant="343" id="s3G-YY-wWB"/>
                                 </constraints>
                                 <state key="normal" title="Scanna in kort">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -298,7 +297,6 @@
                                 <rect key="frame" x="16" y="377" width="343" height="34"/>
                                 <color key="backgroundColor" white="0.83013237850555555" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="HUp-o7-FpH"/>
                                     <constraint firstAttribute="height" constant="34" id="nPY-uL-eKa"/>
                                 </constraints>
                                 <state key="normal" title="Registrera kort senare">
@@ -315,7 +313,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kortnummer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-JC-njz">
-                                <rect key="frame" x="16" y="217" width="343" height="30"/>
+                                <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Bm3-dJ-q7K"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="QmY-5B-N2N"/>
@@ -324,69 +322,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRT-YZ-5Vn">
-                                <rect key="frame" x="189" y="255" width="169" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="169" id="Edy-aM-8cv"/>
-                                    <constraint firstAttribute="height" constant="30" id="FaW-bA-YsK"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ÅÅ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-Ut-rP7">
-                                <rect key="frame" x="102" y="255" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="jhR-LO-dbO"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRB-V4-98f">
-                                <rect key="frame" x="16" y="255" width="79" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="GFK-hc-fB5"/>
-                                    <constraint firstAttribute="width" constant="79" id="UGI-iZ-TCA"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="z6g-JC-njz" firstAttribute="trailing" secondItem="oRT-YZ-5Vn" secondAttribute="trailing" constant="1" id="0DL-Tf-7ty"/>
                             <constraint firstItem="YDE-pc-TYg" firstAttribute="leading" secondItem="GA5-Kh-HFT" secondAttribute="leading" id="39a-o9-r7H"/>
                             <constraint firstItem="QL6-ZM-B5N" firstAttribute="leading" secondItem="YDE-pc-TYg" secondAttribute="leading" id="9W1-8h-dl4"/>
-                            <constraint firstItem="LRB-V4-98f" firstAttribute="baseline" secondItem="DnA-Ut-rP7" secondAttribute="baseline" id="Byh-2Z-vWx"/>
                             <constraint firstItem="YDE-pc-TYg" firstAttribute="trailing" secondItem="GA5-Kh-HFT" secondAttribute="trailing" id="CqK-QL-aZq"/>
-                            <constraint firstItem="oRT-YZ-5Vn" firstAttribute="trailing" secondItem="QL6-ZM-B5N" secondAttribute="trailing" constant="-1" id="FBG-tP-Ane"/>
-                            <constraint firstItem="z6g-JC-njz" firstAttribute="leading" secondItem="LRB-V4-98f" secondAttribute="leading" id="FoX-nC-AWr"/>
-                            <constraint firstItem="LRB-V4-98f" firstAttribute="top" secondItem="z6g-JC-njz" secondAttribute="bottom" constant="8" id="G5k-v6-rjE"/>
                             <constraint firstItem="QL6-ZM-B5N" firstAttribute="trailing" secondItem="YDE-pc-TYg" secondAttribute="trailing" id="GfW-d3-Vs9"/>
-                            <constraint firstItem="oRT-YZ-5Vn" firstAttribute="leading" secondItem="DnA-Ut-rP7" secondAttribute="trailing" constant="8" id="Mky-NH-bt0"/>
-                            <constraint firstItem="z6g-JC-njz" firstAttribute="top" secondItem="biv-oa-P25" secondAttribute="bottom" constant="153" id="OwI-mc-JbF"/>
+                            <constraint firstItem="QL6-ZM-B5N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z6g-JC-njz" secondAttribute="leading" id="JJN-4l-1wY"/>
+                            <constraint firstItem="z6g-JC-njz" firstAttribute="top" secondItem="biv-oa-P25" secondAttribute="bottom" constant="191" id="OwI-mc-JbF"/>
                             <constraint firstItem="GA5-Kh-HFT" firstAttribute="top" secondItem="YDE-pc-TYg" secondAttribute="bottom" constant="8" symbolic="YES" id="ShP-Rs-zSa"/>
-                            <constraint firstItem="QL6-ZM-B5N" firstAttribute="top" secondItem="DnA-Ut-rP7" secondAttribute="bottom" constant="8" symbolic="YES" id="XuF-ez-rJr"/>
+                            <constraint firstItem="QL6-ZM-B5N" firstAttribute="top" secondItem="z6g-JC-njz" secondAttribute="bottom" constant="8" symbolic="YES" id="dRY-Lu-oLl"/>
                             <constraint firstItem="z6g-JC-njz" firstAttribute="centerX" secondItem="xhk-DT-fJO" secondAttribute="centerX" id="dVn-Pl-Hzg"/>
-                            <constraint firstItem="LRB-V4-98f" firstAttribute="leading" secondItem="QL6-ZM-B5N" secondAttribute="leading" id="fKI-OM-3kK"/>
-                            <constraint firstItem="DnA-Ut-rP7" firstAttribute="baseline" secondItem="oRT-YZ-5Vn" secondAttribute="baseline" id="l8T-4g-MfR"/>
                             <constraint firstItem="YDE-pc-TYg" firstAttribute="top" secondItem="QL6-ZM-B5N" secondAttribute="bottom" constant="8" symbolic="YES" id="o63-TA-EIH"/>
-                            <constraint firstItem="DnA-Ut-rP7" firstAttribute="leading" secondItem="LRB-V4-98f" secondAttribute="trailing" constant="7" id="rle-hc-ii6"/>
-                            <constraint firstItem="QL6-ZM-B5N" firstAttribute="top" secondItem="LRB-V4-98f" secondAttribute="bottom" constant="8" id="wND-eD-aR3"/>
+                            <constraint firstItem="QL6-ZM-B5N" firstAttribute="trailing" secondItem="z6g-JC-njz" secondAttribute="trailing" id="pVS-3W-vxr"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cardNumber" destination="z6g-JC-njz" id="ndY-Lc-DTv"/>
-                        <outlet property="cvc" destination="oRT-YZ-5Vn" id="qmY-Tw-OeU"/>
-                        <outlet property="month" destination="DnA-Ut-rP7" id="C09-Fb-rle"/>
-                        <outlet property="year" destination="LRB-V4-98f" id="KOk-EE-frs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rH9-Jy-cBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="80"/>
+            <point key="canvasLocation" x="2605.5999999999999" y="79.610194902548727"/>
         </scene>
         <!--Code Registration View Controller-->
         <scene sceneID="Jix-ag-F5x">
