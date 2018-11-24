@@ -19,7 +19,7 @@ class ReceiptViewCell: UITableViewCell {
       let totalString = total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", total) : String(total)
       self.receiptTotal?.text = totalString + receipt.currency
       storeLogo.image = loadStoreImage(receiptName: receiptName.text!)
-      receiptDate.text = String(receipt.date.prefix(10))
+      receiptDate.text = String(viffsDateFormatter.string(from: receipt.date).prefix(10))
     }
   }
   override func prepareForReuse() {

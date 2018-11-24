@@ -10,12 +10,15 @@ import Foundation
 import Alamofire
 import PromiseKit
 import RxSwift
+import Overture
 
 let baseAWSURL = "http://blipp-dev.eu-west-1.elasticbeanstalk.com/api"
 let receiptAWSURL = baseAWSURL + "/receipts"
 let storesAWSURL = baseAWSURL + "/stores"
 let receiptImageURL = baseAWSURL + "/receiptimage"
 let cardURL = baseAWSURL + "/cards"
+
+let viffsDateFormatter = with(DateFormatter(), set(\.dateFormat, "yyyy-MM-dd'T'HH:mm:ss"))
 
 func setReceipts(token: String) {
   firstly {
@@ -96,7 +99,7 @@ func convertToReceipts(json: Any) -> [Receipt]? {
           name: "Demobutik",
           total: 9999,
           receiptPubID: "demo-mock",
-          date: "2017-03-08",
+          date: viffsDateFormatter.date(from: "2013-07-21T19:32:00")!,
           storePubID: "",
           cardPubID: "",
           userUploaded: false)
@@ -134,10 +137,12 @@ func addToStoreDict(storePubID: String) {
 }
 
 func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
+  print((dict["date"] as? String) ?? "")
   if let storePubID: String = dict["storePubID"] as? String,
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,
-    let date: String = dict["date"] as? String,
+    let dateStr: String = dict["date"] as? String,
+    let date = viffsDateFormatter.date(from: String(dateStr.prefix(19))),
     let cardPubID: String = dict["cardPubID"] as? String,
     let userUploaded: Bool = dict["userUploaded"] as? Bool {
     let receipt = Receipt(
@@ -153,6 +158,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     addToStoreDict(storePubID: storePubID)
     return receipt
   }
+  print("FAIL")
   return nil
 }
 

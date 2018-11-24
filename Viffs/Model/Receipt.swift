@@ -14,7 +14,7 @@ struct Receipt: Decodable {
   var name: String
   let total: Double
   let receiptPubID: String
-  let date: String
+  let date: Date
   let storePubID: String
   let cardPubID: String
   let userUploaded: Bool
