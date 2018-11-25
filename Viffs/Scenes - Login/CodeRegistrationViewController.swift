@@ -25,7 +25,9 @@ class CodeRegistrationViewController: UIViewController , QRCodeReaderViewControl
   }
   
   @IBAction func submitCodeLaterAction(_ sender: Any) {
-    self.navigationController?.popToRootViewController(animated: true)
+    if let username = Current.username, let password = Current.password {
+      LoginManager.login(username: username, password: password)
+    }
   }
     @IBAction func scanQRcodeButtonPushed(_ sender: Any) {
       // Retrieve the QRCode content

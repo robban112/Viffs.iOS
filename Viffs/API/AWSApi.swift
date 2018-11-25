@@ -23,7 +23,7 @@ func setReceipts(token: String) {
   }.done { receipts in
     
     //NOTE: Only update receipts when the total receipt length is different than current.
-    if Current.receipts.count != receipts.count {
+    if shouldUpdate(receipts: receipts) {
       Current.isLoadingReceipts = false
       let rev: [Receipt] = receipts.reversed()
       Current.user = User(username: "", password: "", receipts: rev)
@@ -34,7 +34,10 @@ func setReceipts(token: String) {
       print(error)
     }
 }
-  
+
+func shouldUpdate(receipts: [Receipt]) -> Bool {
+  return Current.receipts.count != receipts.count || receipts.count == 1
+}
 
   
 func scheduleRefreshUserData(token: String) -> Timer {
@@ -140,6 +143,7 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let headers = ["AccessToken" : Current.accessToken ?? ""]
     //extreeeem fullösning
     guard receipt.receiptPubID != "demo-mock" else {
+      NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
       return Promise { $0.fulfill(UIImage(named: "demo_receipt")!) }
     }
     return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)

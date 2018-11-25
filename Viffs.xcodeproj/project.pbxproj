@@ -36,6 +36,7 @@
 		EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9F21A1F8C300F490E7 /* CardUtils.swift */; };
 		EE46AFE621A560CD00C283C8 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE46AFE521A560CD00C283C8 /* SkeletonView.framework */; };
 		EE4CFF0121A5F3D5004BBF64 /* FilterParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */; };
+		EE4CFF0421A6DFD2004BBF64 /* Loading-Spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE4CFF0321A6DFD2004BBF64 /* Loading-Spinner.gif */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
 		EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F3D2198911A00C27912 /* SettingsViewController.swift */; };
@@ -196,6 +197,7 @@
 		EE210B9F21A1F8C300F490E7 /* CardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtils.swift; sourceTree = "<group>"; };
 		EE46AFE521A560CD00C283C8 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterParameters.swift; sourceTree = "<group>"; };
+		EE4CFF0321A6DFD2004BBF64 /* Loading-Spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Loading-Spinner.gif"; path = "../../../../../Downloads/Loading-Spinner.gif"; sourceTree = "<group>"; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 		EE617F3D2198911A00C27912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -451,6 +453,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		EE4CFF0221A6DFBF004BBF64 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				EE4CFF0321A6DFD2004BBF64 /* Loading-Spinner.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		EE617F37219890DF00C27912 /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +520,7 @@
 		EE826E9120AADA4A006A0390 /* Viffs */ = {
 			isa = PBXGroup;
 			children = (
+				EE4CFF0221A6DFBF004BBF64 /* Gif */,
 				EE8F6C1E216E2D83003A12A8 /* BridgingHeader.h */,
 				EE8D4E552157C76A00341157 /* Fonts */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
@@ -968,6 +979,7 @@
 				EE826E9C20AADA4D006A0390 /* Assets.xcassets in Resources */,
 				EEA1EFAB216D5B630027C7A9 /* AWS.storyboard in Resources */,
 				EE8D4E3C2157C70800341157 /* MontserratAlternates-BlackItalic.otf in Resources */,
+				EE4CFF0421A6DFD2004BBF64 /* Loading-Spinner.gif in Resources */,
 				EE8D4E302157C70800341157 /* Montserrat-Bold.otf in Resources */,
 				EE8D4E3B2157C70800341157 /* Montserrat-ExtraLight.otf in Resources */,
 			);

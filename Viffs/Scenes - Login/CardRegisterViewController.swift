@@ -41,10 +41,14 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
         if receiptCode.count == 6 && cardNumber.text!.count == 16 {
           //postReceiptCodeAndCard(code: receiptCode, cardNumber: replaceCardNumber(cardNumber: cardNumber.text!))
           Current.cardNumber = cardNumber.text!
-          self.navigationController?.popToRootViewController(animated: true)
+          if let username = Current.username, let password = Current.password {
+            LoginManager.login(username: username, password: password)
+          } else {
+            print("Username and password not set in Current!")
+          }
         }
       }
-
+      
     }
     @IBAction func scanCardAction(_ sender: Any) {
       let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
@@ -54,7 +58,9 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
     }
   
     @IBAction func submitCardLaterAction(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+      if let username = Current.username, let password = Current.password {
+        LoginManager.login(username: username, password: password)
+      }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -54,6 +54,10 @@ class AWSLoginManager: NSObject {
     }
   }
   
+  func login(username: String, password: String) {
+    self.signInViewController?.signIn(username: username, password: password)
+  }
+
   func setInitialViewController() {
     self.window = UIWindow(frame: UIScreen.main.bounds)
     //    let main = MainViewController.instantiateFromNib()

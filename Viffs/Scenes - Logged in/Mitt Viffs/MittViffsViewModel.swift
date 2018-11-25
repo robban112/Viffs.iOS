@@ -44,9 +44,9 @@ struct MittViffsViewModel: MittViffsViewModelType
   
   init(coordinator: SceneCoordinator) {
     receiptCollectionsContents = Driver.just([
-      ReceiptCollection(name: "Alla kvitton", logo: UIImage(named: "Inbox-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: Current.cards, filterByUserUpload: false))),
-      ReceiptCollection(name: "Importerat", logo: UIImage(named: "Imported-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: [], filterByUserUpload: false))),
-      ReceiptCollection(name: "Scannat", logo: UIImage(named: "Scanned-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: Current.cards, filterByUserUpload: true))),
+      ReceiptCollection(name: "Alla kvitton", logo: UIImage(named: "Inbox-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: Current.cards, filterByUserUpload: false), "Alla kvitton")),
+      ReceiptCollection(name: "Importerat", logo: UIImage(named: "Imported-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: [], filterByUserUpload: false), "Importerade kvitton")),
+      ReceiptCollection(name: "Scannat", logo: UIImage(named: "Scanned-green-2")!, scene: Scene.receipts(FilterParameters.init(cards: Current.cards, filterByUserUpload: true), "Scannade kvitton")),
       ReceiptCollection(name: "Butiker", logo: UIImage(named: "Butiker-green-2")!, scene: Scene.stores),
       ReceiptCollection(name: "Kort", logo: UIImage(named: "Kort-green-2")!, scene: Scene.cards)
       ])

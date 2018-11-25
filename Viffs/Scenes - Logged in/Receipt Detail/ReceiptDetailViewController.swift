@@ -12,7 +12,7 @@ import RxCocoa
 import SkeletonView
 import SwiftGifOrigin
 
-class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
+class ReceiptDetailViewController: UIViewController, ViewModelBindable {
   
   let disposeBag = DisposeBag()
   var viewModel: ReceiptDetailViewModelType!
@@ -20,6 +20,14 @@ class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
     @IBOutlet var loadingImage: UIImageView!
     @IBOutlet var imageView: UIImageView!
   @IBOutlet weak var backButton: UIButton!
+  
+  func setBackButton() {
+    let backItem = UIBarButtonItem()
+    backItem.title = ""
+    if let topItem = self.navigationController?.navigationBar.topItem {
+      topItem.backBarButtonItem = backItem
+    }
+  }
   
   func bindViewModel() {
     bindViewModelToUI()
@@ -38,7 +46,8 @@ class ReceiptDetailViewController: ViffsViewController, ViewModelBindable {
   override func viewDidLoad() {
     setObservers()
     setIsLoading()
-    
+    setBackButton()
+    super.viewDidLoad()
   }
   
   func setObservers() {

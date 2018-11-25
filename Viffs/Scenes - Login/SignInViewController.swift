@@ -34,7 +34,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     //self.username.text = usernameText
     self.username.text = Current.username
     setNavBar()
-    getSession()
+    LoginManager.getSession()
   }
   
   func setNavBar() {
@@ -48,30 +48,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     self.view.endEditing(true)
     return false
   }
-  
-  func getSession(){
-    Current.AWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
-      DispatchQueue.main.async(execute: {
-        let getSessionResult = getSessionTask.result
-        
-        //let idToken = getSessionResult?.idToken?.tokenString
-        if let accessToken = getSessionResult?.accessToken?.tokenString {
-          setReceipts(token: accessToken)
-          Current.accessToken = accessToken
-          print("Accesstoken: " + accessToken)
-        }
-      })
-      return nil
-    }
-  }
+
   
   @IBAction func signInPressed(_ sender: AnyObject) {
     if (self.username.text != nil && self.password.text != nil) {
-      
-      let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.username.text!, password: self.password.text! )
-      self.passwordAuthenticationCompletion?.set(result: authDetails)
-      
-      
+      signIn(username: self.username.text!, password: self.password.text!)
     } else {
       let alertController = UIAlertController(title: "Missing information",
                                               message: "Please enter a valid user name and password",
@@ -79,6 +60,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
       let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
       alertController.addAction(retryAction)
     }
+  }
+  
+  func signIn(username: String, password: String) {
+    let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: username, password: password )
+    self.passwordAuthenticationCompletion?.trySet(result: authDetails)
+    //self.passwordAuthenticationCompletion?.set(result: authDetails)
   }
 }
 
@@ -104,8 +91,9 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
         
         self.present(alertController, animated: true, completion:  nil)
       } else {
-        self.username.text = nil
-        self.dismiss(animated: true, completion: nil)
+        //self.username.text = nil
+        LoginManager.setInitialViewController()
+        //self.dismiss(animated: true, completion: nil)
       }
     }
   }

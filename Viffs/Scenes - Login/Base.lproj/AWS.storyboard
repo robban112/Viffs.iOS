@@ -437,9 +437,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="submitCardLater:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="bX8-AG-Jxs"/>
-                                    <action selector="submitCodeLaterAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="27G-PR-nOe"/>
-                                    <segue destination="p2u-dp-0sD" kind="show" id="Eit-JC-YcU"/>
+                                    <action selector="submitCodeLaterAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="Zw8-SN-flB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -656,7 +654,4 @@
             <point key="canvasLocation" x="1160.8" y="71.514242878560722"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8Pi-k5-FbS"/>
-    </inferredMetricsTieBreakers>
 </document>
