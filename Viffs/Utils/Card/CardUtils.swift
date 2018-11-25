@@ -36,7 +36,8 @@ class CardUtils {
   
   static let typeToImage: [ String : UIImage ] = [
     "Visa" : UIImage(named: "visa_logo")!,
-    "MasterCard" : UIImage(named: "mastercard_logo")!
+    "MasterCard" : UIImage(named: "mastercard_logo")!,
+    "American Express" : UIImage(named: "American_express_logo")!
   ]
   
   static func cardNumberToType(cardNumber: String) -> String? {

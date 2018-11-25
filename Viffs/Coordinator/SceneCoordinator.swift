@@ -57,6 +57,19 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
     }
   }
   
+  func popToCardsVC() {
+    var cardsVC: UIViewController?
+    for vc in self.currentViewController.navigationController?.viewControllers ?? [] {
+      print(vc.nibName)
+      if vc.nibName == "CardsViewController" {
+        cardsVC = vc
+      }
+    }
+    if let cardsVC = cardsVC {
+      self.currentViewController.navigationController?.popToViewController(cardsVC, animated: true)
+    }
+  }
+  
   func transitionToRoot() {
     self.currentViewController.navigationController?.popToRootViewController(animated: true)
   }

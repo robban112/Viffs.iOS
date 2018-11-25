@@ -39,10 +39,9 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     @IBOutlet weak var continueButton: UIButton!
     @IBAction func addCardButtonPushed(_ sender: Any) {
       if let receiptCode = Current.receiptCode, let cardNumber = cardNumberTextField.text {
-        if receiptCode.count == 6 && cardNumber.count == 16 {
+        if receiptCode.count == 6 && cardNumber.count > 15 {
           postReceiptCodeAndCard(code: receiptCode, cardNumber: replaceCardNumber(cardNumber: cardNumber))
-          self.navigationController?.popViewController(animated: false)
-          self.navigationController?.popViewController(animated: false)
+          SceneCoordinator.shared.popToCardsVC()
         }
       }
     }
