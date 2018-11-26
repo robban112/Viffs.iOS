@@ -60,7 +60,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   func popToCardsVC() {
     var cardsVC: UIViewController?
     for vc in self.currentViewController.navigationController?.viewControllers ?? [] {
-      print(vc.nibName)
+      print(vc.nibName ?? "")
       if vc.nibName == "CardsViewController" {
         cardsVC = vc
       }

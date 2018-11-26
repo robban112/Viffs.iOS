@@ -16,7 +16,7 @@ class CodeRegistrationViewController: UIViewController , QRCodeReaderViewControl
     @IBOutlet var registerCode: UITextField!
   @IBOutlet weak var viewasd: UIView!
   @IBAction func continueAction(_ sender: Any) {
-    print("registercode: \(registerCode?.text)")
+    print("registercode: \(registerCode?.text ?? "")")
     if registerCode.text?.count != 0 {
       Current.receiptCode = registerCode.text
 
@@ -36,7 +36,7 @@ class CodeRegistrationViewController: UIViewController , QRCodeReaderViewControl
       
       // Or by using the closure pattern
       readerVC.completionBlock = { (result: QRCodeReaderResult?) in
-        print(result)
+        print(result ?? "No result")
       }
       
       // Presents the readerVC as modal form sheet
