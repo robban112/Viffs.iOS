@@ -9,11 +9,11 @@
 import UIKit
 
 class CardCell: UITableViewCell {
-  
+
   @IBOutlet weak var picture: UIImageView!
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var lastfour: UILabel!
-  
+
   var card: Card? = nil {
     didSet {
       guard let card = card else { return }
@@ -23,9 +23,9 @@ class CardCell: UITableViewCell {
       lastfour.text = String("****\(suffix)")
     }
   }
-  
+
   override func prepareForReuse() {
     card = nil
   }
-    
+
 }

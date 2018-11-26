@@ -1,4 +1,4 @@
-	//
+//
 //  AWSApi.swift
 //  Blipp
 //
@@ -20,26 +20,25 @@ let cardURL = baseAWSURL + "/cards"
 func setReceipts(token: String) {
   firstly {
     AWSGetReceiptsForUser(token: token)
-  }.done { receipts in
-    
-    //NOTE: Only update receipts when the total receipt length is different than current.
-    if shouldUpdate(receipts: receipts) {
-      Current.isLoadingReceipts = false
-      let rev: [Receipt] = receipts.reversed()
-      Current.user = User(username: "", password: "", receipts: rev)
-      Current.receipts = receipts
-      NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
-    }
+    }.done { receipts in
+
+      //NOTE: Only update receipts when the total receipt length is different than current.
+      if shouldUpdate(receipts: receipts) {
+        Current.isLoadingReceipts = false
+        let rev: [Receipt] = receipts.reversed()
+        Current.user = User(username: "", password: "", receipts: rev)
+        Current.receipts = receipts
+        NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
+      }
     }.catch { (error) in
       print(error)
-    }
+  }
 }
 
 func shouldUpdate(receipts: [Receipt]) -> Bool {
   return Current.receipts.count != receipts.count || receipts.count == 1
 }
 
-  
 func scheduleRefreshUserData(token: String) -> Timer {
   return Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { _ in
     if let accessToken = Current.accessToken {
@@ -49,24 +48,24 @@ func scheduleRefreshUserData(token: String) -> Timer {
     }
   }
 }
-  
+
 func setStores() {
-  let store = Store.init(name: "Demobutik", pubID: "78c259ca-c59b-11e8-af09-027c671add7e", address: "Birger Jarlsgatan 29")
+  let store = Store(name: "Demobutik", pubID: "78c259ca-c59b-11e8-af09-027c671add7e", address: "Birger Jarlsgatan 29")
   Current.stores = [store]
 }
-  
-  func setCards(token: String) {
+
+func setCards(token: String) {
   firstly {
     AWSGetCards(token: token)
-  }.done { cards in
-    NotificationCenter.default.post(name: Notification.Name("CardsSet"), object: nil)
-    Current.cards = cards
-  }.catch { (error) in
-    print("Unable to retrieve cards")
-    print(error)
+    }.done { cards in
+      NotificationCenter.default.post(name: Notification.Name("CardsSet"), object: nil)
+      Current.cards = cards
+    }.catch { (error) in
+      print("Unable to retrieve cards")
+      print(error)
   }
 }
-  
+
 func setOffers() {
   let offer = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
   let offer2 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
@@ -77,24 +76,34 @@ func setOffers() {
   let offer7 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
   Current.offers = [offer, offer2, offer3, offer4, offer5, offer6, offer7]
 }
-  
+
 func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
-  let headers = ["AccessToken" : token]
+  let headers = ["AccessToken": token]
   return Alamofire.request(receiptAWSURL, headers: headers)
     .validate()
     .responseJSON()
     .compactMap { json, _ in convertToReceipts(json: json) }
 }
 
-  func convertToReceipts(json: Any) -> [Receipt]? {
-    let dict = json as? [NSDictionary]
-    return dict
-      .map { $0.compactMap(parseResponseToReceipt) }
-      .map { return $0.isEmpty
-        ? [Receipt(currency: "SEK", name: "Demobutik", total: 9999, receiptPubID: "demo-mock", date: "2017-03-08", storePubID: "", cardPubID: "", userUploaded: false)]
-        : $0
-    }
+func convertToReceipts(json: Any) -> [Receipt]? {
+  let dict = json as? [NSDictionary]
+  return dict
+    .map { $0.compactMap(parseResponseToReceipt) }
+    .map { return $0.isEmpty
+      ? [
+        Receipt(
+          currency: "SEK",
+          name: "Demobutik",
+          total: 9999,
+          receiptPubID: "demo-mock",
+          date: "2017-03-08",
+          storePubID: "",
+          cardPubID: "",
+          userUploaded: false)
+        ]
+      : $0
   }
+}
 
 func convertToStore(json: Any) -> Store? {
   if let json = json as? NSDictionary {
@@ -131,165 +140,196 @@ func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
     let date: String = dict["date"] as? String,
     let cardPubID: String = dict["cardPubID"] as? String,
     let userUploaded: Bool = dict["userUploaded"] as? Bool {
-    let receipt = Receipt(currency: "SEK", name: "", total: Double(total), receiptPubID: receiptPubID, date: date, storePubID: storePubID, cardPubID: cardPubID, userUploaded: userUploaded)
+    let receipt = Receipt(
+      currency: "SEK",
+      name: "",
+      total: Double(total),
+      receiptPubID: receiptPubID,
+      date: date,
+      storePubID: storePubID,
+      cardPubID: cardPubID,
+      userUploaded: userUploaded
+    )
     addToStoreDict(storePubID: storePubID)
     return receipt
   }
   return nil
 }
 
-  func getImage(for receipt: Receipt) -> Promise<UIImage> {
-    Current.isLoadingReceiptDetail = true
-    let headers = ["AccessToken" : Current.accessToken ?? ""]
-    //extreeeem fullösning
-    guard receipt.receiptPubID != "demo-mock" else {
-      NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
-      return Promise { $0.fulfill(UIImage(named: "demo_receipt")!) }
-    }
-    return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
-      .responseData()
-      .compactMap { data, response in
-        NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
-        return UIImage(data: data)
-      }
+func getImage(for receipt: Receipt) -> Promise<UIImage> {
+  Current.isLoadingReceiptDetail = true
+  let headers = ["AccessToken": Current.accessToken ?? ""]
+  //extreeeem fullösning
+  guard receipt.receiptPubID != "demo-mock" else {
+    NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
+    return Promise { $0.fulfill(UIImage(named: "demo_receipt")!) }
   }
-    
-  func uploadImage(base64: String) {
-    let headers = ["AccessToken" : Current.accessToken ?? ""]
-    let json: [String : Any] = [
-      "ReceiptImageData" : base64,
-      "ReceiptImageMIME" : "image/jpeg"
-    ]
-    Alamofire.request(receiptImageURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
-      { (response:DataResponse) in
-        switch(response.result)
-        {
-        case .success(let value):
-          NotificationCenter.default.post(name: Notification.Name("UploadedImage"), object: nil)
-          print("Successfully posted receipt")
-          print(value)
-        case .failure(let value):
-          print("failed to post receipt")
-          print(response.result)
-          print(value)
-    }
+  return Alamofire.request("\(receiptImageURL)/\(receipt.receiptPubID)", headers: headers)
+    .responseData()
+    .compactMap { data, _ in
+      NotificationCenter.default.post(name: Notification.Name("ReceiptImageSet"), object: nil)
+      return UIImage(data: data)
   }
 }
-  
-  /*
-   * Receipt code has to be posted first, and then the card
-   */
-  func postReceiptCodeAndCard(code: String, cardNumber: String) {
-    let headers = ["AccessToken" : Current.accessToken ?? "",
-                   "Content-Type" : "application/json"]
-    let json: [ String : Any] = [
-      "RegCode": code,
-      "CardNumber": cardNumber
-    ]
-    
-    Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
-      { (response:DataResponse) in
-        switch(response.result)
-        {
-        case .success(let value):
-          if let accessToken = Current.accessToken {
-            setReceipts(token: accessToken)
-          }
-          print("Successfully posted receipt code")
-          print(value)
-        case .failure(let value):
-          print("failed to post receipt code")
-          print(response.result)
-          print(value)
-        }
-    }
-  }
-  
-  func postCard(receiptCode: String, cardNumber: String) {
-    let headers = ["AccessToken" : Current.accessToken ?? "",
-                   "Content-Type" : "application/json"]
-    let parameters: [ String : Any] = [
-      "RegCode": receiptCode, "CardNumber" : cardNumber
-    ]
-    
-    Alamofire.request(cardURL, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseData
-      { (response:DataResponse) in
-        switch(response.result)
-        {
-        case .success(let value):
-          print("Successfully added card")
-          print(value)
-        case .failure(let value):
-          print("Failed to add card")
-          print(response.result)
-          print(value)
-        }
-    }
-  }
-  
-  //OLD
-  func postReceiptCode(code: String) {
-    let headers = ["AccessToken" : Current.accessToken ?? "",
-                   "Content-Type" : "application/json"]
-    let json: [ String : Any] = [
-      "RegCode": code
-    ]
 
-    Alamofire.request(cardURL, method: .post, parameters: json, encoding: JSONEncoding.default, headers: headers).responseData
-      { (response:DataResponse) in
-        switch(response.result)
-        {
-        case .success(let value):
-          if let accessToken = Current.accessToken {
-            setReceipts(token: accessToken)
-          }
-          print("Successfully posted receipt code")
-          print(value)
-        case .failure(let value):
-          print("failed to post receipt code")
-          print(response.result)
-          print(value)
-        }
+func uploadImage(base64: String) {
+  let headers = ["AccessToken": Current.accessToken ?? ""]
+  let json: [String: Any] = [
+    "ReceiptImageData": base64,
+    "ReceiptImageMIME": "image/jpeg"
+  ]
+  Alamofire.request(
+    receiptImageURL,
+    method: .post,
+    parameters: json,
+    encoding: JSONEncoding.default,
+    headers: headers
+    )
+    .responseData { (response: DataResponse) in
+      switch response.result {
+      case .success(let value):
+        NotificationCenter.default.post(name: Notification.Name("UploadedImage"), object: nil)
+        print("Successfully posted receipt")
+        print(value)
+      case .failure(let value):
+        print("failed to post receipt")
+        print(response.result)
+        print(value)
       }
     }
-  
-  func AWSGetCards(token: String) -> Promise<[Card]> {
-    let headers = ["AccessToken" : token, "Content-Type" : "application/json"]
+}
 
-    let req = Alamofire.request("\(cardURL)", headers: headers)
-      .responseJSON()
-      .compactMap { json, response in
-        return parseJsonToCards(json: json)
-    }
-    req.catch({ (error) in
-      print("Failed to get cards from server")
-      print(error)
-    })
-    return req
-  }
-  
-  func parseJsonToCards(json: Any) -> [Card]? {
-    let json = json as? [NSDictionary]
-    return json
-      .map { $0.compactMap(parseJsonToCard) }
-    }
-  
-  func parseJsonToCard(json: Any) -> Card? {
-    guard let json = json as? NSDictionary else {
-      print("failed to parse card json to NSDictionary")
-      return nil
-    }
-    if let cardNumber = json["cardNumber"] as? String, let pubID = json["pubID"] as? String {
-      if let type = CardUtils.cardNumberToType(cardNumber: cardNumber) {
-        if let image = CardUtils.cardTypeToImage(cardType: type) {
-          return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+/*
+ * Receipt code has to be posted first, and then the card
+ */
+func postReceiptCodeAndCard(code: String, cardNumber: String) {
+  let headers = ["AccessToken": Current.accessToken ?? "",
+                 "Content-Type": "application/json"]
+  let json: [ String: Any] = [
+    "RegCode": code,
+    "CardNumber": cardNumber
+  ]
+
+  Alamofire
+    .request(
+      cardURL,
+      method: .post,
+      parameters: json,
+      encoding: JSONEncoding.default,
+      headers: headers
+    )
+    .responseData { (response: DataResponse) in
+      switch response.result {
+      case .success(let value):
+        if let accessToken = Current.accessToken {
+          setReceipts(token: accessToken)
         }
-      } else {
-        let image = UIImage(named: "question_mark")!
-        let type = "Okänd"
-        return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+        print("Successfully posted receipt code")
+        print(value)
+      case .failure(let value):
+        print("failed to post receipt code")
+        print(response.result)
+        print(value)
       }
-    }
+  }
+}
+
+func postCard(receiptCode: String, cardNumber: String) {
+  let headers = ["AccessToken": Current.accessToken ?? "",
+                 "Content-Type": "application/json"]
+  let parameters: [ String: Any] = [
+    "RegCode": receiptCode, "CardNumber": cardNumber
+  ]
+  
+  Alamofire
+    .request(
+      cardURL,
+      method: .post,
+      parameters: parameters,
+      encoding: JSONEncoding.default,
+      headers: headers
+    )
+    .responseData { (response: DataResponse) in
+      switch response.result {
+      case .success(let value):
+        print("Successfully added card")
+        print(value)
+      case .failure(let value):
+        print("Failed to add card")
+        print(response.result)
+        print(value)
+      }
+  }
+}
+
+//OLD
+func postReceiptCode(code: String) {
+  let headers = ["AccessToken": Current.accessToken ?? "",
+                 "Content-Type": "application/json"]
+  let json: [ String: Any] = [
+    "RegCode": code
+  ]
+  
+  Alamofire
+    .request(
+      cardURL,
+      method: .post,
+      parameters: json,
+      encoding: JSONEncoding.default,
+      headers: headers
+    )
+    .responseData { (response: DataResponse) in
+      switch response.result {
+      case .success(let value):
+        if let accessToken = Current.accessToken {
+          setReceipts(token: accessToken)
+        }
+        print("Successfully posted receipt code")
+        print(value)
+      case .failure(let value):
+        print("failed to post receipt code")
+        print(response.result)
+        print(value)
+      }
+  }
+}
+
+func AWSGetCards(token: String) -> Promise<[Card]> {
+  let headers = ["AccessToken": token, "Content-Type": "application/json"]
+
+  let req = Alamofire.request("\(cardURL)", headers: headers)
+    .responseJSON()
+    .compactMap { json, _ in
+      return parseJsonToCards(json: json)
+  }
+  req.catch({ (error) in
+    print("Failed to get cards from server")
+    print(error)
+  })
+  return req
+}
+
+func parseJsonToCards(json: Any) -> [Card]? {
+  let json = json as? [NSDictionary]
+  return json
+    .map { $0.compactMap(parseJsonToCard) }
+}
+
+func parseJsonToCard(json: Any) -> Card? {
+  guard let json = json as? NSDictionary else {
+    print("failed to parse card json to NSDictionary")
     return nil
   }
-
+  if let cardNumber = json["cardNumber"] as? String, let pubID = json["pubID"] as? String {
+    if let type = CardUtils.cardNumberToType(cardNumber: cardNumber) {
+      if let image = CardUtils.cardTypeToImage(cardType: type) {
+        return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+      }
+    } else {
+      let image = UIImage(named: "question_mark")!
+      let type = "Okänd"
+      return Card.init(number: cardNumber, cardType: type, pubID: pubID, image: image)
+    }
+  }
+  return nil
+}

@@ -9,21 +9,21 @@
 import Foundation
 import UIKit
 
-var storeToLogo: [String : String] = [
-    "Hemköp" : "hemkop_logo.png",
-    "Pressbyrån" : "pressbyran_logo.png",
-    "ICA" : "ica_logo.png",
-    "Willys" : "willys_logo.png",
-    "7-Eleven" : "7-eleven_logo.png",
-    "EasyPark" : "easypark_logo.png",
-    "Demobutik" : "demokvitto.png"
+var storeToLogo: [String: String] = [
+    "Hemköp": "hemkop_logo.png",
+    "Pressbyrån": "pressbyran_logo.png",
+    "ICA": "ica_logo.png",
+    "Willys": "willys_logo.png",
+    "7-Eleven": "7-eleven_logo.png",
+    "EasyPark": "easypark_logo.png",
+    "Demobutik": "demokvitto.png"
 ]
 
-var storeToImage: [String:UIImage] = [
-  "Demobutik" : UIImage(named: "demokvitto")!
+var storeToImage: [String: UIImage] = [
+  "Demobutik": UIImage(named: "demokvitto")!
 ]
 
-var cardTypeToImage: [String:UIImage] = [
-  "MasterCard" : UIImage(named: "mastercard_logo")!,
-  "Visa" : UIImage(named: "visa_logo")!
+var cardTypeToImage: [String: UIImage] = [
+  "MasterCard": UIImage(named: "mastercard_logo")!,
+  "Visa": UIImage(named: "visa_logo")!
 ]

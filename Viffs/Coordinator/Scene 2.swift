@@ -50,12 +50,12 @@ extension Scene: TargetScene {
       registerCardVC.title = "Registrera kort"
       return .push(registerCardVC)
     case .receipts(let filterParameters):
-      
+
       let receiptVC = ReceiptViewController.instantiateFromNib()
       receiptVC.filterParameters = filterParameters
       receiptVC.title = "Kvitton"
       return .push(receiptVC)
-    case .receiptsSorted():
+    case .receiptsSorted:
       let receiptVC = ReceiptViewController.instantiateFromNib()
         receiptVC.title = "Kvitton Sorterat"
         return .push(receiptVC)
@@ -101,7 +101,8 @@ extension Scene: TargetScene {
 }
 
 /*
- Function responsible for creating main viewcontroller and more viewcontroller, with the side menu as the connection between.
+ Function responsible for creating main viewcontroller and more viewcontroller,
+ with the side menu as the connection between.
  Returns the navigationcontroller of main
  */
 func setupSideMenu() -> UINavigationController {
@@ -117,21 +118,22 @@ func setupSideMenu() -> UINavigationController {
   navRight.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
   navRight.navigationBar.shadowImage = UIImage()
   SideMenuManager.default.menuRightNavigationController = navRight
-  
-  mainNav.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 18)!]
+
+  mainNav.navigationBar.titleTextAttributes =
+    [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 18)!]
 
   // Enable gestures. The left and/or right menus must be set up above for these to work.
   // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
 //  SideMenuManager.default.menuAddPanGestureToPresent(toView: navigationController!.navigationBar)
 //  SideMenuManager.default.menuAddScreenEdgePanGesturesToPresent(toView: navigationController!.view)
-  
+
   // Set up a cool background image for demo purposes
   //SideMenuManager.default.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-  
+
   return mainNav
 }
 
-fileprivate func createBlippTabBarController() -> UITabBarController {
+func createBlippTabBarController() -> UITabBarController {
   let blippTabBarController = UITabBarController()
 
   let homeVC = MainViewController.instantiateFromNib()
@@ -141,13 +143,13 @@ fileprivate func createBlippTabBarController() -> UITabBarController {
   homeNav.navigationBar.shadowImage = UIImage()
   homeNav.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "home30x30"), tag: 0)
   homeNav.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
-  
+
   let moreVC = MoreViewController.instantiateFromNib()
   let moreNav = UINavigationController(rootViewController: moreVC)
   moreVC.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "menu30x30"), tag: 1)
   moreVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
-  
+
   blippTabBarController.viewControllers = [ homeNav, moreNav ]
-  
+
   return blippTabBarController
 }

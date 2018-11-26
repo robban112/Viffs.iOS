@@ -9,28 +9,29 @@
 import Foundation
 import AWSCognitoIdentityProvider
 
-
+// swiftlint:disable identifier_name
 var Current = Environment()
 
 struct Environment {
-  var user: User? = nil
-  var AWSUser: AWSCognitoIdentityUser? = nil
-  var pool: AWSCognitoIdentityUserPool? = nil
-  var storeDict: [String : Store] = [:]
-  var accessToken: String? = nil
+  var user: User?
+  var loginManager: AWSLoginManager = AWSLoginManager()
+  var AWSUser: AWSCognitoIdentityUser?
+  var pool: AWSCognitoIdentityUserPool?
+  var storeDict: [String: Store] = [:]
+  var accessToken: String?
   var receipts: [Receipt] = []
   var stores: [Store] = []
   var offers: [Offer] = []
   var cards: [Card] = []
-  var timer: Timer? = nil
+  var timer: Timer?
   var isLoadingReceipts: Bool = true
   var isLoadingReceiptDetail: Bool = true
-  
+
   //Tillfälligt!! Andvänds vid reg processen
-  var username: String? = nil
-  var password: String? = nil
-  var receiptCode: String? = nil
-  var cardNumber: String? = nil
+  var username: String?
+  var password: String?
+  var receiptCode: String?
+  var cardNumber: String?
 }
 
 func flushEnvironment() {

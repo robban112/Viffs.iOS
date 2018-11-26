@@ -13,4 +13,3 @@ struct User: Decodable {
   let password: String
   var receipts: [Receipt]?
 }
-

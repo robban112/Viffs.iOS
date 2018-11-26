@@ -19,30 +19,28 @@ import Foundation
 import AWSCognitoIdentityProvider
 
 class SignUpViewController: UIViewController {
-  
+
   var pool: AWSCognitoIdentityUserPool?
   var sentTo: String?
-  
+
   @IBOutlet weak var username: UITextField!
   @IBOutlet weak var password: UITextField!
-  
+
   @IBOutlet weak var email: UITextField!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController?.navigationBar.backItem?.title = ""
     self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
   }
-  
-  
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let signUpConfirmationViewController = segue.destination as? ConfirmSignUpViewController {
       signUpConfirmationViewController.sentTo = self.sentTo
       signUpConfirmationViewController.user = self.pool?.getUser(self.username.text!)
     }
   }
-  
-  
+
   @IBAction func signUp(_ sender: AnyObject) {
     guard let userNameValue = self.username.text, !userNameValue.isEmpty,
       let passwordValue = self.password.text, !passwordValue.isEmpty else {
@@ -51,44 +49,46 @@ class SignUpViewController: UIViewController {
                                                 preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alertController.addAction(okAction)
-        
-        self.present(alertController, animated: true, completion:  nil)
+
+        self.present(alertController, animated: true, completion: nil)
         return
     }
-    
+
     var attributes = [AWSCognitoIdentityUserAttributeType]()
-    let family_name = AWSCognitoIdentityUserAttributeType()
-    family_name?.name = "family_name"
-    family_name?.value = "efternamn"
-    attributes.append(family_name!)
-    let given_name = AWSCognitoIdentityUserAttributeType()
-    given_name?.name = "given_name"
-    given_name?.value = "given name"
-    attributes.append(given_name!)
+    let familyName = AWSCognitoIdentityUserAttributeType()
+    familyName?.name = "family_name"
+    familyName?.value = "efternamn"
+    attributes.append(familyName!)
+    let givenName = AWSCognitoIdentityUserAttributeType()
+    givenName?.name = "given_name"
+    givenName?.value = "given name"
+    attributes.append(givenName!)
     let email = AWSCognitoIdentityUserAttributeType()
     email?.name = "email"
     email?.value = userNameValue
     attributes.append(email!)
-    
+
     //sign up the user
-    self.pool?.signUp(userNameValue, password: passwordValue, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in
-      guard self != nil else { return nil }
-      DispatchQueue.main.async(execute: {
-        if let error = task.error as NSError? {
-          let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
-                                                  message: error.userInfo["message"] as? String,
-                                                  preferredStyle: .alert)
-          let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
-          alertController.addAction(retryAction)
-          
-          self?.present(alertController, animated: true, completion:  nil)
-        } else if task.result != nil  {
+    self.pool?
+      .signUp(userNameValue, password: passwordValue, userAttributes: attributes, validationData: nil)
+      .continueWith {[weak self] (task) -> Any? in
+        guard self != nil else { return nil }
+        DispatchQueue.main.async(execute: {
+          if let error = task.error as NSError? {
+            let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
+                                                    message: error.userInfo["message"] as? String,
+                                                    preferredStyle: .alert)
+            let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+            alertController.addAction(retryAction)
+
+            self?.present(alertController, animated: true, completion: nil)
+          } else if task.result != nil {
             Current.username = self?.username.text
             Current.password = self?.password.text
-        }
-        
-      })
-      return nil
+          }
+
+        })
+        return nil
     }
   }
 }
