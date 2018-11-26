@@ -1,26 +1,26 @@
 PODS:
-  - Alamofire (4.8.0)
-  - AWSAuthCore (2.6.35):
-    - AWSCore (= 2.6.35)
-  - AWSCognitoIdentityProvider (2.6.35):
+  - Alamofire (4.7.3)
+  - AWSAuthCore (2.6.33):
+    - AWSCore (= 2.6.33)
+  - AWSCognitoIdentityProvider (2.6.33):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
-    - AWSCore (= 2.6.35)
+    - AWSCore (= 2.6.33)
   - AWSCognitoIdentityProviderASF (1.0.1)
-  - AWSCore (2.6.35)
+  - AWSCore (2.6.33)
   - CardIO (5.4.1)
   - Differentiator (3.1.0)
-  - Overture (0.3.1)
-  - PromiseKit (6.5.3):
-    - PromiseKit/CorePromise (= 6.5.3)
-    - PromiseKit/Foundation (= 6.5.3)
-    - PromiseKit/UIKit (= 6.5.3)
-  - PromiseKit/Alamofire (6.5.3):
+  - Overture (0.3.0)
+  - PromiseKit (6.5.2):
+    - PromiseKit/CorePromise (= 6.5.2)
+    - PromiseKit/Foundation (= 6.5.2)
+    - PromiseKit/UIKit (= 6.5.2)
+  - PromiseKit/Alamofire (6.5.2):
     - Alamofire (~> 4.0)
     - PromiseKit/CorePromise
-  - PromiseKit/CorePromise (6.5.3)
-  - PromiseKit/Foundation (6.5.3):
+  - PromiseKit/CorePromise (6.5.2)
+  - PromiseKit/Foundation (6.5.2):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.5.3):
+  - PromiseKit/UIKit (6.5.2):
     - PromiseKit/CorePromise
   - QRCodeReader.swift (9.0.1)
   - Result (4.0.0)
@@ -89,15 +89,15 @@ CHECKOUT OPTIONS:
     :git: https://github.com/WeTransfer/WeScan.git
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  AWSAuthCore: 386e045a341acebf2409425467e907ae1a45ed63
-  AWSCognitoIdentityProvider: 0a041bd229a105d73f3a4d7eb90f696f1b5bd422
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AWSAuthCore: 349738e72c5ecbdd6fcf9f153ae01842dd90a725
+  AWSCognitoIdentityProvider: 97c10594444863772447c9a056b17aff487552f3
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
-  AWSCore: 2dab62ef2e5ca5d8c72c6cbdb3a6ea1532c27c2b
+  AWSCore: ed83f7e36fb6c0211b04a439d8e564aa23bfe37d
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  Overture: f7b76b2c43a49bd48f7e116313dd99e91d11dd83
-  PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
+  Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
+  PromiseKit: 27c1601bfb73405871b805bcb8cf7e55c4dad3db
   QRCodeReader.swift: 96292a5612fbc2fd9a0b26f93fa5164c8d02f59d
   Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f

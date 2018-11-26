@@ -33,6 +33,8 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     }
     return cardNumber
   }
+  
+  
 
   
   @IBOutlet weak var cardNumberTextField: UITextField!
@@ -48,7 +50,9 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
   
   @IBAction func scanCardButtonPushed(_ sender: Any) {
     let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
-    
+    cardIOVC.collectCVV = false
+    cardIOVC.collectExpiry = false
+    cardIOVC.guideColor = UIColor.init(red: 133, green: 212, blue: 201, alpha: 1)
     cardIOVC.hideCardIOLogo = true
     present(cardIOVC, animated: true, completion: nil)
 
