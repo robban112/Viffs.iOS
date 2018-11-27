@@ -118,6 +118,7 @@ func setupSideMenu() -> UINavigationController {
   navRight.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
   navRight.navigationBar.shadowImage = UIImage()
   SideMenuManager.default.menuRightNavigationController = navRight
+  SideMenuManager.default.menuFadeStatusBar = false
 
   mainNav.navigationBar.titleTextAttributes =
     [NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 18)!]
