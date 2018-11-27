@@ -10,12 +10,15 @@ import UIKit
 import Vision
 import WeScan
 
-class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ImageScannerControllerDelegate {
-  
+class ScanReceiptViewController: ViffsViewController,
+                                 UIImagePickerControllerDelegate,
+                                 UINavigationControllerDelegate,
+                                 ImageScannerControllerDelegate {
+
   @IBOutlet var receiptImage: UIImageView!
   @IBOutlet var takePhotoButton: UIButton!
-    @IBOutlet var loadingImage: UIImageView!
-    
+  @IBOutlet var loadingImage: UIImageView!
+
   @IBAction func sparaKvitto(_ sender: Any) {
     //receiptImage To base64 and post request
     let imageData = receiptImage.image!.jpegData(compressionQuality: 0.5)!
@@ -23,33 +26,42 @@ class ScanReceiptViewController: ViffsViewController, UIImagePickerControllerDel
     setLoading()
     uploadImage(base64: strBase64)
   }
-  
+
   func setLoading() {
     let gif = UIImage.gif(name: "Loading-Spinner")
     loadingImage.image = gif
-    NotificationCenter.default.addObserver(self, selector: #selector(setNotLoading), name: Notification.Name("UploadedImage"), object: nil)
+    NotificationCenter.default
+      .addObserver(
+        self,
+        selector: #selector(setNotLoading),
+        name: Notification.Name("UploadedImage"),
+        object: nil
+      )
   }
-  
+
   @objc func setNotLoading() {
     loadingImage.image = nil
   }
-  
+
   func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
     print(error)
   }
-  
-  func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+
+  func imageScannerController(
+    _ scanner: ImageScannerController,
+    didFinishScanningWithResults results: ImageScannerResults) {
     receiptImage.image = results.scannedImage.convertToBlackAndWhite()
     scanner.dismiss(animated: true)
   }
-  
+
   func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
     scanner.dismiss(animated: true)
     self.navigationController?.dismiss(animated: true, completion: nil)
   }
-  
-  
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+  func imagePickerController(
+    _ picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
     if let pickedImage = info[.originalImage] as? UIImage {
       receiptImage.contentMode = .scaleToFill
       receiptImage.image = pickedImage.convertToBlackAndWhite()

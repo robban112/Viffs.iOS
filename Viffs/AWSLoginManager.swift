@@ -10,10 +10,8 @@ import Foundation
 import AWSCognitoIdentityProvider
 import PromiseKit
 
-var LoginManager = AWSLoginManager()
-
 class AWSLoginManager: NSObject {
-  
+
   var storyboard: UIStoryboard!
   var navigationController: UINavigationController?
   var signInViewController: SignInViewController?
@@ -21,19 +19,19 @@ class AWSLoginManager: NSObject {
   var window: UIWindow?
   var mfaViewController: MFAViewController?
 
-  var pool: AWSCognitoIdentityUserPool? = nil
- 
+  var pool: AWSCognitoIdentityUserPool?
+
   func updateUserDetails(pool: AWSCognitoIdentityUserPool) {
     Current.pool = pool
     Current.AWSUser = pool.currentUser()
-    let _ = pool.currentUser()
+    _ = pool.currentUser()
   }
-  
-  func getSession(){
+
+  func getSession() {
     Current.AWSUser?.getSession().continueOnSuccessWith { (getSessionTask) -> AnyObject? in
       DispatchQueue.main.async(execute: {
         let getSessionResult = getSessionTask.result
-        
+
         //let idToken = getSessionResult?.idToken?.tokenString
         if let accessToken = getSessionResult?.accessToken?.tokenString {
           setReceipts(token: accessToken)
@@ -42,7 +40,7 @@ class AWSLoginManager: NSObject {
           setCards(token: accessToken)
           Current.timer = scheduleRefreshUserData(token: accessToken)
           Current.accessToken = accessToken
-          
+
           //Reg, Tillfälligt!
           if let receiptCode = Current.receiptCode, let cardNumber = Current.cardNumber {
             postReceiptCodeAndCard(code: receiptCode, cardNumber: cardNumber)
@@ -53,7 +51,7 @@ class AWSLoginManager: NSObject {
       return nil
     }
   }
-  
+
   func login(username: String, password: String) {
     self.signInViewController?.signIn(username: username, password: password)
   }
@@ -69,38 +67,46 @@ class AWSLoginManager: NSObject {
     SceneCoordinator.shared = coordinator
     _ = coordinator.transition(to: Scene.blipp)
   }
-  
+
   func initialize() {
     // setup logging
     AWSDDLog.sharedInstance.logLevel = .verbose
-    
+
     // setup service configuration
-    let serviceConfiguration = AWSServiceConfiguration(region: CognitoIdentityUserPoolRegion, credentialsProvider: nil)
-    
+    let serviceConfiguration = AWSServiceConfiguration(region: cognitoIdentityUserPoolRegion, credentialsProvider: nil)
+
     // create pool configuration
-    let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
-                                                                    clientSecret: CognitoIdentityUserPoolAppClientSecret,
-                                                                    poolId: CognitoIdentityUserPoolId)
-    
+    let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(
+      clientId: cognitoIdentityUserPoolAppClientId,
+      clientSecret: cognitoIdentityUserPoolAppClientSecret,
+      poolId: cognitoIdentityUserPoolId
+    )
+
     // initialize user pool client
-    AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)
-    
+    AWSCognitoIdentityUserPool.register(
+      with: serviceConfiguration,
+      userPoolConfiguration: poolConfiguration,
+      forKey: AWSCognitoUserPoolsSignInProviderKey
+    )
+
     // fetch the user pool client we initialized in above step
     let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
     self.storyboard = UIStoryboard(name: "AWS", bundle: nil)
     pool.delegate = self
     Current.pool = pool
-    
+
     // Initialize the Amazon Cognito credentials provider
-    let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-                                                            identityPoolId:"us-east-1:b022e33e-7f9a-404f-9874-2def6ce79c2e")
-    
-    let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
-    
+    let credentialsProvider = AWSCognitoCredentialsProvider(
+      regionType: .USEast1,
+      identityPoolId: "us-east-1:b022e33e-7f9a-404f-9874-2def6ce79c2e"
+    )
+
+    let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+
     AWSServiceManager.default().defaultServiceConfiguration = configuration
-    
+
     setInitialViewController()
-    LoginManager.updateUserDetails(pool: pool)
+    Current.loginManager.updateUserDetails(pool: pool)
     updateUserDetails(pool: pool)
     getSession()
   }
@@ -108,16 +114,16 @@ class AWSLoginManager: NSObject {
 
 extension AWSLoginManager: AWSCognitoIdentityInteractiveAuthenticationDelegate {
   func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
-    self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
-    
+    self.navigationController = self.storyboard?
+      .instantiateViewController(withIdentifier: "signinController")
+      as? UINavigationController
 
-    
     self.signInViewController = self.navigationController?.viewControllers[0] as? SignInViewController
 
     DispatchQueue.main.async {
       self.navigationController!.popToRootViewController(animated: true)
-      if (!self.navigationController!.isViewLoaded
-        || self.navigationController!.view.window == nil) {
+      if !self.navigationController!.isViewLoaded
+        || self.navigationController!.view.window == nil {
         self.window?.rootViewController?.present(self.navigationController!,
                                                  animated: true,
                                                  completion: nil)
@@ -128,13 +134,13 @@ extension AWSLoginManager: AWSCognitoIdentityInteractiveAuthenticationDelegate {
   }
 
   func startMultiFactorAuthentication() -> AWSCognitoIdentityMultiFactorAuthentication {
-    if (self.mfaViewController == nil) {
+    if self.mfaViewController == nil {
       self.mfaViewController = MFAViewController()
       self.mfaViewController?.modalPresentationStyle = .popover
     }
     DispatchQueue.main.async {
-      if (!self.mfaViewController!.isViewLoaded
-        || self.mfaViewController!.view.window == nil) {
+      if !self.mfaViewController!.isViewLoaded
+        || self.mfaViewController!.view.window == nil {
         //display mfa as popover on current view controller
         let viewController = self.window?.rootViewController!
         viewController?.present(self.mfaViewController!,
@@ -156,10 +162,10 @@ extension AWSLoginManager: AWSCognitoIdentityInteractiveAuthenticationDelegate {
   }
 }
 
-// MARK:- AWSCognitoIdentityRememberDevice protocol delegate
+// MARK: - AWSCognitoIdentityRememberDevice protocol delegate
 
 extension AWSLoginManager: AWSCognitoIdentityRememberDevice {
-  
+
   func getRememberDevice(_ rememberDeviceCompletionSource: AWSTaskCompletionSource<NSNumber>) {
     self.rememberDeviceCompletionSource = rememberDeviceCompletionSource
     DispatchQueue.main.async {
@@ -168,20 +174,20 @@ extension AWSLoginManager: AWSCognitoIdentityRememberDevice {
       let alertController = UIAlertController(title: "Remember Device",
                                               message: "Do you want to remember this device?.",
                                               preferredStyle: .actionSheet)
-      
-      let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+
+      let yesAction = UIAlertAction(title: "Yes", style: .default, handler: { (_) in
         self.rememberDeviceCompletionSource?.set(result: true)
       })
-      let noAction = UIAlertAction(title: "No", style: .default, handler: { (action) in
+      let noAction = UIAlertAction(title: "No", style: .default, handler: { (_) in
         self.rememberDeviceCompletionSource?.set(result: false)
       })
       alertController.addAction(yesAction)
       alertController.addAction(noAction)
-      
+
       self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
   }
-  
+
   func didCompleteStepWithError(_ error: Error?) {
     DispatchQueue.main.async {
       if let error = error as NSError? {

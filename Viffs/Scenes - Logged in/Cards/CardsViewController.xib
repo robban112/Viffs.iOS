@@ -48,7 +48,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <action selector="AddCardButtonPushed:" destination="-1" eventType="touchUpInside" id="k9e-ka-TgO"/>
+                        <action selector="addCardButtonPushed:" destination="-1" eventType="touchUpInside" id="k9e-ka-TgO"/>
                     </connections>
                 </button>
             </subviews>

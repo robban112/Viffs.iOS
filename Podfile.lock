@@ -36,6 +36,7 @@ PODS:
   - SideMenu (5.0.3)
   - SkeletonView (1.4.1)
   - SwiftGifOrigin (1.6.1)
+  - SwiftLint (0.28.2)
   - WeScan (0.9.2)
 
 DEPENDENCIES:
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - SideMenu
   - SkeletonView
   - SwiftGifOrigin (~> 1.6.1)
+  - SwiftLint
   - WeScan (from `https://github.com/WeTransfer/WeScan.git`, branch `develop`)
 
 SPEC REPOS:
@@ -77,6 +79,7 @@ SPEC REPOS:
     - SideMenu
     - SkeletonView
     - SwiftGifOrigin
+    - SwiftLint
 
 EXTERNAL SOURCES:
   WeScan:
@@ -107,8 +110,9 @@ SPEC CHECKSUMS:
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
+  SwiftLint: f1629ae733b64e9cad20052de01d1debd5b640e7
   WeScan: 3d6f92d053f40719c48592b271b157d2015237df
 
-PODFILE CHECKSUM: b794ca363e68b106c94bfbac5d2b8c708f7a1ce6
+PODFILE CHECKSUM: 7558f0266eccb42bc5999a7fad52f8ff5c9201b9
 
 COCOAPODS: 1.5.3

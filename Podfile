@@ -42,4 +42,7 @@ target 'Viffs' do
   pod 'PromiseKit/Alamofire', '~> 6.0'
 
   pod 'WeScan', :git => 'https://github.com/WeTransfer/WeScan.git', :branch => 'develop'
+
+  #SwiftLint
+  pod 'SwiftLint'
 end

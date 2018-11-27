@@ -12,7 +12,7 @@ class StoreCell: UITableViewCell {
 
   @IBOutlet weak var storeImage: UIImageView!
   @IBOutlet weak var storeName: UILabel!
-  
+
   var store: Store? = nil {
     didSet {
       guard let store = store else { return }
@@ -20,9 +20,9 @@ class StoreCell: UITableViewCell {
       storeImage.image = storeToImage[store.name]
     }
   }
-  
+
   override func prepareForReuse() {
     store = nil
   }
-    
+
 }

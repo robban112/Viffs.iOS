@@ -9,19 +9,19 @@
 import UIKit
 
 class MittViffsCell: UICollectionViewCell {
-  
+
   @IBOutlet weak var title: UILabel!
   @IBOutlet weak var logo: UIImageView!
-  
+
   var collection: ReceiptCollection? = nil {
     didSet {
       title.text = collection?.name
       logo.image = collection?.logo
     }
   }
-  
+
   override func prepareForReuse() {
     collection = nil
   }
-  
+
 }

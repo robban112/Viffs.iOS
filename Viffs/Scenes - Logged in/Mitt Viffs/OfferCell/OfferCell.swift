@@ -9,19 +9,19 @@
 import UIKit
 
 class OfferCell: UICollectionViewCell {
-  
+
   @IBOutlet weak var picture: UIImageView!
-  
+
   var offer: Offer? = nil {
     didSet {
       guard let offer = offer else { return }
       picture.image = offer.picture
     }
   }
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
   }
-  
+
 }

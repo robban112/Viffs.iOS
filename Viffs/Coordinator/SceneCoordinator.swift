@@ -14,12 +14,12 @@ import RxCocoa
  Scene coordinator, manage scene navigation and presentation.
  */
 class SceneCoordinator: NSObject, SceneCoordinatorType {
-  
+
   static var shared: SceneCoordinator!
-  
+
   private var window: UIWindow
   private var storyboard: UIStoryboard
-  
+
   private var currentViewController: UIViewController {
     didSet {
       currentViewController.navigationController?.rx.delegate
@@ -28,26 +28,27 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         .setForwardToDelegate(self, retainDelegate: false)
     }
   }
-  
+
   required init(window: UIWindow, storyboard: UIStoryboard) {
     self.window = window
     self.storyboard = storyboard
     currentViewController = window.rootViewController ?? UIViewController()
   }
-  
+
   func transitionToLogin() {
-//    let signInVC = self.storyboard.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
+    //let signInVC = self.storyboard.instantiateViewController(withIdentifier: "signinController")
+    //  as? UINavigationController
     //transition(to: Scene.blipp)
-//    Current.pool?.clearAll()
+    //Current.pool?.clearAll()
     //getDetails()
-    
+
     flushEnvironment()
-    LoginManager.initialize()
+    Current.loginManager.initialize()
   }
-  
+
   //This is needed to invoke the AWS login delegate
-  func getDetails(){
-    Current.AWSUser?.getDetails().continueOnSuccessWith { (task) -> AnyObject? in
+  func getDetails() {
+    Current.AWSUser?.getDetails().continueOnSuccessWith { (_) -> AnyObject? in
       DispatchQueue.main.async(execute: {
 //        self.response = task.result
 //        self.title = self.user?.username
@@ -56,7 +57,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
       return nil
     }
   }
-  
+
   func popToCardsVC() {
     var cardsVC: UIViewController?
     for vc in self.currentViewController.navigationController?.viewControllers ?? [] {
@@ -69,15 +70,15 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
       self.currentViewController.navigationController?.popToViewController(cardsVC, animated: true)
     }
   }
-  
+
   func transitionToRoot() {
     self.currentViewController.navigationController?.popToRootViewController(animated: true)
   }
-  
+
   @discardableResult
   func transition(to scene: TargetScene) -> Observable<Void> {
     let subject = PublishSubject<Void>()
-    
+
     DispatchQueue.main.async {
       switch scene.transition {
       case let .root(viewController):
@@ -88,12 +89,12 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         guard let navigationController = self.currentViewController.navigationController else {
           fatalError("Can't push a view controller without a current navigation controller")
         }
-        
+
         _ = navigationController.rx.delegate
           .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
           .map { _ in }
           .bind(to: subject)
-        
+
         navigationController.pushViewController(displayedViewController(within: viewController), animated: true)
         self.currentViewController = displayedViewController(within: viewController)
       case let .present(viewController):
@@ -107,11 +108,11 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
         }
       }
     }
-    
+
     return subject.asObservable()
       .take(1)
   }
-  
+
   @discardableResult
   func pop(animated: Bool) -> Observable<Void> {
     let subject = PublishSubject<Void>()
@@ -122,24 +123,24 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
           subject.onCompleted()
         }
       } else if let navigationController = self.currentViewController.navigationController {
-        
+
         _ = navigationController
           .rx
           .delegate
           .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))
           .map { _ in }
           .bind(to: subject)
-        
+
         guard navigationController.popViewController(animated: animated) != nil else {
           fatalError("can't navigate back from \(self.currentViewController)")
         }
-        
+
         self.currentViewController = displayedViewController(within: navigationController.viewControllers.last!)
       } else {
         fatalError("Not a modal, no navigation controller: can't navigate back from \(self.currentViewController)")
       }
     }
-    
+
     return subject.asObservable()
       .take(1)
   }
@@ -148,7 +149,9 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
 // MARK: - UINavigationControllerDelegate
 
 extension SceneCoordinator: UINavigationControllerDelegate {
-  func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+  func navigationController(
+    _ navigationController: UINavigationController,
+    didShow viewController: UIViewController, animated: Bool) {
     currentViewController = displayedViewController(within: viewController)
   }
 }
@@ -156,7 +159,7 @@ extension SceneCoordinator: UINavigationControllerDelegate {
 // MARK: - UITabBarControllerDelegate
 
 extension SceneCoordinator: UITabBarControllerDelegate {
-  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController)  {
+  func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
     currentViewController = displayedViewController(within: viewController)
   }
 }
@@ -164,7 +167,7 @@ extension SceneCoordinator: UITabBarControllerDelegate {
 // MARK: - Extensions
 
 /// Get the view controller currently in view within the view controller
-fileprivate func displayedViewController(within viewController: UIViewController) -> UIViewController {
+private func displayedViewController(within viewController: UIViewController) -> UIViewController {
   switch viewController {
   case let navVC as UINavigationController:
     return navVC.viewControllers.first.flatMap(displayedViewController(within:)) ?? viewController

@@ -1,4 +1,4 @@
-	//
+//
 // Copyright 2014-2018 Amazon.com,
 // Inc. or its affiliates. All Rights Reserved.
 //
@@ -24,34 +24,33 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
   @IBOutlet weak var password: UITextField!
   var passwordAuthenticationCompletion: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>?
   var usernameText: String?
-  
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+
     self.password.delegate = self
     self.username.delegate = self
     self.password.text = Current.password
     //self.username.text = usernameText
     self.username.text = Current.username
     setNavBar()
-    LoginManager.getSession()
+    Current.loginManager.getSession()
   }
-  
+
   func setNavBar() {
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.backItem?.title = ""
 
   }
-  
+
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     self.view.endEditing(true)
     return false
   }
 
-  
   @IBAction func signInPressed(_ sender: AnyObject) {
-    if (self.username.text != nil && self.password.text != nil) {
+    if self.username.text != nil && self.password.text != nil {
       signIn(username: self.username.text!, password: self.password.text!)
     } else {
       let alertController = UIAlertController(title: "Missing information",
@@ -61,7 +60,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
       alertController.addAction(retryAction)
     }
   }
-  
+
   func signIn(username: String, password: String) {
     let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: username, password: password )
     self.passwordAuthenticationCompletion?.trySet(result: authDetails)
@@ -70,16 +69,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
-  
-  public func getDetails(_ authenticationInput: AWSCognitoIdentityPasswordAuthenticationInput, passwordAuthenticationCompletionSource: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>) {
+
+  public func getDetails(
+    _ authenticationInput: AWSCognitoIdentityPasswordAuthenticationInput,
+    passwordAuthenticationCompletionSource: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>) {
     self.passwordAuthenticationCompletion = passwordAuthenticationCompletionSource
     DispatchQueue.main.async {
-      if (self.usernameText == nil) {
+      if self.usernameText == nil {
         //self.usernameText = authenticationInput.lastKnownUsername
       }
     }
   }
-  
+
   public func didCompleteStepWithError(_ error: Error?) {
     DispatchQueue.main.async {
       if let error = error as NSError? {
@@ -88,11 +89,11 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
                                                 preferredStyle: .alert)
         let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
         alertController.addAction(retryAction)
-        
-        self.present(alertController, animated: true, completion:  nil)
+
+        self.present(alertController, animated: true, completion: nil)
       } else {
         //self.username.text = nil
-        LoginManager.setInitialViewController()
+        Current.loginManager.setInitialViewController()
         //self.dismiss(animated: true, completion: nil)
       }
     }

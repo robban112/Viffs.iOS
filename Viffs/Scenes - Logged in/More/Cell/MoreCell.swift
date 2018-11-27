@@ -11,5 +11,5 @@ import UIKit
 class MoreCell: UITableViewCell {
 
   @IBOutlet weak var label: UILabel!
-    
+
 }

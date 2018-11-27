@@ -15,47 +15,46 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
   let disposeBag = DisposeBag()
   @IBOutlet weak var tableView: UITableView!
     @IBOutlet var tableViewTopConstraint: NSLayoutConstraint!
-  
+
   let rowHeight: CGFloat = 75
-  var content = ["Hem","Mitt Viffs","Butiker","Kort","Hjälp","Inställningar", "Logga ut"]
+  var content = ["Hem", "Mitt Viffs", "Butiker", "Kort", "Hjälp", "Inställningar", "Logga ut"]
 
   override func viewDidLoad() {
     loadTableView()
     self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
-  
+
   func setTableViewToMiddle() {
     let screensize = UIScreen.main.bounds
     let height = screensize.height
     let tableViewHeight = rowHeight * CGFloat(content.count)
     tableViewTopConstraint.constant = (tableViewHeight-height)/2
   }
-  
+
   func loadTableView() {
     tableView.dataSource = self
     tableView.delegate = self
-    self.tableView.register(UINib(nibName: "MoreCell", bundle: nil), forCellReuseIdentifier: "MoreCell");
+    self.tableView.register(UINib(nibName: "MoreCell", bundle: nil), forCellReuseIdentifier: "MoreCell")
   }
-  
+
   // MARK: - Table view data source
-  
+
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return rowHeight
   }
-  
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return content.count
   }
-  
-  
+
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath)
-      as! MoreCell
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath) as? MoreCell
+      else { return UITableViewCell() }
     cell.label.text = content[indexPath.row]
-    
+
     return cell
   }
-  
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     defer {
       tableView.deselectRow(at: indexPath, animated: true)

@@ -11,13 +11,13 @@ import UIKit
 class PictogramCell: UICollectionViewCell {
 
   @IBOutlet weak var pictogramImageView: UIImageView!
-  
+
   var pictogramImage: UIImage? = nil {
     didSet {
       pictogramImageView.image = pictogramImage
     }
   }
-  
+
   override func prepareForReuse() {
     pictogramImage = nil
   }

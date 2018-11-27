@@ -9,20 +9,27 @@
 import UIKit
 
 class CardsViewController: ViffsViewController {
-  
+
   @IBOutlet weak var cardsTableView: UITableView!
-  
-    @IBAction func AddCardButtonPushed(_ sender: Any) {
+
+    @IBAction func addCardButtonPushed(_ sender: Any) {
         SceneCoordinator.shared.transition(to: Scene.receiptCode)
     }
-  
+
     @objc func reloadTable() {
       cardsTableView.reloadData()
     }
-    
+
     override func viewDidLoad() {
     super.viewDidLoad()
-    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("CardsSet"), object: nil)
+    NotificationCenter
+      .default
+      .addObserver(
+        self,
+        selector: #selector(reloadTable),
+        name: Notification.Name("CardsSet"),
+        object: nil
+      )
     cardsTableView.registerCell(type: CardCell.self)
     cardsTableView.delegate = self
     cardsTableView.dataSource = self
@@ -31,21 +38,22 @@ class CardsViewController: ViffsViewController {
 }
 
 extension CardsViewController: UITableViewDataSource, UITableViewDelegate {
-  
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return Current.cards.count
   }
-  
+
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(type: CardCell.self, forIndexPath: indexPath)
     let card = Current.cards[indexPath.row]
     cell.card = card
     return cell
   }
-  
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let card = Current.cards[indexPath.row]
-    SceneCoordinator.shared.transition(to: Scene.receipts(FilterParameters.init(cards: [card], filterByUserUpload: false), card.cardType))
+    SceneCoordinator.shared
+      .transition(to: Scene.receipts(FilterParameters(cards: [card], filterByUserUpload: false), card.cardType))
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }

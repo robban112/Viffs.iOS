@@ -13,7 +13,7 @@ import SkeletonView
 
 class MainViewController: ViffsViewController, UITableViewDataSource,
 UIGestureRecognizerDelegate {
-  
+
   var addCard: UIBarButtonItem!
   var swipeCoordLoc: CGFloat!
   var beganAnimation: Bool = false
@@ -25,8 +25,8 @@ UIGestureRecognizerDelegate {
   var maximized: Bool = false
   var receiptTableViewScrollIndex: CGFloat = 0
   var cameraButtonIsShown: Bool = false
-  var placeHolderReceipts = [1,2,3]
-  
+  var placeHolderReceipts = [1, 2, 3]
+
   @IBOutlet var tableToSuperviewConstraint: NSLayoutConstraint!
   @IBOutlet var butikerLabel: UILabel!
   @IBOutlet var kvittoLabel: UILabel!
@@ -35,10 +35,10 @@ UIGestureRecognizerDelegate {
   @IBOutlet var receiptButton: UIButton!
   @IBOutlet var storeButton: UIButton!
   @IBOutlet var receiptTableView: UITableView!
-  
+
   @IBOutlet var arrowUpButton: UIButton!
   @IBOutlet var latestReceiptViewHeightConstraint: NSLayoutConstraint!
-  
+
   @IBAction func receiptButtonPushed(_ sender: Any) {
     SceneCoordinator.shared.transition(to: Scene.mittViffs(.init()))
   }
@@ -46,19 +46,19 @@ UIGestureRecognizerDelegate {
     SceneCoordinator.shared.transition(to: Scene.stores)
   }
   @IBAction func arrowUpButtonPushed(_ sender: Any) {
-    if (maximized) {
+    if maximized {
       minimizeLatestReceiptView()
     } else {
       maximizeLatestReceiptView()
     }
   }
-  
+
   enum ScrollState {
     case maximizedAndAtTop      //Curtain at top and tableView at top
     case maximized              //Curtain at top and tableView not at top
     case minimized              //Curtain not at top
   }
-  
+
   private var currentScrollState: ScrollState = .minimized {
     didSet {
       switch currentScrollState {
@@ -66,36 +66,44 @@ UIGestureRecognizerDelegate {
         //Only scroll down
         hideCameraButton()
         receiptTableView.isScrollEnabled = true
-        break
       case .maximized:
         hideCameraButton()
         receiptTableView.isScrollEnabled = true
-        break
       case .minimized:
         showCameraButton()
         receiptTableView.isScrollEnabled = false
-        break
       }
     }
   }
-    
-    
+
   @objc func reloadTable() {
     receiptTableView.reloadData()
   }
-  
+
   func setObservers() {
-    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("ReceiptsSet"), object: nil)
-    NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: Notification.Name("StoreAdded"), object: nil)
+    NotificationCenter.default
+      .addObserver(
+        self,
+        selector: #selector(reloadTable),
+        name: Notification.Name("ReceiptsSet"),
+        object: nil
+      )
+    NotificationCenter.default
+      .addObserver(
+        self,
+        selector: #selector(reloadTable),
+        name: Notification.Name("StoreAdded"),
+        object: nil
+      )
   }
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     receiptTableView.delegate = self
     receiptTableView.dataSource = self
     latestReceiptSearchBar.delegate = self
     latestReceiptViewHeightConstraint.constant = minHeightLatestReceipt
-    
+
     let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
     panRecognizer.delegate = self
     latestReceiptView.addGestureRecognizer(panRecognizer)
@@ -103,7 +111,7 @@ UIGestureRecognizerDelegate {
     setupSideMenu()
     showCameraButton()
   }
-  
+
   func setupSideMenu() {
     // Define the menus
     let moreVC = MoreViewController.instantiateFromNib()
@@ -111,14 +119,14 @@ UIGestureRecognizerDelegate {
     let navRight = UISideMenuNavigationController(rootViewController: moreVC)
     SideMenuManager.default.menuRightNavigationController = navRight
   }
-  
+
   func hideCameraButton() {
     if cameraButtonIsShown {
       cameraButtonIsShown = false
       navigationItem.setRightBarButton(nil, animated: true)
     }
   }
-  
+
   func showCameraButton() {
     if !cameraButtonIsShown {
       cameraButtonIsShown = true
@@ -126,7 +134,7 @@ UIGestureRecognizerDelegate {
       navigationItem.setRightBarButton(addCard, animated: true)
     }
   }
-  
+
   func addButton() -> UIBarButtonItem {
     let btn1 = UIButton(type: .custom)
     btn1.setImage(UIImage(named: "Kamera-green-small"), for: .normal)
@@ -134,12 +142,12 @@ UIGestureRecognizerDelegate {
     btn1.addTarget(self, action: #selector(self.scanReceiptButtonPushed(_:)), for: .touchUpInside)
     return UIBarButtonItem(customView: btn1)
   }
-  
+
   @objc func scanReceiptButtonPushed(_ sender: Any) {
 //    present(SideMenuManager.default.menuRightNavigationController!, animated: true, completion: nil)
     SceneCoordinator.shared.transition(to: Scene.scanReceipt)
   }
-  
+
   func maximizeLatestReceiptView() {
     maximized = true
     self.latestReceiptViewHeightConstraint.constant = curtainMaxPostion
@@ -152,7 +160,7 @@ UIGestureRecognizerDelegate {
     currentScrollState = .maximizedAndAtTop
     startedAnimation = false
   }
-  
+
   func minimizeLatestReceiptView() {
     maximized = false
     currentScrollState = .minimized
@@ -167,7 +175,7 @@ UIGestureRecognizerDelegate {
     setAlpha(alpha: 1)
     startedAnimation = false
   }
-  
+
   func setAlphaOnButtonsAccordingToLatestReceiptHeight(height: CGFloat) {
     var transformedAlpha = (height - minHeightLatestReceipt) / (maxHeightLatestReceipt - minHeightLatestReceipt)
     //Flip
@@ -175,14 +183,14 @@ UIGestureRecognizerDelegate {
     transformedAlpha = 0.3 + 0.7*transformedAlpha
     setAlpha(alpha: transformedAlpha)
   }
-  
+
   func setAlpha(alpha: CGFloat) {
     storeButton.alpha = alpha
     receiptButton.alpha = alpha
     butikerLabel.alpha = alpha
     kvittoLabel.alpha = alpha
   }
-  
+
   func updateCurtainPosition(newLocation: CGFloat, diff: CGFloat) {
     if latestReceiptViewHeightConstraint.constant + diff >= curtainMaxPostion {
       latestReceiptViewHeightConstraint.constant = curtainMaxPostion
@@ -192,7 +200,7 @@ UIGestureRecognizerDelegate {
       latestReceiptViewHeightConstraint.constant += diff
     }
   }
-  
+
   func gestureChanged(translation: CGPoint) {
     let diff = swipeCoordLoc - translation.y
     let constraint = latestReceiptViewHeightConstraint.constant
@@ -203,26 +211,28 @@ UIGestureRecognizerDelegate {
           updateCurtainPosition(newLocation: translation.y, diff: diff)
           currentScrollState = .minimized
         } else if constraint == UIScreen.main.bounds.height-100 {
-
           currentScrollState = .maximized
         }
       case .maximized:
         break
       case .minimized:
-        if diff > 0 { updateCurtainPosition(newLocation: translation.y, diff: diff) }
-        else if constraint > minHeightLatestReceipt
-        { updateCurtainPosition(newLocation: translation.y, diff: diff) }
+        if diff > 0 {
+          updateCurtainPosition(newLocation: translation.y, diff: diff)
+        } else if constraint > minHeightLatestReceipt {
+          updateCurtainPosition(newLocation: translation.y, diff: diff)
+        }
       }
-      if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt && latestReceiptViewHeightConstraint.constant < maxHeightLatestReceipt {
+      if latestReceiptViewHeightConstraint.constant > minHeightLatestReceipt
+        && latestReceiptViewHeightConstraint.constant < maxHeightLatestReceipt {
         setAlphaOnButtonsAccordingToLatestReceiptHeight(height: latestReceiptViewHeightConstraint.constant)
       }
-    } 
+    }
     swipeCoordLoc = translation.y
   }
-  
+
   func gestureEnded(verticalVelocity: CGFloat) {
     if latestReceiptViewHeightConstraint.constant > maxHeightLatestReceipt {
-      if (verticalVelocity > 0 && currentScrollState != .maximized) {
+      if verticalVelocity > 0 && currentScrollState != .maximized {
         minimizeLatestReceiptView()
       } else {
         maximizeLatestReceiptView()
@@ -231,11 +241,11 @@ UIGestureRecognizerDelegate {
       minimizeLatestReceiptView()
     }
   }
-  
+
   @objc func handlePan(gestureRecognizer: UIPanGestureRecognizer) {
     let translation = gestureRecognizer.translation(in: self.view)
     let verticalVelocity = gestureRecognizer.velocity(in: self.view).y
-    
+
     if gestureRecognizer.state == .began {
       self.swipeCoordLoc = translation.y
       ignoreFollowingSwipes = false
@@ -246,11 +256,13 @@ UIGestureRecognizerDelegate {
       gestureEnded(verticalVelocity: verticalVelocity)
     }
   }
-  
-  func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+
+  func gestureRecognizer(
+    _ gestureRecognizer: UIGestureRecognizer,
+    shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
     return true
   }
-  
+
 }
 
 extension MainViewController: SkeletonTableViewDataSource {
@@ -260,24 +272,26 @@ extension MainViewController: SkeletonTableViewDataSource {
   func numSections(in collectionSkeletonView: UITableView) -> Int {
     return 1
   }
-  func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+  func collectionSkeletonView(
+    _ skeletonView: UITableView,
+    cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
     return "ReceiptViewCell"
   }
 }
 
 extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScrollViewDelegate {
-  
+
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     searchBar.endEditing(true)
   }
-  
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if Current.isLoadingReceipts {
       return 2
     }
     return Current.receipts.count
   }
-  
+
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = ReceiptViewCell.instantiateFromNib()
     if Current.isLoadingReceipts {
@@ -290,7 +304,7 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScroll
     }
     return cell
   }
-  
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     if let receipt = Current.user?.receipts?[indexPath.row] {
       SceneCoordinator.shared.transition(to: Scene.receiptDetail(.init(receipt: receipt)))
@@ -298,14 +312,13 @@ extension MainViewController: UISearchBarDelegate, UITableViewDelegate, UIScroll
     tableView.deselectRow(at: indexPath, animated: true)
     tableView.deselectRow(at: indexPath, animated: true)
   }
-  
+
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if receiptTableView.isScrollEnabled {
       let offset = scrollView.contentOffset.y
       if offset < 0 {
         currentScrollState = .maximizedAndAtTop
-      }
-      else if offset > 0 {
+      } else if offset > 0 {
         currentScrollState = .maximized
       }
     }
