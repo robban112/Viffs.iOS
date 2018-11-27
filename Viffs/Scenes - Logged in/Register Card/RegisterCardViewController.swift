@@ -32,8 +32,6 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     }
     return cardNumber
   }
-  
-  
 
   @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
