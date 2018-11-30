@@ -86,6 +86,7 @@ func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {
     .validate()
     .responseJSON()
     .compactMap { json, _ in convertToReceipts(json: json) }
+    .map { receipts in receipts.sorted(by: { $0.date > $1.date }) }
 }
 
 func convertToReceipts(json: Any) -> [Receipt]? {
