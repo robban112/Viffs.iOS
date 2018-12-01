@@ -28,8 +28,7 @@ func setReceipts(token: String) {
       //NOTE: Only update receipts when the total receipt length is different than current.
       if shouldUpdate(receipts: receipts) {
         Current.isLoadingReceipts = false
-        let rev: [Receipt] = receipts.reversed()
-        Current.user = User(username: "", password: "", receipts: rev)
+        Current.user = User(username: "", password: "", receipts: receipts)
         Current.receipts = receipts
         NotificationCenter.default.post(name: Notification.Name("ReceiptsSet"), object: nil)
       }
