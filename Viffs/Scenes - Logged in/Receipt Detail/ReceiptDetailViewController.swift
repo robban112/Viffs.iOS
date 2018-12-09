@@ -19,7 +19,6 @@ class ReceiptDetailViewController: UIViewController, ViewModelBindable {
 
     @IBOutlet var loadingImage: UIImageView!
     @IBOutlet var imageView: UIImageView!
-  @IBOutlet weak var backButton: UIButton!
 
   func setBackButton() {
     let backItem = UIBarButtonItem()

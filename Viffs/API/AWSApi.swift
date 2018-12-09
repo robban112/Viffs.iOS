@@ -135,7 +135,6 @@ func addToStoreDict(storePubID: String) {
 }
 
 func parseResponseToReceipt(dict: NSDictionary) -> Receipt? {
-  print((dict["date"] as? String) ?? "")
   if let storePubID: String = dict["storePubID"] as? String,
     let receiptPubID: String = dict["pubID"] as? String,
     let total: Int64 = dict["price"] as? Int64,

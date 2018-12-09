@@ -18,7 +18,7 @@ class CardCell: UITableViewCell {
     didSet {
       guard let card = card else { return }
       name.text = card.cardType
-      picture.image = cardTypeToImage[card.cardType]
+      picture.image = card.image
       let suffix = card.number.suffix(4)
       lastfour.text = String("****\(suffix)")
     }
