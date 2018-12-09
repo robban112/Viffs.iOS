@@ -17,7 +17,7 @@ class ReceiptViewCell: UITableViewCell {
       receiptName.text = loadReceiptName(receipt: receipt)
       let total = receipt.total/100
       let totalString = total.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", total) : String(total)
-      self.receiptTotal?.text = totalString + receipt.currency
+      //self.receiptTotal?.text = totalString + receipt.currency
       storeLogo.image = loadStoreImage(receiptName: receiptName.text!)
       receiptDate.text = String(viffsDateFormatter.string(from: receipt.date).prefix(10))
     }
@@ -30,14 +30,14 @@ class ReceiptViewCell: UITableViewCell {
     receiptDate.showAnimatedGradientSkeleton()
     storeLogo.showAnimatedGradientSkeleton()
     receiptName.showAnimatedGradientSkeleton()
-    receiptTotal.showAnimatedGradientSkeleton()
+    //receiptTotal.showAnimatedGradientSkeleton()
   }
 
   func setNotLoading() {
     receiptDate.hideSkeleton()
     storeLogo.hideSkeleton()
     receiptName.hideSkeleton()
-    receiptTotal.hideSkeleton()
+    //receiptTotal.hideSkeleton()
   }
 
   func loadStoreImage(receiptName: String) -> UIImage? {

@@ -69,14 +69,12 @@ func setCards(token: String) {
 }
 
 func setOffers() {
-  let offer = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer2 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer3 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer4 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer5 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer6 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  let offer7 = Offer.init(name: "Offer", picture: UIImage.init(named: "KvittoIkon")!)
-  Current.offers = [offer, offer2, offer3, offer4, offer5, offer6, offer7]
+  let offer = Offer.init(name: "Offer", picture: UIImage.init(named: "electronics")!)
+  let offer2 = Offer.init(name: "Offer", picture: UIImage.init(named: "fashion")!)
+  let offer3 = Offer.init(name: "Offer", picture: UIImage.init(named: "home")!)
+  let offer4 = Offer.init(name: "Offer", picture: UIImage.init(named: "food_and_drinks")!)
+  let offer5 = Offer.init(name: "Offer", picture: UIImage.init(named: "beauty")!)
+  Current.offers = [offer, offer2, offer3, offer4, offer5]
 }
 
 func AWSGetReceiptsForUser(token: String) -> Promise<[Receipt]> {

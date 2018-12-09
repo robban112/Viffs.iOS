@@ -16,11 +16,11 @@ var storeToLogo: [String: String] = [
     "Willys": "willys_logo.png",
     "7-Eleven": "7-eleven_logo.png",
     "EasyPark": "easypark_logo.png",
-    "Demobutik": "demokvitto.png"
+    "Demobutik": "Viffs_ikon.png"
 ]
 
 var storeToImage: [String: UIImage] = [
-  "Demobutik": UIImage(named: "demokvitto")!
+  "Demobutik": UIImage(named: "Viffs_ikon.png")!
 ]
 
 var cardTypeToImage: [String: UIImage] = [
