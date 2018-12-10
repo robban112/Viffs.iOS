@@ -16,6 +16,7 @@ protocol TargetScene {
 enum Scene {
   case blipp
   case receiptDetail(ReceiptDetailViewModel)
+  case receiptInfo(Receipt)
   case registerCard
   case receiptCode
   case receipts(FilterParameters, String)
@@ -49,8 +50,12 @@ extension Scene: TargetScene {
       let registerCardVC = RegisterCardViewController.instantiateFromNib()
       registerCardVC.title = "Registrera kort"
       return .push(registerCardVC)
+    case .receiptInfo(let receipt):
+      let receiptInfoVC = ReceiptInfoViewController.instantiateFromNib()
+      receiptInfoVC.title = ""
+      receiptInfoVC.receipt = receipt
+      return .push(receiptInfoVC)
     case .receipts(let filterParameters, let title):
-
       let receiptVC = ReceiptViewController.instantiateFromNib()
       receiptVC.filterParameters = filterParameters
       receiptVC.title = title

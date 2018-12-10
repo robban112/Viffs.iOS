@@ -61,7 +61,6 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   func popToCardsVC() {
     var cardsVC: UIViewController?
     for vc in self.currentViewController.navigationController?.viewControllers ?? [] {
-      print(vc.nibName ?? "")
       if vc.nibName == "CardsViewController" {
         cardsVC = vc
       }
@@ -78,7 +77,7 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
   @discardableResult
   func transition(to scene: TargetScene) -> Observable<Void> {
     let subject = PublishSubject<Void>()
-
+    
     DispatchQueue.main.async {
       switch scene.transition {
       case let .root(viewController):
@@ -88,6 +87,10 @@ class SceneCoordinator: NSObject, SceneCoordinatorType {
       case let .push(viewController):
         guard let navigationController = self.currentViewController.navigationController else {
           fatalError("Can't push a view controller without a current navigation controller")
+        }
+        
+        if viewController.nibName == self.currentViewController.nibName {
+          return
         }
 
         _ = navigationController.rx.delegate

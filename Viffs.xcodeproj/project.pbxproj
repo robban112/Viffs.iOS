@@ -35,6 +35,10 @@
 		EE210B9D219DF59500F490E7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */; };
 		EE210BA021A1F8C300F490E7 /* CardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210B9F21A1F8C300F490E7 /* CardUtils.swift */; };
 		EE46AFE621A560CD00C283C8 /* SkeletonView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE46AFE521A560CD00C283C8 /* SkeletonView.framework */; };
+		EE4C2F8D21BDBD6500A4EC8E /* ReceiptInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4C2F8B21BDBD6500A4EC8E /* ReceiptInfoViewController.swift */; };
+		EE4C2F8E21BDBD6500A4EC8E /* ReceiptInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4C2F8C21BDBD6500A4EC8E /* ReceiptInfoViewController.xib */; };
+		EE4C2F9221BDC79900A4EC8E /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4C2F9021BDC79900A4EC8E /* LanguageCell.swift */; };
+		EE4C2F9321BDC79900A4EC8E /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4C2F9121BDC79900A4EC8E /* LanguageCell.xib */; };
 		EE4CFF0121A5F3D5004BBF64 /* FilterParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */; };
 		EE617F3B2198910B00C27912 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE617F392198910B00C27912 /* HelpViewController.swift */; };
 		EE617F3C2198910B00C27912 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE617F3A2198910B00C27912 /* HelpViewController.xib */; };
@@ -54,6 +58,7 @@
 		EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE826E9D20AADA4D006A0390 /* LaunchScreen.storyboard */; };
 		EE826EA720AADE52006A0390 /* ReceiptViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */; };
 		EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE826EA820AB64CA006A0390 /* Receipt.swift */; };
+		EE8D07F021BE9C11006A2CBC /* Loading-Spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = EE8D07EF21BE9C11006A2CBC /* Loading-Spinner.gif */; };
 		EE8D4D8721512CE700341157 /* AWSApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8621512CE700341157 /* AWSApi.swift */; };
 		EE8D4D8921512DC300341157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE8D4D8821512DC300341157 /* Alamofire.framework */; };
 		EE8D4D8B215152E900341157 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8D4D8A215152E900341157 /* Store.swift */; };
@@ -194,6 +199,10 @@
 		EE210B9C219DF59500F490E7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		EE210B9F21A1F8C300F490E7 /* CardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUtils.swift; sourceTree = "<group>"; };
 		EE46AFE521A560CD00C283C8 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4C2F8B21BDBD6500A4EC8E /* ReceiptInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptInfoViewController.swift; sourceTree = "<group>"; };
+		EE4C2F8C21BDBD6500A4EC8E /* ReceiptInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiptInfoViewController.xib; sourceTree = "<group>"; };
+		EE4C2F9021BDC79900A4EC8E /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		EE4C2F9121BDC79900A4EC8E /* LanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
 		EE4CFF0021A5F3D5004BBF64 /* FilterParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterParameters.swift; sourceTree = "<group>"; };
 		EE617F392198910B00C27912 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		EE617F3A2198910B00C27912 /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
@@ -215,6 +224,7 @@
 		EE826EA020AADA4D006A0390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewCell.swift; sourceTree = "<group>"; };
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		EE8D07EF21BE9C11006A2CBC /* Loading-Spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Loading-Spinner.gif"; path = "../../../../Downloads/Loading-Spinner.gif"; sourceTree = "<group>"; };
 		EE8D4D8621512CE700341157 /* AWSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSApi.swift; sourceTree = "<group>"; };
 		EE8D4D8821512DC300341157 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8D4D8A215152E900341157 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -448,6 +458,24 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		EE4C2F8A21BDBD0400A4EC8E /* Receipt Info */ = {
+			isa = PBXGroup;
+			children = (
+				EE4C2F8B21BDBD6500A4EC8E /* ReceiptInfoViewController.swift */,
+				EE4C2F8C21BDBD6500A4EC8E /* ReceiptInfoViewController.xib */,
+			);
+			path = "Receipt Info";
+			sourceTree = "<group>";
+		};
+		EE4C2F8F21BDC77A00A4EC8E /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				EE4C2F9021BDC79900A4EC8E /* LanguageCell.swift */,
+				EE4C2F9121BDC79900A4EC8E /* LanguageCell.xib */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		EE617F37219890DF00C27912 /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +488,7 @@
 		EE617F38219890EC00C27912 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				EE4C2F8F21BDC77A00A4EC8E /* Language */,
 				EE617F3D2198911A00C27912 /* SettingsViewController.swift */,
 				EE617F3E2198911A00C27912 /* SettingsViewController.xib */,
 			);
@@ -507,6 +536,7 @@
 		EE826E9120AADA4A006A0390 /* Viffs */ = {
 			isa = PBXGroup;
 			children = (
+				EE8D07EE21BE9BFD006A2CBC /* Gif */,
 				EE8F6C1E216E2D83003A12A8 /* BridgingHeader.h */,
 				EE8D4E552157C76A00341157 /* Fonts */,
 				EE826E9220AADA4A006A0390 /* AppDelegate.swift */,
@@ -526,6 +556,14 @@
 				FFD95B0320CBE1700010FBC4 /* Mocks.swift */,
 			);
 			path = Viffs;
+			sourceTree = "<group>";
+		};
+		EE8D07EE21BE9BFD006A2CBC /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				EE8D07EF21BE9C11006A2CBC /* Loading-Spinner.gif */,
+			);
+			name = Gif;
 			sourceTree = "<group>";
 		};
 		EE8D4D85215126C400341157 /* Scenes - Login */ = {
@@ -624,6 +662,7 @@
 				FF07F63820D26AC600B011D8 /* Mitt Viffs */,
 				FF07F63520D269E900B011D8 /* More */,
 				FF68D04020CD1DBC00472FF7 /* Receipt Detail */,
+				EE4C2F8A21BDBD0400A4EC8E /* Receipt Info */,
 				FF68D03F20CD1DAA00472FF7 /* Receipt */,
 			);
 			path = "Scenes - Logged in";
@@ -912,6 +951,7 @@
 				EE8D4E422157C70800341157 /* MontserratAlternates-SemiBoldItalic.otf in Resources */,
 				EE8D4E362157C70800341157 /* Montserrat-BoldItalic.otf in Resources */,
 				FF29E7AA21887C1200F56F2B /* OfferCell.xib in Resources */,
+				EE4C2F9321BDC79900A4EC8E /* LanguageCell.xib in Resources */,
 				EE826E9F20AADA4D006A0390 /* LaunchScreen.storyboard in Resources */,
 				EE8D4E3A2157C70800341157 /* MontserratAlternates-MediumItalic.otf in Resources */,
 				EE8D4E432157C70800341157 /* Montserrat-SemiBoldItalic.otf in Resources */,
@@ -933,6 +973,7 @@
 				EE13B4C9213AD406007743D2 /* MFAViewController.xib in Resources */,
 				EE8D4E532157C70800341157 /* Montserrat-SemiBold.otf in Resources */,
 				FF68D04D20CD8E7200472FF7 /* ReceiptViewController.xib in Resources */,
+				EE8D07F021BE9C11006A2CBC /* Loading-Spinner.gif in Resources */,
 				EE8D4E312157C70800341157 /* Montserrat-BlackItalic.otf in Resources */,
 				FF68D04920CD396100472FF7 /* ReceiptDetailViewController.xib in Resources */,
 				EE8D4E342157C70800341157 /* MontserratAlternates-LightItalic.otf in Resources */,
@@ -940,6 +981,7 @@
 				5CDFDBDA20E3D58C00BA000F /* ScanReceiptViewController.xib in Resources */,
 				EE8D4E392157C70800341157 /* Montserrat-Thin.otf in Resources */,
 				FF07F64020D26B3E00B011D8 /* StoresViewController.xib in Resources */,
+				EE4C2F8E21BDBD6500A4EC8E /* ReceiptInfoViewController.xib in Resources */,
 				EE8D4E462157C70800341157 /* MontserratAlternates-SemiBold.otf in Resources */,
 				EE8D4E4B2157C70800341157 /* Montserrat-ExtraLightItalic.otf in Resources */,
 				EE8D4E522157C70800341157 /* MontserratAlternates-Italic.otf in Resources */,
@@ -1090,6 +1132,7 @@
 				EEDDC2CC21754F95009EA895 /* AWSLoginManager.swift in Sources */,
 				FF07F65320D27D5400B011D8 /* RegisterCardViewController.swift in Sources */,
 				FF3AF53920E8CCE900CF7B67 /* MoreCell.swift in Sources */,
+				EE4C2F8D21BDBD6500A4EC8E /* ReceiptInfoViewController.swift in Sources */,
 				EE826EA920AB64CA006A0390 /* Receipt.swift in Sources */,
 				FF68D05A20CE772300472FF7 /* NavigationViewController.swift in Sources */,
 				FF07F65720D27DAB00B011D8 /* MoreViewController.swift in Sources */,
@@ -1124,6 +1167,7 @@
 				EE8D4D8B215152E900341157 /* Store.swift in Sources */,
 				EE826E9520AADA4A006A0390 /* ReceiptViewController.swift in Sources */,
 				FF33E00120D6AFE700FF8E5C /* Overture additions.swift in Sources */,
+				EE4C2F9221BDC79900A4EC8E /* LanguageCell.swift in Sources */,
 				FF68D05820CE6D3200472FF7 /* ViewModelBindable.swift in Sources */,
 				EE617F3F2198911A00C27912 /* SettingsViewController.swift in Sources */,
 			);

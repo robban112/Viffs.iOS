@@ -12,7 +12,7 @@ class SettingsViewController: ViffsViewController, UITableViewDelegate, UITableV
 
     @IBOutlet var tableView: UITableView!
 
-    private var content = ["Byt språk"]
+    private var content = ["Svenska", "Engelska"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class SettingsViewController: ViffsViewController, UITableViewDelegate, UITableV
   func loadTableView() {
     tableView.dataSource = self
     tableView.delegate = self
-    self.tableView.register(UINib(nibName: "MoreCell", bundle: nil), forCellReuseIdentifier: "MoreCell")
+    self.tableView.register(UINib(nibName: "LanguageCell", bundle: nil), forCellReuseIdentifier: "LanguageCell")
   }
 
   // MARK: - Table view data source
@@ -32,9 +32,9 @@ class SettingsViewController: ViffsViewController, UITableViewDelegate, UITableV
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: "MoreCell", for: indexPath)
-      as? MoreCell else { return UITableViewCell() }
-    cell.label.text = content[indexPath.row]
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "LanguageCell", for: indexPath)
+      as? LanguageCell else { return UITableViewCell() }
+    cell.languageName.text = content[indexPath.row]
 
     return cell
   }
@@ -45,8 +45,10 @@ class SettingsViewController: ViffsViewController, UITableViewDelegate, UITableV
     }
     dismiss(animated: true, completion: nil)
     switch content[indexPath.row] {
-    case "Byt språk":
-      _ = SceneCoordinator.shared.transition(to: Scene.changeLanguage)
+    case "Svenska":
+      //_ = SceneCoordinator.shared.transition(to: Scene.changeLanguage)
+      return
+    case "Engelska":
       return
     default:
       return
