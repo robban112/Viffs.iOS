@@ -46,8 +46,12 @@ class ReceiptCodeViewController: ViffsViewController, QRCodeReaderViewController
 
   func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
     reader.stopScanning()
-    receiptCode.text = result.value
     dismiss(animated: true, completion: nil)
+    receiptCode.text = result.value
+    _ = SceneCoordinator.shared.transition(to: Scene.registerCard)
+    if receiptCode.text!.count != 0 {
+      Current.receiptCode = receiptCode.text!
+    }
   }
 
     override func viewDidLoad() {

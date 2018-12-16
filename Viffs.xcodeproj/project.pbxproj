@@ -224,7 +224,7 @@
 		EE826EA020AADA4D006A0390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE826EA620AADE52006A0390 /* ReceiptViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewCell.swift; sourceTree = "<group>"; };
 		EE826EA820AB64CA006A0390 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
-		EE8D07EF21BE9C11006A2CBC /* Loading-Spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Loading-Spinner.gif"; path = "../../../../Downloads/Loading-Spinner.gif"; sourceTree = "<group>"; };
+		EE8D07EF21BE9C11006A2CBC /* Loading-Spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Loading-Spinner.gif"; path = "Assets.xcassets/Loading-Spinner.dataset/Loading-Spinner.gif"; sourceTree = "<group>"; };
 		EE8D4D8621512CE700341157 /* AWSApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSApi.swift; sourceTree = "<group>"; };
 		EE8D4D8821512DC300341157 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8D4D8A215152E900341157 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };

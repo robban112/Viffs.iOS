@@ -19,6 +19,7 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
     if let info = cardInfo {
       cardNumber.text = replaceCardNumber(cardNumber: info.cardNumber!)
     }
+    continueAct()
     paymentViewController.dismiss(animated: true, completion: nil)
   }
 
@@ -36,19 +37,23 @@ class CardRegisterViewController: UIViewController, CardIOPaymentViewControllerD
 
     @IBAction func continueAction(_ sender: Any) {
         //push the card data here
-      if let receiptCode = Current.receiptCode {
-        if receiptCode.count == 6 && cardNumber.text!.count == 16 {
-          //postReceiptCodeAndCard(code: receiptCode, cardNumber: replaceCardNumber(cardNumber: cardNumber.text!))
-          Current.cardNumber = cardNumber.text!
-          if let username = Current.username, let password = Current.password {
-            Current.loginManager.login(username: username, password: password)
-          } else {
-            print("Username and password not set in Current!")
-          }
+        continueAct()
+    }
+  
+  func continueAct() {
+    if let receiptCode = Current.receiptCode {
+      if receiptCode.count == 6 && cardNumber.text!.count == 16 {
+        //postReceiptCodeAndCard(code: receiptCode, cardNumber: replaceCardNumber(cardNumber: cardNumber.text!))
+        Current.cardNumber = cardNumber.text!
+        if let username = Current.username, let password = Current.password {
+          Current.loginManager.login(username: username, password: password)
+        } else {
+          print("Username and password not set in Current!")
         }
       }
-
     }
+  }
+  
     @IBAction func scanCardAction(_ sender: Any) {
       let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)!
       cardIOVC.collectCVV = false

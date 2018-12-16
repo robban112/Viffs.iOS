@@ -21,7 +21,9 @@ class RegisterCardViewController: ViffsViewController, CardIOPaymentViewControll
     if let info = cardInfo {
       cardNumberTextField.text = replaceCardNumber(cardNumber: info.cardNumber!)
     }
-    paymentViewController.dismiss(animated: true, completion: nil)
+    paymentViewController.dismiss(animated: true) {
+      self.addCardButtonPushed(self)
+    }
   }
 
   func replaceCardNumber(cardNumber: String) -> String {

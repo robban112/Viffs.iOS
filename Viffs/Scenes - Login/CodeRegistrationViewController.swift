@@ -18,7 +18,6 @@ class CodeRegistrationViewController: UIViewController, QRCodeReaderViewControll
     print("registercode: \(registerCode?.text ?? "")")
     if registerCode.text?.count != 0 {
       Current.receiptCode = registerCode.text
-
     }
     //self.navigationController?.popToRootViewController(animated: true)
   }
@@ -46,7 +45,11 @@ class CodeRegistrationViewController: UIViewController, QRCodeReaderViewControll
   func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
     reader.stopScanning()
     registerCode.text = result.value
+    if registerCode.text?.count != 0 {
+      Current.receiptCode = registerCode.text
+    }
     dismiss(animated: true, completion: nil)
+    performSegue(withIdentifier: "toCardRegister", sender: self)
   }
 
   func readerDidCancel(_ reader: QRCodeReaderViewController) {

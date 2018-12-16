@@ -389,7 +389,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="continueAction:" destination="lKW-Gc-yLc" eventType="touchUpInside" id="8eO-rY-6tB"/>
-                                                    <segue destination="p2u-dp-0sD" kind="show" id="8Pi-k5-FbS"/>
+                                                    <segue destination="p2u-dp-0sD" kind="show" identifier="toCardRegister" id="8Pi-k5-FbS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
